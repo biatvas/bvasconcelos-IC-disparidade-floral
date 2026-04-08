@@ -9,8 +9,7 @@ librarian::shelf(phytools, dplyr, tidyr, purrr, vegan, tidyverse,ape, stringr, r
 #===============================================================#
 morphodata <- read.csv("1.datasets/mimoseae_species_cleaned.csv")
 #3174 obs and 84 variables
-
-#i will make a report with species just from phylogeny 
+ 
 morphodata %>% 
   separate(taxon, into = c("genus", "epithet"),
            sep = "_") %>% 
