@@ -1,0 +1,268 @@
+#============#
+# 1. HEAD ####
+#============#
+
+if (!require(librarian)) install.packages("librarian"); library("librarian")
+librarian::shelf(phytools, dplyr, tidyr, purrr, vegan, tidyverse,ape, stringr, readr) #installing and/or loading packages
+
+morphodata <- read.csv("1.datasets/mimoseae_species_clean.csv")
+
+#======================#
+# 2. SELECTING COLS ####
+#======================#
+
+traits <- cbind("taxon" = morphodata$taxon, morphodata[,6:83])
+#3172 obs and 79 variables
+
+#==================================#
+# 3. CORRECTING CONTINUOUS COLS ####
+#==================================#
+
+# Dados contínuos em traits nem sempre estão corretamente organizados nos seus respectivos 
+# min, low, high e max. São as colunas contínuas:
+cols <- names(traits)
+range_traits <- unique(sub("(.+)_min(_|$).*$", "\\1", cols[grepl("_min(_|$)", cols)]))
+
+min_col <- unlist(lapply(range_traits, function(x) grep(paste0("^", x, 
+                                                               "_min(_|$)"),  cols, value = TRUE)))
+low_col <- unlist(lapply(range_traits, function(x) grep(paste0("^", x, 
+                                                               "_low(_|$)"),  cols, value = TRUE)))
+high_col <- unlist(lapply(range_traits, function(x) grep(paste0("^", x, 
+                                                                "_high(_|$)"), cols, value = TRUE)))
+max_col  <- unlist(lapply(range_traits,  function(x) grep(paste0("^", x, 
+                                                                 "_max(_|$)"), cols, value = TRUE)))
+
+#all.equal(length(min_col), length(low_col), length(high_col), length(max_col)) #checando
+
+continuous_col <- c(min_col, low_col, high_col, max_col)
+# continuous_col[!continuous_col %in% colnames(traits)] #checando
+
+# Podem estar ter valores imputados como:
+unique(unlist(unname(traits[continuous_col])))
+
+traits_2 <- traits
+
+#remover espaços
+no_space <- as.data.frame(sapply(traits_2[continuous_col], function(x) gsub("\\s+", "", x)))
+# all(names(no_space) == names(traits_2[continuous_col])) #checando
+traits_2[continuous_col] <- no_space
+
+#todas as ocorrencias de números iniciadas com ≤ , por exemplo "≤8", será copiado na coluna
+# de nome high e o simbolo será removido
+
+traits_2$inflorescence_length_min[grepl("^≤", traits_2$inflorescence_length_min)]
+which(grepl("^≤", traits_2$inflorescence_length_min) == T)
+
+traits_3 <- traits_2
+
+for (col in continuous_col) {
+
+  root <- sub("_(min|low|high|max)$", "", col)
+  
+  col_high <- paste0(root, "_high")
+  
+  if (!(col_high %in% names(traits_3))) next
+  
+  vals <- traits_3[[col]]
+  high_vals <- traits_3[[col_high]]
+  
+  idx <- grepl("^≤", vals) & (is.na(high_vals) | high_vals == "")
+  
+  traits_3[[col_high]][idx] <- sub("^≤", "", vals[idx])
+  traits_3[[col]][idx] <- NA_character_
+}
+
+#checando se deu certo:
+# traits_2$inflorescence_length_min[grepl("^≤", traits_2$inflorescence_length_min)]
+# which(grepl("^≤", traits_2$inflorescence_length_min) == T)
+# 
+# traits_3$inflorescence_length_min[which(grepl("^≤", traits_2$inflorescence_length_min) == T)]
+# traits_3$inflorescence_length_high[which(grepl("^≤", traits_2$inflorescence_length_min) == T)]
+# 
+# View(data.frame(t_3_high = traits_3$inflorescence_length_high,
+#                    t_2_high = traits_2$inflorescence_length_high,
+#                    t_3_min = traits_3$inflorescence_length_min,
+#                    t_2_min = traits_2$inflorescence_length_min))
+
+#porque parece tar tudo certo, subtituindo os dataset
+traits_2 <- traits_3
+remove(traits_3)
+
+# se símbolo  ± então o valor é em low e em high
+traits_3 <- traits_2
+
+for (col in continuous_col) {
+  
+  root <- sub("_(min|low|high|max)$", "", col)
+  
+  col_low  <- paste0(root, "_low")
+  col_high <- paste0(root, "_high")
+  
+  if (!(col_low %in% names(traits_3)) || !(col_high %in% names(traits_3))) next
+  
+  vals <- traits_3[[col]]
+  low_vals  <- traits_3[[col_low]]
+  high_vals <- traits_3[[col_high]]
+  
+  #quem tem ± no início
+  idx <- grepl("^±\\s*", vals) &
+    (is.na(low_vals) | low_vals == "") &
+    (is.na(high_vals) | high_vals == "")
+  
+  #tira o simbolo
+  clean_vals <- sub("^±\\s*", "", vals[idx])
+  
+  #copia em low e high
+  traits_3[[col_low]][idx]  <- clean_vals
+  traits_3[[col_high]][idx] <- clean_vals
+  
+  #apaga
+  traits_3[[col]][idx] <- NA_character_
+}
+
+#checando se deu certo:
+# traits_2$inflorescence_length_min[grepl("^±", traits_2$inflorescence_length_min)]
+# which(grepl("^±", traits_2$inflorescence_length_min) == T)
+# 
+# traits_3$inflorescence_length_min[which(grepl("^±", traits_2$inflorescence_length_min) == T)]
+# traits_3$inflorescence_length_high[which(grepl("^±", traits_2$inflorescence_length_min) == T)]
+# 
+# View(data.frame(t_3_high = traits_3$inflorescence_length_high,
+#                    t_2_high = traits_2$inflorescence_length_high,
+#                    t_3_min = traits_3$inflorescence_length_min,
+#                    t_2_min = traits_2$inflorescence_length_min))
+
+#td certo
+traits_2 <- traits_3
+
+# agora resolvendo problemas dos que estão entre parenteses, atribuindo esses valores para
+#low, min, max ou high
+remove(traits_3)
+traits_3 <- traits_2
+
+for (col in continuous_col) {
+  
+  root <- sub("_(min|low|high|max)$", "", col)
+  
+  col_min  <- paste0(root, "_min")
+  col_low  <- paste0(root, "_low")
+  col_high <- paste0(root, "_high")
+  col_max  <- paste0(root, "_max")
+  col_check <- paste0(root, "_check")
+  
+  vals <- traits_3[[col]]
+  
+  #quais colunas tem casos de parenteses?
+  idx <- grepl("\\(", vals)
+  traits_3[[col_check]] <- NA_character_
+  traits_3[[col_check]][idx] <- vals[idx]
+  
+  x <- vals[idx]
+  
+  #extraindo os numeros dos parenteses no inicio do numero medio
+  
+  has_min <- grepl("^\\(", x)
+  min_vals <- rep(NA_character_, length(x))
+  
+  min_vals[has_min] <- sub("^\\(([^\\)]+)\\).*", "\\1", x[has_min])
+  min_vals <- sub("-$", "", min_vals)
+  
+  traits_3[[col_min]][idx] <- min_vals
+  
+  #extraindo os numeros dos parenteses no final do numero medio
+  
+  has_max <- grepl("\\)$", x)
+  max_vals <- rep(NA_character_, length(x))
+  
+  max_vals[has_max] <- sub(".*\\(([^\\)]+)\\)$", "\\1", x[has_max])
+  max_vals <- sub("^-", "", max_vals)
+  
+  traits_3[[col_max]][idx] <- max_vals
+  
+  #removendo parenteses  
+  
+  core <- gsub("\\([^\\)]+\\)", "", x)
+  core <- gsub("--+", "-", core)
+  core <- gsub("^-|-$", "", core)
+  
+  #definindo quem é low e high
+  
+  low_vals  <- rep(NA_character_, length(core))
+  high_vals <- rep(NA_character_, length(core))
+  
+  has_range <- grepl("-", core)
+  
+  low_vals[has_range]  <- sub("^(\\d+\\.?\\d*).*", "\\1", core[has_range])
+  high_vals[has_range] <- sub(".*-(\\d+\\.?\\d*)$", "\\1", core[has_range])
+  #outras inconsistencias com hifen
+  no_range <- !has_range & core != ""
+  low_vals[no_range] <- core[no_range]
+  
+  traits_3[[col_low]][idx]  <- low_vals
+  traits_3[[col_high]][idx] <- high_vals
+  
+}
+
+# #checando se deu certo:
+# sum(grepl("\\(", traits_2$inflorescence_length_min)) #tinha 7 ocorrencias com ()
+# sapply(traits_2[continuous_col], function(x) sum(grepl("\\(", x))) #todas na coluna 
+# #inflorescence_length_min
+# 
+# traits_2$inflorescence_length_min[grepl("\\)", traits_2$inflorescence_length_min)]
+# which(grepl("\\(", traits_2$inflorescence_length_min) == T)
+# 
+# traits_3$inflorescence_length_min[which(grepl("\\(", traits_2$inflorescence_length_min) == T)]
+# traits_3$inflorescence_length_max[which(grepl("\\(", traits_2$inflorescence_length_min) == T)]
+# 
+# traits_3$inflorescence_length_low[which(grepl("\\(", traits_2$inflorescence_length_min) == T)]
+# traits_3$inflorescence_length_high[which(grepl("\\(", traits_2$inflorescence_length_min) == T)]
+
+traits_3 <- select(traits_3, -c((names(traits_3[!colnames(traits_3) %in% colnames(traits_2)]))))
+
+traits_2 <- traits_3
+remove(traits_3)
+
+unique(unlist(unname(traits_2[continuous_col])))
+
+#agora só tratar ps numeros entre -, atribuindo os valores para low ou para high
+traits_3 <- traits_2
+
+for (col in continuous_col) {
+  
+  root <- sub("_(min|low|high|max)$", "", col)
+  
+  col_low  <- paste0(root, "_low")
+  col_high <- paste0(root, "_high")
+  
+  vals <- traits_3[[col]]
+  
+  idx <- grepl("^\\d+\\.?\\d*-\\d+\\.?\\d*$", vals)
+  
+  low_vals  <- sub("^(\\d+\\.?\\d*)-.*", "\\1", vals[idx])
+  high_vals <- sub(".*-(\\d+\\.?\\d*)$", "\\1", vals[idx])
+  
+  traits_3[[col_low]][idx]  <- low_vals
+  traits_3[[col_high]][idx] <- high_vals
+  
+  traits_3[[col]][idx] <- NA_character_
+  
+}
+
+# traits_2$inflorescence_length_min[grepl("-", traits_2$inflorescence_length_min)]
+# which(grepl("-", traits_2$inflorescence_length_min) == T)
+# 
+# traits_3$inflorescence_length_low[which(grepl("-", traits_2$inflorescence_length_min) == T)]
+# traits_3$inflorescence_length_high[which(grepl("-", traits_2$inflorescence_length_min) == T)]
+
+traits_2 <- traits_3
+
+unique(unlist(unname(traits[continuous_col])))
+
+unique(unlist(unname(traits_2[continuous_col])))
+
+#=====================#
+# 4.SAVIND DATASET ####
+#=====================#
+
+write.csv(traits_2, "3.outputs/corrected_data-continuous_cols-20260408.csv", 
+          fileEncoding = "UTF-8")
