@@ -1,13 +1,14 @@
 #======================#
 #----- setup ---------- 
 #2026.04.07
-setwd("~/Documents/Labis/Dados") #defining work directory
+#setwd("~/Documents/Labis/Dados") #defining work directory
+
 if (!require(librarian)) install.packages("librarian"); library("librarian")
 librarian::shelf(phytools, dplyr, tidyr, purrr, vegan, tidyverse,ape, stringr, readr) #installing and/or loading packages
 #===============================================================#
 # 1. read complete dataset
 #===============================================================#
-morphodata <- read.csv("1.datasets/mimoseae_species_cleaned.csv")
+morphodata <- read.csv("1.datasets/mimoseae_species_clean.csv")
 #3174 obs and 84 variables
  
 morphodata %>% 
@@ -44,8 +45,9 @@ cols <- c("inflorescence_length_min",
           "corolla_lobe_width_low",
           "filament_length_min",
           "filament_length_low")
-traits[cols] <- lapply(traits[cols], \(v) ifelse(is.na(v), NA, 1))
+traits[cols] <- lapply(traits[cols], \(v) ifelse(is.na(v), NA, 1)) #aqui todas as colunas que são min e low estão sendo preenchidas com 1
 
+View(traits[cols])
 
 # Data treatment ==============================================================
 
@@ -82,9 +84,11 @@ for (root in range_traits) {
   
   ### only proceed if all columns exist for this root
   if (length(min_col) && length(low_col) && length(high_col) && length(max_col)) {
-    traits <- update_trait_values(traits, min_col[1], low_col[1], high_col[1], max_col[1])
+    traits <- update_trait_values(traits, min_col[1], low_col[1], high_col[1], max_col[1]) #aqui, update_trait_values está sendo aplicada apenas para a primeira ocorrência. 
   }
 }
+
+sum(is.na(traits)) #166507
 
 ## summarise continuous and discrete traits -----------------------------------
 
@@ -150,6 +154,10 @@ continuous_pattern <- "(length|lenght|width|diameter|height)"
 continuous_traits <- str_remove(low_cols[str_detect(low_cols, continuous_pattern)], "_low.*")
 #meristic_traits   <- str_remove(low_cols[str_detect(low_cols, discrete_pattern)], "_low.*")
 
+#antes de aplicar essa sumarização, os traços contínuos precisam ser tratados, pois neles ocorrem coisas como length = (1)2-3(-4)
+unique(morphodata$inflorescence_length_min) #no morphodata, o original. porque no traits só vai ter 1 ou NA:
+unique(traits$inflorescence_length_min) #no script 2.scripts/1.continuous_data_cleaning.R estamos fazendo isso
+
 ### apply summarization
 traits <- traits %>%
   {
@@ -180,6 +188,8 @@ traits <- traits %>%
       } %>%
   select(-matches("(_min|_low|_high|_max)"))
 
+sum(is.na(traits)) #69092
+
 #now we have 43 variables 
 
 ## unit standardization -------------------------------------------------------
@@ -188,7 +198,7 @@ for (var in continuous_traits) {
   unit_col <- paste0(var, "_unit")
   
   ### make sure values are numeric
-  traits[[var]] <- as.numeric(as.character(traits[[var]]))
+  traits[[var]] <- as.numeric(as.character(traits[[var]])) #só funcionará se todos os traços nas colunas forem contínuos, caso contrário gera NA
   
   ### meters to cm
   idx_m <- !is.na(traits[[unit_col]]) & traits[[unit_col]] == "m"
@@ -220,9 +230,9 @@ names(traits_percent[traits_percent < 30])
 traits_filtered <- traits[, c(TRUE, trait_completeness >= 30)]
 
 #now i will keep 30% filtered columns and remove taxa with less than 60% completeness
-species_completeness <- rowMeans(!is.na(traits_filtered[,-1])) * 100
-traits_filtered$species_completeness <- species_completeness
-write.csv(traits_filtered, "4.outputs/traits_filtered.csv", row.names = F)
+#species_completeness <- rowMeans(!is.na(traits_filtered[,-1])) * 100
+traits_filtered$species_completeness <- species_completeness # como foi tudo transformado em 1, o nome das espécies tbm foram perdidos
+#write.csv(traits_filtered, "4.outputs/traits_filtered.csv", row.names = F)
 
 #remove species less than 60% completeness
 traits_final <- traits_filtered %>%
@@ -230,7 +240,7 @@ traits_final <- traits_filtered %>%
   dplyr::select(-species_completeness)
 #now we have 1773 species
 
-write.csv(traits_final,"final_species_filtered_data.csv", row.names = F)
+#write.csv(traits_final,"final_species_filtered_data.csv", row.names = F)
 
 traits_final <- traits_final %>% 
   separate(taxon, into = c("genus", "epithet"),
