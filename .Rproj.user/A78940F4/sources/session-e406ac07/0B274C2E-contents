@@ -1,0 +1,218 @@
+#============#
+# 1. HEAD ####
+#============#
+
+if (!require(librarian)) install.packages("librarian"); library("librarian")
+librarian::shelf(phytools, dplyr, tidyr, purrr, vegan, tidyverse,ape, stringr, readr) #installing and/or loading packages
+
+traits <- read.csv("3.outputs/corrected_data-continuous_cols-20260408.csv")
+
+#======================#
+# 2. DATA TREATMENT ####
+#======================#
+
+## resolve wrong placement of cont trait values -------------------------------
+
+## data extraction had problems dealing with min-low-high-max
+update_trait_values <- function(traits, min_col, low_col, high_col, max_col) {
+  ### find indices for min→low and max→high separately
+  min_to_low <- which(is.na(traits[[low_col]]) & !is.na(traits[[min_col]]))
+  max_to_high <- which(is.na(traits[[high_col]]) & !is.na(traits[[max_col]]))
+  
+  ### only update where needed, then set min/max to NA
+  if (length(min_to_low)) {
+    traits[[low_col]][min_to_low] <- traits[[min_col]][min_to_low]
+    traits[[min_col]][min_to_low] <- NA
+  }
+  if (length(max_to_high)) {
+    traits[[high_col]][max_to_high] <- traits[[max_col]][max_to_high]
+    traits[[max_col]][max_to_high] <- NA
+  }
+  
+  return(traits)
+}
+
+### find all columns ending with _min_, _low_, _high_, or _max_ (followed by anything)
+cols <- names(traits)
+range_traits <- unique(sub("(.+)_min(_|$).*$", "\\1", cols[grepl("_min(_|$)", cols)]))
+
+traits_2 <- traits #monique: só pra gnt comparar e ver se deu tudo certo
+
+for (root in range_traits) {
+  min_col  <- grep(paste0("^", root, "_min(_|$)"),  cols, value = TRUE) 
+  low_col  <- grep(paste0("^", root, "_low(_|$)"),  cols, value = TRUE)
+  high_col <- grep(paste0("^", root, "_high(_|$)"), cols, value = TRUE)
+  max_col  <- grep(paste0("^", root, "_max(_|$)"),  cols, value = TRUE)
+  
+  n <- min(length(min_col), length(low_col), length(high_col), length(max_col))
+  
+  if (n > 0) {
+    for (i in seq_len(n)) {
+      traits_2 <- update_trait_values(
+        traits_2,
+        min_col[i],
+        low_col[i],
+        high_col[i],
+        max_col[i]
+      )
+    }
+  }
+}
+
+### only proceed if all columns exist for this root
+#if (length(min_col) && length(low_col) && length(high_col) && length(max_col)) {
+# traits <- update_trait_values(traits, min_col[1], low_col[1], high_col[1], max_col[1])
+#}
+#} # monique: isso aqui tava usando só a primeira coluna de min, low etc... 
+
+# monique: comentei umas coisas e vou deixra aqui, mas era só checando pra ver se deu tudo certo e aparentemente tá td beleza agora
+# traits$inflorescence_length_min[traits$taxon == "Calliandra_hirsuta"]
+# traits$inflorescence_length_low[traits$taxon == "Calliandra_hirsuta"]
+# traits_2$inflorescence_length_min[traits_2$taxon == "Calliandra_hirsuta"]
+# traits_2$inflorescence_length_low[traits_2$taxon == "Calliandra_hirsuta"]
+
+# traits$inflorescence_length_min[traits$taxon == "Acacia_ampliata"]
+# traits$inflorescence_length_low[traits$taxon == "Acacia_ampliata"]
+# traits_2$inflorescence_length_min[traits_2$taxon == "Acacia_ampliata"]
+# traits_2$inflorescence_length_low[traits_2$taxon == "Acacia_ampliata"]
+# 
+# traits$inflorescence_length_min[traits$taxon == "Zygia_picramnioides"]
+# traits$inflorescence_length_low[traits$taxon == "Zygia_picramnioides"]
+# traits_2$inflorescence_length_min[traits_2$taxon == "Zygia_picramnioides"]
+# traits_2$inflorescence_length_low[traits_2$taxon == "Zygia_picramnioides"]
+
+# monique: porque tudo parece tar certo, vou substituir traits por traits_2
+traits <- traits_2
+
+## summarise continuous and discrete traits -----------------------------------
+
+# para dados contínuos, usaremos apenas os valores em low e high
+
+#verificando se existe algo que tem informação em min mas não tem em low ou se tem em max mas não tem em high
+min_cols <- unlist(lapply(range_traits, function(x) grep(paste0("^", x, 
+                                                                "_min(_|$)"),  cols, value = TRUE)))
+low_cols <- unlist(lapply(range_traits, function(x) grep(paste0("^", x, 
+                                                                "_low(_|$)"),  cols, value = TRUE)))
+high_cols <- unlist(lapply(range_traits, function(x) grep(paste0("^", x, 
+                                                                 "_high(_|$)"), cols, value = TRUE)))
+max_cols  <- unlist(lapply(range_traits,  function(x) grep(paste0("^", x, 
+                                                                  "_max(_|$)"), cols, value = TRUE)))
+any(sapply(seq_along(min_cols), function(i) {
+  idx <- !is.na(traits[[min_cols[i]]]) & traits[[min_cols[i]]] != "" &
+    (is.na(traits[[low_cols[i]]]) | traits[[low_cols[i]]] == "")
+  any(idx)
+}))
+
+any(sapply(seq_along(max_cols), function(i) {
+  idx <- !is.na(traits[[max_cols[i]]]) & traits[[max_cols[i]]] != "" &
+    (is.na(traits[[high_cols[i]]]) | traits[[high_cols[i]]] == "")
+  any(idx)
+}))
+
+#já que não há nada que tenha em min e max que não tenha valores em low e high, vou remover as colunas
+#min e max e tirar a média entre low e high (se só houver apenas um valor, ele será usado)
+# e reduzir o dataset
+
+traits_2 <- traits
+
+for (i in seq_along(low_cols)) {
+  
+  low  <- as.numeric(traits_2[[low_cols[i]]])
+  high <- as.numeric(traits_2[[high_cols[i]]])
+  
+  mean_col <- sub("_low$", "_mean", low_cols[i])
+  
+  traits_2[[mean_col]] <- rowMeans(
+    cbind(low, high),
+    na.rm = TRUE
+  )
+}
+
+#verificando
+# all.equal(traits_2$height_mean, rowMeans(cbind(as.numeric(traits_2$height_low),
+#                as.numeric(traits_2$height_high)),na.rm = TRUE))
+
+traits_3 <- traits_2
+
+# removendo colunas com low, min, max, high (manter só mean)
+continuous_col <- c(min_cols, low_cols, high_cols, max_cols)
+traits_3 <- traits_3[!colnames(traits_3) %in% continuous_col]
+#44 variaveis e 3172 obs 
+
+traits_2 <- trait_3
+## unit standardization -------------------------------------------------------
+colnames(traits_2) <- sub("calyx_lobe_length_unit.", "calyx_lobe_length_unit", colnames(traits_2))
+
+cols <- names(traits_2)
+range_traits <- unique(sub("(.+)_mean(_|$).*$", "\\1", cols[grepl("_mean(_|$)", cols)]))
+unit_col <- paste(range_traits, "unit", sep = "_")
+unit_col[!unit_col %in% colnames(traits_2)]
+sapply(traits_2[unit_col], function (x) unique(x))
+
+#min_cols <-  unlist(lapply(range_traits, function(x) paste(x, "min", sep = "_")))
+#low_cols <- unlist(lapply(range_traits, function(x) paste(x, "low", sep = "_")))
+#high_cols <- unlist(lapply(range_traits, function(x) paste(x, "high", sep = "_")))
+#max_cols  <- unlist(lapply(range_traits, function(x) paste(x, "max", sep = "_")))
+
+continuous_col
+
+sum(is.na(traits_3)) #70012
+
+traits_2 <- traits_3
+#[PAREI AQUI]
+
+for (var in unit_col) {
+  unit_col <- paste0(var, "_unit")
+  
+  ### make sure values are numeric
+  traits_2[[var]] <- as.numeric(as.character(traits_2[[var]]))
+  
+  ### meters to cm
+  idx_m <- !is.na(traits_2[[unit_col]]) & traits_2[[unit_col]] == "m"
+  traits_2[[var]][idx_m] <- traits_2[[var]][idx_m] * 100
+  
+  ### decimeters to cm
+  idx_dm <- !is.na(traits_2[[unit_col]]) & traits_2[[unit_col]] == "dm"
+  traits_2[[var]][idx_dm] <- traits_2[[var]][idx_dm] * 10
+  
+  ### millimeters to cm
+  idx_mm <- !is.na(traits_2[[unit_col]]) & traits_2[[unit_col]] == "mm"
+  traits_2[[var]][idx_mm] <- traits_2[[var]][idx_mm] / 10
+  
+}
+
+sum(is.na(traits_3)) #93086
+
+#now unit col can be deleted 
+traits_2 <- traits_2 %>%
+  select(-contains("_unit"))
+
+#traits contain 31 variables
+colnames(traits)
+
+#checking traits with less than 15% completeness
+traits_percent <- colMeans(!is.na(traits)) * 100
+names(traits_percent[traits_percent < 15])
+trait_completeness <- colMeans(!is.na(traits[,-1])) * 100 
+#checking less than 30% 
+names(traits_percent[traits_percent < 30])
+traits_filtered <- traits[, c(TRUE, trait_completeness >= 30)]
+
+#now i will keep 30% filtered columns and remove taxa with less than 60% completeness
+species_completeness <- rowMeans(!is.na(traits_filtered[,-1])) * 100
+traits_filtered$species_completeness <- species_completeness
+write.csv(traits_filtered, "4.outputs/traits_filtered.csv", row.names = F)
+
+#remove species less than 60% completeness
+traits_final <- traits_filtered %>%
+  dplyr::filter(species_completeness >= 60) %>%
+  dplyr::select(-species_completeness)
+#now we have 1773 species
+
+write.csv(traits_final,"final_species_filtered_data.csv", row.names = F)
+
+traits_final <- traits_final %>% 
+  separate(taxon, into = c("genus", "epithet"),
+           sep = "_")
+unique(traits_final$genus)
+traits_final %>% distinct() %>% count(genus, name = "traits_final")
