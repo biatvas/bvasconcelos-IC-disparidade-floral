@@ -113,14 +113,16 @@ NGS_acacia <- c(
   "Paraserianthes_lophantha"
 )
 
-morphodata$nitfix <- as.integer(morphodata$taxon %in% phylo_source$tip.label)
-morphodata$NGS_acacia <- as.integer(morphodata$taxon %in% NGS_acacia) #conferindo com dados do Daniel
+acacia <-  
+  morphodata %>%
+  filter(str_detect(taxon, "Acacia_"))
 
-table(morphodata$NGS_acacia)
-#0    1 
-#3085   87
-length(NGS_acacia)
-#108
+acacia$nitfix <- as.integer(acacia$taxon %in% phylo_source$tip.label)
+acacia$NGS_acacia <- as.integer(acacia$taxon %in% NGS_acacia) #conferindo com dados do Daniel
+
+table(acacia$NGS_acacia)
+#  0    1 
+# 1067   86 
 
 #save dataset with new colnames
-write.csv(morphodata, "4.outputs/species_data_source.csv", row.names = FALSE)
+write.csv(acacia, "4.outputs/acacia_data_source.csv", row.names = FALSE)
