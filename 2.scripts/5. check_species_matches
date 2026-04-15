@@ -1,11 +1,10 @@
 # Species data  -----------------------------------
-mimoseae_generos <- read.csv("4.outputs/mimoseae_generos.csv")
-morphodata <- read.csv("1.datasets/mimoseae_species_clean.csv")
+morphodata <- read.csv("1.datasets/continuous_data_cleaned-20260410.csv")
 phylo_source <- read.tree("3.trees/mimosoid_branchesoptimized_clean_updated.tre")
 NGS_acacia <- c(
   "Acacia_ampliceps",
-  "Acacia_colei_var_colei",
-  "Acacia_deltoidea_subsp_deltoidea",
+  "Acacia_colei_colei",
+  "Acacia_deltoidea_deltoidea",
   "Acacia_kelleri",
   "Acacia_lycopodiifolia",
   "Acacia_paradoxa",
@@ -15,15 +14,15 @@ NGS_acacia <- c(
   "Acacia_tumida",
   "Acacia_acinacea",
   "Acacia_acuminata",
-  "Acacia_alata_var_biglandulosa",
+  "Acacia_alata_biglandulosa",
   "Acacia_alleniana",
   "Acacia_ancistrocarpa",
-  "Acacia_ancistrophylla_var_lissophylla",
+  "Acacia_ancistrophylla_lissophylla",
   "Acacia_anthochaera",
   "Acacia_aptaneura",
   "Acacia_auriculiformis",
   "Acacia_ausfeldii",
-  "Acacia_baueri_subsp_baueri",
+  "Acacia_baueri_baueri",
   "Acacia_binervata",
   "Acacia_brachybotrya",
   "Acacia_calyculata",
@@ -32,35 +31,35 @@ NGS_acacia <- c(
   "Acacia_concurrens",
   "Acacia_conferta",
   "Acacia_coolgardiensis",
-  "Acacia_coriacea_subsp_pendens",
+  "Acacia_coriacea_pendens",
   "Acacia_crassicarpa",
   "Acacia_crassuloides",
   "Acacia_cyclops",
-  "Acacia_deanei_subsp_paucijuga",
+  "Acacia_deanei_paucijuga",
   "Acacia_denticulosa",
   "Acacia_diastemata",
   "Acacia_divergens",
   "Acacia_doratoxylon",
-  "Acacia_drummondii_subsp_drummondii",
+  "Acacia_drummondii_drummondii",
   "Acacia_elata",
   "Acacia_eremaea",
-  "Acacia_excelsa_subsp_excelsa",
+  "Acacia_excelsa_excelsa",
   "Acacia_falcata",
   "Acacia_falciformis",
   "Acacia_fimbriata",
   "Acacia_floribunda",
-  "Acacia_genistifolia_subsp_genistifolia",
+  "Acacia_genistifolia_genistifolia",
   "Acacia_glutinosissima",
   "Acacia_gonocarpa",
   "Acacia_grasbyi",
   "Acacia_guymeri",
   "Acacia_halliana",
-  "Acacia_heteroneura_var_jutsonii",
+  "Acacia_heteroneura_jutsonii",
   "Acacia_humifusa",
-  "Acacia_inceana_subsp_conformis",
-  "Acacia_julifera_subsp_julifera",
+  "Acacia_inceana_conformis",
+  "Acacia_julifera_julifera",
   "Acacia_juncifolia",
-  "Acacia_lanigera_var_lanigera",
+  "Acacia_lanigera_lanigera",
   "Acacia_ligustrina",
   "Acacia_longipedunculata",
   "Acacia_longispinea",
@@ -72,7 +71,7 @@ NGS_acacia <- c(
   "Acacia_montana",
   "Acacia_murrayana",
   "Acacia_nervosa",
-  "Acacia_neurophylla_subsp_erugata",
+  "Acacia_neurophylla_erugata",
   "Acacia_nigricans",
   "Acacia_orbifolia",
   "Acacia_oswaldii",
@@ -81,22 +80,22 @@ NGS_acacia <- c(
   "Acacia_pilligaensis",
   "Acacia_pravifolia",
   "Acacia_preissiana",
-  "Acacia_pulchella_var_pulchella",
+  "Acacia_pulchella_pulchella",
   "Acacia_pycnantha",
   "Acacia_quadrimarginea",
-  "Acacia_ramulosa_var_ramulosa",
+  "Acacia_ramulosa_ramulosa",
   "Acacia_redolens",
   "Acacia_rostellifera",
   "Acacia_rothii",
   "Acacia_saligna",
   "Acacia_scalena",
-  "Acacia_sclerophylla_var_sclerophylla",
+  "Acacia_sclerophylla_sclerophylla",
   "Acacia_shirleyi",
   "Acacia_sibirica",
   "Acacia_stenophylla",
   "Acacia_stenoptera",
   "Acacia_subcontorta",
-  "Acacia_sulcata_var_sulcata",
+  "Acacia_sulcata_sulcata",
   "Acacia_tetragonophylla",
   "Acacia_torulosa",
   "Acacia_trachycarpa",
@@ -106,23 +105,25 @@ NGS_acacia <- c(
   "Acacia_ulicifolia",
   "Acacia_verniciflua",
   "Acacia_verriculum",
-  "Acacia_victoriae_subsp_victoriae",
-  "Acacia_wickhamii_subsp_cassitera",
+  "Acacia_victoriae_victoriae",
+  "Acacia_wickhamii_cassitera",
   "Acacia_wilhelmiana",
-  "Acacia_yorkrakinensis_subsp_acrita",
+  "Acacia_yorkrakinensis_acrita",
   "Paraserianthes_lophantha"
 )
 
+
+all_taxa <- union(morphodata$taxon, NGS_acacia) %>%
+  union(phylo_source$tip.label)
+all_taxa_df <- data.frame(taxon = all_taxa)
+morphodata_expanded <- full_join(all_taxa_df, morphodata, by = "taxon")
+
 acacia <-  
-  morphodata %>%
+  morphodata_expanded %>%
   filter(str_detect(taxon, "Acacia_"))
 
-acacia$nitfix <- as.integer(acacia$taxon %in% phylo_source$tip.label)
+acacia$Phylo_nitfix <- as.integer(acacia$taxon %in% phylo_source$tip.label)
 acacia$NGS_acacia <- as.integer(acacia$taxon %in% NGS_acacia) #conferindo com dados do Daniel
+acacia$flora_AUS_traits <- as.integer(acacia$taxon %in% morphodata$taxon)
 
-table(acacia$NGS_acacia)
-#  0    1 
-# 1067   86 
-
-#save dataset with new colnames
 write.csv(acacia, "4.outputs/acacia_data_source.csv", row.names = FALSE)
