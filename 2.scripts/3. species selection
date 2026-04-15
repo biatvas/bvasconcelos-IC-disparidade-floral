@@ -1,0 +1,195 @@
+#===============================================================#
+# Head ----------------------------------------------------------------------
+
+setwd("~/bia/Labis/IC/Dados") #defining work directory
+if (!require(librarian)) install.packages("librarian"); library("librarian")
+librarian::shelf(phytools, dplyr, tidyr, purrr, factoextra, vegan, tidyverse,ape, stringr, readr,
+                 tidytree, ggtree) #installing and/or loading packages
+
+#===============================================================#
+# 1. read phylogeny ---- 
+tree_nitfix <- read.tree("3.trees/mimosoid_calibrated_clean_updated.tre")
+
+#===============================================================#
+# 2. check species names
+
+sp_nitfix <- tree_nitfix$tip.label
+
+#===============================================================#
+# 3. correction of names 
+
+# Função para padronizar nomes
+clean_names <- function(x){
+  x %>%
+    str_replace_all("_", " ") %>%
+    str_trim()
+}
+
+sp_nitfix <- clean_names(sp_nitfix)
+
+#===============================================================#
+# 4. reading morpho data 
+#===============================================================#
+morpho <- read.csv("1.datasets/mimos_features.csv")
+morpho$species <- clean_names(morpho$species)
+
+#checking NA in each species 
+morpho$na_percent <- rowMeans(is.na(morpho[,7:82])) * 100
+
+#===============================================================#
+# 5. checking species from phylogeny 
+#===============================================================#
+nitfix_genus_count <- sp_nitfix %>% 
+  tibble(species = .) %>% 
+  separate(species, into = c("genus", "epithet"),
+           sep = " ") %>% 
+  distinct() %>% 
+  count(genus, name = "n_nitfix_species")
+
+morpho$phylo <- morpho$species %in% sp_nitfix #check which species are in phylo 
+sum(morpho$phylo, na.rm = TRUE) #1283 sp, sendo que temos 1219 sp no nitfix
+#conferir espécies que estão com nomes repetidos
+morpho_with_phylo <- morpho %>% filter(phylo == TRUE)
+write.csv(morpho_with_phylo, "4.outputs/species_features_phylo_clean.csv", row.names = FALSE)
+#vou excluir os tips duplicados dessa tabela com apenas sp da phylo 
+
+especies_duplicadas <- morpho_with_phylo$species[duplicated(morpho_with_phylo$species)]
+#118 especies duplicadas 
+write.table(especies_duplicadas, file = "4.outputs/duplicate_data_tips.txt", row.names = FALSE)
+#clean duplicate tips from dataset 
+# open cleaned dataset after manual check 
+morpho <- read.csv("4.outputs/species_features_phylo_clean_check.csv")
+#agora o dataset contêm 1168 espécies 
+
+#===============================================================#
+# 6. SELECIONAR 10% DAS ESPÉCIES POR GÊNERO
+#===============================================================#
+mimoseae_generos <- read.csv("4.outputs/mimoseae_generos.csv")#tabela com numero de especies em cada genero de mimoseae
+mimoseae_generos <- mimoseae_generos %>% separate(Genero, into = c("genero", "author"), 
+                                    sep = " ")
+#calculating the percentage of each genus 
+mimoseae_generos <- mimoseae_generos %>%
+  mutate(
+    spp = as.numeric(spp),
+    n_target = if_else( #generos com menos de 5 sp não entram na porcentagem 
+      spp > 5,
+      ceiling(spp * 0.10),
+      spp
+    )
+  )
+#filttering species from phylogeny 
+morpho_phylo <- morpho %>%
+filter(species %in% sp_nitfix)
+#ao inves de fazer isso posso trabalhar com o dataset ja filtrado 
+
+morpho_filtered <- morpho_phylo %>%
+  filter(na_percent <= 65) #usando apenas espécies com menos de 50% de NA 
+
+#creating a column with genus from each species 
+morpho_filtered <- morpho_filtered %>%
+  separate(species, into = c("genus", "epithet"),
+           sep = " ", remove = FALSE)
+
+morpho_filtered <- morpho_filtered %>% select(-"epithet")
+
+#creating a column with genus from each species 
+morpho_phylo <- morpho_phylo %>%
+  separate(species, into = c("genus", "epithet"),
+           sep = " ", remove = FALSE)
+
+#corrigindo o nome da coluna de generos pra extrair no dataset
+mimoseae_generos <- mimoseae_generos %>%
+  rename(genus = genero)
+#inserindo a porcentagem na tabela 
+morpho_with_target <- morpho_phylo %>%
+  left_join(
+    mimoseae_generos %>% select(genus, n_target),
+    by = "genus"
+  )
+
+#excluindo generos que não estão na filogenia 
+morpho_with_target <- morpho_with_target %>%
+  filter(!is.na(n_target))
+
+# sorteio das espécies
+set.seed(123) #permite replicabilidade
+
+morpho_10perc <- morpho_with_target %>%
+  group_by(genus) %>%
+  group_modify(~ {
+    
+    n_needed <- unique(.x$n_target)   # 10% calculado pelo total do gênero
+    n_available <- nrow(.x)           # quantas espécies desse gênero estão na filogenia
+    
+    n_select <- min(n_needed, n_available)
+    
+    slice_sample(.x, n = n_select)
+  }) %>%
+  ungroup()
+
+# salvar nova tabela
+write.csv(morpho_10perc,
+          "4.outputs/morpho_10perc_all.csv",
+          row.names = FALSE)
+
+##===============================================================#
+# 8. visualizar como está a distribuição filogenetica das sp
+#===============================================================#
+sampled_species <- morpho_10perc$species
+
+#===============================================================#
+# 4. criar dataframe com as informações das espécies
+#===============================================================#
+tree_nitfix$tip.label <- clean_names(tree_nitfix$tip.label)
+
+tip_data <- data.frame(
+  label = tree_nitfix$tip.label
+)
+
+tip_data$sampled <- ifelse(tip_data$label %in% sampled_species,
+                           "sampled",
+                           "not_sampled")
+
+
+p <- ggtree(tree_nitfix, size = 0.1) %<+% tip_data +
+  geom_tippoint(aes(color = sampled), size = 0.3) +
+  scale_color_manual(values = c(
+    sampled = "red",
+    not_sampled = "grey80"
+  )) +
+  theme(
+    legend.position = "right"
+  )
+
+#checking selected species
+mimos_data <- read.csv("4.outputs/morpho_10perc_all.csv") #reading morphological dataset
+tree <- read.tree("3.trees/tree_infrasp_clean_updated.tre")
+
+tree$tip.label <- gsub("_", " ", tree$tip.label)
+
+groupInfo <- split(tree$tip.label, gsub(" \\w+", "", tree$tip.label))
+tree <- groupOTU(tree, groupInfo)
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager"); BiocManager::install("ggtree")
+
+sampled_species <- mimos_data$species
+tip_data <- data.frame(
+  label = tree$tip.label
+)
+
+tip_data$selected <- ifelse(tip_data$label %in% sampled_species,
+                            "selected",
+                            "not_selected")
+
+p <- ggtree(tree, layout = "circular", branch.length = "none") 
+cols <- c("selected" = "#481567FF", "not_selected" = "#D3D3D399") 
+gheatmap(p, mimos_data, offset = -0.7, width = 0.2, 
+         colnames = FALSE) +
+  scale_fill_manual(values = cols, breaks = c("selected",
+                                              "not_selected"), 
+                    name = NULL) +
+  geom_tiplab(size = 1.5)
+
+ggsave("mimoseae_genus_nitfix.pdf", plot = p, dpi = 300, width = 6, height = 4, units = "in")
+
