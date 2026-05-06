@@ -127,3 +127,78 @@ acacia$NGS_acacia <- as.integer(acacia$taxon %in% NGS_acacia) #conferindo com da
 acacia$flora_AUS_traits <- as.integer(acacia$taxon %in% morphodata$taxon)
 
 write.csv(acacia, "4.outputs/acacia_data_source.csv", row.names = FALSE)
+
+#TIME SLICE
+#read tree
+phylo <- read.tree("~/Documents/Labis/Dados/3.trees/mimosoid_calibrated_clean_updated.tre")
+#prune only for Acacia
+phylo <- drop.tip(phylo, phylo$tip.label[!grepl("Acacia_", phylo$tip.label)]) #424 acacia
+
+#get clades from time slice
+
+#create a dataframe of consisting of taxon names of one taxon from each clade
+
+
+#compile the clade group in dataset 
+acacia_source <- read.csv("4.outputs/acacia_data_source.csv", 
+                                        na.strings = c("", " ", "NA"))
+
+#salvar dataset so com os taxons escolhidos 
+
+phylo <- read.tree("~/Documents/Labis/Dados/3.trees/mimosoid_calibrated_clean_updated.tre")
+#prune only for Acacia
+phylo <- drop.tip(phylo, phylo$tip.label[!grepl("Acacia_", phylo$tip.label)]) #424 acacia
+
+SLICE10 <- 10
+#for 10MYa
+time_slice10 <- treeSlice(phylo, slice = max(nodeHeights(phylo)) - SLICE10,
+                          trivial = TRUE) 
+
+taxa_time_slice10 <- bind_rows(lapply(time_slice10, function(x) 
+  data.frame(taxon = x$tip.label)),
+  .id = 'clade') %>%
+  mutate(clade = as.numeric(clade)) #38 subclados
+
+clade_sizes10 <- taxa_time_slice10 %>%
+  group_by(clade) %>%
+  summarise(n_species = n())
+
+n10 <- length(time_slice10)
+
+#create a dataframe
+## create a dataframe for time slice
+phylo_taxa <- taxa_time_slice10 %>%
+  mutate(clade = as.character(clade))
+
+#juntar com o dataframe 
+acacia_slice <- left_join(acacia_source, phylo_taxa, by = "taxon")
+
+set.seed(123)
+#selecionar 20% de cada clado 
+
+sampled_acacia <- acacia_slice %>% 
+  filter(!is.na(clade)) %>% #considerando apenas especies na filogenia 
+  group_by(clade) %>%
+  reframe(slice_sample(cur_data(),
+                       n = max(1, round(0.2*n()))))
+#checar a amostragem
+clade_sampling <- acacia_slice %>%
+  filter(!is.na(clade)) %>%
+  group_by(clade) %>%
+  summarise(
+    n_species = n(),
+    n_20perc  = 0.2 * n_species,
+    .groups = "drop"
+  )
+
+sampled_acacia %>%
+  filter(!is.na(clade)) %>%
+  count(clade, name = "n_sampled")
+
+check_selection <- sampled_acacia %>%
+  filter(!is.na(clade)) %>%
+  count(clade, name = "n_sampled") %>%
+  left_join(clade_sampling, by = "clade")
+
+#save new dataset 
+write.csv(sampled_acacia, "4.outputs/acacia_source_selected.csv", row.names = FALSE)
