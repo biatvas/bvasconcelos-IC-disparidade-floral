@@ -128,23 +128,10 @@ acacia$flora_AUS_traits <- as.integer(acacia$taxon %in% morphodata$taxon)
 
 write.csv(acacia, "4.outputs/acacia_data_source.csv", row.names = FALSE)
 
-#TIME SLICE
-#read tree
-phylo <- read.tree("~/Documents/Labis/Dados/3.trees/mimosoid_calibrated_clean_updated.tre")
-#prune only for Acacia
-phylo <- drop.tip(phylo, phylo$tip.label[!grepl("Acacia_", phylo$tip.label)]) #424 acacia
-
-#get clades from time slice
-
-#create a dataframe of consisting of taxon names of one taxon from each clade
-
-
-#compile the clade group in dataset 
 acacia_source <- read.csv("4.outputs/acacia_data_source.csv", 
                                         na.strings = c("", " ", "NA"))
 
-#salvar dataset so com os taxons escolhidos 
-
+#read tree
 phylo <- read.tree("~/Documents/Labis/Dados/3.trees/mimosoid_calibrated_clean_updated.tre")
 #prune only for Acacia
 phylo <- drop.tip(phylo, phylo$tip.label[!grepl("Acacia_", phylo$tip.label)]) #424 acacia
@@ -170,18 +157,18 @@ n10 <- length(time_slice10)
 phylo_taxa <- taxa_time_slice10 %>%
   mutate(clade = as.character(clade))
 
-#juntar com o dataframe 
+#join dataframe
 acacia_slice <- left_join(acacia_source, phylo_taxa, by = "taxon")
 
 set.seed(123)
-#selecionar 20% de cada clado 
+#select 20% 
 
 sampled_acacia <- acacia_slice %>% 
   filter(!is.na(clade)) %>% #considerando apenas especies na filogenia 
   group_by(clade) %>%
   reframe(slice_sample(cur_data(),
                        n = max(1, round(0.2*n()))))
-#checar a amostragem
+#check sampling
 clade_sampling <- acacia_slice %>%
   filter(!is.na(clade)) %>%
   group_by(clade) %>%
