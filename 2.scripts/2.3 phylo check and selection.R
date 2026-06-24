@@ -56,18 +56,11 @@ time_slice <- treeSlice(tree_pruned,
 taxa_time_slice <- bind_rows(lapply(time_slice, function(x) data.frame(taxon = x$tip.label)), .id = 'clade') %>%
   mutate(clade = as.numeric(clade))
 
-#create a dataframe of consisting of taxon names of one taxon from each clade
-phylo_taxa <- bind_rows(lapply(time_slice, 
-                               function(x) data.frame(taxon = x$tip.label)), 
-                        .id = "clade") %>%
-  mutate(clade = as.numeric(clade))
-
 #you can use the argument criterion to choose slice for 
 # million years (my) or phylogenetic diversity (pd)
 
 #===============================================================#
 # 5. checking species from phylogeny =======
-
 #nitfix_genus_count <- sp_nitfix %>% 
 #  tibble(species = .) %>% 
 #  separate(species, into = c("genus", "epithet"),
