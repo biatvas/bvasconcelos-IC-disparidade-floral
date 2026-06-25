@@ -103,12 +103,10 @@ mimoseae_generos <- mimoseae_generos %>%
     )
   )
 
-#ao inves de fazer isso posso trabalhar com o dataset ja filtrado 
-
 #creating a column with genus from each species 
-morpho_filtered <- morpho_filtered %>%
-  separate(species, into = c("genus", "epithet"),
-           sep = " ", remove = FALSE)
+  morpho_filtered <- morpho_phylo %>%
+  separate(taxon, into = c("genus", "epithet"),
+           sep = "_", remove = FALSE)
 
 morpho_filtered <- morpho_filtered %>% select(-"epithet")
 
@@ -120,16 +118,13 @@ morpho_phylo <- morpho_phylo %>%
 #corrigindo o nome da coluna de generos pra extrair no dataset
 mimoseae_generos <- mimoseae_generos %>%
   rename(genus = genero)
+                                    
 #inserindo a porcentagem na tabela 
-morpho_with_target <- morpho_phylo %>%
+morpho_with_target <- morpho_filtered %>%
   left_join(
     mimoseae_generos %>% select(genus, n_target),
     by = "genus"
   )
-
-#excluindo generos que não estão na filogenia 
-morpho_with_target <- morpho_with_target %>%
-  filter(!is.na(n_target))
 
 # sorteio das espécies
 set.seed(123) #permite replicabilidade
