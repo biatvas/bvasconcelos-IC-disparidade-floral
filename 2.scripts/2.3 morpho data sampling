@@ -30,13 +30,11 @@ sum(duplicated(morpho$taxon))
 #Time Slice for taxon sampling 
 # Setup =======================================================================
 ## libraries ------------------------------------------------------------------
-library(phytools)
-library(tidyverse)
-library(ggtree)
 library(viridis)
 library(paletteer)
 library(ggnewscale)
 library(treesliceR)
+
 #we have 1219 species on the phylogeny 
 #morphodata contains 3172 species
 #prune phylogeny with dataset 
