@@ -1,0 +1,240 @@
+"clade","taxon","habit","root_system","inflorescence_type","inflorescence_shape","flower_merosity","bisexual_flowers_presence","male_flowers_presence","heteromorphic_flower_presence","sterile_flower_presence","calyx_shape","stamen_count","filament_color","anther_gland_presence","stemonozone_presence","stamen_tube_presence","staminal_tube_presence","intrastaminal_nectary_presence","nectary_presence","height_mean","inflorescence_length_mean","inflorescence_width_mean","inflorescence_peduncle_length_mean","pedicel_length_mean","pedicel_width_mean","calyx_length_mean","calyx_lobe_length_mean","corolla_length_mean","corolla_lobe_length_mean","corolla_lobe_width_mean","filament_length_mean","na_percent"
+1,"Paraserianthes_lophantha","trees",NA,"racemes",NA,"5-merous",NA,NA,"homomorphic",NA,"shallowly campanulate","96","greenishor lemon-yellow",NA,"obscure",NA,NA,NA,"",800,5.75,NA,1.5,NA,NA,0.26,0.08,0.61,0.22,0.145,1.475,41.3793103448276
+2,"Archidendron_utile","shrubs, rarely trees","","panicled head","","","","","","","","","","","","","","","",150,NA,NA,NA,NA,NA,2.25,NA,7,1.5,NA,NA,27.5862068965517
+3,"Archidendron_jiringa","shrub, tree","","consisting of glomerules or small spikes","consisting of glomerules or small spikes aggregated into panicles","5","","","","","","","","","","","","","",2100,NA,NA,NA,NA,NA,1.5,0.25,4.5,2,NA,9,20.6896551724138
+4,"Archidendron_ellipticum","tree, shrub","","terminal and axillary at the distal leaves, consisting of pedunculate glomerules","terminal and axillary at the distal leaves, consisting of pedunculate glomerules aggregated into panicles","5","","","","","","","white","","","","","","",1450,NA,NA,NA,NA,NA,3.25,0.75,6.75,3,NA,6,20.6896551724138
+5,"Archidendron_robinsonii","tree","","panicled head","","","","","","","","","","","","","","","",850,NA,NA,12.5,NA,NA,5.75,NA,10.5,4.5,NA,NA,24.1379310344828
+6,"Archidendron_chevalieri","tree","","panicled, pedunculate","terminal or axillary, narrow panicled, peduncle","5","","","","","","46","","","","","","","",350,NA,NA,15.5,NA,NA,2.75,NA,5,NA,NA,15,24.1379310344828
+7,"Archidendron_scutiferum","tree, shrub","","consisting of pedunculate glomerules","consisting of pedunculate glomerules, aggregated into panicles","5","","","","","","","white","","","","","","",2000,NA,NA,NA,NA,NA,1.85,0.35,5,2.4,NA,7.5,20.6896551724138
+8,"Archidendron_glomeriflorum","tree, shrub","","pedunculate","","","","","","","","","","","","","","","",500,NA,NA,30,NA,NA,1.3,0.3,4,2.25,NA,NA,20.6896551724138
+9,"Archidendron_ptenopum","tree","","consisting of simple or once-branched pedunculate umbles or corymbs","","5","","","","","","","white","","","","","","",1125,NA,NA,NA,4.5,NA,3,NA,10.75,6,NA,16,20.6896551724138
+10,"Archidendron_glabrum","shrub, tree","","long, slender, racemes","","5","","","","","","","white","","","","","","",700,450,NA,NA,22.5,NA,2.5,1,7.5,3,NA,17.5,13.7931034482759
+11,"Pararchidendron_pruinosum","tree, shrub","","consisting of axillary pedunculate corymbs","","5","","","","","","numerous","white, cream","","","","","","",18,NA,NA,65,4.5,NA,1.5,0.8,6.1,0.75,NA,12,13.7931034482759
+12,"Archidendropsis_granulosa","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+13,"Archidendropsis_fournieri","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+14,"Wallaceodendron_celebicum","tree","","racemes solitary, racemes paired","","","","","","","","","white","","","","","","",45,165,NA,105,9,NA,4,NA,14.25,4.5,NA,37.5,13.7931034482759
+15,"Falcataria_falcata","tree","","spikes","panicle of spikes","5 (6)","","","","","","84","","","","","","","",2500,NA,NA,NA,0,NA,2.55,27.5,6.6,3.2,1.75,16,13.7931034482759
+16,"Inga_tenuicalyx","tree",NA,"spike",NA,NA,NA,NA,NA,NA,NA,"55","white",NA,NA,NA,"present",NA,"",500,2.75,NA,4.25,NA,NA,0.8,0.35,1.15,0.15,NA,2,55.1724137931034
+16,"Inga_adenophylla","tree","","spike","axillary, a congested spike","","","","","","","45","","","","","","","",NA,NA,NA,60,0.25,NA,NA,2,NA,3.5,NA,25,24.1379310344828
+16,"Inga_lallensis","tree",NA,"umbellate","globose",NA,NA,NA,NA,NA,"cup-shaped","40",NA,NA,NA,NA,"present",NA,"",800,0.4,NA,5.5,0.275,NA,NA,0.0375,NA,0.125,NA,0.85,55.1724137931034
+16,"Inga_umbratica","tree",NA,"umbellate",NA,NA,NA,NA,NA,NA,"tubular","20","white",NA,NA,NA,"present",NA,"",2000,NA,NA,0.75,0.2875,NA,NA,0.0275,NA,0.1125,NA,0.9,58.6206896551724
+16,"Inga_stenoptera","tree",NA,"spike",NA,NA,NA,NA,NA,NA,"tubular to narrowly funnel-shaped","40","cream-coloured",NA,NA,"present","present",NA,"",1750,1.25,NA,3.75,NA,NA,NA,0.125,NA,0.225,NA,1.5,55.1724137931034
+16,"Inga_maritima","Shrub or small tree",NA,"spike",NA,NA,NA,NA,NA,NA,NA,"35","white",NA,NA,NA,"present",NA,"",700,2.5,NA,2.25,NA,NA,NA,0.05,NA,0.2,NA,1.2,62.0689655172414
+16,"Inga_microcalyx","tree",NA,"spike","congested",NA,NA,NA,NA,NA,"cup-shaped","30","white",NA,NA,NA,"present",NA,"",800,3,NA,8.5,0.025,NA,NA,0.025,NA,0.175,NA,1.25,51.7241379310345
+16,"Inga_alba","tree","","spike","axillary, often clustered on short leafless axillary shoots, congested spike","","","","","","","25","","","","","","","",NA,NA,NA,12,NA,NA,NA,0.25,NA,0.75,NA,5.25,27.5862068965517
+16,"Inga_mortoniana","tree",NA,"capitate",NA,NA,NA,NA,NA,NA,"tubular or narrowly funnel-shaped, often slightly curved","45","pure white",NA,NA,"present",NA,NA,"",1500,NA,NA,3.5,NA,NA,NA,0.06,0.95,0.15,NA,0.85,58.6206896551724
+16,"Inga_blanchetiana","Tree",NA,"spike or raceme","congested",NA,NA,NA,NA,NA,NA,"75","white",NA,NA,"present","present",NA,"",2000,1.75,NA,1.75,0.2,NA,NA,NA,NA,0.3,NA,2.65,55.1724137931034
+16,"Inga_cordatoalata","tree",NA,"racemose",NA,NA,NA,NA,NA,NA,"cup-shaped","40","white",NA,NA,NA,"present",NA,"",3000,4.25,NA,1.55,0.075,NA,NA,0.025,NA,0.1,NA,0.6,55.1724137931034
+16,"Inga_oerstediana","tree","","spike","axillary, often clustered at the apex, or in the axils of undeveloped leaves on axillary shoots, a congested spike","","","","","","","60","","","","","","","",NA,NA,NA,45,NA,NA,NA,0.75,NA,2.5,NA,17.5,27.5862068965517
+16,"Inga_nobilis",NA,NA,"spike, capitulum or umbel","globose, clavate or unexpanded",NA,NA,NA,NA,NA,NA,"35",NA,NA,NA,"present","present",NA,"",NA,1.1,NA,4.25,0.85,NA,NA,NA,NA,0.175,NA,1.6,62.0689655172414
+16,"Inga_barbata","tree",NA,"spike",NA,NA,NA,NA,NA,NA,NA,"35","white",NA,NA,NA,"present",NA,"",1200,1.5,NA,3.75,NA,NA,NA,NA,NA,0.3,NA,2,65.5172413793103
+16,"Inga_sertulifera",NA,NA,NA,NA,NA,NA,NA,NA,NA,"tubular","50",NA,NA,NA,"present","present",NA,"",NA,NA,NA,5,1.35,NA,NA,0.055,NA,0.225,NA,1.4,65.5172413793103
+16,"Inga_samanensis","tree",NA,"spike",NA,NA,NA,NA,NA,NA,"tubular","33","white",NA,NA,"present","present",NA,"",2000,1.7,NA,1.05,NA,NA,NA,0.025,NA,0.125,NA,1,55.1724137931034
+16,"Inga_herrerae","tree",NA,"a congested spike",NA,NA,NA,NA,NA,NA,NA,"80",NA,NA,NA,"present",NA,NA,"",1500,2.5,NA,1.75,NA,NA,NA,NA,NA,0.35,NA,1.75,68.9655172413793
+16,"Inga_bullatorugosa","small tree",NA,"umbellate","globose",NA,NA,NA,NA,NA,"narrowly funnel-shaped","50",NA,NA,NA,"present","present",NA,"",NA,0.2,NA,0.35,1.25,NA,NA,0.05,NA,0.125,NA,0.95,55.1724137931034
+16,"Inga_sierrae","tree",NA,"spike",NA,NA,NA,NA,NA,NA,NA,"80","white",NA,NA,NA,"present",NA,"",2000,2.25,NA,6,NA,NA,NA,0.2,NA,0.4,NA,2.25,62.0689655172414
+16,"Inga_tonduzii","Tree",NA,"spike",NA,NA,NA,NA,NA,NA,NA,"100","pale cream-coloured",NA,NA,"present","present",NA,"",2500,2.5,NA,2.15,NA,NA,NA,NA,NA,0.45,NA,3,62.0689655172414
+16,"Inga_golfodulcensis","tree",NA,"congested spike",NA,NA,NA,NA,NA,NA,"funnel-shaped","40",NA,NA,NA,NA,"present",NA,"",2500,0.45,NA,1.35,0.05,NA,0.225,0.025,NA,0.15,NA,NA,58.6206896551724
+17,"Inga_ruiziana","tree",NA,"congested spike",NA,NA,NA,NA,NA,NA,NA,"50","white",NA,NA,NA,"present",NA,"",3000,1,NA,2.65,0.025,NA,NA,0.075,NA,0.175,NA,0.95,58.6206896551724
+18,"Inga_umbellifera","tree",NA,"umbellate","globose",NA,NA,NA,NA,NA,"tubular","25","white",NA,NA,NA,"present",NA,"",2000,0.275,NA,3.1,1.35,NA,NA,0.0625,NA,0.175,NA,1.75,51.7241379310345
+19,"Inga_filiformis","tree",NA,"capitate","subglobose",NA,NA,NA,NA,NA,NA,"45","white",NA,NA,"present","present",NA,"",1500,0.25,NA,9.75,0.025,NA,NA,0.3,NA,0.2,NA,1.4,51.7241379310345
+20,"Inga_arenicola","treelet",NA,"capitate",NA,NA,NA,NA,NA,NA,"funnel-shaped","35",NA,NA,NA,"present","present",NA,"",350,NA,NA,6,0.0625,NA,NA,0.25,0.75,0.125,NA,1,55.1724137931034
+21,"Zygia_longifolia","trees",NA,"spikes",NA,"5(-10)-nerved",NA,NA,NA,NA,"campanulate","30","whitish",NA,NA,"present",NA,NA,"",1300,NA,NA,NA,NA,NA,0.105,0.0325,NA,0.095,NA,1.775,58.6206896551724
+21,"Zygia_peckii","trees",NA,"capitula",NA,"5-merous",NA,NA,NA,NA,"campanulate",NA,NA,NA,"present",NA,NA,"present","",650,NA,NA,0.65,0.65,NA,0.26,0.04,0.725,0.14,NA,NA,55.1724137931034
+21,"Zygia_paucijugata","Arborescent shrubs",NA,"capitula",NA,NA,NA,NA,NA,NA,"campanulate",NA,NA,NA,"present",NA,NA,"present","",700,NA,NA,1,NA,NA,0.19,0.065,0.725,0.1,NA,NA,62.0689655172414
+22,"Zygia_lathetica","Slender trees",NA,"pseudoracemes",NA,NA,NA,NA,NA,NA,"campanulate",NA,"lilac",NA,"present",NA,NA,NA,"",1050,2.5,NA,1.15,1.15,NA,0.215,0.0175,1.65,0.235,NA,3.8,51.7241379310345
+23,"Zygia_racemosa","trees",NA,"capitula",NA,"5-merous",NA,NA,NA,NA,"campanulate or hemisphericat","22","ochroleucous, whitish, yellow-tipped, or orange",NA,"present",NA,NA,NA,"",1900,0.1,NA,0.7,NA,NA,0.09,0.01,0.375,0.085,NA,1.325,48.2758620689655
+24,"Zygia_claviflora","Slender multifoliolate cauliflorous trees",NA,"capitula",NA,NA,NA,NA,NA,NA,"campanulate",NA,"red or pink",NA,"present",NA,"present",NA,"",650,NA,NA,0.25,NA,NA,0.08,0.015,0.8,0.11,NA,2.7,55.1724137931034
+25,"Macrosamanea_simabifolia","shrubs",NA,"capitula",NA,NA,NA,NA,NA,NA,"cylindric or slightly dilated above middle",NA,NA,NA,NA,NA,NA,NA,"",400,NA,NA,3.75,NA,NA,0.575,0.105,1.75,0.3,NA,NA,68.9655172413793
+26,"Robrichia_schomburgkii","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+27,"Blanchetiodendron_blanchetii","tree",NA,"capitula",NA,"5-merous",NA,NA,"yes",NA,"turbinate-campanulate or somewhat urn-shaped",NA,"white",NA,"present","present",NA,NA,"",600,4,NA,1.05,0.375,0.035,0.25,0.0175,0.45,0.18,0.11,1.35,34.4827586206897
+28,"Albizia_aurisparsa","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+28,"Albizia_bernieri","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+28,"Albizia_commiphoroides","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+29,"Albizia_tulearensis","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+30,"Albizia_kostermansii","tree","","pedunculate glomerules","pedunculate glomerules aggregated into terminal, shortly, tomentose panicles","5","","","","","","","","","","","","","",30,NA,NA,16,NA,NA,1.9,0.15,5.85,1.75,NA,15,17.2413793103448
+31,"Albizia_procera","tree",NA,"capitula","subglobose","5-merous",NA,NA,NA,NA,"deeply campanulate","30","whitish",NA,"present",NA,"present",NA,"",300,NA,NA,1.3,1.3,NA,0.295,0.04,0.61,0.17,NA,1,41.3793103448276
+32,"Albizia_julibrissin","trees",NA,"pseudoraceme of capitula",NA,NA,"bisexual","staminate","dimorphic",NA,"campanulate or deeply campannlate",NA,"pink or pinkish orange",NA,"the stemonozone 1 mm or less","the filament-tube far-exserted",NA,NA,"",900,6,NA,NA,0.08,NA,0.32,0.05,0.9,0.195,0.105,3.1,37.9310344827586
+33,"Albizia_chevalieri","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+33,"Albizia_carrii","tree","","pedunculate flowers","pedunculate flowers bearing corymbs","5","","","","","","numerous","white","","","","","","",3000,NA,NA,37.5,5,NA,3.25,0.5,7,3,NA,25,13.7931034482759
+34,"Albizia_gummifera","tree","","","","","","","","","","","white, crimson","","","","","","",3000,NA,NA,6.5,0.5,NA,3.75,NA,9.25,NA,NA,NA,24.1379310344828
+35,"Enterolobium_timbouva","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+36,"Enterolobium_barnebianum","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+37,"Chloroleucon_foliolosum","arborescent shrubs",NA,"capitula","hemispherical","5- merous",NA,NA,"present",NA,"campanulate",NA,NA,NA,NA,NA,"present",NA,"",550,NA,NA,1.35,NA,NA,0.13,0.015,0.42,0.135,0.07,1.225,48.2758620689655
+38,"Samanea_saman","tree",NA,"capitula","hemispherical","5-9-merous",NA,NA,"yes",NA,"slenderly vase-shaped",NA,"white proximally, pink or red distally",NA,"present",NA,NA,NA,"",2750,NA,NA,6.25,0.225,0.045,0.59,0.095,1.1,0.255,0.135,3.25,37.9310344827586
+39,"Pseudosamanea_guachapele","tree","","pedunculate, umbellate","","5","","","","","","","","","","","","","",2500,NA,NA,NA,NA,NA,6.5,NA,9.5,NA,NA,NA,31.0344827586207
+40,"Pseudosamanea_carbonaria","Trees",NA,"capitula",NA,"S-merous",NA,NA,"yes",NA,"narrowly campanulate",NA,"white",NA,"present","present",NA,NA,"",500,1.35,NA,3.2,0.275,NA,0.3,0.09,0.54,0.175,NA,1.475,41.3793103448276
+41,"Jupunba_longipedunculata","shrubs and srees",NA,"capitula",NA,"5-merous",NA,NA,NA,NA,"narrowly campanulate","36",NA,NA,"present",NA,NA,NA,"",1100,NA,NA,8.75,NA,NA,0.615,0.12,0.875,0.2,NA,NA,58.6206896551724
+41,"Jupunba_turbinata",NA,NA,"capitulum",NA,NA,NA,NA,"yes",NA,"turbinate",NA,NA,NA,NA,NA,NA,NA,"",NA,1.5,NA,12,0.15,NA,0.4,NA,0.65,NA,NA,NA,68.9655172413793
+41,"Jupunba_ganymedea","trees",NA,"capitula",NA,"S-merous",NA,"present","present",NA,NA,"10",NA,NA,"present",NA,NA,NA,"",2000,1,1.85,2.75,0.065,NA,0.11,0.04,0.41,0.17,0.07,1.55,37.9310344827586
+41,"Jupunba_oppositifolia","trees",NA,"capitula",NA,"5-merous",NA,NA,NA,NA,NA,"47",NA,NA,"present",NA,NA,NA,"",750,0.4,NA,6,0.15,NA,0.38,0.055,0.66,0.265,0.135,1.35,48.2758620689655
+41,"Hydrochorea_leucocalyx","trees",NA,"","","","","","","","",NA,"",NA,"","","","","",2250,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,48.2758620689655
+41,"Jupunba_abbottii","trees",NA,"","","","","","","","",NA,"",NA,"","","","","",800,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,48.2758620689655
+42,"Jupunba_cochleata","tree",NA,"capitula",NA,"5-merous",NA,NA,"yes",NA,"turbinate-campanulate, obtusely 5-angulate",NA,NA,NA,"present",NA,"present",NA,"",1400,NA,NA,NA,0.19,NA,0.21,0.0375,0.495,0.13,NA,NA,55.1724137931034
+43,"Jupunba_adenophora","Macrophyllidious trees",NA,"","","","","","","","",NA,"",NA,"","","","","",2100,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,48.2758620689655
+44,"Punjuba_lehmannii","Macrophyllidious srees",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"campanulate","40",NA,NA,"present",NA,NA,NA,"",950,9,NA,2.5,0.03,NA,0.135,0.05,0.575,0.115,0.0825,NA,48.2758620689655
+45,"Pseudalbizzia_tomentosa","trees",NA,"capitula",NA,"5-merous",NA,NA,"yes",NA,"turbinate, broadly campanulate",NA,"white",NA,"present",NA,NA,NA,"",1400,NA,NA,1.9,0.055,0.045,0.22,0.04,0.45,0.145,NA,1.325,44.8275862068966
+45,"Pseudalbizzia_decandra","Trees",NA,NA,NA,"5- or 6-merous",NA,NA,"TRUE",NA,"campanulate","10",NA,NA,"present",NA,NA,NA,"",2500,NA,NA,1.5,0.065,NA,0.11,0.015,0.37,0.165,0.09,1.4,48.2758620689655
+45,"Pseudalbizzia_sinaloensis","trees",NA,"capitula","subhemispherical","5-merous",NA,NA,"homomorphic",NA,"turbinate-campanulate","36",NA,NA,NA,"present",NA,NA,"",2000,0.15,NA,2.25,NA,NA,0.2,0.05,0.38,0.095,0.07,0.525,41.3793103448276
+46,"Abarema_levelii","trees",NA,"capitula",NA,"5-merous",NA,NA,"yes",NA,"campanulate","30","white",NA,"present",NA,"present",NA,"",900,7,NA,2.65,NA,NA,0.325,0.05,1.35,0.4,0.13,NA,41.3793103448276
+47,"Pithecellobium_dulce","tree",NA,"capitula","subspherical","5-merous","present","present",NA,NA,"campanulate or turbinate-campanulate","26",NA,NA,"present",NA,NA,NA,"",1000,NA,NA,1.2,1.2,0.05,0.165,NA,NA,0.115,0.09,NA,44.8275862068966
+48,"Pithecellobium_furcatum","trees and arborescent shrubs",NA,"spikes",NA,"S-merous",NA,NA,NA,NA,"cylindric or cylindro-campanulate",NA,NA,NA,"present",NA,NA,NA,"",750,0.8,NA,1.7,1.7,NA,0.6,0.105,1,0.21,0.16,3.85,48.2758620689655
+49,"Havardia_albicans","trees",NA,"capitula",NA,"4-merous",NA,NA,NA,NA,"subhemispherical",NA,"white",NA,"present",NA,NA,NA,"",825,NA,NA,0.95,NA,NA,0.185,0.0325,NA,NA,NA,1.125,62.0689655172414
+50,"Havardia_pallens","trees or bushy treelets",NA,"capitula","hemispherical","5(randomly 6)-merous",NA,NA,NA,NA,"shallowly campanulate or hemispherical",NA,NA,NA,"present",NA,NA,NA,"",550,NA,NA,NA,NA,NA,0.19,0.035,0.465,0.16,0.085,1.25,55.1724137931034
+51,"Painteria_elachistophylla","shrubs","","capitula","","4-5","","","","","","28","","","","","","","",NA,NA,NA,3,NA,NA,1.2,0.225,4.7,1.4,0.95,10.5,17.2413793103448
+52,"Gretheria_campylacantha","arborescent shrubs and trees",NA,"capitula",NA,"5-merous",NA,NA,NA,NA,"deeply campanulate",NA,NA,NA,"present",NA,NA,NA,"",800,NA,NA,3,NA,NA,0.295,0.06,0.5,0.09,NA,1.025,58.6206896551724
+53,"Cojoba_graciliflora","shrubs, tree","","capitula","","5","","","","","","21","","","","","","","",800,NA,NA,53,NA,NA,3.75,0.5,12.5,1.375,NA,17.5,17.2413793103448
+54,"Lysiloma_watsonii","tree","","capituliform, suborbicular","","","","","","","","","","","","","","","",NA,5.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,37.9310344827586
+55,"Hesperalbizia_occidentalis","frees",NA,"capitula",NA,"5-merous",NA,NA,"present",NA,"campanulate",NA,"white",NA,"present",NA,NA,NA,"",2500,NA,NA,4.75,NA,NA,0.275,0.055,0.925,0.19,NA,2.2,51.7241379310345
+56,"Calliandra_mollissima","shrubs and treefets",NA,"capitula",NA,"4 (5)-merous",NA,NA,"present",NA,"campanulate",NA,"white",NA,"present",NA,NA,"present","",300,1.9,NA,1.9,NA,NA,0.17,0.0275,0.485,0.11,NA,2.95,44.8275862068966
+56,"Calliandra_brenesii","shrubs",NA,"capitula",NA,"3-4-merous",NA,NA,NA,NA,"campanulate",NA,"scarlet",NA,"present",NA,NA,"present","",250,NA,NA,2.65,0.06,0.05,0.29,0.06,0.975,0.26,NA,3.25,44.8275862068966
+56,"Calliandra_longipes","subshrubs","rhizomes","capitula",NA,NA,NA,NA,"homomorsphic",NA,NA,NA,"whitish",NA,"present","present",NA,"no","",20,NA,NA,12,0.055,0.07,0.255,0.0825,1.09,0.26,NA,2.7,41.3793103448276
+56,"Calliandra_californica","shrubs",NA,"capitula",NA,"5",NA,"some staminate only","homomorphic",NA,"campanulate or hemispherical","17(30)","red-crimson",NA,"present",NA,NA,NA,"",140,NA,NA,1.15,0.0375,0.045,0.145,NA,0.65,0.21,NA,NA,44.8275862068966
+56,"Calliandra_caeciliae","frees",NA,"capitula",NA,"4 (5)-merous",NA,"staminate","variably homoor heteromorphic",NA,"campanulate or deeply campanulate",NA,"pallid proximally, carmine",NA,NA,NA,NA,NA,"",400,NA,NA,0.8,0.03,0.05,0.165,0.0175,NA,0.115,NA,2.55,48.2758620689655
+56,"Calliandra_dysantha","subshrubs","xylopodium","capitula",NA,"5",NA,"yes","yes",NA,"turbinate",NA,"blood-red",NA,"present",NA,NA,"absent","",80,2.75,NA,NA,0.3,NA,0.575,0.17,1.2,NA,NA,4.5,41.3793103448276
+56,"Calliandra_comosa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,96.551724137931
+56,"Calliandra_brevicaulis","herbaceous subshrubs, subherbaceous subshrubs","","capiula cymose-umbilliform","","5-7","","","","","","34","","no","","","","","",NA,NA,NA,65,15.5,NA,4.1,1.1,8.6,3.5,NA,52.5,17.2413793103448
+56,"Calliandra_bella","arborescent shrubs",NA,"capituliform racemes",NA,NA,NA,NA,"yes",NA,"campanulate",NA,"white",NA,"present",NA,NA,"absent","",400,NA,NA,5,0.155,0.105,0.315,0.07,0.8,0.325,NA,4.65,44.8275862068966
+57,"Calliandra_erubescens","Shrubs",NA,NA,NA,"2444-merous",NA,NA,NA,NA,"shallowly campanulate",NA,"rubescent",NA,"present",NA,"present","absent","",225,NA,NA,3.25,0.065,0.15,0.155,0.04,0.56,0.25,NA,2.7,44.8275862068966
+57,"Calliandra_bahiana","shrubs",NA,"capitula",NA,"4 (5)-merous",NA,NA,NA,NA,"shallowly campanulate",NA,"white rubescent",NA,"present",NA,"present","absent","",230,NA,NA,NA,0.08,0.31,0.55,0.09,1.1,0.5,NA,0.38,44.8275862068966
+58,"Acaciella_angustissima","shrubs, trees","","racemes","capitulum like racemes","","","","","","","","","","","","","","",NA,60,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,37.9310344827586
+58,"Acaciella_tequilana","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+59,"Zapoteca_ravenii","shrubs","","capitula","capitula axillary","5","","","","","","","white","","","","","","",4,NA,NA,38,NA,NA,5,NA,4,1,NA,12,20.6896551724138
+60,"Viguieranthus_glaber","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+61,"Viguieranthus_glandulosus","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+62,"Faidherbia_albida","tree","","spike","slender","5","","","","","","","","","","","","","",3000,90,NA,NA,NA,NA,1.35,NA,3.25,NA,NA,NA,27.5862068965517
+63,"Senegalia_kraussiana","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+63,"Senegalia_intsia","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+63,"Senegalia_erythrocalyx","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+63,"Senegalia_pennata","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+64,"Senegalia_interior","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+64,"Senegalia_reniformis","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+64,"Senegalia_gaumeri","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+65,"Senegalia_gilliesii","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+66,"Senegalia_burkei","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+66,"Senegalia_laeta","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+66,"Senegalia_persiciflora","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+67,"Senegalia_caffra","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+68,"Senegalia_macrostachya","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+69,"Senegalia_chundra","Tree",NA,"spicate",NA,NA,NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",600,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,86.2068965517241
+70,"Mariosousa_centralis","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+70,"Mariosousa_heterophylla","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+71,"Pseudosenegalia_feddeana","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+72,"Senegalia_praecox","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+73,"Parasenegalia_miersii","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+74,"Parasenegalia_skleroxyla","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+75,"Mimosa_hilariana","subshrubs","","capitula","ellipsoid","4-merous",NA,NA,NA,NA,"irregularly denticulate","4","",NA,NA,"","",NA,"",115,0.5,NA,NA,NA,NA,0.07,NA,0.185,0.07,0.045,NA,44.8275862068966
+75,"Mimosa_margaritae","","","","","",NA,NA,NA,NA,"","","",NA,NA,"","",NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,65.5172413793103
+75,"Mimosa_bonplandii","shrub or treelet","","capitula","globose","4-merous",NA,NA,NA,NA,"cup-shaped","4","pale yellow",NA,NA,"","",NA,"",200,NA,NA,0.35,NA,NA,0.045,NA,0.23,0.09,0.09,0.25,41.3793103448276
+75,"Mimosa_lactiflua","","","pseudoracemes","","",NA,NA,NA,NA,"","","",NA,NA,"","",NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,65.5172413793103
+75,"Mimosa_sicyocarpa","Scrambling or arborescent shrubs","","capitulum","","",NA,NA,NA,NA,"campanulate","","",NA,NA,"","",NA,"",600,NA,NA,NA,NA,NA,0.05,NA,NA,NA,NA,NA,58.6206896551724
+75,"Mimosa_cruenta","subshrubs","heavy woody rootstock","capitula","globose","(3-)4(-5)-merous",NA,NA,NA,NA,"campanulate","8","bright pink",NA,NA,"","",NA,"",100,NA,NA,2.6,NA,NA,0.095,0.0325,0.3,0.1,0.085,0.475,37.9310344827586
+76,"Mimosa_pectinatipinna","shrubs","","capitula","globose","",NA,NA,NA,NA,"pappiform","","pink or white",NA,NA,"","",NA,"",190,0.45,NA,1.1,NA,NA,0.105,NA,0.195,0.06,0.05,0.4,37.9310344827586
+77,"Mimosa_albida","herbs, bushy shrubs, weakly woody sarmentose vines and treelets","","capitula","globose","4-merous",NA,NA,NA,NA,"minute","4","lilac-, roseor magenta-pink",NA,NA,"","",NA,"",300,0.55,NA,2.5,NA,NA,0.0275,NA,0.23,0.07,0.05,0.575,37.9310344827586
+78,"Mimosa_pudica","subshrubs, herbs","","capitula","ellipsoid","4-merous",NA,NA,NA,NA,"campanulate cup","4","pink",NA,NA,"","",NA,"",120,0.425,NA,2,NA,NA,0.015,NA,0.18,0.07,0.045,0.475,37.9310344827586
+79,"Mimosa_xanthocentra","subshrubs","woody roots or short caudex","capitula","ovoid-ellipsoid","4-merous",NA,NA,NA,NA,"paleaceous-pappiform","4","pink",NA,NA,"","",NA,"",90,0.75,NA,1.25,NA,NA,0.215,NA,0.23,0.11,0.055,0.725,37.9310344827586
+80,"Mimosa_skinneri","short-lived perennial herbs","","capitula","ellipsoid or globose","4-merous",NA,NA,NA,NA,"","4","pink",NA,NA,"","",NA,"",35,NA,NA,4.5,NA,NA,0.02,NA,0.205,NA,NA,0.5,48.2758620689655
+80,"Mimosa_cyclophylla","subshrubs","xylopodium","capitula","globose","4-merous",NA,NA,NA,NA,"paleaceous","4","",NA,NA,"","",NA,"",175,1,NA,6,NA,NA,0.275,NA,0.4,0.18,0.085,0.65,37.9310344827586
+81,"Mimosa_affinis","herbs","","capitula","","",NA,NA,NA,NA,"","","",NA,NA,"","",NA,"",NA,0.3,NA,NA,NA,NA,NA,NA,0.2,NA,NA,0.3,55.1724137931034
+82,"Mimosa_paludosa","shrubs, treelets","","capitula","","4","","","","","","8","pink","","","","","","",3.25,NA,NA,25,NA,NA,2,NA,2.75,1.15,NA,10.5,20.6896551724138
+82,"Mimosa_manidea","rosette-trees","","capitula","ovoid-ellipsoid or globose","",NA,NA,NA,NA,"","","",NA,NA,"","",NA,"",300,1.45,NA,5,NA,NA,NA,NA,0.525,NA,NA,NA,51.7241379310345
+83,"Mimosa_somnians","subshrubs, shrubs and treelets","","capitula","subglobose","4(-5)-merous",NA,NA,NA,NA,"membranous","","pink",NA,NA,"","",NA,"",145,0.575,NA,1.9,NA,NA,0.0425,NA,0.28,0.21,0.085,0.55,37.9310344827586
+84,"Mimosa_pigra","shrubs","adventitiously rooting","capitula","globose","",NA,NA,NA,NA,"","","pink",NA,NA,"","",NA,"",105,0.575,NA,1.2,NA,NA,0.0725,NA,0.165,NA,NA,0.2,44.8275862068966
+85,"Mimosa_orthacantha","Shrubs","","capitula","globose","4-merous",NA,NA,NA,NA,"campanulate","4","pink",NA,NA,"","",NA,"",200,0.6,NA,1.9,NA,NA,0.04,NA,0.245,0.08,0.055,0.675,37.9310344827586
+86,"Mimosa_gemmulata","shrubs","","fl-spikes","","4-merous",NA,NA,NA,NA,"crateriform or shallowly campanulate","8","pink",NA,NA,"","",NA,"",175,8.5,NA,NA,NA,NA,0.06,0.02,0.205,0.13,0.0725,0.6,37.9310344827586
+87,"Mimosa_guaranitica","subshrubs","woody root-stock","capitula","globose","3-merous",NA,NA,NA,NA,"campanulate","6","pink",NA,NA,"","",NA,"",NA,0.525,NA,4.25,0.01,NA,NA,NA,0.255,0.12,0.1,0.525,41.3793103448276
+88,"Mimosa_gracilis","herbs","woody, when young carrot-like, in age knotty and amorphous","capitula","globose","4-merous",NA,NA,NA,NA,"campanulate","8","vivid pink or lilac-pink",NA,NA,"","",NA,"",80,NA,NA,2.75,NA,NA,0.03,NA,0.2,0.17,NA,0.4,44.8275862068966
+89,"Mimosa_antioquensis","shrubs","","capitula","","5","","","","","","","","","","","","","",500,NA,NA,12,NA,NA,0.7,NA,2.3,0.75,0.3,NA,20.6896551724138
+90,"Mimosa_quadrivalvis","Humifuse and herbaceous or frutescent and sarmentose","","capitula","globose","(4-)5-6- merous",NA,NA,NA,NA,"campanulate","10","pink or purplish-pink, sometimes fading whitish",NA,NA,"","",NA,"",120,NA,NA,6.7,0.1,NA,0.045,NA,0.315,0.17,0.0725,0.575,37.9310344827586
+91,"Mimosa_arenosa","subshrubs, shrubs and trees","","spikes","","4-merous",NA,NA,NA,NA,"shakkiwky or shortly campanulate","8","white or cream-white, exceptionally pallid-roseate in fading",NA,NA,"","",NA,"",350,5.25,NA,NA,NA,NA,0.055,0.015,0.225,0.14,0.08,0.425,37.9310344827586
+92,"Mimosa_bimucronata","Trees and bushy treelets","","capitula","globose","4 (5)-merous",NA,NA,NA,NA,"campanulate","8(10)","white",NA,NA,"","",NA,"",550,NA,NA,1.8,NA,NA,0.0725,0.01,0.24,0.11,0.07,0.525,37.9310344827586
+93,"Mimosa_caesalpiniifolia","trees or potentially sarmentose shrubs","","amentiform fl-spikes","","3-merous",NA,NA,NA,NA,"","6","white",NA,NA,"","",NA,"",500,NA,NA,5,NA,NA,0.055,0.015,0.195,0.13,0.08,0.575,37.9310344827586
+94,"Mimosa_borealis","shrubs","","capitula","umbelliform, spherical or hemispherical","4- or 5-merous",NA,NA,NA,NA,"turbinate","8(10)","pink",NA,NA,"","",NA,"",120,0.6,NA,1.65,0.07,NA,0.065,NA,0.245,NA,NA,0.375,41.3793103448276
+94,"Mimosa_spirocarpa","shrubs","","fl-spikes","amentiform","5-merous",NA,NA,NA,NA,"campanulate","10","pink fading whitish",NA,NA,"","",NA,"",NA,8,NA,NA,NA,NA,0.12,0.035,0.245,0.12,0.0725,0.575,41.3793103448276
+94,"Mimosa_moniliformis","Bushy shrubs and small trees","","capitula","globose or ellipsoid","",NA,NA,NA,NA,"campanulate","10","pink-purple",NA,NA,"","",NA,"",300,0.95,NA,1.4,NA,NA,0.08,NA,0.3,0.11,0.06,0.5,37.9310344827586
+94,"Mimosa_monancistra","shrubs","","capitula","oblong","5-merous",NA,NA,NA,NA,"campanulate or turbinate","10","pink",NA,NA,"","",NA,"",180,0.85,NA,1,NA,NA,0.12,0.025,0.24,NA,NA,0.5,41.3793103448276
+94,"Mimosa_adenantheroides","arborescent shrubs","","capitula","oblong-ellipsoid, spiciform, cylindric, or amentiform","5-merous",NA,NA,NA,NA,"campanulate","10","whitish or pale pink",NA,NA,"","",NA,"",250,1.4,NA,2.25,NA,NA,0.165,0.035,0.315,NA,NA,0.6,41.3793103448276
+94,"Mimosa_rhododactyla","arborescent shrubs","","spikes","","4- or 5- or 6-merous",NA,NA,NA,NA,"campanulate or turbinate-campanulate","8","pink",NA,NA,"","",NA,"",450,NA,NA,NA,NA,NA,0.105,0.0175,0.25,0.11,NA,0.45,44.8275862068966
+94,"Mimosa_gentryi","shrubs","","capitula","hemispherical","4- and 5-merous",NA,NA,NA,NA,"campanulate","","lilac",NA,NA,"","",NA,"",250,0.75,NA,2,NA,NA,0.09,NA,0.34,0.13,0.0725,0.525,37.9310344827586
+94,"Mimosa_brevispicata","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+95,"Mimosa_leucaenoides","shrubs and treelets","","capitula","globose","4-merous",NA,NA,NA,NA,"narrowly campanulate","8","pink",NA,NA,"","",NA,"",450,NA,NA,2,NA,NA,0.13,0.02,0.295,NA,NA,0.4,44.8275862068966
+96,"Mimosa_bahamensis","shrubs and treelets","","capitula","globose","4(-5)-merous",NA,NA,NA,NA,"campanulate","8(10)","pink",NA,NA,"","",NA,"",325,NA,NA,1.1,NA,NA,0.115,0.02,0.28,0.11,0.08,0.375,37.9310344827586
+97,"Mimosa_extranea","shrubs or treelets","","capitula","globose","4-S-merous",NA,NA,NA,NA,"narrowly campanulate","","white",NA,NA,"","",NA,"",225,0.5,NA,2.2,2.2,NA,0.09,0.02,0.27,0.13,0.06,0.275,31.0344827586207
+98,"Mimosa_hondurana","vines","","capitula","globose","4-merous",NA,NA,NA,NA,"campanulate","8","white",NA,NA,"","",NA,"",300,NA,NA,NA,NA,NA,0.06,NA,2.15,NA,NA,NA,55.1724137931034
+99,"Mimosa_dormiens","herbs","","capitula","plumply ellipsoid","4(-5)-merous",NA,NA,NA,NA,"","8","pale lilac fading whitish",NA,NA,"","",NA,"",NA,0.575,NA,2.15,NA,NA,NA,NA,0.15,0.07,0.04,0.25,44.8275862068966
+100,"Mimosa_ephedroides","shrubs","","capitula","globose","4(5-)-merous",NA,NA,NA,NA,"campanulate","8(10)","white",NA,NA,"","",NA,"",200,NA,NA,1,0.03,NA,NA,0.035,0.295,NA,NA,0.55,44.8275862068966
+101,"Mimosa_colombiana","vines","","capitula","globose","5- or 6-merous",NA,NA,NA,NA,"campanulate","","white",NA,NA,"","",NA,"",NA,NA,NA,0.7,0.3,NA,0.065,NA,0.225,0.1,NA,0.275,44.8275862068966
+102,"Mimosa_pithecolobioides","arborescent shrubs and round-topped trees","","fl-spikes","amentiform","5-merous",NA,NA,NA,NA,"campanulate","10","cream-colored",NA,NA,"","",NA,"",350,NA,NA,2.25,NA,NA,0.095,0.03,0.225,0.1,0.0375,0.24,37.9310344827586
+103,"Mimosa_townsendii","Treelets","","spikes","","4-merous",NA,NA,NA,NA,"shallowly campanulate","8","white",NA,NA,"","",NA,"",NA,1.15,NA,1.25,NA,NA,0.05,0.01,0.23,0.11,0.075,0.5,37.9310344827586
+104,"Adenopodia_spicata","climbing shrub, scrambling shrub","","spike","often paniculately aggregated, solitary or few in a cluster","","","","","","","","","","","","","","",600,NA,NA,21.5,NA,NA,1.1,0.1,NA,1,NA,NA,24.1379310344828
+105,"Piptadenia_gonoacantha","tree","","terminal pseudoracemes, axillary spikes","","","","","","","","","white, yellowish-cream, rarely light pink","yes","","","","","",11.5,84,9.5,5,NA,NA,0.6,0.15,2.1,1.4,NA,3.25,10.3448275862069
+106,"Piptadenia_adiantoides","liana, shrub","","spikes","spikes in pseudoracemes","","","","","","","","cream-colored, greenish-yellow, rarely light pink, red, vinaceous","yes","","","","","",9,89.5,6.5,13.5,0.2,NA,1.8,0.15,4.1,1.75,NA,5.45,6.89655172413793
+107,"Piptadenia_buchtienii","tree, shrub","","mostly in terminal and axillary pseudoracemes, rarely spikes on leaf axils","","","","","","","","","red to vinaceous","yes","","","","","",7,5.5,9.5,9.5,NA,NA,1.05,0.15,2.1,1.5,NA,5,10.3448275862069
+108,"Piptadenia_paniculata","tree","","mostly in terminal panicles, mostly in terminal pseudoracemes, spike","","","","","","","","","greenish-yellow","yes","","","","","",13,52,7.5,8,0.2,NA,0.5,0.15,1.9,1.4,NA,4.5,6.89655172413793
+109,"Piptadenia_robusta","tree","","axillary pseudoracemes, spike","","","","","","","","","white, red, vinaceous","yes","","","","","",20,90,10.5,8.5,NA,NA,0.85,0.15,2.45,2.3,NA,5,10.3448275862069
+110,"Piptadenia_retusa","shrub, tree","","spikes","spikes in pseudoracemes","","","","","","","","cream-colored, greenish-yellow, pinkish-red","yes","","","","","",2.25,51,6.5,7,0.1,NA,1.1,0.15,2.8,1.8,NA,5.05,6.89655172413793
+111,"Stryphnodendron_guianense","treelets, trees","","spikes","simple thyrsi, cymule of solitary to 4-ternate spikes","","","","","","","","","","","","","","",7,120,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,34.4827586206897
+112,"Pityrocarpa_moniliformis","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+113,"Pityrocarpa_obliqua","shrubs, trees","","","","","","","","","","","greenish-white","","","","","","",3.25,NA,NA,NA,NA,NA,1.2,NA,2.65,NA,NA,6,27.5862068965517
+114,"Pityrocarpa_schumanniana","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+115,"Parapiptadenia_excelsa","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+116,"Marlimorimia_psilostachya","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+117,"Vachellia_xanthophloea","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+117,"Vachellia_pallidifolia","Tree",NA,"heads","globular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",650,NA,NA,3.4,3.4,NA,NA,NA,NA,NA,NA,NA,79.3103448275862
+117,"Vachellia_pachyphloia","shrub or tree",NA,"heads","globular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,NA,NA,3.15,3.15,NA,NA,NA,NA,NA,NA,NA,79.3103448275862
+117,"Vachellia_gerrardi","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+117,"Vachellia_bellula","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+117,"Vachellia_myrmecophila","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+118,"Vachellia_collinsii","tree","","","","5","","","","","","","","","","","","","",10,NA,NA,13,NA,NA,1.2,NA,1.3,NA,NA,2,24.1379310344828
+118,"Vachellia_farnesiana","shrub to small tree",NA,"globose head","globose","5-lobed",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,0.8,0.8,2.55,2.55,0.045,0.145,NA,0.235,NA,NA,0.45,55.1724137931034
+118,"Vachellia_campeachiana","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+118,"Vachellia_pennatula","Tree",NA,"globose head","globose","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,1.1,1.1,2.3,2.3,0.065,0.115,NA,0.23,NA,NA,0.375,55.1724137931034
+119,"Vachellia_bilimekii","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+120,"Vachellia_nebrownii","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+121,"Parkia_nitida","tree","","capitula, biglobos with basal staminoidal fringe, apical parts ellipsoid, apical parts obovoid","","","","","","","","","","","","","","","",40,700,NA,92.5,NA,NA,10.25,1,11.25,2,NA,NA,17.2413793103448
+122,"Parkia_discolor","tree","","capitula, biglobos with basal staminoidal fringe, apically obovoid,","","","","","","","","","","","","","","","",15,80,NA,80,NA,NA,7,0.5,8.25,0.75,NA,NA,17.2413793103448
+123,"Parkia_ulei","tree","","capitula","","","","","","","","","","","","","","","",NA,300,NA,7,NA,NA,3.25,0.5,4,1,NA,NA,20.6896551724138
+124,"Parkia_platycephala","tree","","capitula","","","","","","","","","","","","","","","",18,500,NA,250,NA,NA,9,1.75,11,6.25,NA,NA,17.2413793103448
+125,"Parkia_filicoidea","tree","","","","","","","","","","","","","","","","","",19,80,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,34.4827586206897
+126,"Anadenanthera_peregrina","tree","","globose-capitate","","5","","","","","","10","off-white, golden red","no","","","","","",1500,NA,14,27.5,NA,NA,1.75,NA,2.75,NA,NA,6.5,20.6896551724138
+127,"Desmanthus_fruticosus","shrub, small tree","","heads, very short spikes","","5","","","","","","8","white","no","","","","","",250,17.5,NA,26.5,NA,NA,2.9,0.375,4.05,NA,NA,13,17.2413793103448
+127,"Mezcala_balsensis","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+128,"Leucaena_trichodes","tree, shrub","","capitula","","5","","","","","","10","creamy white","","","","","","",650,NA,10,14,NA,NA,1.95,NA,2.8,NA,NA,5.15,20.6896551724138
+129,"Leucaena_esculenta","tree","","capitula","","5","","","","","","10","white","","","","","","",1250,NA,26.5,27.5,NA,NA,3.3,NA,4.85,NA,NA,12.9,20.6896551724138
+130,"Leucaena_retusa","tree","","capitula","","5","","","","","","10","bright yellow","","","","","","",350,NA,22.5,57.5,NA,NA,4.35,NA,6,NA,NA,12.75,20.6896551724138
+131,"Leucaena_pulverulenta","tree","","capitula","","5","","","","","","10","pale cream-white","","","","","","",1150,NA,17.5,30,NA,NA,1.45,NA,3.95,NA,NA,5.9,20.6896551724138
+132,"Leucaena_cuspidata","tree","","capitula","","5","","","","","","10","pale creamy white","","","","","","",300,NA,14.5,31,NA,NA,2.75,NA,4,NA,NA,6.5,20.6896551724138
+133,"Alantsilodendron_mahafalense","shrub","","head","","","","","","","","","","no","","","","","",400,NA,NA,22.5,NA,NA,1.25,NA,3.125,NA,NA,1.1,24.1379310344828
+134,"Calliandropsis_nervosa","shrub","","","","","","","","","","5","white, pink","no","","","","","",100,NA,NA,4,NA,NA,2,NA,3.75,NA,NA,7,24.1379310344828
+135,"Neptunia_lutea","herb","","pedunculate spike, cylindrical","","5","","","","","","10","yellow","yes","","","","","",2.4,14.5,NA,74,NA,NA,1.85,0.6,3.05,NA,NA,7.3,17.2413793103448
+136,"Lemurodendron_capuronii","tree","","spike","panicle","","","","","","","10","","yes","","","","","",3000,NA,NA,NA,NA,NA,1.375,NA,3.65,NA,NA,5.75,27.5862068965517
+137,"Prosopidastrum_mexicanum","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+138,"Piptadeniopsis_lomentifera","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+139,"Neltuma_laevigata","tree","","racemes, spiciform","","","","","","","","","","","","","","","",6.5,70,NA,NA,NA,NA,1,NA,3.5,NA,NA,NA,27.5862068965517
+139,"Neltuma_flexuosa","trees, large erect polypodial shrubs","","racemes, spiciform","","","","","","","","","","","","","","","",6.5,90,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,34.4827586206897
+140,"Neltuma_ruscifolia","tree","","racemes, spikelike","","","","","","","","","","","","","","","",8.5,115,NA,15,1.6,NA,1.25,NA,3.5,NA,NA,6,17.2413793103448
+141,"Strombocarpa_tamarugo","tree","","spikes","spikes axillary","","","","","","","","","","","","","","",18,50,NA,NA,NA,NA,1.5,NA,4.5,NA,NA,NA,27.5862068965517
+142,"Xerocladia_viridiramis","shrub","","capitate, pedunculate, heads","","5","","","","","","","","","","","","","",1,7,NA,8,NA,NA,1.5,NA,2.5,NA,NA,NA,24.1379310344828
+143,"Prosopis_farcta","shrubs, subshrubs, sometimes shrub-trees","","racemes simple, elongate","","","","","","","","","","yes","","","","","",1.65,80,NA,NA,NA,NA,1,NA,3.75,NA,NA,4.5,24.1379310344828
+144,"Cylicodiscus_gabunensis","tree","","","","","","","","","","","","yes","","","","","",7800,NA,NA,NA,NA,NA,1,NA,2,NA,NA,NA,31.0344827586207
+145,"Newtonia_hildebrandtii","tree","","spikes","","","","","","","","","","no","","","","","",25,65,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,34.4827586206897
+146,"Newtonia_leucocarpa","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+147,"Newtonia_buchananii","tree","","spike","","","","","","","","","","yes","","","","","",25,112.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,34.4827586206897
+148,"Plathymenia_reticulata","tree","","axillary, racemose, erect","","5","","","","","","10","white","yes","","","","","",26,87.5,NA,NA,NA,NA,3,NA,3.75,1.05,NA,6,20.6896551724138
+149,"Entada_elephantina","geoxylic suffrutex","","raceme","axillary spiciform raceme usually confined to the lower part of the stem","","","","","","","","","","","","","","",NA,60,NA,NA,1.5,NA,1.75,NA,3.25,NA,NA,6.5,24.1379310344828
+150,"Entada_goetzei","shrub, tree","","raceme","spiciform raceme","","","","","","","","","","","","","","",550,125,NA,NA,1,NA,1.625,NA,2.75,NA,NA,4.5,20.6896551724138
+151,"Aubrevillea_kerstingii","tree","","racemes","Spiciform racemes","","","","","","","8","","","","","","","",NA,NA,NA,NA,1,NA,0.85,NA,2.75,NA,NA,NA,31.0344827586207
+152,"Piptadeniastrum_africanum","tree","","spiciform racemes","","","","","","","","","","","","","","","",50,75,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,34.4827586206897
+153,"Chidlowia_sanguinea","tree","","panicles","","5","","","","","","10","","","","","","","yes",NA,250,NA,NA,3.25,NA,2,NA,6.5,NA,NA,25,24.1379310344828
+154,"Pentaclethra_macrophylla","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+155,"Calpocalyx_cauliflorus","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+156,"Calpocalyx_aubrevillei","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+157,"Xylia_hoffmannii","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+158,"Xylia_xylocarpa","tree","","round heads pedunculate","","5","","","","","","10","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+159,"Calpocalyx_dinklagei","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+160,"Pseudoprosopis_fischeri","shrub, tree","","","","","","","","","","","","","","","","","",4.5,85,NA,6.5,3.25,NA,1.25,NA,4.25,NA,NA,6.5,17.2413793103448
+161,"Adenanthera_microsperma","tree","","raceme","","5","","","","","","10","","","","","","","",3000,90,NA,NA,2.25,NA,0.625,NA,3,NA,NA,3.75,20.6896551724138
+162,"Tetrapleura_tetraptera","tree","","racemes","","","","","","","","","","","","","","","",6,90,NA,NA,NA,NA,0.75,NA,2.75,NA,NA,3.5,24.1379310344828
+163,"Jacqueshuberia_brevipes","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.3793103448276
+164,"Jacqueshuberia_loretensis","Tree","","Terminal","compound-racemose","","","","","","","","red","","","","","","",2000,NA,NA,NA,21.5,NA,5.25,NA,8.25,NA,NA,40.5,24.1379310344828
+165,"Tetrapterocarpon_septentrionale","tree","","panicles","","4","","","","","","8","","","","","","","",13.5,150,NA,NA,NA,NA,1,NA,1.75,NA,NA,3,24.1379310344828
