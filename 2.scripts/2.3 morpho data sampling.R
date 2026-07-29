@@ -1,6 +1,6 @@
 #===============================================================#
 # Head ----------------------------------------------------------------------
-setwd("~/Documents/Labis/Dados/") #defining work directory
+setwd("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/") #defining work directory
 if (!require(librarian)) install.packages("librarian"); library("librarian")
 librarian::shelf(phytools, dplyr, tidyr, purrr, factoextra, vegan, tidyverse,ape, stringr, readr,
                  tidytree, ggtree) #installing and/or loading packages
@@ -14,7 +14,7 @@ sp_nitfix <- tree_nitfix$tip.label
 # reading morpho data =====
 morpho <- read.csv("3.outputs/continuous_data_cleaned-20260410.csv")
 #checking NA in each species 
-morpho$na_percent <- rowMeans(is.na(morpho[,3:32])) * 100
+morpho$na_percent <- rowMeans(is.na(morpho[,3:31])) * 100
 
 #excluir acacia pois o sampling esta sendo validado separadamente
 morpho <- morpho %>%
@@ -27,6 +27,7 @@ morpho <- morpho %>%
   ungroup()
 
 sum(duplicated(morpho$taxon))
+
 #Time Slice for taxon sampling 
 # Setup =======================================================================
 ## libraries ------------------------------------------------------------------
@@ -39,10 +40,12 @@ library(treesliceR)
 #morphodata contains 1836 species
 #prune phylogeny with dataset 
 tree_pruned <- drop.tip(tree_nitfix, setdiff(tree_nitfix$tip.label,
-                                             morpho$taxon) #745 species 
-
+                                             morpho$taxon))  #745 species 
+                        
 ### time slice
+
 SLICE <- 15
+
 #para os principais grupos de mimoseae 
 #get clades from time slice
 time_slice <- treeSlice(tree_pruned, 
@@ -113,27 +116,30 @@ length(unique(morpho_10perc$genero) %in% unique(morpho_filtered$genero))
 
 # salvar nova tabela
 write.csv(morpho_10perc,
-          "4.outputs/morpho_10perc_all.csv",
+          "3.outputs/morpho_10perc_all.csv",
           row.names = FALSE)
 
 #===============================================================#
-# SELECIONAR ESPÉCIES por CORTE TEMPORAL =====
+# selecionar espécies por corte temporal =====
 data_slice <- left_join(morpho_phylo, taxa_time_slice, by = "taxon")
 
 # morpho_filtered <- data_slice %>%
 #  filter(na_percent <= 50) #usando apenas espécies com menos de 50% de NA 
 #609 especies sobraram aqui 
 
-set.seed(123)
 sampled_species <- data_slice %>% 
   filter(!is.na(clade)) %>% #considerando apenas especies na filogenia 
   group_by(clade) %>%
   reframe(slice_sample(cur_data(),
-                       n = max(1, round(0.2*n()))))
+                       n = max(1, round(0.2*n())))) #20% selecionado
 ##clados com menos de 5 sp nao entram na porcentagem 
 
 #10% selecionou 191 de espécies
 #20% 239 especies 
+
+write.csv(sampled_species,
+          "3.outputs/morpho_10perc_timeslice.csv",
+          row.names = FALSE)
 
 ##===============================================================#
 # visualizar como está a distribuição filogenetica das sp ====
