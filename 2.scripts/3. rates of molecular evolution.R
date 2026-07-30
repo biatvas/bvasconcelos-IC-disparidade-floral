@@ -1,17 +1,17 @@
 #===Molecular evolution analysis======
 #=====2026.3.4======# 
-setwd("C:/Users/Eulália/Desktop/bia/Labis/IC/Dados") #defining work directory
+# setwd() #defining work directory
 
 #extracting terminal branchs lengths 末端枝の長さを取り出すコード
 library(ape)
-tree <- ape:: read.tree("3.trees/mimosoid_calibrated_clean_updated.tre")
+tree <- ape:: read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
 lengths <- tree$edge.length[tree$edge[,2] <= length(tree$tip.label)]
 
 #==========================================================#
 #==========分子進化速度を計算して、表を作る ===============
 #=======calculating molecular evolutionary rates at terminal branches===#
-time_tree <- read.tree("3.trees/mimosoid_calibrated_clean_updated.tre")
-substitution_tree <- read.tree("3.trees/mimosoid_branchesoptimized_clean_updated.tre")
+time_tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
+substitution_tree <- read.tree("4.trees/mimosoid_branchesoptimized_clean_updated.tre")
 
 all.equal.phylo(time_tree, substitution_tree, use.edge.length = FALSE) #checking topology 
 
@@ -26,7 +26,7 @@ molecular_evolutionary_rate <- data.frame(
 )
 
 write.table(molecular_evolutionary_rate,
-            file = "4.outputs/molecular_evolutionary_rates_mimoseae.txt",
+            file = "3.outputs/molecular_evolutionary_rates_mimoseae.txt",
             row.names = FALSE)
 
 #checking rates distribution 
@@ -47,19 +47,22 @@ molecular_evolutionary_rate %>%
 
 #===2026.03.18====#
 # 枝長の比率を計算====
+#calculate rate of branch length 
+
 library(ape)
 library(ggplot2)
 library(circlize)
 
-time_tree <- read.tree("3.trees/mimosoid_calibrated_clean_updated.tre")
-substitution_tree <- read.tree("3.trees/mimosoid_branchesoptimized_clean_updated.tre")
+time_tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
+substitution_tree <- read.tree("4.trees/mimosoid_branchesoptimized_clean_updated.tre")
 
 rates <- substitution_tree$edge.length / time_tree$edge.length
 rates_df <- data.frame(rates = rates)
 
-pdf("4.outputs/distribution_molecular_evolutionary_rates.pdf", width = 7, height = 7)
+pdf("3.outputs/distribution_molecular_evolutionary_rates.pdf", width = 7, height = 7)
 
-# ①分子進化速度のヒストグラムを作成/histogram
+# ① 分子進化速度のヒストグラムを作成/histogram of rates of molecular evolution 
+
 ggplot(rates_df, aes(x = rates)) +
   geom_histogram(binwidth = 0.0005, fill = "#9f9f98", color = "black") +
   labs(title = "Distribution of Molecular Evolutionary Rates",
@@ -69,7 +72,8 @@ ggplot(rates_df, aes(x = rates)) +
 #first we plotted with width = 0.0001 but was too tiny 
 #check for median, min and max for values 
 
-# ②系統樹の色を決める
+# ②系統樹の色を決める choose color for phylogenetic tree 
+
 color_scale <- colorRamp2(c(0.001, 0.0025, 0.010), c("#00a1e9", "#eae8e1", "#ea5532"))
 rate_colors <- color_scale(rates)
 
@@ -78,14 +82,14 @@ color_scale <- colorRamp2(c(0.001, 0.004, 0.015), c("#00a1e9", "#eae8e1", "#ea55
 rate_colors <- color_scale(rates)
 
 
-# ③系統樹をプロット
+# ③系統樹をプロット plot tree 
 plot.phylo(time_tree, type = "fan", align.tip.label = TRUE,
            edge.color = rate_colors, cex = 0.03, 
            edge.width = 0.8, main = "Molecular evolutionary rate")
 
 
-# salvar o plot
-pdf("4.outputs/molecular_evolutionary_rates_2.pdf", width = 7, height = 7)
+# save plot
+pdf("3.outputs/molecular_evolutionary_rates.pdf", width = 7, height = 7)
 
 plot.phylo(time_tree, type = "fan", align.tip.label = TRUE,
            edge.color = rate_colors, cex = 0.05, 
