@@ -1,0 +1,1163 @@
+"taxon","habit","root_system","inflorescence_type","inflorescence_shape","flower_merosity","bisexual_flowers_presence","male_flowers_presence","heteromorphic_flower_presence","sterile_flower_presence","calyx_shape","stamen_count","filament_color","anther_gland_presence","stemonozone_presence","stamen_tube_presence","staminal_tube_presence","intrastaminal_nectary_presence","nectary_presence","height_mean","inflorescence_length_mean","inflorescence_width_mean","inflorescence_peduncle_length_mean","pedicel_length_mean","pedicel_width_mean","calyx_length_mean","calyx_lobe_length_mean","corolla_length_mean","corolla_lobe_length_mean","corolla_lobe_width_mean","filament_length_mean","Phylo_nitfix","NGS_acacia","flora_AUS_traits"
+"Acacia_latisepala","shrub",NA,"","","","","","","","",NA,"",NA,"","","","","",200,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_pruinosa","shrub or tree",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,"40",NA,NA,NA,NA,NA,NA,"",600,0.75,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_debilis","shrub or tree",NA,"Heads",NA,NA,NA,NA,NA,NA,"triangular to rounded-triangular",NA,NA,NA,NA,NA,NA,NA,"",600,0.525,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_blayana","Tree",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",2500,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_schinoides","Shrub or tree",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_polybotrya","shrub",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",275,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_chinchillensis","shrub",NA,"","","","","","","","",NA,"",NA,"","","","","",115,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cangaiensis","Shrub or tree",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_spectabilis","Shrub or tree",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_glaucocarpa","Shrub or tree",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",625,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_elata","Tree",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1350,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_terminalis","shrub",NA,"racemes or false-panicles",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_terminalis","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_leptoclada","shrub",NA,"","","","","","","","",NA,"",NA,"","","","","",200,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_pubescens","shrub",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_baileyana","Shrub or tree",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_jonesii","shrub",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",220,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_muelleriana","shrub or tree",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",475,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cardiophylla","shrub or tree",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",215,NA,0.4,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_chrysotricha","Tree",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1050,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_fulva","Shrub or tree",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",575,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_oshanesii","tree or shrub",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_filicifolia","Shrub or erect tree",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",850,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_leucoclada","Shrub or mostly spreading tree",NA,"","","","","","","","",NA,"",NA,"","","","","",1125,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_leucoclada_leucoclada","Tree or sometimes shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_leucoclada_argentifolia","Tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",2000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_parvipinnula","Shrub or tree",NA,"","","","","","","","",NA,"",NA,"","","","","",600,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_deanei","Shrub or tree",NA,"","","","","","","","",NA,"",NA,"","","","","",425,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_deanei_deanei",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_deanei_paucijuga",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_pedleyi","tree",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_storyi","Shrub or tree",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_olsenii","Tree",NA,"","","","","","","","",NA,"",NA,"","","","","",900,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_silvestris","tree",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1800,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_parramattensis","Shrub or tree",NA,"","","","","","","","",NA,"",NA,"","","","","",1500,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_mearnsii","shrub or mostly erect tree",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_loroloba","Shrub or tree",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",900,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_constablei","shrub",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",215,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_decurrens","Tall shrub to tree",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_dangarensis","Tree",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_nanodealbata","Tree",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_dealbata","shrub or spreading tree",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",3000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dealbata_dealbata","Shrub or spreading tree",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",3000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dealbata_subalpina","shrub or tree",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mollifolia","shrub or tree",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",375,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_irrorata","shrub or tree",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_irrorata_irrorata","Tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_irrorata_velutinella","Tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_trachyphloia","shrub or tree",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",950,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_mitchellii","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_binervata","Bushy tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",650,4.5,NA,0.9,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_penninervis","Shrub or small tree",NA,"racemose",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,7.5,NA,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_penninervis_penninervis",NA,NA,"Raceme",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_penninervis_longiracemosa",NA,NA,"raceme",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_falciformis","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,6,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_obliquinervia","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,6,NA,0.325,0.325,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_caerulescens","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1250,6.5,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_saliciformis","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",475,4.75,NA,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_wardellii","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,2.75,NA,0.45,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_bancroftiorum","shrub or slender tree",NA,"raceme","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,5.5,NA,0.65,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_macradenia","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3.5,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_holotricha","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",750,6,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_falcata","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,4,NA,0.35,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_mabellae","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",650,2.75,NA,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_attenuata","Slender shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,5,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_rubida","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",325,4.5,NA,0.3,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_amoena","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,3.75,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_kydrensis","shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,1.75,NA,0.225,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_chalkeri","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,1.5,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_forsythii","shrub",NA,NA,NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_flocktoniae","shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,4,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_deuteroneura","Shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,4,NA,1.3,1.3,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_wattsiana","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,1.75,NA,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_quornensis","shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,1.75,NA,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_subulata","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,1.75,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_calamifolia","shrub",NA,"racemose","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,2.05,NA,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_nematophylla","Bushy shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,0.95,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_leiophylla","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,5,NA,0.45,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_alcockii","Bushy shrub","suckering","racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,3,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_anceps","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,1.75,NA,1.75,1.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_notabilis","shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,4,NA,0.425,0.425,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_rivalis","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3.5,NA,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_araneosa","tree",NA,"racemose","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,6.5,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cretacea","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3,0.45,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_gillii","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,5,NA,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_validinervia","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,3.75,0.55,0.35,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_steedmanii","shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,NA,NA,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_retinodes","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",750,2.35,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_retinodes","shrub or tree",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_uncifolia","shrub or tree","spreading by runners and coppicing to form dense groves","Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",750,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_confluens","Shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,3,0.8,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_jennerae","Shrub or tree",NA,"raceme","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,2.5,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_microbotrya","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",450,2.75,0.5,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_amblyophylla","shrub or tree",NA,"racemose","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,2.25,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_brumalis","Shrub or tree",NA,"racemose","globular to slightly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,2.3,0.65,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_chamaeleon","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,2.6,0.625,0.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_chamaeleon","shrub or tree",NA,"flower-heads","obloid or spicate","5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",500,0.65,NA,0.9,NA,NA,0.08,NA,0.165,NA,NA,NA,1,0,1
+"Acacia_harveyi","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,1.75,0.4,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_chrysella","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,1.2,0.25,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_aestivalis","Bushy shrub or tree",NA,"racemes","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,3,0.375,0.375,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_leptopetala","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,2,0.375,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_meisneri","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,1.05,0.45,1.35,1.35,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_merrickiae","shrub",NA,"racemes","globular to slightly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,2.5,0.55,0.95,0.95,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_leichhardtii","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,5.5,NA,0.55,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_gladiiformis","Open shrub",NA,"raceme","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,4,1,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_difformis","shrub or rounded tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",450,3.5,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pycnantha","Shrub or tree",NA,"racemose","globular to obloid","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,5.75,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_hakeoides","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3,NA,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_williamsonii","shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,2,NA,0.25,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_hamiltoniana","Bushy shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,2.25,NA,0.3,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_obtusata","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,3,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_decora","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,4.5,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_decora","shrub",NA,"raceme",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_macnuttiana","Bushy shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,2.5,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_betchei","Shrubs",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,2.5,NA,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_adunca","Bushy shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,2.75,NA,0.475,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_acrionastes","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",500,3.25,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_floydii","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,4.75,NA,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_fimbriata","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,3.25,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_fimbriata","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,4.5,NA,0.325,0.325,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_ingramii","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,3,NA,0.375,0.375,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_neriifolia","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",900,4.5,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_pustula","Tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,5,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_linearifolia","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,4.25,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_angusta","Tree or shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",450,2,NA,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_polifolia","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,4,NA,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pubicosta","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,4,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_caesiella","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",275,2.5,NA,0.4,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cluniesrossiae","Bushy shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,2.75,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_barringtonensis","shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,2.5,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dorothea","Shrub",NA,"racemose","obloid to shortly cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,0.2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_costiniana","shrub",NA,"racemose","obloid to subglobular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",155,0.6,NA,0.575,0.575,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lucasii","Shrub",NA,"racemes","obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3.25,NA,0.25,0.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_covenyi","shrub or tree",NA,"racemose",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",450,4.25,NA,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_jucunda","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,4,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_kybeanensis","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,2.5,NA,0.2,0.2,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_everistii","shrub",NA,"raceme",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_prominens","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,3.75,NA,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_kettlewelliae","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,4,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_semirigida","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3.5,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pataczekii","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,5.75,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_uncifera","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,6.5,NA,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_podalyriifolia","tree",NA,NA,NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_pravissima","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,NA,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_vestita","shrub",NA,"racemose","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3.75,NA,0.275,0.275,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_boormanii","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,2,NA,0.25,0.25,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_linifolia","shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3.5,NA,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_meiantha","shrub","reproduces by underground runners","racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",170,2.25,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cultriformis","Shrub",NA,"racemes","globular to shortly cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3,NA,0.375,0.375,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_semilunata","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,4,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_lunata","Shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,3,0.55,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_leucolobia","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,3,0.9,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_buxifolia","Shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,2.75,NA,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_buxifolia_buxifolia","Shrub",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,2,0.75,2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_buxifolia_pubiflora","Shrub",NA,"Racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,3.25,NA,3.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_baueri","subshrub","Rhizomatous","simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,NA,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_baueri_baueri",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,1,1,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_baueri_aspera",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.25,NA,0.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ruppii","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,2.15,0.8,0.75,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_gittinsii","shrub",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,3.5,0.45,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_brunioides","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.8,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_brunioides_brunioides","Shrub",NA,"flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_brunioides_granitica","Shrub",NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_gordonii","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",90,NA,NA,1.15,1.15,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_arbiana","shrub",NA,"heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,0.9,0.9,NA,NA,NA,0.2,NA,NA,NA,0,0,1
+"Acacia_conferta","Shrub or tree",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,NA,NA,1.4,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_tindaleae","shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_hubbardiana","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,3,NA,0.85,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sertiformis","shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.95,NA,1.4,1.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_piligera","shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,NA,0.85,0.9,0.9,0.05,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_uncinata","shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,1.2,0.75,1.2,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_undulifolia","shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,0.85,1.1,1.1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_clandullensis","shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.45,0.45,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_aureocrinita","shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.9,0.65,0.9,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cremiflora","shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,0.75,1.15,NA,NA,NA,NA,NA,0.035,NA,NA,1,0,1
+"Acacia_spilleriana","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.125,1.1,2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_brachybotrya","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.275,NA,0.95,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_argyrophylla","shrub",NA,"racemose",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.7,NA,1,1,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_suaveolens","shrub",NA,"racemes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,1.75,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_subcaerulea",NA,NA,"raceme",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,2.75,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_iteaphylla","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,3,NA,0.8,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_beckleri","Shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,2,0.9,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_pruinocarpa","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",750,9,0.75,2.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_ensifolia","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",900,7.5,0.75,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_fasciculifera","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,0.2,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_crombiei","Tree",NA,NA,NA,"5-merous",NA,NA,NA,NA,NA,"5",NA,NA,NA,NA,NA,NA,"",1000,NA,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_peuce","tree",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,NA,NA,1.35,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_carneorum","shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,NA,1.9,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_jasperensis",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_alleniana","shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,NA,0.95,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_juncifolia","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.15,NA,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_juncifolia","shrub",NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_serpentinicola","shrub",NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_quadrilateralis","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.85,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_dietrichiana","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,0.1,NA,0.95,0.95,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_praelongata","Trees",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,9,0.5,0.95,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_murrayana","Shrub or tree","suckering and forming colonies","racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,3.5,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_pachyacra","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,2,NA,0.55,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_subrigida","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.6,NA,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_gelasina","shrub",NA,NA,NA,"S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,NA,NA,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_alexandri","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,NA,NA,1.15,1.15,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_aphanoclada","shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,7,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_victoriae","Shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,5.5,NA,1.2,1.2,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_glaucocaesia","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,3.5,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_synchronicia","shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,NA,NA,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_dempsteri","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,1,1,2,2,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ryaniana","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,1,1,2.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_chartacea","shrub or tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",275,5.5,NA,1.15,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_pickardii","shrub or tree","spreading by suckering","simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cuspidifolia","Bushy shrub or +gnarled tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,NA,1.75,1.75,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_strongylophylla","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pyrifolia","shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,10.5,NA,1.45,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_inaequilatera","tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,11.5,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_marramamba","tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,10.5,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_maitlandii","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_anthochaera","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,1.1,NA,0.95,0.95,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_hemiteles","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,1.1,NA,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_prainii","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,0.9,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_camptoclada","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",60,0.25,NA,0.95,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dorsenna","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,1.75,NA,1,1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_tetragonophylla","shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_salicina","Shrub or tree","clonal due to suckering habit","racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,3,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_ampliceps","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,"truncate or sinuate-toothed",NA,NA,NA,NA,NA,NA,NA,"",550,10,NA,1.25,1.25,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_bivenosa","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,3,NA,2.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_sclerosperma","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1.65,NA,0.95,0.95,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_sclerosperma_sclerosperma",NA,NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sclerosperma_glaucescens",NA,NA,"raceme",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_tysonii","shrub or tree",NA,NA,NA,"5-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,1.75,1.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ligulata","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",250,1.15,NA,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cupularis","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",175,0.4,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_rostellifera","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,2,0.6,0.55,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_xanthina","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,4.5,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_telmica","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",200,1.75,NA,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_startii","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",150,2.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_didyma","shrub or tree",NA,"racemes","globular","5 merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",275,3,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_microcalyx","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,0.85,NA,1.1,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_wilcoxii","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",300,2,NA,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_maxwellii","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,0.175,0.5,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_crassiuscula","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,3.5,0.575,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_saligna","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1.65,0.85,1,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_scirpifolia","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",300,2.5,0.55,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_blakelyi","shrub or tree",NA,"racemes","globular","S-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",200,4,0.75,1.1,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_spathulifolia","shrub",NA,"1-headed raceme","globular","5-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",175,0.125,0.55,1,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_castanostegia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pachypoda","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",70,0.1,NA,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ashbyae","shrub",NA,"racemes","obloid to shortly cylindrical","5 merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,NA,NA,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_nigripilosa","Shrub",NA,"racemes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,0.2,NA,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_nigripilosa_nigripilosa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_nigripilosa_latifolia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_inaequiloba","shrub",NA,"headed rudimentary racemes","globular to shortly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",315,NA,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_wiseana","shrub",NA,NA,NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,NA,NA,0.8,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_scleroclada","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,1.05,NA,0.95,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_restiacea","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,3.5,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_flagelliformis","subshrub",NA,NA,NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",60,NA,NA,0.75,0.75,NA,0.33,NA,NA,NA,NA,NA,0,0,1
+"Acacia_squamata","subshrub","thizomatous","racemes","globular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",37.5,NA,NA,1,1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_insolita","Shrub or subshrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,NA,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_insolita_insolita","Shrub",NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",0.45,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_insolita_recurva","Shrub",NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",90,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_adjutrices","Subshrub",NA,"flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",55,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_anomala","subshrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",32.5,2,NA,0.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_aphylla","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",230,NA,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_extensa","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_alata","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_alata_alata","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_alata_biglandulosa","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_alata_platyptera","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_alata_tetrantha","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_willdenowiana","shrub",NA,"racemose",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,6.5,NA,1.05,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_applanata","subshrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",25,0.525,NA,0.85,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pterocaulon","shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",130,5.5,1.25,1.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_clydonophora","shrub",NA,"racemes","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,1.75,NA,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_myrtifolia","shrub",NA,"racemes","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,3.5,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_celastrifolia","shrub",NA,NA,NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.65,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_heterochroa","shrub",NA,"simple or short-racemose","globular","4-merous",NA,NA,NA,NA,"truncate to sinuously lobed",NA,NA,NA,NA,NA,NA,NA,"",100,1.5,NA,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_heterochroa_heterochroa","mallee scrub",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,1.1,NA,1.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_heterochroa_robertii",NA,NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,2.25,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_durabilis","shrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",135,NA,NA,2,2,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_disticha","shrub",NA,"racemes","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.4,NA,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_pygmaea","Dwarf subshrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,"truncate to sinuolately lobed",NA,NA,NA,NA,NA,NA,NA,"",40,NA,NA,0.55,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_obovata","Shrub","woody rootstock","racemes","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,0.1,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_nervosa","subshrub","woody root-stock","racemes","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,0.06,NA,1.15,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_scalpelliformis",NA,NA,NA,NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_urophylla","Shrub",NA,"racemes","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.15,NA,0.95,0.95,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_hispidula","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.85,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_purpureapetala","Sprawling prostrate shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,NA,NA,1.1,1.1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dictyophleba","Shrub",NA,"simple","globular or obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,1.1,1.1,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_melleodora","Shrub",NA,"heads","globular or obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.55,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_jensenii","shrub or tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sabulosa","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,1.3,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_hockingsii","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_gnidium","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,NA,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ixodes","Bushy shrub or small tree",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,NA,0.85,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_eremophiloides","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_calantha","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_islana","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_resinocostata","shrub",NA,"simple heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_johnsonii","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,NA,NA,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_burbidgeae","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pilligaensis","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,0.4,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_handonis","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.8,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_rossei","shrub",NA,"terminal false racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,2.5,NA,2.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_glutinosissima","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,2.75,NA,2.75,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_sedifolia","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_sedifolia_sedifolia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.25,0.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sedifolia_pulvinata","shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_phasmoides","shrub",NA,"heads","obloid","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_genistifolia","shrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",180,NA,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_aculeatissima","shrub",NA,"simple","globular, sometimes obloid","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,NA,NA,0.9,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_aculeatissima","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_neobrachycarpa","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.275,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_brownii","shrub",NA,"flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_ulicifolia","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,1.1,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_asparagoides","shrub",NA,"1-headed rudimentary racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",0.15,0.05,0.425,0.225,0.225,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_echinula","shrub",NA,"simple heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.75,NA,1,1,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_gunnii","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_saxicola","shrub",NA,"1-headed rudimentary racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,1.3,1.05,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_siculiformis","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,0.65,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_rupicola","shrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,NA,NA,1,1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_acuaria","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.05,NA,0.8,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_retrorsa","shrub",NA,"1-headed rudimentary racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.05,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pravifolia","shrub",NA,"1-headed rudimentary racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,0.05,NA,0.35,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_amblygona","shrub",NA,"1-headed rudimentary racemes","globular to shortly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.05,NA,0.9,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lanceolata","shrub",NA,"1-headed rudimentary racemes","globular to shortly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_flabellifolia","shrub",NA,"1-headed rudimentary racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,0.05,NA,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_scalena","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",130,0.05,NA,0.55,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_sphenophylla","shrub",NA,"racemes","globular or obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",80,0.05,NA,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_continua","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,0.8,0.4,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_spinescens","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,0.6,0.6,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_basedowii",NA,NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,1,1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_oxyclada","shrub",NA,"racemes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",55,0.1,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_acanthoclada","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",115,0.05,0.45,1,1,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_acanthoclada_acanthoclada","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",115,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_acanthoclada_glaucescens","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",115,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pulviniformis","shrub",NA,"1-headed racemes","globular","4- or 5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",20,0.05,0.225,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_ferocior","shrub",NA,"1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,0.05,0.275,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_acanthaster","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,0.325,0.85,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ericksoniae","shrub",NA,"1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,0.05,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_bidentata","shrub",NA,"racemes",NA,"S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,0.2,NA,0.65,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_orbifolia","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",115,0.4,0.65,1.8,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_aristulata","Shrub",NA,"1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.05,0.55,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_improcera","shrub",NA,"rudimentary 1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",27.5,0.05,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_erinacea","shrub",NA,"rudimentary racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,0.05,NA,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_ulicina","shrub",NA,"racemes","globular to shortly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,0.05,0.5,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_spinosissima","shrub",NA,"rudimentary 1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",85,0.05,0.325,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_rostellata","shrub",NA,"rudimentary 1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,0.1,0.35,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_jacksonioides","shrubs",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,0.05,0.4,0.45,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_brachyclada","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,NA,NA,0.45,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sorophylla","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",25,NA,0.325,0.275,0.275,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_gregorii","shrub",NA,"simple or rudimentary 1-headed racemes","globular or obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,NA,0.75,1.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_idiomorpha","shrub",NA,"simple","globular to slightly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",60,0.65,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_crassistipula","shrub",NA,"simple","globular to slightly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",32.5,NA,0.55,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_crispula","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,0.175,0.425,1.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_shuttleworthii","Compact subshrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,0.4,0.475,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_delphina","Shrub",NA,"simple","obloid to short-cylindrical","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,NA,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_truncata","Shrub",NA,"racemes","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",140,0.075,NA,1.4,1.4,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_trapezoidea","shrub",NA,"racemes","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.05,NA,NA,0.9,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_incrassata","Subshrub","spreading by subterranean runners","heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",22.5,NA,NA,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_chrysocephala","subshrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,NA,NA,0.175,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_biflora","Shrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,NA,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_robiniae","shrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",60,NA,NA,0.2,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_phlebopetala","Shrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,NA,NA,0.95,NA,NA,NA,NA,0.275,NA,NA,NA,1,0,1
+"Acacia_phlebopetala_phlebopetala","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_phlebopetala_pubescens","shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_divergens","shrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",230,NA,NA,0.675,0.675,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_mooreana","Shrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",31,NA,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_forrestiana","shrub",NA,"heads","globular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,NA,NA,1.1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_huegelii","shrub",NA,"simple","globular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,NA,NA,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_imparilis","subshrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_hastulata","shrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",115,NA,NA,0.3,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_horridula","Shrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",60,NA,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_pycnocephala","shrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,0.225,NA,0.225,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_inops","Scrambling shrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_uliginosa","shrub",NA,"simple","globular to shortly obloid","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_semitrullata","shrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.55,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_ingrata","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,0.15,NA,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_plautella","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",85,0.075,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_andrewsii","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_baxteri","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,NA,0.65,0.65,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_neorigida","Shrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ataxiphylla","Subshrub",NA,"simple","globular to slightly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,NA,NA,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ataxiphylla_ataxiphylla","subshrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",20,NA,0.5,1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ataxiphylla_magna","subshrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,0.8,0.8,0.55,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_incurva","subshrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_laricina","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,NA,NA,1.35,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_laricina_laricina",NA,NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_laricina_crassifolia","mallee scrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cedroides","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_simulans","shrub",NA,"simple","globular to slightly obloid","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_argutifolia","shrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,NA,NA,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_unifissilis","shrub",NA,"heads","globular or obloid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",42.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_costata","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,NA,NA,0.85,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_barbinervis","shrub",NA,"simple or rudimentary racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,0.05,NA,0.95,0.95,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_barbinervis_barbinervis",NA,NA,"Flower-heads",NA,NA,NA,NA,NA,NA,"dissected",NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_barbinervis_borealis",NA,NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_phaeocalyx","shrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dilatata","shrub",NA,"simple","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,NA,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_aemula","subshrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,1,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_aemula_aemula",NA,NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_aemula_muricata",NA,NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_volubilis","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.2,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_stenoptera","Subshrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,NA,NA,0.65,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_tetragonocarpa","shrub",NA,"simple",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,1.1,NA,1.1,1.1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cummingiana","subshrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,NA,0.8,0.95,0.95,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_carens","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",60,NA,0.8,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_auronitens","subshrub",NA,"simple heads","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,NA,NA,1.1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_quadrisulcata","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,"orange-brown",NA,NA,NA,NA,NA,"",70,NA,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cavealis","shrub",NA,"simple heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,NA,0.425,0.95,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_teretifolia","subshrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,NA,NA,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_acutata","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,0.05,NA,0.325,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_intricata","shrub",NA,"rudimentary binate racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",32.5,0.05,NA,0.225,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_hystrix","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,NA,1,1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_hystrix_hystrix","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_hystrix_continua","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,1.1,1.1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_asepala","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,0.2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_calcarata","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.05,NA,0.525,0.525,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_inamabilis","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",85,NA,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_concolorans","subshrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,NA,NA,0.225,0.225,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pritzeliana","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,0.05,NA,1.05,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_xerophila","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,NA,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_xerophila_xerophila",NA,NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_xerophila_brevior",NA,NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_daviesioides","shrub",NA,"racemes","globular","5-merous, a few 4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,NA,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cerastes","shrub",NA,"1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.05,NA,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_erioclada","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,0.475,NA,0.475,0.475,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sessilis","shrub",NA,"1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.05,NA,0.15,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_sphacelata","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",85,NA,NA,0.8,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_sphacelata_sphacelata","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sphacelata_recurva","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sphacelata_verticillata","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,NA,NA,0.95,0.95,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_trigonophylla","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,NA,NA,1,1,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_dentifera","Shrub",NA,"heads","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_graniticola","shrub",NA,"racemes","globular to widely ellipsoid","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,4,0.475,1.55,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_tuberculata","shrub",NA,"racemes","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,0.625,0.475,1.3,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_congesta","shrub",NA,"racemes","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,1.25,NA,1.25,1.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_congesta_congesta","Shrub",NA,"heads","globular or obloid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,1.25,1.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_congesta_cliftoniana","Shrub",NA,"heads","globular to shortly obloid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,NA,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_congesta_wonganensis","Shrub",NA,"heads","obloid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_puncticulata","shrub",NA,"heads","globular to obloid","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",115,NA,NA,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_aculeiformis","shrub",NA,"racemes","globular or slightly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.075,NA,1.15,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cuneifolia","Shrub",NA,"simple or rudimentary racemes",NA,"S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,1.25,0.4,1.25,1.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_rendlei","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,NA,1.025,1.025,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_truculenta","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",145,NA,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_semicircinalis","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_botrydion","shrub",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",90,1.25,NA,1,1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lullfitziorum","shrub",NA,"simple heads","globular to shortly obloid","4- or 5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,0.375,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_nodiflora","shrub",NA,"simple","globular to shortly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",130,NA,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_adinophylla","shrub",NA,"simple","globular to slightly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,0.55,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_kochii","shrub",NA,"spikes","obloid to shortly cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,1.1,0.55,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_imitans","shrub",NA,"simple or sometimes a rudimentary 1-headed raceme","obloid to shortly cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,0.7,0.45,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_diminuta","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",20,NA,0.2,0.325,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_deficiens","shrub",NA,"normally 1-headed rudimentary racemes","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.075,0.45,0.65,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_exocarpoides","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.1,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_gonophylla","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,0.3,0.475,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ericifolia","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,0.375,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_leptospermoides","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",115,NA,0.45,0.8,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_leptospermoides_leptospermoides","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",120,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_leptospermoides_psammophila","shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_leptospermoides_obovata","shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",85,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_vassalii","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,0.35,0.35,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_diaphyllodinea","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,0.05,0.4,0.65,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_crassuloides","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,0.05,0.3,0.5,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_binata","shrub",NA,"racemes","globular to slightly obloid","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",55,NA,0.425,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_saxatilis","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.075,0.525,1.15,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_evenulosa","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",110,0.05,NA,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_blaxellii","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,0.05,0.4,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_diaphana","shrub",NA,"","","","","","","","",NA,"",NA,"","","","","",100,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_euthyphylla","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.15,0.45,0.65,0.65,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_carnosula","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.325,NA,0.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_profusa","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",60,0.075,0.475,1.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pusilla","subshrub",NA,"simple","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",25,NA,0.225,0.7,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_rhamphophylla","subshrub",NA,"1-headed racemes","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,0.05,0.275,1.05,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_excentrica","subshrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,0.075,0.425,1.1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lachnophylla","shrub",NA,"rudimentary racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",80,NA,0.425,1.2,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_poliochroa","dwarf shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.05,0.45,1.35,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_quinquenervia","Shrub",NA,"rudimentary, 2-branched racemes","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",85,0.05,0.375,0.9,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mutabilis","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",115,0.075,0.45,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_mutabilis_mutabilis","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,NA,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mutabilis_angustifolia","Shrub",NA,"flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",80,NA,0.65,1.15,1.15,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mutabilis_incurva","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",180,NA,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mutabilis_rhynchophylla","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",75,NA,NA,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mutabilis_stipulifera","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,NA,0.8,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_halliana","Bushy spreading shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,0.6,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_dermatophylla","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,0.1,0.6,1.025,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pachyphylla","shrub",NA,"1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,0.05,0.725,2.1,2.1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_glaucissima","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",105,0.15,0.55,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_acoma","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.075,NA,1.45,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_merrallii","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.1,0.45,1.2,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_sericocarpa","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",120,0.45,0.45,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ligustrina","shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.525,0.525,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_tetraptera","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,0.45,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_glaucoptera","shrub",NA,"1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.05,0.55,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_bifaria","shrub",NA,"J-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,0.1,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_bracteolata","shrub",NA,"racemes","globular to slightly obloid","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",60,NA,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_imbricata","shrub",NA,"1-headed, rudimentary racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.05,NA,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_triquetra","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.1,NA,0.55,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_acinacea","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.05,0.425,1.2,1.2,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_microcarpa","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_praemorsa","shrub","suckering","racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.25,NA,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_flexifolia","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,0.3,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_lineata","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_aspera","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,NA,NA,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_glandulicarpa","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_paradoxa","shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,1.2,1,1,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_rhetinocarpa","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,NA,NA,0.55,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_verniciflua","shrub or tree",NA,"heads","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",450,NA,NA,0.65,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_leprosa","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.25,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ausfeldii","shrub or tree",NA,"heads","globular to slightly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,0.65,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_dodonaeifolia","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,0.5,NA,1.15,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_howittii","shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,NA,NA,0.65,0.65,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_montana","shrub or tree",NA,"heads","globular to shortly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,0.6,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_errabunda","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,NA,NA,0.2,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_stricta","Shrub or tree",NA,"heads","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,0.35,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_veronica","shrub or tree",NA,"racemes","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",650,0.4,0.95,1.15,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cognata","Shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",650,0.45,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_subporosa","Tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,0.65,0.65,0.85,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_baeuerlenii","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.35,0.8,1.15,1.15,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_tessellata","Tall shrub to small tree",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",875,0.85,0.85,1.3,1.3,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_viscidula","Shrub or small tree",NA,"heads","globular","4-merous, infrequently 5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,NA,0.475,0.4,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_barattensis","shrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_gracilifolia","Shrub",NA,"heads","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,0.65,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_menzelii","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_wilhelmiana","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_cowaniana","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,"membranous",NA,NA,NA,NA,NA,NA,NA,"",500,0.25,NA,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_viscifolia","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,0.15,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_helmsiana","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_abrupta","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.3,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ascendens","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.3,NA,0.95,0.95,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_brachypoda","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.25,0.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_leptalea","Shrubs",NA,"1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,0.075,0.4,0.35,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dawsonii","Shrub or occasionally tree",NA,"racemes","depressed-globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,1.5,0.35,0.2,0.2,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_farinosa","shrub",NA,"heads","globular","","","","","","",NA,"",NA,"","","","","",150,NA,0.375,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_pinguifolia","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.1,0.35,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sclerophylla","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,0.35,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_sclerophylla_sclerophylla",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_sclerophylla_pilosa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sclerophylla_teretiuscula",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pinguiculosa","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,0.45,0.75,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_pinguiculosa_pinguiculosa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pinguiculosa_teretifolia","shrubland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_gemina","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,0.35,0.35,0.3,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_deflexa","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",107.5,NA,0.325,0.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pharangites","shrub",NA,"racemes","obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,0.85,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_tetanophylla","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",130,0.375,0.375,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_dura","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",110,NA,0.375,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_octonervia","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,0.35,0.35,0.95,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_nitidula","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",130,0.375,0.375,0.9,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_sulcata","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",110,0.35,0.35,0.95,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_sulcata_sulcata",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,1.15,1.15,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_sulcata_platyphylla",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sulcata_planoconvexa","shrubland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.65,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_brachyphylla","Subshrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",25,NA,0.35,0.7,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_brachyphylla_brachyphylla",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_brachyphylla_recurvata","shrubland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_prismifolia","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",32.5,NA,0.35,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_declinata","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",32.5,NA,0.5,0.625,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_caesariata","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",95,NA,0.4,0.3,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_patagiata","shrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.45,0.45,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_torticarpa","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,0.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_awestoniana","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",275,0.45,0.55,1.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dictyoneura","shrub",NA,"racemes","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",110,0.425,0.5,0.75,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_recurvata","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.075,0.475,0.65,0.65,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_auratiflora","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,0.1,0.65,0.15,0.15,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cassicula","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,NA,0.45,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lanuginophylla","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",85,0.6,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_chrysopoda","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,0.55,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_kingiana","Bushy shrub",NA,"1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.175,0.425,0.375,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_consobrina","Spreading shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",90,0.25,0.5,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_flavipila","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,0.4,0.475,0.45,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_flavipila_flavipila","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_flavipila_ovalis","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_trulliformis","shrub",NA,"racemes","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.5,0.55,1.05,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_loxophylla","shrub",NA,"reduced racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",60,0.2,0.45,0.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_vittata","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.075,0.45,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_verricula","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,0.35,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_lobulata","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,0.4,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pelophila","shrub",NA,"heads","subglobular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.575,0.45,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lanei","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.175,0.5,0.4,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_spongolitica","shrub",NA,"racemes","globular to short-obloid","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.4,0.5,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_ixiophylla","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.4,0.7,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_trineura","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.6,0.4,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_redolens","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,0.625,0.4,0.375,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_warramaba","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,0.35,0.375,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_trinervata","Shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,0.45,0.45,1.25,1.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_bynoeana","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",30,NA,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_venulosa","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,1,0.75,0.65,0.65,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lanigera","shrub",NA,"heads","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.6,0.55,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_lanigera_lanigera",NA,NA,"flower-heads","globular to subglobular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.65,0.65,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_lanigera_gracilipes",NA,NA,"flower-heads","globular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,0.5,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lanigera_whanii","shrubland with scattered trees",NA,"flower-heads","widely ellipsoid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.5,0.45,0.25,0.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ptychoclada","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",130,NA,0.5,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_elongata","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,0.75,0.5,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_longispinea","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,0.125,0.7,1.45,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_speckii","shrub or small tree",NA,"simple","broadly ellipsoid to obloid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.75,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_obtecta","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,NA,0.5,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_trinalis","Shrub or bushy tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",275,NA,0.425,0.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_heteroclita","Shrub or small tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.5,0.5,0.85,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_heteroclita_heteroclita","shrubland, mallee or heath",NA,"flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,0.45,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_heteroclita_valida",NA,NA,"flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,0.55,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_triptycha","shrub to small tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.5,0.5,0.7,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_aulacophylla","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.55,0.55,0.65,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_assimilis","shrub or tree",NA,"simple","globular to widely ellipsoid or obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,0.5,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_assimilis_assimilis",NA,NA,"flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_assimilis_atroviridis",NA,NA,"flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_fragilis","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,0.425,0.475,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_uncinella","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",165,NA,0.365,0.45,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_ophiolithica","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",115,NA,0.325,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_consanguinea","Shrub",NA,"globular heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",95,0.45,0.45,0.35,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_subflexuosa","shrub",NA,"simple, heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,0.375,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_subflexuosa_subflexuosa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.35,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_subflexuosa_capillata",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.45,NA,0.45,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_leptoneura","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_adnata","Shrub",NA,"heads","globular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_comans","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",115,0.425,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_latipes","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_latipes_latipes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_latipes_licina","shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cochlearis","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,NA,0.45,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_benthamii","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.5,0.5,0.4,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_nyssophylla","shrub",NA,"heads","globular, rarely ellipsoid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",180,0.475,0.475,0.675,0.675,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_colletioides","Shrub or tree",NA,"simple","subglobular, often widely ellipsoid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,0.4,0.375,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_enterocarpa","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_hexaneura","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,NA,0.5,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_subsessilis","Shrub",NA,"simple","obloid to short-cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,1.1,0.5,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_acellerata","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,0.35,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_chapmanii","shrub",NA,"simple","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,NA,0.45,1.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_chapmanii_chapmanii",NA,NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_chapmanii_australis",NA,NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_curvata","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,0.325,0.7,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_campylophylla","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,NA,0.5,1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_wilsonii","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",25,NA,0.8,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ridleyana","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",55,NA,0.6,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_formidabilis","subshrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",42.5,NA,0.475,0.7,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_resinistipulea","Shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,0.45,0.45,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_obesa","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,0.375,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_nivea","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,0.275,0.275,0.325,0.325,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dielsii","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,0.3,NA,0.3,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_mimica","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",140,0.55,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_mimica_mimica",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mimica_angusta",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_inceana","Shrub",NA,"simple","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,0.375,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_inceana_inceana",NA,NA,"flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_inceana_conformis",NA,NA,"heads",NA,NA,NA,NA,NA,NA,"spathulate",NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.55,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_enervia","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",180,0.4,0.4,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_enervia_enervia",NA,NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,0.35,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_enervia_explicata",NA,NA,"flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.45,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_unguicula","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.55,0.55,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lineolata","Shrub",NA,"simple","globular or slightly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",110,NA,0.5,0.65,0.65,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lineolata_lineolata",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lineolata_multilineata",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_whibleyana","shrub",NA,"simple","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,NA,1.5,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ancistrophylla","shrub",NA,"simple","globular","mostly 5-merous with some 4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",155,NA,0.35,0.325,0.325,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_ancistrophylla_ancistrophylla",NA,NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ancistrophylla_lissophylla",NA,NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.375,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_ancistrophylla_perarcuata","shrubs",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",110,NA,NA,0.2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_amyctica","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",110,NA,0.325,0.55,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_hadrophylla","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,0.325,NA,0.125,0.125,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_undosa","shrubs",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",90,0.325,0.325,0.125,0.125,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dissona","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,0.55,0.35,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dissona_dissona",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dissona_indoloria",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mackeyana","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",110,0.35,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_kalgoorliensis","shrub",NA,"simple","globular to widely ellipsoid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.45,0.45,0.1,0.1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_densiflora","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",85,NA,0.45,0.1,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_eremophila","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",120,NA,0.35,0.15,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_eremophila_eremophila","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",120,NA,NA,0.15,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_eremophila_variabilis","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",130,NA,NA,0.2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_papulosa","shrub",NA,"simple","globular or slightly obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",112.5,0.3,0.275,0.425,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_balsamea","shrub",NA,"simple","subglobular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,NA,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_resinosa","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,0.375,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_oswaldii","shrub or tree",NA,"heads","depressed globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,0.475,0.04,0.04,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_masliniana","Shrub or tree",NA,"heads","globular","4- or 5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.45,0.45,0.175,0.175,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_havilandiorum","shrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,NA,NA,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_roycei","shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,NA,0.55,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_rigens","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,0.4,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_argyrotricha","shrub",NA,"heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.225,0.225,NA,0.1,NA,0.15,NA,NA,0.35,0,0,1
+"Acacia_donaldsonii","Shrub or +gnarled tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.45,0.45,1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_gilesiana","Shrub",NA,NA,NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_eremaea","shrub or tree",NA,"globular heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,0.65,0.65,1.1,1.1,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_galeata","shrub or tree",NA,"racemes","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,0.125,0.45,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_stenophylla","tree","sucker","racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,0.4,0.75,0.95,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_coriacea","shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,0.06,0.55,1.85,1.85,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_coriacea_coriacea","Bushy shrub or tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_coriacea_pendens","Tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,NA,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_sericophylla","Tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",650,1.5,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sibilans","tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,0.1,0.5,0.85,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_auripila","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.325,0.475,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_loderi","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,0.45,0.55,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_papyrocarpa","Tall shrub or small tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,NA,0.35,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_microsperma","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,0.125,0.475,0.65,0.65,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pendula","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,0.55,0.4,0.55,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_omalophylla","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",750,0.3,0.45,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_omalophylla","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_melvillei","Tree",NA,"racemes","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,0.4,0.65,0.65,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_maranoensis","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,0.35,0.5,0.65,0.65,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_maconochieana","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,0.25,0.5,0.65,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_tephrina","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",2000,0.45,0.45,0.8,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cana","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,0.35,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_latzii","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,0.325,0.4,0.7,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_calcicola","shrub or straggly tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,0.9,0.35,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_ammophila","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,0.25,0.5,0.95,0.95,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_georginae","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,0.6,0.425,0.95,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cambagei","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",950,0.55,0.4,0.7,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_harpophylla","Tree","root-suckering","racemes","globular","4- or sometimes 5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",2500,0.6,0.65,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_argyrodendron","Tree",NA,"racemes","globular","4-merous, rarely with intermixed 5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1650,4,0.35,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_arafurica","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1.55,0.475,NA,NA,NA,0.08,NA,0.145,NA,NA,NA,0,0,1
+"Acacia_sublanata","shrub",NA,"heads","globular to occasionally obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",170,0.8,0.55,1.3,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_vincentii","Shrub",NA,"simple","obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,0.55,0.925,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_stipulosa","Shrub",NA,"simple","globular","5-11-lobed",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"present",NA,"",300,NA,0.9,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_froggattii","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,NA,0.5,1.3,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_deltoidea","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,NA,0.55,1.55,1.55,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_deltoidea_deltoidea","shrubland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.9,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_deltoidea_ampla",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_adenogonia","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.5,0.5,1.075,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_tenuior","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,NA,1.05,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dolichophylla","Bushy shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,0.125,0.45,1.15,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_estrophiolata","tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,NA,0.45,0.85,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_excelsa","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",2000,0.65,0.65,1,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_excelsa_excelsa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_excelsa_angusta",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_johannis","Shrub",NA,"heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,1.7,1.7,NA,0.15,NA,NA,0.19,NA,0.35,0,0,1
+"Acacia_armillata","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,0.15,0.375,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_legnota","Shrub to tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.45,0.55,1.75,1.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_hylonoma","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,0.125,0.575,1,1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_racospermoides","shrub or slender tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,NA,NA,0.9,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_homaloclada","shrub",NA,"simple or rudimentary racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,0.1,NA,1.15,1.15,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ommatosperma","Shrub or small tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_fleckeri","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,NA,0.475,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_complanata","Shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,0.6,1,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_ramiflora","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.075,0.5,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_simsii","shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.125,0.375,0.85,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_multisiliqua","shrub",NA,"simple or occasionally 1-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,0.5,0.45,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cyclops","shrub to small tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,1.15,0.6,0.8,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_oraria","Spreading tree",NA,NA,NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",650,NA,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_frigescens","Shrub or tree",NA,NA,NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",900,NA,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_melanoxylon","Tree","root suckers","racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1800,2.3,0.6,0.875,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_implexa","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",900,2.75,0.55,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_hemignosta","Tree or sometimes shrub",NA,NA,NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",650,NA,NA,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_amanda","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,NA,NA,2.5,2.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_anaticeps","Shrubby tree",NA,"heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,1.35,NA,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_auricoma","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,NA,0.75,2.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_retivenea","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,1,NA,2.85,2.85,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_retivenea_retivenea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,2.45,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_retivenea_clandestina","shrubland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,3,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_flavescens","Tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,6,0.525,1.7,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_leptoloba","shrub to tree",NA,"racemes","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,2.5,0.8,1.1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_platycarpa","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,14.5,0.575,1.2,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_sericata","Shrub or tree",NA,NA,NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",625,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_tolmerensis","shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.9,0.9,1.75,1.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_convallium","Tree",NA,"heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,"present",NA,NA,"",600,NA,NA,1.45,1.45,NA,NA,NA,0.16,NA,NA,0.35,0,0,1
+"Acacia_dunnii","shrub or tree",NA,"panicles","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,30.5,0.7,1.4,1.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_kenneallyi","Weak tree or shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",450,6,0.5,1.65,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_latescens","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",650,2,0.5,1.15,1.15,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mimula","Tree",NA,NA,NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,NA,1.25,1.25,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_rothii","Tree",NA,"racemose","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",900,7.25,0.575,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_bakeri","Tree",NA,"racemose","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",4000,4.5,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_dimidiata","shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,"5",NA,NA,NA,NA,NA,NA,"",750,4.75,NA,NA,NA,NA,0.11,NA,0.18,NA,NA,NA,0,0,1
+"Acacia_humifusa","Shrub",NA,"spikes",NA,"5- or 6-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,2,NA,NA,NA,NA,0.135,NA,NA,NA,NA,NA,1,1,1
+"Acacia_cretata","Shrub or tree",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,7.75,NA,NA,NA,NA,0.05,NA,0.135,NA,NA,NA,0,0,1
+"Acacia_latifolia","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"truncate or dissected",NA,NA,NA,NA,NA,NA,NA,"",500,2.15,NA,3.25,3.25,NA,0.035,NA,0.215,NA,NA,NA,1,0,1
+"Acacia_gardneri","shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,5,NA,NA,NA,NA,0.045,NA,0.18,NA,NA,NA,0,0,1
+"Acacia_tropica","shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,4.25,NA,1,1,NA,0.045,NA,0.175,NA,NA,NA,0,0,1
+"Acacia_lacertensis","tree",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,"broadly cupular",NA,NA,NA,NA,NA,NA,NA,"",800,4.5,NA,0.65,0.65,NA,0.045,NA,0.15,NA,NA,0.35,0,0,1
+"Acacia_crassa","shrub or tree",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",900,6,NA,NA,NA,NA,0.09,NA,0.175,NA,NA,NA,1,0,1
+"Acacia_crassa_crassa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_crassa_longicoma","trees",NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_concurrens","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,7.25,NA,NA,NA,NA,0.08,NA,0.19,NA,NA,NA,1,1,1
+"Acacia_leiocalyx","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,6.5,NA,NA,NA,NA,0.07,NA,0.175,NA,NA,NA,1,0,1
+"Acacia_leiocalyx_leiocalyx",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_leiocalyx_herveyensis",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_longispicata","tree",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,7.75,NA,NA,NA,NA,0.065,NA,0.165,NA,NA,NA,1,0,1
+"Acacia_longispicata","trees",NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_tingoorensis",NA,NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_leptocarpa","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,6.5,NA,NA,NA,NA,0.065,NA,0.165,NA,NA,NA,0,0,1
+"Acacia_crassicarpa","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1800,4.5,NA,NA,NA,NA,0.05,NA,0.14,NA,NA,NA,1,1,1
+"Acacia_aulacocarpa","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,3.5,NA,NA,NA,NA,0.06,NA,0.11,NA,NA,NA,1,0,1
+"Acacia_auriculiformis","tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",3500,6.75,NA,NA,NA,NA,0.11,NA,0.205,NA,NA,NA,1,1,1
+"Acacia_polystachya","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1400,5.5,NA,NA,NA,NA,0.055,NA,0.17,NA,NA,NA,1,0,1
+"Acacia_cincinnata","Large shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,4.5,NA,NA,NA,NA,NA,NA,0.165,NA,NA,NA,0,0,1
+"Acacia_spirorbis_solandri","Tree",NA,"spikes",NA,"S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,5.5,NA,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mangium","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1850,8.5,NA,NA,NA,NA,0.07,NA,0.19,NA,NA,NA,1,0,1
+"Acacia_grandifolia","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",800,6.75,NA,NA,NA,NA,0.085,NA,0.225,NA,NA,NA,0,0,1
+"Acacia_holosericea","Shrub or tree",NA,"racemes",NA,"5-merous",NA,NA,NA,NA,NA,"5",NA,NA,NA,NA,NA,NA,"",550,3,NA,0.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_neurocarpa","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,5.5,NA,0.7,0.7,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pellita","Shrub or tree",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,5,NA,NA,NA,NA,0.075,NA,0.22,NA,NA,NA,0,0,1
+"Acacia_nesophila","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",350,3.5,NA,NA,NA,NA,0.1,NA,0.14,NA,NA,NA,0,0,1
+"Acacia_sericoflora","Shrub or tree",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,3.25,NA,NA,NA,NA,0.08,NA,0.17,NA,NA,NA,0,0,1
+"Acacia_colei","shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,4.75,NA,0.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_elachantha","shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,2.4,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cowleana","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,4,NA,0.65,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_thomsonii","shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,2.25,NA,0.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_gonoclada","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3,NA,NA,NA,NA,0.1,NA,0.175,NA,NA,NA,1,0,1
+"Acacia_laccata","shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3.5,NA,NA,NA,NA,0.11,NA,0.24,NA,NA,NA,0,0,1
+"Acacia_acradenia","shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",750,4.25,NA,NA,NA,NA,0.105,NA,0.2,NA,NA,NA,1,0,1
+"Acacia_megalantha","shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,2.45,NA,NA,NA,NA,0.13,NA,0.345,NA,NA,NA,0,0,1
+"Acacia_brassii","Tree",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,4,NA,NA,NA,NA,0.07,NA,0.11,NA,NA,NA,1,0,1
+"Acacia_tumida","shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",850,4.25,NA,NA,NA,NA,0.09,NA,0.13,NA,NA,NA,1,1,1
+"Acacia_difficilis","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,3.25,NA,NA,NA,NA,NA,NA,0.13,NA,NA,NA,1,0,1
+"Acacia_retinervis","Tree, shrub",NA,"spikes",NA,"S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,3.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mountfordiae","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3.75,NA,NA,NA,NA,NA,NA,0.11,NA,NA,NA,0,0,1
+"Acacia_torulosa","shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,"5",NA,NA,NA,NA,NA,NA,"",815,2.5,NA,NA,NA,NA,0.065,NA,0.105,NA,NA,NA,0,1,1
+"Acacia_eriopoda","shrub or small tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",375,3.15,NA,NA,NA,NA,0.0625,NA,0.1375,NA,NA,NA,1,0,1
+"Acacia_hemsleyi","shrub or tree",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,2.25,NA,NA,NA,NA,0.07,NA,0.125,NA,NA,NA,0,0,1
+"Acacia_plectocarpa","shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",900,5.5,NA,NA,NA,NA,0.065,NA,0.105,NA,NA,NA,1,0,1
+"Acacia_plectocarpa_plectocarpa",NA,NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,0.35,NA,NA,NA,0.04,NA,NA,NA,NA,NA,0,0,1
+"Acacia_plectocarpa_tanumbirinensis",NA,NA,"Spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,0.425,NA,NA,NA,0.06,NA,NA,NA,NA,NA,0,0,1
+"Acacia_echinuliflora","Tree or rarely a shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,6,NA,NA,NA,NA,NA,NA,0.115,NA,NA,NA,0,0,1
+"Acacia_armitii","Shrub or slender tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",750,NA,NA,NA,NA,NA,0.07,NA,0.14,NA,NA,NA,0,0,1
+"Acacia_hammondii","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"cupular","5",NA,NA,NA,NA,NA,NA,"",400,2.1,NA,NA,NA,NA,0.075,NA,0.16,NA,NA,NA,1,0,1
+"Acacia_malloclada","shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",NA,0.95,NA,NA,NA,NA,0.08,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pubirhachis","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,4.25,NA,NA,NA,NA,0.055,NA,0.145,NA,NA,NA,0,0,1
+"Acacia_rigescens","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",180,3,NA,NA,NA,NA,0.065,NA,0.135,NA,NA,NA,0,0,1
+"Acacia_conspersa","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",750,3.75,NA,NA,NA,NA,0.065,NA,0.1,NA,NA,NA,0,0,1
+"Acacia_multistipulosa","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,5.7,NA,NA,NA,NA,0.07,NA,0.1,NA,NA,NA,0,0,1
+"Acacia_stipuligera","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3.5,NA,0.3,NA,NA,0.09,NA,0.135,NA,NA,NA,1,0,1
+"Acacia_gloeotricha","Shrub",NA,"spikes","cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,4,NA,1.1,1.1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_filamentosa","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,2.25,0.6,1,1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_filipes","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,1.75,NA,4,4,NA,0.07,NA,0.11,NA,NA,NA,0,0,1
+"Acacia_proiantha","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",600,1.75,NA,0.5,0.5,NA,0.05,NA,0.095,NA,NA,NA,0,0,1
+"Acacia_brockii","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,3.3,0.4,0.25,NA,NA,0.085,NA,0.135,NA,NA,NA,0,0,1
+"Acacia_scopulorum","Tree or large shrub",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,4,NA,0.175,NA,NA,0.05,NA,0.15,NA,NA,0.25,1,0,1
+"Acacia_gracilenta","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,3.75,0.5,1.95,NA,NA,0.03,NA,0.12,NA,NA,NA,0,0,1
+"Acacia_linarioides","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,3.15,NA,NA,NA,NA,0.025,NA,1.12,NA,NA,NA,0,0,1
+"Acacia_kelleri","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,2.9,NA,NA,NA,NA,NA,NA,0.145,NA,NA,NA,1,1,1
+"Acacia_chrysochaeta","Shrub",NA,"spikes",NA,"5- or rarely 6-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,2.75,NA,NA,NA,NA,0.115,NA,0.15,NA,NA,NA,1,0,1
+"Acacia_guymeri","Shrub",NA,"spikes",NA,"5-merous, rarely 4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,1.1,NA,NA,NA,NA,0.07,NA,0.18,NA,NA,NA,0,1,1
+"Acacia_jackesiana","Shrub",NA,"spikes",NA,"5-merous, rarely 6-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,1.7,NA,NA,NA,NA,0.075,NA,0.21,NA,NA,NA,0,0,1
+"Acacia_whitei","Shrub",NA,"spikes",NA,"mostly 5-merous, also 4- and 6-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,1.15,0.45,NA,NA,NA,0.095,NA,0.195,NA,NA,NA,1,0,1
+"Acacia_hyaloneura","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,2.75,NA,NA,NA,NA,0.08,NA,0.175,NA,NA,NA,0,0,1
+"Acacia_subtilinervis","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"shallowly lobed",NA,NA,NA,NA,NA,NA,NA,"",375,2.2,NA,NA,NA,NA,0.065,NA,0.16,NA,NA,NA,0,0,1
+"Acacia_lysiphloia","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,2.2,NA,NA,NA,NA,0.055,NA,0.125,NA,NA,NA,1,0,1
+"Acacia_chisholmii","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,2.05,NA,NA,NA,NA,0.07,NA,0.135,NA,NA,NA,1,0,1
+"Acacia_minniritchi","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3,NA,NA,NA,NA,0.035,NA,0.15,NA,NA,NA,0,0,1
+"Acacia_trachycarpa","Shrub or small tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,1.45,NA,NA,NA,NA,0.07,NA,0.145,NA,NA,NA,1,1,1
+"Acacia_effusa","Shrub",NA,"Spikes",NA,"5-merous, occasionally 4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,1.4,NA,NA,NA,NA,0.055,NA,0.135,NA,NA,NA,0,0,1
+"Acacia_helicophylla","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,2.5,NA,NA,NA,NA,0.09,NA,0.17,NA,NA,NA,0,0,1
+"Acacia_monticola","Shrub or tree",NA,"heads","globular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,0.8,0.8,NA,NA,NA,0.1,NA,0.28,NA,NA,NA,0,0,1
+"Acacia_phlebocarpa","Shrub",NA,"simple, globular heads","globular","5-merous",NA,NA,NA,NA,NA,NA,"",NA,"","","","","",120,0.75,0.75,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_orthocarpa","Shrub or small tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,2.05,NA,NA,NA,NA,0.065,NA,0.115,NA,NA,NA,1,0,1
+"Acacia_arida","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,1.7,NA,NA,NA,NA,0.065,NA,0.08,NA,NA,NA,0,0,1
+"Acacia_tenuispica","shrub",NA,"spikes","narrow","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,3,NA,0.225,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_lentiginea","Shrub",NA,"spikes","narrow","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,2.25,NA,0.25,0.25,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_delibrata","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",900,2.25,NA,NA,NA,NA,0.05,NA,0.115,NA,NA,NA,0,0,1
+"Acacia_richardsii","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,2.5,0.3,1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_kimberleyensis","Shrub",NA,"spikes","narrow","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,2.5,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_gonocarpa","Shrub to tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,3,NA,NA,NA,NA,NA,NA,0.085,NA,NA,NA,1,1,1
+"Acacia_conjunctifolia","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,1.85,NA,0.4,0.4,NA,NA,NA,0.115,NA,NA,NA,0,0,1
+"Acacia_subternata","Shrub",NA,"heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",120,NA,0.7,NA,NA,NA,0.125,NA,0.21,NA,NA,NA,0,0,1
+"Acacia_manipularis","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",87.5,NA,0.6,2.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_delicatula","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.525,0.525,1.15,NA,NA,0.08,NA,0.155,NA,NA,NA,0,0,1
+"Acacia_yirrkallensis","Shrub",NA,"Heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,0.375,NA,NA,NA,0.1,NA,0.15,NA,NA,NA,1,0,1
+"Acacia_minutifolia","Shrub",NA,"Heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,0.7,NA,NA,NA,NA,0.115,NA,0.255,NA,NA,NA,0,0,1
+"Acacia_abbreviata","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,1.1,NA,NA,NA,NA,0.12,NA,0.19,NA,NA,NA,0,0,1
+"Acacia_hilliana","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,2.75,NA,NA,NA,NA,0.075,NA,0.155,NA,NA,NA,0,0,1
+"Acacia_arrecta","Shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.85,0.85,NA,NA,NA,0.115,NA,0.225,NA,NA,NA,0,0,1
+"Acacia_nuperrima","Shrub",NA,"heads",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",115,0.55,NA,1,1,0.05,0.085,NA,0.175,NA,NA,NA,0,0,1
+"Acacia_setulifera","Shrub or subshrub",NA,"Heads",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",50,NA,0.65,0.8,NA,NA,0.085,NA,0.185,NA,NA,NA,0,0,1
+"Acacia_stellaticeps","Shrub",NA,"heads",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",200,1.2,NA,1.75,NA,NA,0.09,NA,0.295,NA,NA,NA,0,0,1
+"Acacia_translucens","Shrub",NA,"Heads",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",200,0.65,NA,17.5,NA,NA,0.115,NA,0.225,NA,NA,NA,1,0,1
+"Acacia_wickhamii","Shrub",NA,"heads","obloid or spicate, rarely globular","5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",250,2,0.3,NA,NA,NA,0.08,NA,0.135,NA,NA,NA,1,0,1
+"Acacia_wickhamii_wickhamii","Shrub",NA,"spicate",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",85,2.25,NA,1.25,1.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_calligera","Shrub",NA,"Heads spicate",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,2.25,NA,0.625,0.625,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_calligera","Shrub",NA,"spicate",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,2,NA,0.85,0.85,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_wickhamii_cassitera","Shrub",NA,"heads","obloid or shortly spicate, or sometimes globular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",60,0.75,0.3,1.45,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_sphaerostachya","Shrub",NA,"spike","obloid to shortly cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,1.1,NA,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ancistrocarpa","Shrub or fastigiate tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,3.5,NA,NA,NA,NA,0.065,NA,0.165,NA,NA,NA,1,1,1
+"Acacia_cataractae","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,"5",NA,NA,NA,NA,NA,NA,"",200,3,NA,0.8,NA,NA,0.0875,NA,0.125,NA,NA,NA,0,0,1
+"Acacia_lazaridis","Shrub",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,1.5,NA,1.5,NA,NA,0.05,NA,0.16,NA,NA,NA,0,0,1
+"Acacia_limbata","Shrub",NA,"spikes",NA,"5 merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",120,1.7,NA,3,NA,NA,0.065,NA,0.15,NA,NA,NA,1,0,1
+"Acacia_leptophleba","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",170,3.25,NA,NA,NA,NA,0.105,NA,0.17,NA,NA,NA,1,0,1
+"Acacia_argyraea","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,1.75,NA,NA,NA,NA,0.125,NA,0.175,NA,NA,NA,1,0,1
+"Acacia_stigmatophylla","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",300,3.25,NA,NA,NA,NA,0.0625,NA,0.105,NA,NA,NA,1,0,1
+"Acacia_producta","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.9,NA,NA,1.4,NA,0.085,NA,0.2,NA,NA,NA,1,0,1
+"Acacia_praetermissa","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",180,1.85,NA,NA,NA,NA,0.075,NA,0.155,NA,NA,NA,0,0,1
+"Acacia_paula","Subshrub","subterranean rootstock","spikes","shortly cylindrical to +obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.8,NA,NA,NA,NA,0.105,NA,0.185,NA,NA,NA,0,0,1
+"Acacia_calyculata","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,NA,NA,NA,NA,NA,0.06,NA,0.15,NA,NA,NA,1,1,1
+"Acacia_solenota","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"broadly cupular",NA,NA,NA,NA,NA,NA,NA,"",500,3,NA,0.7,NA,NA,0.04,NA,0.18,NA,NA,NA,0,0,1
+"Acacia_oncinocarpa","Shrub or tree",NA,"spikes",NA,"5-merous, rarely 4-merous",NA,NA,NA,NA,"membranous",NA,NA,NA,NA,NA,NA,NA,"",275,5.25,NA,NA,NA,NA,0.05,NA,0.1,NA,NA,NA,0,0,1
+"Acacia_oligoneura","Shrub","woody rootstock","spikes",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",200,2.6,NA,0.525,NA,NA,0.06,NA,0.125,NA,NA,NA,1,0,1
+"Acacia_polyadenia","shrub or small tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",30,1.5,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_drepanocarpa","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,3,NA,NA,NA,NA,0.095,NA,0.14,NA,NA,NA,0,0,1
+"Acacia_drepanocarpa_drepanocarpa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_drepanocarpa_latifolia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ptychophylla","Shrub",NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,3.25,NA,NA,NA,NA,0.09,NA,0.15,NA,NA,NA,0,0,1
+"Acacia_binervia","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,3.75,NA,NA,NA,NA,0.055,NA,0.165,NA,NA,NA,1,0,1
+"Acacia_burrowii","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1300,2.25,NA,NA,NA,NA,0.065,NA,0.165,NA,NA,NA,1,0,1
+"Acacia_bulgaensis","Shrub or small tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"nearly truncate or dissected",NA,NA,NA,NA,NA,NA,NA,"",475,4.1,NA,NA,NA,NA,0.055,NA,0.165,NA,NA,NA,1,0,1
+"Acacia_blakei","Tree",NA,"Spikes",NA,"4- or 5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,4,NA,NA,NA,NA,0.065,NA,0.155,NA,NA,NA,0,0,1
+"Acacia_blakei_blakei",NA,NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_blakei_diphylla",NA,NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_matthewii","Tall shrub or small tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"nearly truncate or dissected",NA,NA,NA,NA,NA,NA,NA,"",900,4,NA,NA,NA,NA,0.065,NA,0.175,NA,NA,NA,1,0,1
+"Acacia_meiosperma","Shrub or tree",NA,"spikes",NA,"S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,2.5,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cheelii","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,"",NA,"","","","","",1000,4.1,NA,NA,NA,NA,0.06,NA,NA,NA,NA,NA,1,0,1
+"Acacia_striatifolia","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,4,NA,NA,NA,NA,0.07,NA,0.14,NA,NA,NA,0,0,1
+"Acacia_georgensis","Shrub to tree",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",750,2.75,NA,NA,NA,NA,0.05,NA,0.18,NA,NA,NA,0,0,1
+"Acacia_pubifolia","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"truncate or dissected","5",NA,NA,NA,NA,NA,NA,"",800,3.5,NA,NA,NA,NA,0.07,NA,0.17,NA,NA,NA,0,0,1
+"Acacia_spania","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,3.25,NA,NA,NA,NA,0.1,NA,0.15,NA,NA,NA,0,0,1
+"Acacia_rhodoxylon","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",1300,2.5,NA,1.4,1.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_julifera_curvinervia","Shrub",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,2.55,NA,NA,NA,NA,0.07,NA,0.12,NA,NA,NA,0,0,1
+"Acacia_julifera","Tree to c. 7.5 m high or straggly shrub to c, 3m",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",750,4.25,NA,NA,NA,NA,0.085,NA,0.145,NA,NA,NA,1,0,1
+"Acacia_julifera_julifera",NA,NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,3.25,NA,NA,NA,NA,0.095,NA,0.15,NA,NA,NA,0,1,1
+"Acacia_julifera_gilbertensis",NA,NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,4.25,NA,NA,NA,NA,0.07,NA,1.35,NA,NA,NA,0,0,1
+"Acacia_pycnostachya","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"sinuate",NA,NA,NA,NA,NA,NA,NA,"",700,5,NA,NA,NA,NA,0.095,NA,0.275,NA,NA,NA,1,0,1
+"Acacia_tenuinervis","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"truncate or sinuolate",NA,NA,NA,NA,NA,NA,NA,"",900,4,NA,NA,NA,NA,0.075,NA,0.14,NA,NA,NA,0,0,1
+"Acacia_umbellata","Shrub to 3 m high, multistemmed, +semiprostrate, or rarely tree 3-6 m",NA,"spikes",NA,"5 (or 6)-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,1.35,NA,NA,NA,NA,0.1,NA,0.16,NA,NA,NA,0,0,1
+"Acacia_leptostachya","shrub to tree",NA,"racemes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",325,0.3,NA,0.2,0.2,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_shirleyi","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,3.25,NA,NA,NA,NA,0.065,NA,0.17,NA,NA,NA,0,1,1
+"Acacia_distans","Tree",NA,"racemes",NA,"5-merous",NA,NA,NA,NA,"cupular","5",NA,NA,NA,NA,NA,NA,"",800,0.075,NA,1,1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_petraea","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,3.25,NA,NA,NA,NA,NA,NA,0.19,NA,NA,NA,0,0,1
+"Acacia_sparsiflora","Tree",NA,"racemes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,0.225,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_granitica","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.65,NA,0.2,NA,NA,0.065,NA,0.16,NA,NA,NA,0,0,1
+"Acacia_doratoxylon","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,2.75,NA,NA,NA,NA,0.09,NA,0.165,NA,NA,NA,1,1,1
+"Acacia_caroleae","Shrub or fastigiate tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,1.6,NA,NA,NA,NA,0.08,NA,0.15,NA,NA,NA,1,0,1
+"Acacia_macdonnelliensis","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,"5",NA,NA,NA,NA,NA,NA,"",450,2,0.45,0.3,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_macdonnelliensis_macdonnelliensis","Shrub or bushy tree",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_macdonnelliensis_teretifolia","Shrub or tree",NA,"racemes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.4,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ammobia","Shrub or small tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",425,3.5,NA,NA,NA,NA,0.1125,NA,0.145,NA,NA,NA,0,0,1
+"Acacia_undoolyana","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,2.25,NA,0.45,NA,NA,0.085,NA,NA,NA,NA,NA,1,0,1
+"Acacia_lasiocalyx","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,"5",NA,NA,NA,NA,NA,NA,"",275,3,0.65,1.25,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_conniana","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1.75,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_longiphyllodinea","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",290,3.5,0.8,1.15,1.15,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_signata","shrub or tree",NA,"racemes and spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.5,0.675,1.3,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_yorkrakinensis","Shrubs or trees",NA,"racemes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,1.4,0.6,0.9,0.9,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_yorkrakinensis_yorkrakinensis","shrubland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_yorkrakinensis_acrita",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_crenulata","Shrub",NA,"globular heads","globular","5-merous",NA,NA,NA,NA,"cup",NA,NA,NA,NA,NA,NA,NA,"",300,NA,0.4,0.15,0.15,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_curranii","Shrub",NA,"spikes","obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.8,NA,NA,NA,NA,0.11,NA,0.155,NA,NA,NA,1,0,1
+"Acacia_cyperophylla","shrub or usually tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,2,NA,NA,NA,NA,0.115,NA,0.19,NA,NA,NA,1,0,1
+"Acacia_cyperophylla_cyperophylla",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cyperophylla_omearana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_desmondii","Shrubby tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",450,2.5,NA,NA,NA,NA,0.095,NA,0.175,NA,NA,NA,0,0,1
+"Acacia_rhodophloia","Shrub or tree",NA,"spikes","cylindrical","5- or 6-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,1.55,NA,NA,NA,NA,0.105,NA,0.2,NA,NA,NA,0,0,1
+"Acacia_grasbyi","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1.9,NA,NA,NA,NA,0.13,NA,0.2,NA,NA,NA,0,1,1
+"Acacia_atkinsiana","Shrub",NA,"spikes","oblong","5- or 6-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",360,1,0.8,1.15,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_aprepta","Tree",NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,2.05,NA,NA,NA,NA,0.045,NA,0.15,NA,NA,NA,0,0,1
+"Acacia_kempeana","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"cupular",NA,NA,NA,NA,NA,NA,NA,"",500,1.75,NA,0.85,NA,NA,NA,NA,0.165,NA,NA,NA,1,0,1
+"Acacia_duriuscula","Shrub or tree",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",185,0.375,NA,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_adsurgens","Shrub or small tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1.65,NA,0.95,NA,NA,0.1025,NA,0.15,NA,NA,NA,1,0,1
+"Acacia_tenuissima","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"truncate",NA,NA,NA,NA,NA,NA,NA,"",400,0.75,NA,NA,NA,NA,0.09,NA,0.13,NA,NA,NA,1,0,1
+"Acacia_exigua","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"cup",NA,NA,NA,NA,NA,NA,NA,"",450,1.5,NA,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_wanyu","Shrub or shrubby tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",275,1.8,0.55,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cuthbertsonii","shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,2.2,0.35,0.65,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cuthbertsonii_cuthbertsonii",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cuthbertsonii_linearis",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_levata","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,2.25,0.6,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pachycarpa","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",450,4.5,1,1.2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_intorta","Shrub or tree",NA,"I-headed racemes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,2.25,NA,1,1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_xiphophylla","Shrub or tree",NA,"spikes",NA,"S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,4,0.6,1.125,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_hamersleyensis","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,4.5,0.7,0.65,0.65,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_daweana","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,3.25,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_citrinoviridis","bushy shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,2,NA,NA,NA,NA,0.09,NA,0.12,NA,NA,NA,1,0,1
+"Acacia_olgana","Shrub or small tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,"spathulate",NA,NA,NA,NA,NA,NA,NA,"",600,2.75,NA,NA,NA,NA,0.075,NA,0.15,NA,NA,NA,1,0,1
+"Acacia_xanthocarpa","Shrub",NA,"simple","subglobular to obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.6,NA,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_demissa","Shrub or tree",NA,"simple","obloid to cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1.55,NA,0.325,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_quadrimarginea","Shrub or tree",NA,"simple","broadly ellipsoid, obloid or cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",375,1.3,0.5,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_ramulosa","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,1.75,NA,0.95,0.95,NA,NA,NA,0.2,NA,NA,0.325,0,0,1
+"Acacia_ramulosa_ramulosa",NA,NA,"Spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,1.5,NA,NA,NA,NA,NA,NA,0.2,NA,NA,NA,0,1,1
+"Acacia_ramulosa_linophylla",NA,NA,"Spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,2,NA,NA,NA,NA,NA,NA,0.16,NA,NA,NA,0,0,1
+"Acacia_brachystachya","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,2,NA,0.65,NA,NA,NA,NA,0.165,NA,NA,0.3,1,0,1
+"Acacia_clelandii","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,1.75,NA,0.65,NA,NA,NA,NA,0.135,NA,NA,0.275,0,0,1
+"Acacia_paraneura","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,1.75,NA,0.9,NA,NA,NA,NA,0.165,NA,NA,NA,1,0,1
+"Acacia_aneura","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1800,1.85,NA,0.65,NA,NA,NA,NA,0.135,NA,NA,0.275,1,0,1
+"Acacia_pteraneura","Tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,NA,NA,NA,NA,NA,NA,NA,0.135,NA,NA,0.275,0,0,1
+"Acacia_macraneura","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,NA,NA,NA,NA,NA,NA,NA,0.155,NA,NA,NA,0,0,1
+"Acacia_incurvaneura","Shrub or tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,NA,NA,NA,NA,NA,NA,0.155,NA,NA,NA,0,0,1
+"Acacia_aptaneura","Tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,NA,NA,NA,NA,NA,NA,NA,0.14,NA,NA,NA,0,1,1
+"Acacia_aptaneura","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,NA,NA,NA,NA,NA,NA,NA,0.145,NA,NA,NA,0,1,1
+"Acacia_aneura_major","Tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1400,NA,NA,NA,NA,NA,NA,NA,0.14,NA,NA,NA,0,0,1
+"Acacia_aneura_aneura","Shrub or tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,NA,NA,NA,NA,NA,NA,0.14,NA,NA,0.26,0,0,1
+"Acacia_aneura_aneura","Shrub or tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,NA,NA,NA,NA,NA,NA,NA,0.14,NA,NA,0.25,0,0,1
+"Acacia_fuscaneura","Tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,NA,NA,NA,NA,NA,NA,NA,0.2,NA,NA,0.35,0,0,1
+"Acacia_caesaneura","Tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,NA,NA,NA,NA,NA,NA,NA,0.15,NA,NA,0.275,0,0,1
+"Acacia_ayersiana","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,2,NA,0.6,NA,NA,NA,NA,0.15,NA,NA,0.35,0,0,1
+"Acacia_minyura","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1.25,NA,0.8,NA,NA,NA,NA,0.145,NA,NA,0.275,1,0,1
+"Acacia_craspedocarpa","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1.6,NA,1.5,NA,NA,NA,NA,0.2,NA,NA,0.375,1,0,1
+"Acacia_catenulata","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,2,NA,0.3,NA,NA,NA,NA,0.11,NA,NA,NA,1,0,1
+"Acacia_subtessarogona","Tree",NA,"heads","capitate to shortly spicate","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,0.9,NA,0.6,0.6,NA,NA,NA,0.2,NA,NA,NA,1,0,1
+"Acacia_atopa","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",450,2,NA,0.6,0.6,NA,0.07,NA,0.12,NA,NA,NA,0,0,1
+"Acacia_anastema","Tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,3,0.7,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_coolgardiensis","Shrub or tree",NA,"heads","globular, widely ellipsoid, obloid, or cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1.95,0.55,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_coolgardiensis",NA,NA,"flower-heads","globular to widely ellipsoid or obloid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.95,0.55,0.2,0.2,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_effusifolia",NA,NA,"flower-heads","globular to cylindrical",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,1.95,0.55,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_latior",NA,NA,"flower-heads","widely ellipsoid to obloid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,1,0.6,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ampliata","Shrub or small tree",NA,"simple","obloid to short-cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,1.05,0.75,0.625,0.625,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_jamesiana","shrub or tree",NA,"heads","obloid to shortly cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,1.05,0.7,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_resinimarginea","shrub or tree",NA,"simple","obloid to short-cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,1.05,NA,0.425,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_beauverdiana","shrub",NA,"simple","short-obloid to globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.7,0.6,0.275,0.275,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_stereophylla","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",275,2.4,0.6,0.35,0.35,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_stereophylla_stereophylla",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_stereophylla_cylindrata","shrubland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sibina","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,1.65,0.7,0.275,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_aciphylla","Shrub",NA,"heads","obloid","5-merous",NA,NA,NA,NA,NA,"5",NA,NA,NA,NA,NA,NA,"",150,0.75,0.6,0.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_incanicarpa","Shrub",NA,"spikes","obloid to short-cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,0.85,0.45,0.25,0.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_tarculensis","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,2,NA,0.55,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_symonii","Shrub or tree",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,1.3,0.4,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_websteri","shrub or tree",NA,"simple","obloid to subglobular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,0.55,0.4,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_gibbosa","Shrub or tree",NA,"simple","obloid to short-cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.7,0.425,0.275,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_repanda","Shrub",NA,"simple heads","subglobular to broadly ellipsoid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,0.65,0.475,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_ephedroides","Shrub or tree",NA,"simple","subglobular to short-cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,1,0.55,0.025,0.025,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_oncinophylla","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,1.8,0.55,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_oncinophylla_oncinophylla",NA,NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,1.2,0.55,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_oncinophylla_patulifolia",NA,NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,2,NA,0.6,0.6,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_fauntleroyi","shrub or small tree",NA,"heads","obloid to short-cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",450,1.1,0.625,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_inophloia","Shrub or tree",NA,"simple","obloid to cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,1.4,0.5,0.135,0.135,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_palustris","Shrub or tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.85,0.45,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_acuminata","shrub or tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,2,NA,0.2,NA,NA,0.085,NA,0.15,NA,NA,NA,1,1,1
+"Acacia_acuminata","Shrub or tree",NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1200,2.25,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_burkittii","Shrub or tree",NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",700,1.05,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_oldfieldii","Shrub to straggly tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",325,3.75,0.45,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_drepanophylla","Tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",375,1.5,0.5,0.2,0.2,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_jibberdingensis","shrub or small tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,2.75,0.6,0.85,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_sessilispica","Shrub",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",165,1.9,0.4,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_multispicata","Shrub",NA,"simple","obloid to cylindrical","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",145,1.15,NA,0.1,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_singula","Shrub",NA,"simple","obloid to short-cylindrical","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",117.5,0.75,0.425,0.025,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_arcuatilis","Shrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",60,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_aprica","Shrub",NA,"heads","subglobular to obloid","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,0.85,0.75,0.2,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_merinthophora","Shrub or small tree",NA,"simple","obloid to short-cylindrical","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",400,0.8,0.75,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_filifolia","Shrub",NA,"simple","subglobular to obloid","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.9,0.65,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_tratmaniana","Shrub",NA,"heads","globular to subglobular, sometimes obloid","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_isoneura_isoneura",NA,NA,"Spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_isoneura_nimia","shrubland",NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_kerryana","Shrub",NA,"simple","obloid to short-cylindrical","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.75,0.35,0.95,0.95,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_microneura","Shrub",NA,"heads","globular to broadly ellipsoid or obloid","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.575,0.55,0.05,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lirellata","Shrub",NA,"heads","subglobular to obloid, rarely cylindrical","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.6,0.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lirellata_lirellata",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lirellata_compressa","shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_tetraneura","Shrub",NA,"simple heads","globular to shortly obloid","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cochlocarpa","Shrub",NA,"heads","subglobular to short-cylindrical","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,0.75,0.55,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cochlocarpa_cochlocarpa",NA,NA,"flower-heads","obloid to short-cylindrical",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.85,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cochlocarpa_velutinosa",NA,NA,"flower-heads","subglobular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_neurophylla","Shrub or sometimes small tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",275,3,0.55,0.25,0.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_neurophylla_neurophylla","Shrub",NA,"flower-heads","cylindrical",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,2,NA,0.2,0.2,NA,NA,NA,2,NA,NA,NA,0,0,1
+"Acacia_neurophylla_erugata","shrub, small tree",NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,3.5,NA,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_incongesta","Shrub",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",230,2,0.375,0.2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_anfractuosa","Shrub or tree",NA,"simple","globular to broadly ellipsoid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.95,0.7,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_sciophanes","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,0.75,0.75,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_epedunculata","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",57.5,0.45,0.45,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_heteroneura","Shrub",NA,NA,NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_heteroneura_heteroneura","Shrub",NA,"flower-heads","globular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",182.5,0.55,0.55,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_heteroneura_jutsonii","Shrub",NA,"flower-heads","globular to widely ellipsoid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",175,0.65,0.6,0.45,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_heteroneura_petila","shrubland",NA,"flower-heads","globular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.55,0.55,0.4,0.4,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_heteroneura_prolixa","shrub",NA,"flower-heads","widely ellipsoid to obloid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,0.85,0.75,0.65,0.65,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_desertorum","shrub",NA,"simple","globular to widely ellipsoid or obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",130,0.8,0.7,0.55,0.55,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_desertorum_desertorum","shrubland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,0.05,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_desertorum_nudipes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,0.065,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_cylindrica","shrub",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",225,1.05,0.5,0.1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_denticulosa","Shrub",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",250,5.25,0.7,0.5,0.5,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_obtusifolia","shrub or tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",775,5,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_phlebophylla","Shrub or tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_alpina","Shrub",NA,"spikes","oblong or cylindrical","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,1.5,NA,0.2,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_mucronata","shrub or tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,3.5,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_mucronata_dependens","shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",800,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mucronata_longifolia","Shrub or small tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_longifolia","Shrub or erect tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",575,3.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_longifolia","shrub or small tree",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_sophorae","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_floribunda","Shrub or tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_maidenii","Tall shrub or tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",2000,4.25,NA,NA,NA,NA,0.05,NA,0.145,NA,NA,NA,1,0,1
+"Acacia_dallachiana","Tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1500,6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_orites","Tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",3000,4.5,NA,0.3,0.3,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_longissima","shrub or small spreading tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",500,3.75,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_courtii","Tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",2000,4.75,NA,0.4,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_oxycedrus","Tree or shrub",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,3.25,NA,0.75,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_verticillata","shrub or erect tree",NA,"spikes","ovoid or globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,4.5,NA,0.85,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_verticillata_verticillata","Shrub or small tree",NA,"spikes","cylindrical",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_verticillata_ruscifolia","Shrub or small tree",NA,"spikes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",550,2.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_verticillata_cephalantha","Shrub or small tree",NA,"spikes","cylindrical",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",600,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_verticillata_ovoidea","Shrub",NA,"spikes","ovoid or spherical heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_riceana","shrub or small tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",1000,2.5,NA,0.85,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_axillaris","Shrub",NA,"spikes",NA,"4-merous or rarely 3-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.6,NA,0.175,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_rhigiophylla","Shrub",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",300,0.75,NA,0.15,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_triptera","Shrub or tree",NA,"spikes",NA,"4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",450,1.85,NA,0.45,NA,NA,NA,NA,NA,NA,NA,NA,1,1,1
+"Acacia_hippuroides","Shrub",NA,"Heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,2.25,NA,NA,0.05,NA,NA,NA,NA,NA,1,0,1
+"Acacia_spondylophylla","Shrub",NA,"Heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,1.75,NA,NA,0.1,NA,NA,NA,NA,NA,1,0,1
+"Acacia_adoxa","Shrub",NA,"heads",NA,"5- or 6-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",70,NA,NA,1.05,NA,NA,0.065,0.035,NA,NA,NA,NA,1,0,1
+"Acacia_adoxa_adoxa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,0.03,NA,0.03,NA,NA,0,0,1
+"Acacia_adoxa_subglabra",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_orthotricha","Shrub",NA,"Heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,0.75,NA,NA,0.125,NA,NA,NA,NA,NA,1,0,1
+"Acacia_chippendalei","Shrub",NA,"Heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,NA,NA,1.2,NA,NA,0.08,NA,NA,NA,NA,NA,1,0,1
+"Acacia_lycopodiifolia","shrub",NA,"Heads",NA,"5- or 6-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,1.7,NA,NA,0.07,NA,NA,NA,NA,NA,1,1,1
+"Acacia_anasilla","shrub",NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",200,NA,NA,2.25,2.25,NA,0.08,NA,0.215,NA,NA,NA,0,0,1
+"Acacia_capillaris","Shrub",NA,"heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,NA,NA,1.55,NA,NA,0.09,NA,NA,NA,NA,NA,0,0,1
+"Acacia_smeringa","Shrub",NA,"heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,1.8,NA,NA,0.15,NA,0.25,NA,NA,NA,0,0,1
+"Acacia_repens","shrub",NA,"Heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,2.5,2.5,NA,0.05,NA,0.215,NA,NA,NA,0,0,1
+"Acacia_hypermeces","Shrub",NA,"Heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,1.8,NA,NA,0.08,NA,NA,NA,NA,NA,0,0,1
+"Acacia_mitodes","Prostrate shrub",NA,"heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,1.7,1.7,NA,0.19,NA,0.24,NA,NA,NA,0,0,1
+"Acacia_zatrichota","Shrub",NA,"Heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,2.65,2.65,NA,0.075,NA,NA,NA,NA,NA,0,0,1
+"Acacia_perryi","Shrub",NA,"heads",NA,"5- or 6-merous",NA,NA,NA,NA,"narrowly obconical",NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,1.25,1.25,NA,0.12,NA,NA,NA,NA,NA,0,0,1
+"Acacia_asperulacea","Shrub",NA,"Heads",NA,"5- or 6-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,1.75,NA,NA,0.075,0.03,NA,0.03,NA,NA,1,0,1
+"Acacia_longipedunculata","Shrub",NA,"heads","slightly elongated","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,3,NA,NA,0.12,0.05,NA,NA,NA,NA,0,1,1
+"Acacia_porcata","Shrub",NA,"Heads",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,NA,NA,1.5,1.5,NA,0.195,NA,NA,NA,NA,NA,0,0,1
+"Acacia_galioides","Shrub",NA,"Heads",NA,"5- or 6-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",50,NA,NA,0.95,0.95,NA,0.1,NA,NA,NA,NA,NA,1,0,1
+"Acacia_galioides",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,0.075,NA,0.21,NA,NA,NA,1,0,1
+"Acacia_galioides",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,0.11,NA,0.21,NA,NA,NA,1,0,1
+"Acacia_galioides",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,0.09,NA,0.23,NA,NA,NA,1,0,1
+"Acacia_pentadenia","Shrub or tree",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,0.25,NA,1.3,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_subracemosa","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",350,0.1,NA,1.2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_nigricans","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.125,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_leioderma","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,NA,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_empelioclada","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",125,NA,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_browniana","Shrub",NA,"heads","globular, sometimes obloid","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",115,NA,0.5,1.25,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_browniana_browniana","Shrub",NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_browniana_obscura","Shrub",NA,"flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_browniana_endlicheri","Subshrub","spreading by subterranean runners","Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_browniana_intermedia","Shrub",NA,"Flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_browniana_glaucescens","subshrub","spreading by subterranean runners","flower-heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,NA,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lateriticola","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,0.85,2.25,2.25,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_grisea","Subshrub",NA,"simple","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,1.5,NA,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_moirii","Subshrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",37.5,NA,NA,1.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_moirii_moirii","shrubland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,1.05,1.05,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_moirii_dasycarpa","shrubland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,1.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_moirii_recurvistipula","semi-prostrate",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,1,1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_newbeyi","Shrub",NA,"I-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_depressa","shrub",NA,"simple","globular","S-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",5,1.5,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_amputata","subshrub",NA,"I-headed racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,0.05,NA,0.15,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pulchella","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,0.8,NA,0.8,0.8,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_pulchella_pulchella","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_pulchella_reflexa",NA,NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pulchella_glaberrima",NA,NA,"Heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,1.1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_pulchella_goadbyi",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_megacephala","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,0.9,0.9,2,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_fagonioides","Shrub",NA,"heads","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,NA,NA,0.6,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_epacantha","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,NA,NA,0.85,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lasiocarpa","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",85,0.7,NA,0.7,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_lasiocarpa_lasiocarpa","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",90,NA,0.6,0.9,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lasiocarpa_sedifolia","Shrub",NA,"heads","globular",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,NA,0.4,0.3,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_lasiocarpa_bracteolata","Shrub",NA,"heads",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,0.6,NA,0.45,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_guinetii","Shrub",NA,"racemes","globular","5-merous",NA,NA,NA,NA,"turbinate",NA,NA,NA,NA,NA,NA,NA,"",115.5,0.1,NA,1.75,1.75,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_plicata","Shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_drewiana","Subshrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,NA,1.5,1.5,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_drewiana_drewiana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_drewiana_minor",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_anarthros","Subshrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",35,NA,NA,1.1,1.1,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_preissiana","shrub","lignotuber","simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_tayloriana","shrub",NA,"simple","globular","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,3.75,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_drummondii","Shrub",NA,"spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",110,2.5,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_drummondii_drummondii","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",40,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_drummondii_affinis","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_drummondii_candolleana","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",65,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_drummondii_elegans","Shrub",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",150,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_varia","Shrub","spreading by subterranean runners","spikes",NA,"5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,1.25,NA,1.1,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_varia_varia","Subshrub","spreading by subterranean runners","spikes","cylindrical",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_varia_crassinervis","Subshrub","spreading by subterranean runners","spikes","cylindrical",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_varia_parviflora","shrub","suckering from subterranean runners","spikes","obloid to cylindrical",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_luteola","Shrub",NA,"simple","globular to cylindrical","5-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",45,NA,NA,1.5,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_gilbertii","shrub",NA,"heads","globular","4-merous",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"",100,NA,NA,1.25,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_confusa","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_cracentis","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,1
+"Acacia_genistifolia_genistifolia","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,1
+"Acacia_x_grayana","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_koa","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_koa","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_simplex","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_simplex","","","","","","","","","","","","","","","","","","",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,0,1
+"Acacia_colei_colei",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,0
+"Acacia_diastemata",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,0
+"Acacia_sibirica",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,0
+"Acacia_subcontorta",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,0
+"Acacia_verriculum",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,0
+"Acacia_victoriae_victoriae",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,1,0
+"Acacia_spirorbis",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,0
+"Acacia_x",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,0
+"Acacia_richii",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,0,0

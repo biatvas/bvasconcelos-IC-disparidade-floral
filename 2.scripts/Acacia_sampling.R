@@ -1,6 +1,8 @@
 # Species data  -----------------------------------
-morphodata <- read.csv("1.datasets/continuous_data_cleaned-20260410.csv")
-phylo_source <- read.tree("3.trees/mimosoid_branchesoptimized_clean_updated.tre")
+#setwd() #select the working directory 
+
+morphodata <- read.csv("3.outputs/continuous_data_cleaned-20260410.csv")
+phylo_source <- read.tree("4.trees/mimosoid_branchesoptimized_clean_updated.tre")
 NGS_acacia <- c(
   "Acacia_ampliceps",
   "Acacia_colei_colei",
@@ -112,6 +114,8 @@ NGS_acacia <- c(
   "Paraserianthes_lophantha"
 )
 
+library(dplyr)
+library(stringr)
 
 all_taxa <- union(morphodata$taxon, NGS_acacia) %>%
   union(phylo_source$tip.label)
@@ -126,17 +130,23 @@ acacia$Phylo_nitfix <- as.integer(acacia$taxon %in% phylo_source$tip.label)
 acacia$NGS_acacia <- as.integer(acacia$taxon %in% NGS_acacia) #conferindo com dados do Daniel
 acacia$flora_AUS_traits <- as.integer(acacia$taxon %in% morphodata$taxon)
 
-write.csv(acacia, "4.outputs/acacia_data_source.csv", row.names = FALSE)
+##create a file for Acacia
+dir.create("3.outputs/Acacia/")
+write.csv(acacia, "3.outputs/Acacia/acacia_data_source.csv", row.names = FALSE)
 
-acacia_source <- read.csv("4.outputs/acacia_data_source.csv", 
+acacia_source <- read.csv("3.outputs/Acacia/acacia_data_source.csv", 
                                         na.strings = c("", " ", "NA"))
 
 #read tree
-phylo <- read.tree("~/Documents/Labis/Dados/3.trees/mimosoid_calibrated_clean_updated.tre")
+phylo <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
 #prune only for Acacia
 phylo <- drop.tip(phylo, phylo$tip.label[!grepl("Acacia_", phylo$tip.label)]) #424 acacia
 
 SLICE10 <- 10
+
+library(treesliceR)
+library(phytools)
+
 #for 10MYa
 time_slice10 <- treeSlice(phylo, slice = max(nodeHeights(phylo)) - SLICE10,
                           trivial = TRUE) 
@@ -188,4 +198,4 @@ check_selection <- sampled_acacia %>%
   left_join(clade_sampling, by = "clade")
 
 #save new dataset 
-write.csv(sampled_acacia, "4.outputs/acacia_source_selected.csv", row.names = FALSE)
+write.csv(sampled_acacia, "3.outputs/Acacia/acacia_source_selected.csv", row.names = FALSE)

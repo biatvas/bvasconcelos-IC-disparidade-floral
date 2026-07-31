@@ -8,11 +8,11 @@
   library(ggtree)
   library(treeio)
   
-setwd("~/Documents/Labis/Dados") 
+setwd("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/") 
   
 #add rates in morphodataset ====
-time_tree <- read.tree("3.trees/mimosoid_calibrated_clean_updated.tre")
-substitution_tree <- read.tree("3.trees/mimosoid_branchesoptimized_clean_updated.tre")
+time_tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
+substitution_tree <- read.tree("4.trees/mimosoid_branchesoptimized_clean_updated.tre")
   
 all.equal.phylo(time_tree, substitution_tree, use.edge.length = FALSE) #checking topology 
   
@@ -27,7 +27,11 @@ molecular_evolutionary_rate <- data.frame(
     rate = rates
   )
 molecular_evolutionary_rate$taxon <- gsub("_", " ", molecular_evolutionary_rate$taxon)
-tree_table_filtered <- read.csv("4.outputs/morphoData_mimosa.csv")
+
+tree_table_filtered <- read.csv("3.outputs/morphoData_mimosa.csv") 
+#aqui eu usei um dataset de mimosa preparado para essa analise, com alguns ajustes de dados
+#apenas para testar o script preliminar 
+
 tree_table_filtered <- merge(tree_table_filtered, molecular_evolutionary_rate, by = "taxon")
 
 #0 are spike, 1 are raceme, 2 capitula and 3 umbel
@@ -36,7 +40,7 @@ tree_table_filtered <- merge(tree_table_filtered, molecular_evolutionary_rate, b
 
 set.seed(1234)
 # データ読込
-phylo_tree <- read.tree("3.trees/mimosoid_calibrated_clean_updated.tre")
+phylo_tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
 phylo_tree$tip.label <- gsub("_", " ", phylo_tree$tip.label)
 #because names in tree are Mimosa_myriadenia and in dataset are Mimosa myriadenia
 
@@ -94,17 +98,18 @@ rownames(A) <- colnames(A) <- tip_order
 cat("Is A symmetric? ", isSymmetric(A), "\n")
 cat("Are all eigenvalues positive? ", all(eigen(A)$values > 0), "\n")
 
-# データ側も Tip を A に一致させる
+# データ側も Tip を A に一致させる alinhar dados com a matriz A
 tree_table <- subset(tree_table, taxon %in% tip_order)
 tree_table$taxon <- factor(tree_table$taxon, levels = tip_order)
-# 分布確認 ====
+# 分布確認 check distribution ====
 p <- ggplot(tree_table, aes(x = rate)) +
   geom_histogram(bins = 40) +
   theme_minimal()
 ggsave("rates_histogram.pdf", plot = p, width = 8, height = 6)
 
-# brmsモデル（切片なし） without intercept ====
+# brmsモデル（切片なし） brms model (without intercept) ====
 #using all traits
+
 options(mc.cores = 16)
 brms_model_all <- brm(
   formula = rate ~  stamenNumber + filament_color + InfType + FlowMerosity + inflorescence_peduncle_length_mean +
@@ -121,8 +126,7 @@ brms_model_all <- brm(
   iter = 5000, warmup = 2500, chains = 4, cores = 16, seed = 1234
 )
 
-#there were 52 divergent transition
-
+#there was 52 divergent transition
 sink("brms_mimosa_all.txt"); print(summary(brms_model_all)); sink()
 
 # サマリー・事後サンプルの保存 ====
@@ -142,7 +146,8 @@ saveRDS(fixef_df, "brms_fixef_summary_testing_allmimosa.rds")
 
 plot(brms_model_all)
 
-# ランダム効果 ==== 
+# ランダム効果 random effects==== 
+#calcula um desvio depois de subtrair o sinal filogenetico ?
 pdf("random_effects_mimosa.pdf", width = 10, height = 6)
 try({
   plot(ranef(brms_model_all)$taxon[, , "Intercept"],
@@ -150,7 +155,10 @@ try({
 })
 dev.off()
 
-# 残差 vs フィット ====
+# 残差 vs フィット residual vs fitted ====
+#para cada especie, obtemos um valor previsto (fitted) e a diferença entre
+# o observado e o esperado (residual). Idealmente os pontos vao formar uma nuvem aleatória
+#em torno do zero. Sem funil ou curvatura. 
 fitted_vals    <- fitted(brms_model_all)[, "Estimate"]
 residuals_vals <- residuals(brms_model_all)[, "Estimate"]
 pdf("residuals_vs_fitted_mimosa.pdf", width = 8, height = 6)
@@ -161,11 +169,14 @@ abline(h = 0, col = "red")
 dev.off()
 
 #=== 事後予測チェック====
+#pp check vai sobrepor os dados reais com a densidade simulada
 pdf("posterior_predictive_check_mimosa.pdf", width = 8, height = 6)
 pp_check(brms_model_all)
 dev.off()
 
-#=== 固定効果の図示（95% CI）====
+
+#=== 固定効果の図示（95% CI）check for fixed effects====
+# coeficientes de regressao 
 library(bayesplot)
 color_scheme_set("blue")
 

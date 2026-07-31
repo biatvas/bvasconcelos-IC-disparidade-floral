@@ -1,6 +1,6 @@
 #===Molecular evolution analysis======
-#=====2026.3.4======# 
-# setwd() #defining work directory
+#=====2026.3.4 ======# 
+setwd("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/") #defining work directory
 
 #extracting terminal branchs lengths 末端枝の長さを取り出すコード
 library(ape)
@@ -48,7 +48,6 @@ molecular_evolutionary_rate %>%
 #===2026.03.18====#
 # 枝長の比率を計算====
 #calculate rate of branch length 
-
 library(ape)
 library(ggplot2)
 library(circlize)
@@ -59,10 +58,7 @@ substitution_tree <- read.tree("4.trees/mimosoid_branchesoptimized_clean_updated
 rates <- substitution_tree$edge.length / time_tree$edge.length
 rates_df <- data.frame(rates = rates)
 
-pdf("3.outputs/distribution_molecular_evolutionary_rates.pdf", width = 7, height = 7)
-
 # ① 分子進化速度のヒストグラムを作成/histogram of rates of molecular evolution 
-
 ggplot(rates_df, aes(x = rates)) +
   geom_histogram(binwidth = 0.0005, fill = "#9f9f98", color = "black") +
   labs(title = "Distribution of Molecular Evolutionary Rates",
@@ -73,7 +69,6 @@ ggplot(rates_df, aes(x = rates)) +
 #check for median, min and max for values 
 
 # ②系統樹の色を決める choose color for phylogenetic tree 
-
 color_scale <- colorRamp2(c(0.001, 0.0025, 0.010), c("#00a1e9", "#eae8e1", "#ea5532"))
 rate_colors <- color_scale(rates)
 
@@ -89,7 +84,7 @@ plot.phylo(time_tree, type = "fan", align.tip.label = TRUE,
 
 
 # save plot
-pdf("3.outputs/molecular_evolutionary_rates.pdf", width = 7, height = 7)
+pdf("5.figuras/molecular_evolutionary_rates.pdf", width = 7, height = 7)
 
 plot.phylo(time_tree, type = "fan", align.tip.label = TRUE,
            edge.color = rate_colors, cex = 0.05, 

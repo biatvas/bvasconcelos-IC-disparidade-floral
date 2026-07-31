@@ -10,21 +10,23 @@ library(posterior)
 library(ggtree)
 library(treeio)
 library(circlize)
-setwd("~/Documents/Labis/Dados/")
+setwd("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/")
 
-traits <- read.csv("~/Documents/Labis/Dados/1.datasets/moniq/continuous_data_cleaned-20260410.csv")
+traits <- read.csv("3.outputs/continuous_data_cleaned-20260410.csv")
+
 ##read tree 系統樹読み込み
-time_tree <- read.tree("3.trees/mimosoid_calibrated_clean_updated.tre")
-substitution_tree <- read.tree("3.trees/mimosoid_branchesoptimized_clean_updated.tre")
+time_tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
+substitution_tree <- read.tree("4.trees/mimosoid_branchesoptimized_clean_updated.tre")
 
 all.equal.phylo(time_tree, substitution_tree,
                 use.edge.length = FALSE)
 
-#prune phylogeny 
+#prune phylogeny only for species in morphodata
 tips_remove <- setdiff(time_tree$tip.label, traits$taxon)
 
 #calculate rates
 time_tree <- drop.tip(time_tree, tips_remove)
+#now we have 1166 species
 substitution_tree <- drop.tip(substitution_tree, tips_remove)
 rates <- substitution_tree$edge.length / time_tree$edge.length
 rates_df <- data.frame(rates = rates)
@@ -43,13 +45,11 @@ ggplot(rates_df, aes(x = rates)) +
 color_scale <- colorRamp2(c(0.0015, 0.0030, 0.010), c("#00a1e9", "#eae8e1", "#ea5532"))
 rate_colors <- color_scale(rates)
 
-# save plot
-pdf("4.outputs/Mimoseae_molecular_evolutionary_rates.pdf", width = 7, height = 7)
+#see rates in the phylogenetic tree
 
 plot.phylo(time_tree, type = "fan", edge.color = rate_colors, cex = 0.05, 
            edge.width = 0.5, main = "Rates of molecular evolution")
 
-dev.off()
 
 #============================#
 #== brms =====================
@@ -63,3 +63,5 @@ rates_df <- data.frame(
 
 #juntar o dataset com as taxas
 mimoseae_data <- merge(traits, rates_df, by = "taxon")
+
+#tem 1284 especies, mas sao muitas duplicadas pq corrigimos no trns pra nivel de especie, excluimos var. ou subsp
