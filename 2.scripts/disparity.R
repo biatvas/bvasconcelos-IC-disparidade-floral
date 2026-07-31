@@ -1,25 +1,33 @@
 ## DISPARITY ANALYSES ======
 ## calcular distancia de Gower -> PCoA -> disparidade (SV, SR, MPD) -> plots
-setwd("~/Documents/Labis/Dados/") #defining work directory
+setwd("~/Documents/Github/bvasconcelos-IC-disparidade-floral/") #defining work directory
 if (!require(librarian)) install.packages("librarian"); library("librarian")
 librarian::shelf(phytools, dplyr, tidyr, purrr, factoextra, vegan, tidyverse,ape, stringr, readr,
                  tidytree, ggtree, cluster, dispRity) #installing and/or loading packages
 
 ##=== Limpeza e organização dos dados =======
 ##testing with a small dataset of mimosa
-dat_flower <- read.csv("4.outputs/morpho_10perc_genus.csv", )
+dat_flower <- read.csv("3.outputs/morpho_10perc_timeslice.csv")
 dat_flower <- dat_flower %>%
   filter(str_detect(taxon, "Mimosa"))
 
 #we have only 62 species from Mimosa here 
-
-tree <- read.tree("3.trees/mimosoid_calibrated_clean_updated.tre")
+tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
 dat_eco <- #extract from ringelberg?
   
-  ## get traits dataframe
-  traits <- cbind("taxon" = dat_flower$taxon, dat_flower[, 4:33])
+## get traits dataframe
+traits <- cbind("taxon" = dat_flower$taxon, dat_flower[, 5:32])
 
 set.seed(7)
+
+## =========================================###
+## validação manual para categóricas
+## Estrategia: para cada variavel problematica, gera um CSV com os valores
+## unicos + contagem de ocorrencias, e uma coluna "clean_value" em branco
+## para preencher a mao com a categoria correta. Depois le esse CSV
+## de volta e aplica via left_join.
+#salvar um csv do unique dos traços pra fazer uma validação dos dados
+
 ## sinonimos: staminal_tube == stamen_tube
 traits <- traits %>%
   mutate(stamen_tube_final = coalesce(stamen_tube_presence, staminal_tube_presence)) %>%
@@ -33,23 +41,13 @@ tree_pruned <- drop.tip(tree, setdiff(tree$tip.label,
 #inflorescence width, pedicel width, 
 #calyx lobe length, corolla lobe length serão todos excluídos. 
 #dados de sexualidade das flores precisam ser pensados como tratar
+
 traits_mixed <- traits %>%
   column_to_rownames("taxon") %>%
   select(where(~ !all(is.na(.))))   # remove colunas 100% NA (ex: inflorescence_width_mean)
 
-traits_mixed <- traits_mixed %>%
-  mutate(
-    flower_merosity = factor(
-      flower_merosity,
-      levels = c("3-merous", "4-merous", "5-merous", "variable"),
-      ordered = FALSE #pra mim nao faz sentido ordenar
-    )
-  ) 
-###mudar esse script aqui pra selecionar 
-#salvar um csv do unique dos traços pra fazer uma validação dos dados
 
 ##tratamento dos dados validados
-
 ## stamen_count 
 traits_mixed <- traits_mixed %>%
   mutate(
@@ -94,6 +92,44 @@ traits_mixed <- traits_mixed %>%
 ## conferencia
 sapply(traits_mixed, class)
 
+## Input de dados com Moda e Mediana =======
+##funçao para estimar estados mais frequentes para traços integer
+get_moda <- function(x) {
+  x <- x[!is.na(x)]
+  if (length(x) == 0) return(NA)
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+##substitui NA pelos estados mais frequentes
+moda_integer <- sapply(integer, function(x) {
+  a <- traits_mixed[[x]]
+  tidyr::replace_na(traits_mixed[[x]], get_moda(a))
+})
+
+#substituindo as colunas com NA pelo valor de moda 
+traits_mixed[,c(integer)] <- moda_integer
+
+#dataset apenas com colunas que sao numericas 
+numeric <- traits_mixed[,!names(traits_mixed) %in%
+                                integer]
+#funcao para estimar a media das colunas numericas
+mean_numeric <- log(sapply(names(numeric), function(x) {
+  a <- traits_mixed$flower[[x]]
+  tidyr::replace_na(a, mean(a, na.rm = TRUE))
+}))
+
+#substituindo as colunas
+
+
+## recebe traits_mixed (ja com colunas continuas e categoricas
+## tipadas corretamente) e devolve uma copia com NAs preenchidos.
+## Continuas: preenchidas com a MEDIA da coluna.
+## Categoricas (factor): preenchidas com a MODA da coluna.
+
+## checagem
+sum(sapply(traits_modemean_input, function(x) sum(is.na(x))))  # deve ser 0
+
+
 ## Input de dados com RPhylopars ============ 
 install.packages("Rphylopars")
 #downloades Rphylopars_0.3.10
@@ -105,36 +141,9 @@ cont_cols <- traits_mixed %>%
   select(where(is.numeric)) %>%
   colnames()
 
-## Teste de normalidade nos dados iniciais ======
-cont_raw <- traits_mixed %>%
-  rownames_to_column("species") %>%
-  select(species, all_of(cont_cols))
-
-shapiro_results <- lapply(cont_raw[cont_cols], function(x) {
-  x <- na.omit(x)
-  if (length(x) >= 3) shapiro.test(x) else NA
-})
-
-data.frame(
-  trait   = names(shapiro_results),
-  W       = sapply(shapiro_results, function(r) if (is.list(r)) r$statistic else NA),
-  p.value = sapply(shapiro_results, function(r) if (is.list(r)) r$p.value else NA)
-)
-
-## log no dado bruto, antes de imputar (NAs continuam ali, log(NA) = NA,
-##    entao nao precisa remover NA antes)
-cont_log <- cont_raw
-cont_log[cont_cols] <- lapply(cont_log[cont_cols], log)
-
-## Checagem de alinhamento entre taxons e arvore antes do phylopars =====
-setdiff(cont_log$species, tree_pruned$tip.label)
-setdiff(tree_pruned$tip.label, cont_log$species)
-
-#o setdiff precisa vir (0)
-
-## phylopars() agora roda na escala log ======
+## phylopars() 
 phylopars_fit <- phylopars(
-  trait_data       = cont_log,
+  trait_data       = cont_cols,
   tree             = tree_pruned,
   model            = "BM",
   pheno_error      = TRUE,
@@ -163,7 +172,7 @@ sum(is.na(cont_log[cont_cols]))
 sum(is.na(imputed_cont))   # deve ser 0
 
 
-## Substituir em traits_mixed - agora traits_mixed fica DIRETO em escala log
+## Substituir em traits_mixed - agora traits_mixed fica direto em escala log
 imputed_df <- as.data.frame(imputed_cont) %>%
   rownames_to_column("species")
 
@@ -176,9 +185,35 @@ traits_mixed <- traits_mixed %>%
 sapply(traits_mixed, class)
 sum(sapply(traits_mixed, function(x) sum(is.na(x))))   # so as categoricas devem ter NA
 
-## NAO tem mais etapa de "log nas continuas" depois disso - ja esta feito
+## Teste de normalidade nos dados iniciais ======
+cont_raw <- traits_mixed %>%
+  rownames_to_column("species") %>%
+  select(species, all_of(cont_cols))
 
-## DISTANCIA DE GOWER 
+shapiro_results <- lapply(cont_raw[cont_cols], function(x) {
+  x <- na.omit(x)
+  if (length(x) >= 3) shapiro.test(x) else NA
+})
+
+data.frame(
+  trait   = names(shapiro_results),
+  W       = sapply(shapiro_results, function(r) if (is.list(r)) r$statistic else NA),
+  p.value = sapply(shapiro_results, function(r) if (is.list(r)) r$p.value else NA)
+)
+
+## log nos dados 
+cont_log <- cont_raw
+cont_log[cont_cols] <- lapply(cont_log[cont_cols], log)
+
+## Checagem de alinhamento entre taxons e arvore antes do phylopars =====
+setdiff(cont_log$species, tree_pruned$tip.label)
+setdiff(tree_pruned$tip.label, cont_log$species)
+
+#o setdiff precisa vir (0)
+
+
+## DISTANCIA DE GOWER =======
+
 ## type = list(...) permite controlar como cada bloco de variaveis e tratado
 ## symm = fatores nominais tratados como "simple matching" (0/1)
 library(cluster)
