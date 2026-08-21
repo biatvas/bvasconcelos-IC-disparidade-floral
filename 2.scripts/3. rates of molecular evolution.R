@@ -4,6 +4,7 @@ setwd("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/") #defining work d
 
 #extracting terminal branchs lengths 末端枝の長さを取り出すコード
 library(ape)
+library(dplyr)
 tree <- ape:: read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
 lengths <- tree$edge.length[tree$edge[,2] <= length(tree$tip.label)]
 
@@ -91,6 +92,16 @@ plot.phylo(time_tree, type = "fan", align.tip.label = TRUE,
            edge.width = 0.5, main = "Molecular evolutionary rate")
 
 dev.off()
+
+#plot without tip label
+pdf("5.figuras/molecular_evolutionary_rates_color.pdf", width = 7, height = 7)
+
+plot.phylo(time_tree, type = "fan", show.tip.label = FALSE,
+           edge.color = rate_colors, cex = 0.05, 
+           edge.width = 0.5, main = "Molecular evolutionary rate")
+
+dev.off()
+
 #see tip names with high evolutionary rates 
 threshold <- 0.01
 
