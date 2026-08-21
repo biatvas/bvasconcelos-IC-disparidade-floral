@@ -28,11 +28,10 @@ molecular_evolutionary_rate <- data.frame(
   )
 molecular_evolutionary_rate$taxon <- gsub("_", " ", molecular_evolutionary_rate$taxon)
 
-tree_table_filtered <- read.csv("3.outputs/morphoData_mimosa.csv") 
+tree_table_filtered <- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/filtered_mimosa_table.csv") 
+
 #aqui eu usei um dataset de mimosa preparado para essa analise, com alguns ajustes de dados
 #apenas para testar o script preliminar 
-
-tree_table_filtered <- merge(tree_table_filtered, molecular_evolutionary_rate, by = "taxon")
 
 #0 are spike, 1 are raceme, 2 capitula and 3 umbel
 #for the variable filament color, 0 is white, 1 is yellow, 2 is pink and 3 is red
@@ -44,8 +43,7 @@ phylo_tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
 phylo_tree$tip.label <- gsub("_", " ", phylo_tree$tip.label)
 #because names in tree are Mimosa_myriadenia and in dataset are Mimosa myriadenia
 
-#154 obs and 13 variables
-
+#149 obs and 13 variables
 #imputing data because are some NAs ====
 tree_table <- tree_table_filtered %>%
   select(-nectary_presence, -CalShape)
@@ -81,6 +79,7 @@ tree_table[categorical_cols] <- lapply(tree_table[categorical_cols], function(x)
 # Na除去
 tree_table <- tree_table[!is.na(tree_table$rate), ]
 nrow(tree_table)
+
 # 表を参照して系統樹をトリミング
 phylo_tree_filtered <- drop.tip(
   phylo_tree,
@@ -109,7 +108,6 @@ ggsave("rates_histogram.pdf", plot = p, width = 8, height = 6)
 
 # brmsモデル（切片なし） brms model (without intercept) ====
 #using all traits
-
 options(mc.cores = 16)
 brms_model_all <- brm(
   formula = rate ~  stamenNumber + filament_color + InfType + FlowMerosity + inflorescence_peduncle_length_mean +
@@ -127,7 +125,9 @@ brms_model_all <- brm(
 )
 
 #there was 52 divergent transition
-sink("brms_mimosa_all.txt"); print(summary(brms_model_all)); sink()
+# 1: There were 1 divergent transitions after warmup.
+
+sink("3.outputs/brms_mimosa_all.txt"); print(summary(brms_model_all)); sink()
 
 # サマリー・事後サンプルの保存 ====
 # summary and posterior predictive 
@@ -210,6 +210,31 @@ fixef_df <- fixef(brms_model_all) |>
   )
 
 ##make a plot 
+
+pdf("5.figuras/Posterior mean estimates.pdf", width = 8, height = 6)
+ggplot(fixef_df,
+       aes(y = reorder(Parameter, Estimate))) +
+  geom_vline(xintercept = 0,
+             linetype = "dashed",
+             colour = "grey50") +
+  geom_segment(aes(x = Q2.5,
+                   xend = Q97.5,
+                   yend = reorder(Parameter, Estimate)),
+               linewidth = 0.8) +
+  geom_point(aes(x = Estimate),
+             size = 2.8) +
+  labs(
+    x = "Posterior estimate",
+    y = NULL,
+    title = "Effects of floral traits on molecular evolutionary rate"
+  ) +
+  theme_classic(base_size = 13)
+dev.off()
+
+#save png data 
+png("5.figuras/Posterior mean estimates.png",
+    width = 8, height = 6, units = "in", res = 300)
+
 ggplot(fixef_df,
        aes(y = reorder(Parameter, Estimate))) +
   geom_vline(xintercept = 0,
@@ -228,7 +253,7 @@ ggplot(fixef_df,
   ) +
   theme_classic(base_size = 13)
 
-
+dev.off()
 
 #=== Data for Mimoseae ========
 #=================================#
