@@ -7,12 +7,12 @@ library(tidyverse)
 library(phytools)
 
 #get ready
-setwd("~/Documents/Labis/Dados")
+setwd("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/")
 #cada ramo tem uma taxa e buscamos ver como isso muda ao longo do tempo 
 
 #ler arvores
-time_tree <- read.tree("3.trees/mimosoid_calibrated_clean_updated.tre")
-substitution_tree <- read.tree("3.trees/mimosoid_branchesoptimized_clean_updated.tre")
+time_tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
+substitution_tree <- read.tree("4.trees/mimosoid_branchesoptimized_clean_updated.tre")
 
 # garantir mesma ordem
 time_tree <- reorder.phylo(time_tree, "postorder")
@@ -120,7 +120,7 @@ rate_graph <- ggplot(results, aes(x = bin_end, y = rate)) +
   )
 
 # salvar o plot
-pdf("4.outputs/molecular_evolutionary_rates_in_time.pdf", width = 7, height = 7)
+pdf("5.figuras/molecular_evolutionary_rates_in_time.pdf", width = 7, height = 7)
 
 ggplot(results, aes(x = bin_end, y = rate)) +
   geom_line(linewidth = 1) +
@@ -133,6 +133,8 @@ ggplot(results, aes(x = bin_end, y = rate)) +
   )
 dev.off()
 
+
+##==== SCRIPT EM TESTE =========
 #plot tree with rates 
 rates <- edge_df$rate
 names(rates) <- 1:nrow(time_tree$edge)
