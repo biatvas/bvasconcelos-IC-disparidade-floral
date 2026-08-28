@@ -23,7 +23,7 @@ get_range_cols <- function(cols, range_traits, suffix) {
     grep(paste0("^", x, "_", suffix, "(_|$)"), cols, value = TRUE)))
 }
 
-cols <- names(inga_traits)
+cols <- names(traits)
 range_traits <- get_range_traits(cols)
 
 continuous_col <- c(
