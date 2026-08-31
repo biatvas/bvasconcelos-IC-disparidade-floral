@@ -3,7 +3,7 @@ librarian::shelf(dplyr, purrr, readr, stringr, tidyr, tibble,
                  cluster, ape, vegan, ggplot2, readr)
 
 morpho_data<- read_csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/mimoseae_subset_clean.csv")
-validated_data <- morpho_data %>% filter(Check == "1") #204 obs
+validated_data <- morpho_data %>% filter(Check == "1") #221 obs
 
 traits <- cbind("taxon" = validated_data$taxon, validated_data[, 6:83])
 
@@ -16,14 +16,14 @@ traits <- cbind("taxon" = validated_data$taxon, validated_data[, 6:83])
 setwd("Documents/GitHub/bvasconcelos-IC-disparidade-floral/")
 
 get_range_traits <- function(cols) {
-  unique(sub("(.+)_min(_|$).*$", "\\1", cols[grepl("_min(_|$)", cols)]))
-}
+  unique(sub("(.+)_min(_|$).*$", "\\1", cols[grepl("_min(_|$)", cols)]))}
+
 get_range_cols <- function(cols, range_traits, suffix) {
   unlist(lapply(range_traits, function(x)
     grep(paste0("^", x, "_", suffix, "(_|$)"), cols, value = TRUE)))
 }
 
-cols <- names(inga_traits)
+cols <- names(traits)
 range_traits <- get_range_traits(cols)
 
 continuous_col <- c(
@@ -39,7 +39,7 @@ qual_cols <- setdiff(cols, c("taxon", continuous_col, unit_col))
 
 export_qualitative_lookup <- function(traits, qual_cols, path) {
   lookup <- purrr::map_dfr(qual_cols, function(col) {
-    x <- as.character(inga_traits[[col]])
+    x <- as.character(traits[[col]])
     x <- x[!is.na(x) & x != ""]
     if (length(x) == 0) return(NULL)
     tab <- sort(table(x), decreasing = TRUE)
@@ -58,11 +58,10 @@ export_qualitative_lookup <- function(traits, qual_cols, path) {
 #evitar que existam diferenças como Branco, branco, branco ,
 traits[qual_cols] <- lapply(traits[qual_cols], function(x) trimws(tolower(as.character(x))))
 
-qual_lookup <- export_qualitative_lookup(_traits, qual_cols, "qualitative_lookup_mimoseae.csv")
+qual_lookup <- export_qualitative_lookup(traits, qual_cols, "3.outputs/qualitative_lookup_mimoseae.csv")
 
 #checar manualmente e gerar um novo arquivo editado pra substituir os nomes 
-
-qual_lookup_check <- readr::read_csv("qualitative_lookup_mimoseaee_check.csv")
+qual_lookup_check <- read.csv("3.outputs/qualitative_lookup_mimoseaee_check.csv")
 
 apply_qualitative_lookup <- function(traits, lookup) {
   for (v in unique(lookup$variable)) {
@@ -85,6 +84,7 @@ continuous_col[!continuous_col %in% colnames(traits)]
 
 #conferindo os dados 
 unique(unlist(unname(traits[continuous_col]))) #tem um cm no meio dos dados, conferir onde que teve esse erro de digitacao 
+## +- em um dado, uns dados com (0.7) e acho que só?
 
 #conferindo onde ta esse cm
 traits[apply(traits[continuous_col], 1, function(x) any(x == "cm", na.rm = TRUE)), ]
@@ -110,6 +110,7 @@ update_trait_values <- function(traits, min_col, low_col, high_col, max_col) {
 cols <- names(traits)
 range_traits <- unique(sub("(.+)_min(_|$).*$", "\\1", cols[grepl("_min(_|$)", cols)]))
 
+traits_2 <- traits
 #vamos continuar usando o traits_2
 for (root in range_traits) {
   min_col  <- grep(paste0("^", root, "_min(_|$)"),  cols, value = TRUE) 
@@ -132,12 +133,11 @@ for (root in range_traits) {
   }
 }
 
-sum(is.na(traits_2)) #1428
-sum(is.na(traits)) #1428
+sum(is.na(traits_2)) #10188
+sum(is.na(traits)) #10188
 
 #===========================================#
 ## Mean values for continuous traits ####
-
 # Verificando se existe algo que tem informação em min mas não tem em low ou se tem em max mas não tem em high
 min_cols <- unlist(lapply(range_traits, function(x) grep(paste0("^", x, 
                                                                 "_min(_|$)"),  cols, value = TRUE)))

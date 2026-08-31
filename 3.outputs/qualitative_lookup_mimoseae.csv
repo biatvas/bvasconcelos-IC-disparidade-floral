@@ -1,15 +1,16 @@
 variable,original_value,n_occurrences,standardized_value
-habit,tree,79,tree
+habit,tree,86,tree
 habit,trees,22,trees
-habit,shrubs,19,shrubs
+habit,shrubs,20,shrubs
 habit,subshrubs,6,subshrubs
 habit,arborescent shrubs,5,arborescent shrubs
+habit,shrub,5,shrub
+habit,shrub or small tree,5,shrub or small tree
 habit,"shrub, tree",5,"shrub, tree"
-habit,shrub,4,shrub
-habit,shrub or small tree,4,shrub or small tree
 habit,shrubs and treelets,4,shrubs and treelets
 habit,"tree, shrub",4,"tree, shrub"
 habit,herbs,3,herbs
+habit,shrub or tree,3,shrub or tree
 habit,shrub or treelet,2,shrub or treelet
 habit,"shrubs, trees",2,"shrubs, trees"
 habit,vines,2,vines
@@ -24,13 +25,13 @@ habit,herb,1,herb
 habit,"herbs, bushy shrubs, weakly woody sarmentose vines and treelets",1,"herbs, bushy shrubs, weakly woody sarmentose vines and treelets"
 habit,humifuse herbs,1,humifuse herbs
 habit,"liana, shrub",1,"liana, shrub"
+habit,lianas or straggling shrubs,1,lianas or straggling shrubs
 habit,macrophyllidious trees,1,macrophyllidious trees
 habit,perennial herbs or shrub,1,perennial herbs or shrub
 habit,rosette-trees,1,rosette-trees
 habit,scandent shrubs or lianes,1,scandent shrubs or lianes
 habit,scrambling or arborescent shrubs,1,scrambling or arborescent shrubs
 habit,short-lived perennial herbs,1,short-lived perennial herbs
-habit,shrub or tree,1,shrub or tree
 habit,shrub to small tree,1,shrub to small tree
 habit,"shrub, small tree",1,"shrub, small tree"
 habit,shrubs and small trees,1,shrubs and small trees
@@ -63,9 +64,9 @@ root_system,rhizomes,1,rhizomes
 root_system,woody root-stock,1,woody root-stock
 root_system,woody roots or short caudex,1,woody roots or short caudex
 root_system,"woody, when young carrot-like, in age knotty and amorphous",1,"woody, when young carrot-like, in age knotty and amorphous"
-inflorescence_type,capitula,86,capitula
-inflorescence_type,spike,28,spike
-inflorescence_type,spikes,18,spikes
+inflorescence_type,capitula,87,capitula
+inflorescence_type,spike,33,spike
+inflorescence_type,spikes,21,spikes
 inflorescence_type,capitate,6,capitate
 inflorescence_type,racemes,6,racemes
 inflorescence_type,head,5,head
@@ -74,6 +75,7 @@ inflorescence_type,fl-spikes,3,fl-spikes
 inflorescence_type,pedunculate glomerules,3,pedunculate glomerules
 inflorescence_type,capitulum like racemes,2,capitulum like racemes
 inflorescence_type,globose head,2,globose head
+inflorescence_type,heads,2,heads
 inflorescence_type,panicled head,2,panicled head
 inflorescence_type,panicles,2,panicles
 inflorescence_type,raceme,2,raceme
@@ -90,7 +92,7 @@ inflorescence_type,corymbs,1,corymbs
 inflorescence_type,dense globose heads pedunculate,1,dense globose heads pedunculate
 inflorescence_type,globular pedunculate heads,1,globular pedunculate heads
 inflorescence_type,glomerules,1,glomerules
-inflorescence_type,heads,1,heads
+inflorescence_type,heads globose,1,heads globose
 inflorescence_type,"heads, very short spikes",1,"heads, very short spikes"
 inflorescence_type,panicle of pseudoracemes (capitula?),1,panicle of pseudoracemes (capitula?)
 inflorescence_type,"panicled, pedunculate",1,"panicled, pedunculate"
@@ -103,6 +105,7 @@ inflorescence_type,racemose,1,racemose
 inflorescence_type,spiciforms racemes,1,spiciforms racemes
 inflorescence_type,spike or raceme,1,spike or raceme
 inflorescence_type,"spike,capitulum or umbel",1,"spike,capitulum or umbel"
+inflorescence_type,spikes or densely flowered heads,1,spikes or densely flowered heads
 inflorescence_type,umbell,1,umbell
 inflorescence_type,umbles or corymbs,1,umbles or corymbs
 inflorescence_shape,globose,24,globose
@@ -130,6 +133,7 @@ inflorescence_shape,capitula axillary,1,capitula axillary
 inflorescence_shape,capituliforme,1,capituliforme
 inflorescence_shape,"consisting of pedunculate glomerules, aggregated into panicles",1,"consisting of pedunculate glomerules, aggregated into panicles"
 inflorescence_shape,cylindrical,1,cylindrical
+inflorescence_shape,cylindrical loosely flowered,1,cylindrical loosely flowered
 inflorescence_shape,ellipsoid or globose,1,ellipsoid or globose
 inflorescence_shape,fascicled or racemose,1,fascicled or racemose
 inflorescence_shape,fasciculate,1,fasciculate
@@ -139,6 +143,8 @@ inflorescence_shape,"globose, clavate or unexpanded",1,"globose, clavate or unex
 inflorescence_shape,head,1,head
 inflorescence_shape,heads or very short spikes,1,heads or very short spikes
 inflorescence_shape,hemispherical or subglobose,1,hemispherical or subglobose
+inflorescence_shape,loosely flowered cylindrical,1,loosely flowered cylindrical
+inflorescence_shape,loosely flowered cylindrical spike,1,loosely flowered cylindrical spike
 inflorescence_shape,mostly in terminal and axillary pseudoracemes,1,mostly in terminal and axillary pseudoracemes
 inflorescence_shape,"mostly in terminal panicles, mostly in terminal pseudoracemes",1,"mostly in terminal panicles, mostly in terminal pseudoracemes"
 inflorescence_shape,oblong,1,oblong
@@ -149,9 +155,11 @@ inflorescence_shape,ovoid-ellipsoid or globose,1,ovoid-ellipsoid or globose
 inflorescence_shape,panicle of spikes,1,panicle of spikes
 inflorescence_shape,pedunculate flowers bearing corymbs,1,pedunculate flowers bearing corymbs
 inflorescence_shape,"pedunculate glomerules aggregated into terminal, shortly, tomentose panicles",1,"pedunculate glomerules aggregated into terminal, shortly, tomentose panicles"
+inflorescence_shape,pedunculate heads arranged in terminal open panicles or elongated racemes,1,pedunculate heads arranged in terminal open panicles or elongated racemes
 inflorescence_shape,plumply ellipsoid,1,plumply ellipsoid
 inflorescence_shape,simple thyrsi,1,simple thyrsi
 inflorescence_shape,"simple thyrsi, cymule of solitary to 4-ternate spikes",1,"simple thyrsi, cymule of solitary to 4-ternate spikes"
+inflorescence_shape,solitary or paired heads sometimes combined into a panicle,1,solitary or paired heads sometimes combined into a panicle
 inflorescence_shape,solitary or paired racemes axillary to the distal leaves,1,solitary or paired racemes axillary to the distal leaves
 inflorescence_shape,spiciform raceme,1,spiciform raceme
 inflorescence_shape,spiciform racemes,1,spiciform racemes
@@ -164,7 +172,7 @@ inflorescence_shape,terminal panicle,1,terminal panicle
 inflorescence_shape,"terminal pseudoracemes, axillary",1,"terminal pseudoracemes, axillary"
 inflorescence_shape,terminal racemes,1,terminal racemes
 inflorescence_shape,"umbelliform, spherical or hemispherical",1,"umbelliform, spherical or hemispherical"
-flower_merosity,5,69,5
+flower_merosity,5,76,5
 flower_merosity,5-merous,42,5-merous
 flower_merosity,4-merous,17,4-merous
 flower_merosity,4 (5)-merous,4,4 (5)-merous
@@ -180,6 +188,7 @@ flower_merosity,(4)5-merous,1,(4)5-merous
 flower_merosity,3-4-merous,1,3-4-merous
 flower_merosity,4- or 5- or 6-merous,1,4- or 5- or 6-merous
 flower_merosity,4- or 5-merous,1,4- or 5-merous
+flower_merosity,4-5,1,4-5
 flower_merosity,4(5-)-merous,1,4(5-)-merous
 flower_merosity,5 (6),1,5 (6)
 flower_merosity,5-7,1,5-7
@@ -187,7 +196,7 @@ flower_merosity,5-merous or randomly 6-7-merous,1,5-merous or randomly 6-7-merou
 flower_merosity,5-merous(some terminal flower 6-merous),1,5-merous(some terminal flower 6-merous)
 flower_merosity,5(6)9-merous,1,5(6)9-merous
 flower_merosity,5(randomly 6)-merous,1,5(randomly 6)-merous
-bisexual_flowers_presence,yes,22,yes
+bisexual_flowers_presence,yes,23,yes
 bisexual_flowers_presence,bisexual,3,bisexual
 bisexual_flowers_presence,present,3,present
 bisexual_flowers_presence,all bisexual,1,all bisexual
@@ -220,10 +229,10 @@ heteromorphic_flower_presence,homo or heteromorphic,1,homo or heteromorphic
 heteromorphic_flower_presence,inner most broader than outer ones,1,inner most broader than outer ones
 heteromorphic_flower_presence,no,1,no
 heteromorphic_flower_presence,probably dimorphic but terminal one not observed,1,probably dimorphic but terminal one not observed
+sterile_flower_presence,lower ones sterile,2,lower ones sterile
 sterile_flower_presence,yes,2,yes
 sterile_flower_presence,absent,1,absent
 sterile_flower_presence,basal flowers sterile,1,basal flowers sterile
-sterile_flower_presence,lower ones sterile,1,lower ones sterile
 calyx_shape,campanulate,36,campanulate
 calyx_shape,funnel-shaped,5,funnel-shaped
 calyx_shape,cup-shaped,4,cup-shaped
@@ -233,6 +242,7 @@ calyx_shape,tubular,4,tubular
 calyx_shape,turbinate,3,turbinate
 calyx_shape,campanulate or turbinate-campanulate,2,campanulate or turbinate-campanulate
 calyx_shape,deeply campanulate,2,deeply campanulate
+calyx_shape,obconical,2,obconical
 calyx_shape,campanulate cup,1,campanulate cup
 calyx_shape,campanulate or deeply campannlate,1,campanulate or deeply campannlate
 calyx_shape,campanulate or deeply campanulate,1,campanulate or deeply campanulate
@@ -242,6 +252,7 @@ calyx_shape,campanulate or turbinate,1,campanulate or turbinate
 calyx_shape,crateriform or shallowly campanulate,1,crateriform or shallowly campanulate
 calyx_shape,cup shaped,1,cup shaped
 calyx_shape,cup-shaped to tubular,1,cup-shaped to tubular
+calyx_shape,cupular,1,cupular
 calyx_shape,cylindric or cylindro-campanulate,1,cylindric or cylindro-campanulate
 calyx_shape,cylindric or slightly dilated above middle,1,cylindric or slightly dilated above middle
 calyx_shape,cylindrical to slightly obconical,1,cylindrical to slightly obconical
@@ -251,7 +262,6 @@ calyx_shape,minute,1,minute
 calyx_shape,"narrowly campanulate or vase-shaped from turbinate base, cylindrocampanulate",1,"narrowly campanulate or vase-shaped from turbinate base, cylindrocampanulate"
 calyx_shape,narrowly funnel-shaped,1,narrowly funnel-shaped
 calyx_shape,narrowly obconical,1,narrowly obconical
-calyx_shape,obconical,1,obconical
 calyx_shape,obsolete,1,obsolete
 calyx_shape,paleaceous,1,paleaceous
 calyx_shape,paleaceous-pappiform,1,paleaceous-pappiform
@@ -269,7 +279,7 @@ calyx_shape,turbinate-campanulate or somewhat urn-shaped,1,turbinate-campanulate
 calyx_shape,"turbinate-campanulate, obtusely 5-angulate",1,"turbinate-campanulate, obtusely 5-angulate"
 calyx_shape,"turbinate, broadly campanulate",1,"turbinate, broadly campanulate"
 calyx_lobe_length_unit.,mm,115,mm
-stamen_count,10,45,10
+stamen_count,10,46,10
 stamen_count,8,10,8
 stamen_count,4,8,4
 stamen_count,8(10),6,8(10)
@@ -286,6 +296,7 @@ stamen_count,5,2,5
 stamen_count,6,2,6
 stamen_count,8-10,2,8-10
 stamen_count,80,2,80
+stamen_count,numerous (more than 50),2,numerous (more than 50)
 stamen_count,species from genus vachellia have numerous stamens (20-100),2,species from genus vachellia have numerous stamens (20-100)
 stamen_count,(16)18-31(terminal flowers 54 -100),1,(16)18-31(terminal flowers 54 -100)
 stamen_count,(18-)21-30(32) or 50-80 on terminal flowers,1,(18-)21-30(32) or 50-80 on terminal flowers
@@ -297,6 +308,7 @@ stamen_count,(98-)114-204(-218),1,(98-)114-204(-218)
 stamen_count,10-12,1,10-12
 stamen_count,10(15),1,10(15)
 stamen_count,100-110,1,100-110
+stamen_count,100-140,1,100-140
 stamen_count,12-22,1,12-22
 stamen_count,15-17,1,15-17
 stamen_count,16-28(32),1,16-28(32)
@@ -314,6 +326,7 @@ stamen_count,25-50,1,25-50
 stamen_count,26-38,1,26-38
 stamen_count,26-44,1,26-44
 stamen_count,27-36,1,27-36
+stamen_count,28,1,28
 stamen_count,28-36,1,28-36
 stamen_count,30-36,1,30-36
 stamen_count,30-40,1,30-40
@@ -327,6 +340,7 @@ stamen_count,36,1,36
 stamen_count,36-62,1,36-62
 stamen_count,40-45,1,40-45
 stamen_count,40-65,1,40-65
+stamen_count,40-80,1,40-80
 stamen_count,43-52,1,43-52
 stamen_count,45,1,45
 stamen_count,45-55,1,45-55
@@ -399,19 +413,19 @@ filament_color,whitish or pale pink,1,whitish or pale pink
 filament_color,whitish with tassel red,1,whitish with tassel red
 filament_color,"whitish, yellow-tipped or orange",1,"whitish, yellow-tipped or orange"
 filament_color,yellow,1,yellow
-anther_gland_presence,absent,29,absent
+anther_gland_presence,absent,30,absent
 anther_gland_presence,yes,25,yes
-anther_gland_presence,eglandular,14,eglandular
+anther_gland_presence,eglandular,16,eglandular
 anther_gland_presence,no,10,no
-anther_gland_presence,present,5,present
+anther_gland_presence,present,10,present
 anther_gland_presence,bearing a anther gland,3,bearing a anther gland
 anther_gland_presence,spheroidal apical gland,2,spheroidal apical gland
 anther_gland_presence,anther gland normally present,1,anther gland normally present
 anther_gland_presence,anthers bearing a caducous apical gland,1,anthers bearing a caducous apical gland
 anther_gland_presence,anthers eglandular,1,anthers eglandular
 anther_gland_presence,anthers usually bearing a caducous stalked anther gland.,1,anthers usually bearing a caducous stalked anther gland.
+anther_gland_presence,bearing a caducous apical gland,1,bearing a caducous apical gland
 anther_gland_presence,ellipsoid anthers with deciduous gland,1,ellipsoid anthers with deciduous gland
-anther_gland_presence,glandular,1,glandular
 anther_gland_presence,"mostly glandless, rarely with minute apical glands",1,"mostly glandless, rarely with minute apical glands"
 anther_gland_presence,with a stalked spherical apical gland,1,with a stalked spherical apical gland
 stemonozone_presence,present,51,present
@@ -437,7 +451,7 @@ intrastaminal_nectary_presence,disk adnate to the stamina tube,1,disk adnate to 
 intrastaminal_nectary_presence,only in bissexual flowers,1,only in bissexual flowers
 intrastaminal_nectary_presence,only in central flowers,1,only in central flowers
 nectary_presence,absent,7,absent
-nectary_presence,present,5,present
+nectary_presence,present,7,present
 nectary_presence,yes,2,yes
 nectary_presence,basal nectary in ovary,1,basal nectary in ovary
 nectary_presence,flowers with minute reddish to reddish-brown glands at the base,1,flowers with minute reddish to reddish-brown glands at the base
