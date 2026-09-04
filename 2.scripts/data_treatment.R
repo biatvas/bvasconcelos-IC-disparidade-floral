@@ -2,7 +2,7 @@ if (!require(librarian)) install.packages("librarian")
 librarian::shelf(dplyr, purrr, readr, stringr, tidyr, tibble,
                  cluster, ape, vegan, ggplot2, readr)
 
-morpho_data<- read_csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/mimoseae_subset_clean.csv")
+morpho_data<- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/mimoseae_subset_clean.csv")
 validated_data <- morpho_data %>% filter(Check == "1") #221 obs
 
 traits <- cbind("taxon" = validated_data$taxon, validated_data[, 6:83])
@@ -61,7 +61,10 @@ traits[qual_cols] <- lapply(traits[qual_cols], function(x) trimws(tolower(as.cha
 qual_lookup <- export_qualitative_lookup(traits, qual_cols, "3.outputs/qualitative_lookup_mimoseae.csv")
 
 #checar manualmente e gerar um novo arquivo editado pra substituir os nomes 
-qual_lookup_check <- read.csv("3.outputs/qualitative_lookup_mimoseaee_check.csv")
+#quali data to check are inflorescence type, sex type of flower/inflo, habit,
+#flower_merosity, filament_color, stamen_count, nectary presence, anther gland presence (i dont now if i will keep stemonozone & stamen tube)
+
+qual_lookup_check <- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/3.outputs/qualitative_lookup_mimoseae_check.csv")
 
 apply_qualitative_lookup <- function(traits, lookup) {
   for (v in unique(lookup$variable)) {
@@ -74,8 +77,6 @@ apply_qualitative_lookup <- function(traits, lookup) {
 
 traits <- apply_qualitative_lookup(traits, qual_lookup_check)
 
-sapply(qual_cols, function(v) length(unique(traits[[v]])))  # comparar antes/depois
-
 ### CORRECTING CONTINUOUS DATA ####
 # Dados contínuos em traits nem sempre estão corretamente organizados nos seus respectivos 
 # min, low, high e max. São as colunas contínuas:
@@ -84,7 +85,7 @@ continuous_col[!continuous_col %in% colnames(traits)]
 
 #conferindo os dados 
 unique(unlist(unname(traits[continuous_col]))) #tem um cm no meio dos dados, conferir onde que teve esse erro de digitacao 
-## +- em um dado, uns dados com (0.7) e acho que só?
+##uns dados com (0.7) e acho que só?
 
 #conferindo onde ta esse cm
 traits[apply(traits[continuous_col], 1, function(x) any(x == "cm", na.rm = TRUE)), ]
@@ -133,8 +134,8 @@ for (root in range_traits) {
   }
 }
 
-sum(is.na(traits_2)) #10188
-sum(is.na(traits)) #10188
+sum(is.na(traits_2)) #8393
+sum(is.na(traits)) #8393
 
 #===========================================#
 ## Mean values for continuous traits ####
@@ -217,6 +218,14 @@ unit_col <- paste(range_traits, "unit", sep = "_") #colunas com unit
 all(unit_col %in% colnames(traits_3)) #todas colunas de unit_col está em traits
 
 unique(unname(unlist(lapply(traits_3[unit_col], function (x) unique(x)))))
+#ajuste 
+traits_3[unit_col] <- lapply(traits_3[unit_col], function(x) {
+  x <- tolower(trimws(x))
+  x[x == ""] <- NA
+  x
+})
+
+unique(unname(unlist(lapply(traits_3[unit_col], function (x) unique(x)))))
 #parece estar tudo certo "m"  NA "cm" "mm"
 
 traits_2 <- traits_3
@@ -249,21 +258,21 @@ for (var in mean_cols) {
 }
 
 #tem que ter a mesma soma de NA
-sum(is.na(traits_2)) #584
-sum(is.na(traits_3)) #584
+sum(is.na(traits_2)) #3244
+sum(is.na(traits_3)) #3244
 
 
 which(traits_2$inflorescence_length_unit == "mm")[3]
-traits_2[10,"inflorescence_length_unit"]
-traits_2[10,"inflorescence_length_mean"] #2.5
-#precisa ser 2.5/10
-traits_3[10,"inflorescence_length_mean"]
+traits_2[3,"inflorescence_length_unit"]
+traits_2[3,"inflorescence_length_mean"] #16.5
+#precisa ser 16.5/10
+traits_3[3,"inflorescence_length_mean"] #1.65
 
 which(traits_2$inflorescence_length_unit == "cm")[7]
-traits_2[20,"inflorescence_length_unit"]
-traits_2[20,"inflorescence_length_mean"] #1.7
-#precisa ser 1.7
-traits_3[20,"inflorescence_length_mean"]
+traits_2[5,"inflorescence_length_unit"]
+traits_2[5,"inflorescence_length_mean"] #3.25
+#precisa ser 3.25
+traits_3[5,"inflorescence_length_mean"]
 
 #checando se algum NA foi introduzido
 which(is.na(traits_3[mean_cols]) & !is.na(traits_2[mean_cols]) == T)
@@ -276,15 +285,248 @@ traits_2 <- traits_3
 remove(traits_3)
 
 cleaned_traits <- traits_2
+
+# limpar NaN -> NA
+cleaned_traits[] <- lapply(cleaned_traits, function(x) {
+  if (is.numeric(x)) {
+    x[is.nan(x)] <- NA
+  }
+  x
+})
+
 #check dataset completeness
 #checking traits with less than 15% completeness
 traits_percent <- colMeans(!is.na(cleaned_traits)) * 100
 names(traits_percent[traits_percent < 15])
+
+#pedicel width mean (vou excluir esse)
 traits_percent_original <- colMeans(!is.na(traits)) * 100
 names(traits_percent_original[traits_percent_original < 15])
 trait_completeness <- colMeans(!is.na(cleaned_traits[,-1])) * 100
 
-head(cleaned_traits)
+cleaned_traits <- cleaned_traits %>%
+  select(-pedicel_width_mean)
+#tem alguns NaN, vou limpar pra virar NA
+##to montando o script em ordem entao nao vou salvar o dataset agora
+## write.csv(cleaned_traits, "3.outputs/morphological_dataset_clean.csv", row.names = F)
 
-write.csv(cleaned_traits, "3.outputs/morphological_dataset_clean.csv", row.names = F)
+traits <- cleaned_traits
+#221 obs & 30 variables
+
+## Traits selected for disparity analyses
+traits_selected <- traits %>%
+  select(
+    taxon,
+    inflorescence_type,
+    flower_merosity,
+    stamen_count,
+    anther_gland_presence,
+    nectary_presence,
+    inflorescence_length_mean,
+    inflorescence_peduncle_length_mean,
+    calyx_length_mean,
+    corolla_length_mean,
+    corolla_lobe_length_mean,
+    pedicel_length_mean,
+    filament_length_mean
+  )
+
+dim(traits_selected)
+#221 13 
+inflo_traits <- c(
+  "inflorescence_type",
+  "inflorescence_length_mean",
+  "inflorescence_peduncle_mean"
+)
+
+flower_traits <- c(
+  "flower_merosity",
+  "stamen_count",
+  "anther_gland_presence",
+  "nectary_presence",
+  "calyx_length_mean",
+  "corolla_length_mean",
+  "corolla_lobe_length_mean",
+  "pedicel_length_mean",
+  "filament_length_mean"
+)
+
+##Disparity analyses
+#read phylogenetic tree and ecological data
+tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
+## prune phylogeny
+tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits$taxon))
+            
+## set seed for replicability
+set.seed(7) 
+
+##Input de dados com Rphylopars e Moda/Media
+##isso nao ta funcionando mt bem, preciso repensar como fazer
+# Mean/mode
+traits_matrix <- traits_selected %>%
+  tibble::column_to_rownames("taxon")
+
+categorical_cols <- c(
+  "inflorescence_type",
+  "flower_merosity",
+  "anther_gland_presence",
+  "nectary_presence"
+)
+
+#funcao pra obter moda 
+get_moda <- function(x) {
+  x <- x[!is.na(x)]
+  if (length(x) == 0) return(NA)
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+
+##substitui NA pelos estados mais frequentes
+moda_integer <- sapply(categorical_cols, function(x) {
+  a <- traits_matrix[[x]]
+  tidyr::replace_na(traits_matrix[[x]], get_moda(a))
+})
+
+#substituindo as colunas com NA pelo valor de moda 
+traits_matrix[,c(categorical_cols)] <- moda_integer
+
+#valores continuos vamos trabalhar com media
+continuous_cols <- c(
+  "inflorescence_length_mean",
+  "inflorescence_peduncle_length_mean",
+  "calyx_length_mean",
+  "corolla_length_mean",
+  "corolla_lobe_length_mean",
+  "pedicel_length_mean",
+  "filament_length_mean"
+)
+
+for (col in continuous_cols) {
+  
+  mean_value <- mean(
+    traits_matrix[[col]],
+    na.rm = TRUE
+  )
+  
+  traits_matrix[[col]][
+    is.na(traits_matrix[[col]])
+  ] <- mean_value
+}
+
+#substituindo as colunas
+## recebe traits_mixed (ja com colunas continuas e categoricas
+## tipadas corretamente) e devolve uma copia com NAs preenchidos.
+## Continuas: preenchidas com a MEDIA da coluna.
+## Categoricas (factor): preenchidas com a MODA da coluna.
+
+## checagem
+sum(sapply(traits_matrix, function(x) sum(is.na(x))))  # deve ser 0
+#15
+
+# Rphylopars
+#downloades Rphylopars_0.3.10
+library(Rphylopars)
+#Rphylopars so funciona para variaveis CONTINUAS (assume um modelo de
+## evolucao do caracter - BM ou OU - correlacionado com a filogenia)
+cont_cols <- traits_imputed_rphylopars %>%
+  select(where(is.numeric)) %>%
+  colnames()
+
+#senegalia catechu & S. caesia are not in the tree? 
+grep("catechu", tree_pruned$tip.label, value = TRUE, ignore.case = TRUE)
+grep("caesia", tree_pruned$tip.label, value = TRUE, ignore.case = TRUE)
+excluir <- c("Senegalia_catechu", "Senegalia_caesia")
+
+traits_selected <- traits_selected %>%
+  filter(!taxon %in% excluir)
+
+## phylopars() 
+traits_for_phylopars <- traits_selected %>%
+  select(taxon, all_of(continuous_cols)) %>%
+  rename(species = taxon)
+
+phylopars_fit <- phylopars(
+  trait_data = traits_for_phylopars,
+  tree       = tree_pruned,
+  model      = "BM")
+#first column name must be "species"
+
+## Extrair valores das pontas ==== 
+n_tip <- length(tree_pruned$tip.label)
+imputed_cont <- phylopars_fit$anc_recon[1:n_tip, , drop = FALSE]
+
+## checagem defensiva: a ordem das pontas em anc_recon bate com a arvore?
+name_order <- identical(rownames(imputed_cont), tree_pruned$tip.label)
+name_order 
+
+## agora sim, se necessario, garanta o rotulo (so depois de confirmar a ordem)
+rownames(imputed_cont) <- tree_pruned$tip.label
+
+## quantos NA existiam antes vs depois (em escala log)
+sum(is.na(imputed_cont))   # deve ser 0
+
+## Substituir em traits_mixed - agora traits_mixed fica direto em escala log
+imputed_df <- as.data.frame(imputed_cont) %>%
+  rownames_to_column("species")
+
+imputed_phylopars <- traits_for_phylopars %>%
+  rownames_to_column("species") %>%
+  select(-all_of(cont_cols)) %>%
+  left_join(imputed_df, by = "species") %>%
+  column_to_rownames("species")
+
+sapply(traits_mixed, class)
+sum(sapply(traits_mixed, function(x) sum(is.na(x))))   # so as categoricas devem ter NA
+
+##Gower distance x PCoA =====------ 
+library(cluster)
+gower_d <- daisy(traits_mixed, metric = "gower") ##cluster package
+
+## checagem: quantos pares tem NA na distancia (caso alguma linha nao compartilhe
+## nenhuma variavel observada com outra - daria distancia NA)
+sum(is.na(as.matrix(gower_d)))
+
+## PCoA com a matriz de gower =====================================
+pcoa_res <- pcoa(gower_d).  #ape package
+
+## % de variancia explicada por eixo
+pcoa_res$values$Relative_eig[1:5]
+
+scores_pcoa <- pcoa_res$vectors[, 1:2]
+colnames(scores_pcoa) <- c("PCo1", "PCo2")
+
+## garantir ordem identica a arvore 
+scores_pcoa <- scores_pcoa[match(tree_pruned$tip.label, rownames(scores_pcoa)), ]
+stopifnot(identical(rownames(scores_pcoa), tree_pruned$tip.label))
+
+
+
+#PCA Hill-Smith =======
+
+
+
+##calcular metricas de disparidade =======
+## SV, SR, MPD
+## --- SV (sum of variances) e SR (sum of ranges) via dispRity,
+##     calculadas sobre TODOS os eixos retidos do PCoA (nao so os 2 primeiros,
+##     para nao perder disparidade que esta em eixos de ordem maior) ---
+
+
+##plot clades ======
+
+
+#plot ecomorphospace ======
+
+
+##phylomorphospace ======
+# phylomorphospace exige matrix numerica pura, na mesma ordem da arvore
+scores_mat <- as.matrix(scores_pcoa)
+
+phylomorphospace(
+  tree_pruned,
+  scores_mat,
+  xlab = paste0("PCo1 (", var_pco1, "%)"),
+  ylab = paste0("PCo2 (", var_pco2, "%)"),
+  label = "off"
+)
 
