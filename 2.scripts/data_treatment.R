@@ -1,6 +1,7 @@
 if (!require(librarian)) install.packages("librarian")
 librarian::shelf(dplyr, purrr, readr, stringr, tidyr, tibble,
-                 cluster, ape, vegan, ggplot2, readr)
+                 cluster, ape, vegan, ggplot2, readr, ade4, FactoMineR, 
+                 tibble, stats)
 
 morpho_data<- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/mimoseae_subset_clean.csv")
 validated_data <- morpho_data %>% filter(Check == "1") #221 obs
@@ -89,6 +90,7 @@ unique(unlist(unname(traits[continuous_col]))) #tem um cm no meio dos dados, con
 
 #conferindo onde ta esse cm
 traits[apply(traits[continuous_col], 1, function(x) any(x == "cm", na.rm = TRUE)), ]
+#198 tetrapleura tetraptera
 
 # função para incluir valores de min e max em low e high, respectivamente
 update_trait_values <- function(traits, min_col, low_col, high_col, max_col) {
@@ -218,7 +220,8 @@ unit_col <- paste(range_traits, "unit", sep = "_") #colunas com unit
 all(unit_col %in% colnames(traits_3)) #todas colunas de unit_col está em traits
 
 unique(unname(unlist(lapply(traits_3[unit_col], function (x) unique(x)))))
-#ajuste 
+#ajuste pq tem um M e um ""
+
 traits_3[unit_col] <- lapply(traits_3[unit_col], function(x) {
   x <- tolower(trimws(x))
   x[x == ""] <- NA
@@ -313,8 +316,14 @@ cleaned_traits <- cleaned_traits %>%
 traits <- cleaned_traits
 #221 obs & 30 variables
 
+inga <-validated_data %>%
+  filter(str_detect(clade, "Inga clade"))
+
+inga_traits <- traits %>%
+  filter(taxon %in% inga$taxon)
+
 ## Traits selected for disparity analyses
-traits_selected <- traits %>%
+traits_selected <- inga_traits %>%
   select(
     taxon,
     inflorescence_type,
@@ -332,7 +341,7 @@ traits_selected <- traits %>%
   )
 
 dim(traits_selected)
-#221 13 
+#34 13 
 inflo_traits <- c(
   "inflorescence_type",
   "inflorescence_length_mean",
@@ -355,7 +364,7 @@ flower_traits <- c(
 #read phylogenetic tree and ecological data
 tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
 ## prune phylogeny
-tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits$taxon))
+tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits_selected$taxon))
             
 ## set seed for replicability
 set.seed(7) 
@@ -373,25 +382,7 @@ categorical_cols <- c(
   "nectary_presence"
 )
 
-#funcao pra obter moda 
-get_moda <- function(x) {
-  x <- x[!is.na(x)]
-  if (length(x) == 0) return(NA)
-  ux <- unique(x)
-  ux[which.max(tabulate(match(x, ux)))]
-}
-
-##substitui NA pelos estados mais frequentes
-moda_integer <- sapply(categorical_cols, function(x) {
-  a <- traits_matrix[[x]]
-  tidyr::replace_na(traits_matrix[[x]], get_moda(a))
-})
-
-#substituindo as colunas com NA pelo valor de moda 
-traits_matrix[,c(categorical_cols)] <- moda_integer
-
-#valores continuos vamos trabalhar com media
-continuous_cols <- c(
+cont_cols <- c(
   "inflorescence_length_mean",
   "inflorescence_peduncle_length_mean",
   "calyx_length_mean",
@@ -401,17 +392,37 @@ continuous_cols <- c(
   "filament_length_mean"
 )
 
-for (col in continuous_cols) {
-  
-  mean_value <- mean(
-    traits_matrix[[col]],
-    na.rm = TRUE
-  )
-  
-  traits_matrix[[col]][
-    is.na(traits_matrix[[col]])
-  ] <- mean_value
+#funcao pra obter moda 
+# ============================================================
+# 3A. IMPUTAÇÃO COM MODA / MÉDIA
+# ============================================================
+traits_sub <- traits_matrix %>%
+  mutate(across(all_of(categorical_cols), as.factor)) %>%
+  mutate(across(all_of(cont_cols), as.numeric))
+
+# log nos traços contínuos que fugirem de normalidade (ajuste conforme shapiro_tab)
+traits_sub_log <- traits_sub %>%
+  mutate(across(all_of(cont_cols), log))
+
+
+get_moda <- function(x) {
+  ux <- unique(x[!is.na(x)])
+  ux[which.max(tabulate(match(x, ux)))]
 }
+
+traits_modemean <- traits_sub_log %>% column_to_rownames("taxon")
+
+traits_modemean[cont_cols] <- lapply(traits_modemean[cont_cols], function(x) {
+  x[is.na(x)] <- mean(x, na.rm = TRUE)
+  x
+})
+
+traits_modemean[categorical_cols] <- lapply(traits_modemean[categorical_cols], function(x) {
+  x[is.na(x)] <- get_moda(x)
+  x
+})
+
+stopifnot(sum(sapply(traits_modemean, function(x) sum(is.na(x)))) == 0)
 
 #substituindo as colunas
 ## recebe traits_mixed (ja com colunas continuas e categoricas
@@ -420,63 +431,54 @@ for (col in continuous_cols) {
 ## Categoricas (factor): preenchidas com a MODA da coluna.
 
 ## checagem
-sum(sapply(traits_matrix, function(x) sum(is.na(x))))  # deve ser 0
+sum(sapply(traits_matrix, function(x) sum(is.na(x)))) # deve ser 0
 #15
-
 # Rphylopars
 #downloades Rphylopars_0.3.10
+
+# ============================================================
+# 3B. IMPUTAÇÃO COM Rphylopars (só traços contínuos)
+# ============================================================
+# phylopars precisa de data.frame com coluna "species" + as contínuas,
+# NA onde faltar dado — não apenas os nomes das colunas.
+colnames(traits_sub_log)[colnames(traits_sub_log) == "taxon"] <- "species"
+
+phylopars_input <- traits_sub_log %>%
+  select(species, all_of(cont_cols))
+
 library(Rphylopars)
-#Rphylopars so funciona para variaveis CONTINUAS (assume um modelo de
-## evolucao do caracter - BM ou OU - correlacionado com a filogenia)
-cont_cols <- traits_imputed_rphylopars %>%
-  select(where(is.numeric)) %>%
-  colnames()
-
-#senegalia catechu & S. caesia are not in the tree? 
-grep("catechu", tree_pruned$tip.label, value = TRUE, ignore.case = TRUE)
-grep("caesia", tree_pruned$tip.label, value = TRUE, ignore.case = TRUE)
-excluir <- c("Senegalia_catechu", "Senegalia_caesia")
-
-traits_selected <- traits_selected %>%
-  filter(!taxon %in% excluir)
-
-## phylopars() 
-traits_for_phylopars <- traits_selected %>%
-  select(taxon, all_of(continuous_cols)) %>%
-  rename(species = taxon)
-
 phylopars_fit <- phylopars(
-  trait_data = traits_for_phylopars,
-  tree       = tree_pruned,
-  model      = "BM")
-#first column name must be "species"
+  trait_data       = phylopars_input,
+  tree             = tree_pruned,
+  model            = "BM",
+  pheno_error      = TRUE,
+  phylo_correlated = TRUE,
+  pheno_correlated = TRUE
+)
 
-## Extrair valores das pontas ==== 
 n_tip <- length(tree_pruned$tip.label)
-imputed_cont <- phylopars_fit$anc_recon[1:n_tip, , drop = FALSE]
+imputed_cont <- phylopars_fit$anc_recon[1:n_tip, cont_cols, drop = FALSE]
 
-## checagem defensiva: a ordem das pontas em anc_recon bate com a arvore?
-name_order <- identical(rownames(imputed_cont), tree_pruned$tip.label)
-name_order 
+# checagem defensiva de ordem antes de rotular
+name_order_ok <- identical(rownames(imputed_cont), tree_pruned$tip.label)
+if (!name_order_ok) {
+  imputed_cont <- imputed_cont[match(tree_pruned$tip.label, rownames(imputed_cont)), ]
+  stopifnot(identical(rownames(imputed_cont), tree_pruned$tip.label))
+}
 
-## agora sim, se necessario, garanta o rotulo (so depois de confirmar a ordem)
-rownames(imputed_cont) <- tree_pruned$tip.label
+stopifnot(sum(is.na(imputed_cont)) == 0)
 
-## quantos NA existiam antes vs depois (em escala log)
-sum(is.na(imputed_cont))   # deve ser 0
-
-## Substituir em traits_mixed - agora traits_mixed fica direto em escala log
-imputed_df <- as.data.frame(imputed_cont) %>%
-  rownames_to_column("species")
-
-imputed_phylopars <- traits_for_phylopars %>%
+# categóricas entram pela moda (Rphylopars não modela discreto/categórico)
+traits_phylo <- as.data.frame(imputed_cont) %>%
   rownames_to_column("species") %>%
-  select(-all_of(cont_cols)) %>%
-  left_join(imputed_df, by = "species") %>%
+  left_join(
+    traits_modemean %>% rownames_to_column("species") %>% select(species, all_of(categorical_cols)),
+    by = "species"
+  ) %>%
   column_to_rownames("species")
 
-sapply(traits_mixed, class)
-sum(sapply(traits_mixed, function(x) sum(is.na(x))))   # so as categoricas devem ter NA
+stopifnot(sum(sapply(traits_phylo, function(x) sum(is.na(x)))) == 0)
+
 
 ##Gower distance x PCoA =====------ 
 library(cluster)
@@ -510,6 +512,22 @@ stopifnot(identical(rownames(scores_pcoa), tree_pruned$tip.label))
 ## --- SV (sum of variances) e SR (sum of ranges) via dispRity,
 ##     calculadas sobre TODOS os eixos retidos do PCoA (nao so os 2 primeiros,
 ##     para nao perder disparidade que esta em eixos de ordem maior) ---
+
+gower_dist <- cluster::daisy(trait_df_clean, metric = "gower")
+
+# PCoA para obter um espaço multivariado contínuo (necessário p/ SOV e SOR)
+pcoa_res <- ape::pcoa(gower_dist)
+pcoa_axes <- pcoa_res$vectors
+
+# objeto dispRity a partir dos eixos da PCoA
+disp_obj <- custom.subsets(pcoa_axes, group = list(all = rownames(pcoa_axes)))
+
+sov <- dispRity(disp_obj, metric = c(sum, variances))
+sor <- dispRity(disp_obj, metric = c(sum, ranges))
+
+gower_mat <- as.matrix(gower_dist)
+disp_obj_dist <- custom.subsets(gower_mat, group = list(all = rownames(gower_mat)))
+mpd <- dispRity(disp_obj_dist, metric = c(mean, pairwise.dist))
 
 
 ##plot clades ======
