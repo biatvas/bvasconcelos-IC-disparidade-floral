@@ -335,6 +335,46 @@ traits_selected <- traits %>%
 
 dim(traits_selected)
 #221 13 
+str(traits_selected)
+                            
+#optei por usar max e min do numero de estames
+# Separa os valores usando "-"
+stamen_range <- strsplit(traits_selected$stamen_count, "-")
+
+# Extrai o mínimo
+traits_selected$stamen_min <- sapply(
+  stamen_range,
+  function(x) as.numeric(x[1])
+)
+
+# Extrai o máximo
+traits_selected$stamen_max <- sapply(
+  stamen_range,
+  function(x) {
+    if (length(x) == 2) {
+      as.numeric(x[2])
+    } else {
+      as.numeric(x[1])
+    }
+  }
+)
+
+
+traits_selected[, c(
+  "species",
+  "stamen_count",
+  "stamen_min",
+  "stamen_max")]
+
+#manter apenas o log do maximo e minimo
+traits_selected <- traits_selected %>%
+  select(
+    species,flower_merosity,
+    filament_color,
+    calyx_length_mean,
+    inflorescence_peduncle_length,
+    stamen_min,
+    stamen_max)
 
 inflo_traits <- c(
   "inflorescence_type",
@@ -354,7 +394,23 @@ flower_traits <- c(
   "filament_length_mean"
 )
 
-##Disparity analyses
+
+#turn species names as a rownames
+#preciso substituir taxon por species
+                            
+traits_matrix <- traits_selected %>%
+  tibble::column_to_rownames("species")
+
+#definindo quais sao as colunas continuas
+cont_cols <- c(
+  "inflorescence_peduncle_length",
+  "calyx_length_mean",
+  "stamen_min",
+  "stamen_max")
+
+categorical_cols <- c("inflorescence_type","flower_merosity","filament_color")
+
+                          
 #read phylogenetic tree and ecological data
 tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
 
@@ -365,32 +421,7 @@ tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits_selected$taxon))
 set.seed(7) 
 
 ##Input de dados com Rphylopars e Moda/Media
-##isso nao ta funcionando mt bem, preciso repensar como fazer
-# Mean/mode
-traits_matrix <- traits_selected %>%
-  tibble::column_to_rownames("taxon")
-
-categorical_cols <- c(
-  "inflorescence_type",
-  "flower_merosity",
-  "anther_gland_presence",
-  "nectary_presence"
-)
-
-cont_cols <- c(
-  "inflorescence_length_mean",
-  "inflorescence_peduncle_length_mean",
-  "calyx_length_mean",
-  "corolla_length_mean",
-  "corolla_lobe_length_mean",
-  "pedicel_length_mean",
-  "filament_length_mean"
-)
-
-#funcao pra obter moda 
-# ============================================================
-# 3A. IMPUTAÇÃO COM MODA / MÉDIA
-# ============================================================
+### A. IMPUTAÇÃO COM MODA / MÉDIA
 traits_sub <- traits_matrix %>%
   mutate(across(all_of(categorical_cols), as.factor)) %>%
   mutate(across(all_of(cont_cols), as.numeric))
@@ -399,13 +430,12 @@ traits_sub <- traits_matrix %>%
 traits_sub_log <- traits_sub %>%
   mutate(across(all_of(cont_cols), log))
 
-
 get_moda <- function(x) {
   ux <- unique(x[!is.na(x)])
   ux[which.max(tabulate(match(x, ux)))]
 }
 
-traits_modemean <- traits_sub_log %>% column_to_rownames("taxon")
+traits_modemean <- traits_sub_log 
 
 traits_modemean[cont_cols] <- lapply(traits_modemean[cont_cols], function(x) {
   x[is.na(x)] <- mean(x, na.rm = TRUE)
@@ -420,28 +450,22 @@ traits_modemean[categorical_cols] <- lapply(traits_modemean[categorical_cols], f
 stopifnot(sum(sapply(traits_modemean, function(x) sum(is.na(x)))) == 0)
 
 #substituindo as colunas
-## recebe traits_mixed (ja com colunas continuas e categoricas
-## tipadas corretamente) e devolve uma copia com NAs preenchidos.
 ## Continuas: preenchidas com a MEDIA da coluna.
 ## Categoricas (factor): preenchidas com a MODA da coluna.
-
 ## checagem
-sum(sapply(traits_matrix, function(x) sum(is.na(x)))) # deve ser 0
-#15
-# Rphylopars
-#downloades Rphylopars_0.3.10
+sum(sapply(traits_matrix, function(x) sum(is.na(x)))) #5 NAs no começo
+sum(sapply(traits_modemean,function(x) sum(is.na(x)))) #aqui é 0
 
-# ============================================================
-# 3B. IMPUTAÇÃO COM Rphylopars (só traços contínuos)
+# B. IMPUTAÇÃO COM Rphylopars (só traços contínuos)
 # ============================================================
 # phylopars precisa de data.frame com coluna "species" + as contínuas,
-# NA onde faltar dado — não apenas os nomes das colunas.
-colnames(traits_sub_log)[colnames(traits_sub_log) == "taxon"] <- "species"
+# NA onde faltar dado — não apenas os nomes das colunas
+library(Rphylopars)
+library(tibble)
 
-phylopars_input <- traits_sub_log %>%
+phylopars_input <- traits_selected %>%
   select(species, all_of(cont_cols))
 
-library(Rphylopars)
 phylopars_fit <- phylopars(
   trait_data       = phylopars_input,
   tree             = tree_pruned,
@@ -474,6 +498,8 @@ traits_phylo <- as.data.frame(imputed_cont) %>%
 
 stopifnot(sum(sapply(traits_phylo, function(x) sum(is.na(x)))) == 0)
 
+#traits_phylo are dataset with phylogenetic input
+
 
 ##Gower distance x PCoA =====------ 
 library(cluster)
@@ -497,8 +523,24 @@ scores_pcoa <- scores_pcoa[match(tree_pruned$tip.label, rownames(scores_pcoa)), 
 stopifnot(identical(rownames(scores_pcoa), tree_pruned$tip.label))
 
 
-
 #PCA Hill-Smith =======
+library(ade4)
+library(adegraphics)
+
+hs <- dudi.hillsmith(traits_modemean,
+               scannf = TRUE, nf = 2)
+
+hs$eig
+axes_contribution <- 100*hs$eig/sum(hs$eig)
+
+#plot flowers in morpho space
+plot(hs$li[,1],
+     hs$li[,2],
+     xlab = "pc1",
+     ylab = "pc2",
+     pch = 19)
+
+text(hs$li[,1],hs$li[,2],labels = traits_selected$species, pos = 1)
 
 
 
