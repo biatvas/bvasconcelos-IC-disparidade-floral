@@ -3,6 +3,7 @@ librarian::shelf(dplyr, purrr, readr, stringr, tidyr, tibble,
                  cluster, ape, vegan, ggplot2, readr, ade4, FactoMineR, 
                  tibble, stats)
 
+#limpeza e normalização dos dados iniciais
 morpho_data<- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/mimoseae_subset_clean.csv")
 validated_data <- morpho_data %>% filter(Check == "1") #221 obs
 
@@ -13,7 +14,6 @@ traits <- cbind("taxon" = validated_data$taxon, validated_data[, 6:83])
 #aplicar um unique csv e gerar arquivo de substituição dos dados qualitativos +
 #transformar dados continuos pra mesma escala de medida e calcular média
 # depois dessas etapas, conferir NAs e realizar imputação e também calcular Gower sem input
-
 setwd("Documents/GitHub/bvasconcelos-IC-disparidade-floral/")
 
 get_range_traits <- function(cols) {
@@ -64,7 +64,6 @@ qual_lookup <- export_qualitative_lookup(traits, qual_cols, "3.outputs/qualitati
 #checar manualmente e gerar um novo arquivo editado pra substituir os nomes 
 #quali data to check are inflorescence type, sex type of flower/inflo, habit,
 #flower_merosity, filament_color, stamen_count, nectary presence, anther gland presence (i dont now if i will keep stemonozone & stamen tube)
-
 qual_lookup_check <- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/3.outputs/qualitative_lookup_mimoseae_check.csv")
 
 apply_qualitative_lookup <- function(traits, lookup) {
@@ -77,6 +76,7 @@ apply_qualitative_lookup <- function(traits, lookup) {
 }
 
 traits <- apply_qualitative_lookup(traits, qual_lookup_check)
+## script rodando normalmente até aqui 
 
 ### CORRECTING CONTINUOUS DATA ####
 # Dados contínuos em traits nem sempre estão corretamente organizados nos seus respectivos 
@@ -86,8 +86,7 @@ continuous_col[!continuous_col %in% colnames(traits)]
 
 #conferindo os dados 
 unique(unlist(unname(traits[continuous_col]))) #tem um cm no meio dos dados, conferir onde que teve esse erro de digitacao 
-##uns dados com (0.7) e acho que só?
-
+##uns dados com (0.7) e um cm 
 #conferindo onde ta esse cm
 traits[apply(traits[continuous_col], 1, function(x) any(x == "cm", na.rm = TRUE)), ]
 #198 tetrapleura tetraptera
@@ -136,8 +135,8 @@ for (root in range_traits) {
   }
 }
 
-sum(is.na(traits_2)) #8393
-sum(is.na(traits)) #8393
+sum(is.na(traits_2)) #8396
+sum(is.na(traits)) #8396
 
 #===========================================#
 ## Mean values for continuous traits ####
@@ -170,8 +169,8 @@ any(sapply(seq_along(max_cols), function(i) {
 # vou remover as colunas min e max e tirar a média entre low e high (se só houver apenas um valor, 
 # ele será usado)
 
-traits_2 #33 obs, 79 variables
-sum(is.na(traits_2)) #1428
+traits_2 #221 obs, 79 variables
+sum(is.na(traits_2)) #8396
 
 for (i in seq_along(low_cols)) {
   
@@ -187,7 +186,7 @@ for (i in seq_along(low_cols)) {
 }
 
 #Verificando
-sum(is.na(traits_2[colnames(traits)])) #1428, o mesmo que antes, então não foram gerados NAs ao estimar a média
+sum(is.na(traits_2[colnames(traits)])) #8396, o mesmo que antes, então não foram gerados NAs ao estimar a média
 
 all.equal(traits_2$height_mean, rowMeans(cbind(as.numeric(traits_2$height_low),
                                                as.numeric(traits_2$height_high)),na.rm = TRUE))
@@ -199,20 +198,19 @@ continuous_col <- c(min_cols, low_cols, high_cols, max_cols)
 traits_3 <- traits_2
 
 traits_3 <- traits_3[!colnames(traits_3) %in% continuous_col]
-#43 variaveis e 33obs
-sum(is.na(traits_3)) #584
+#43 variaveis e 221obs
+sum(is.na(traits_3)) #2305
 
 ### Unit standardization ####
 traits_2 <- traits_3
 remove(traits_3)
-sum(is.na(traits_2))
+sum(is.na(traits_2)) #2305
 
 ## Correcting typos ####
 traits_3 <- traits_2
 
 #corrigindo um erro na escrita
 colnames(traits_3) <- sub("calyx_lobe_length_unit.", "calyx_lobe_length_unit", colnames(traits_3))
-
 cols <- names(traits_3)
 range_traits <- unique(sub("(.+)_mean(_|$).*$", "\\1", cols[grepl("_mean(_|$)", cols)]))
 
@@ -230,7 +228,6 @@ traits_3[unit_col] <- lapply(traits_3[unit_col], function(x) {
 
 unique(unname(unlist(lapply(traits_3[unit_col], function (x) unique(x)))))
 #parece estar tudo certo "m"  NA "cm" "mm"
-
 traits_2 <- traits_3
 remove(traits_3)
 
@@ -261,8 +258,8 @@ for (var in mean_cols) {
 }
 
 #tem que ter a mesma soma de NA
-sum(is.na(traits_2)) #3244
-sum(is.na(traits_3)) #3244
+sum(is.na(traits_2)) #3238
+sum(is.na(traits_3)) #3238
 
 
 which(traits_2$inflorescence_length_unit == "mm")[3]
@@ -289,6 +286,7 @@ remove(traits_3)
 
 cleaned_traits <- traits_2
 
+#tem alguns NaN, vou limpar pra virar NA
 # limpar NaN -> NA
 cleaned_traits[] <- lapply(cleaned_traits, function(x) {
   if (is.numeric(x)) {
@@ -296,6 +294,7 @@ cleaned_traits[] <- lapply(cleaned_traits, function(x) {
   }
   x
 })
+##checando o funcionamento, script funcional até aqui 07/09/2026
 
 #check dataset completeness
 #checking traits with less than 15% completeness
@@ -309,21 +308,16 @@ trait_completeness <- colMeans(!is.na(cleaned_traits[,-1])) * 100
 
 cleaned_traits <- cleaned_traits %>%
   select(-pedicel_width_mean)
-#tem alguns NaN, vou limpar pra virar NA
-##to montando o script em ordem entao nao vou salvar o dataset agora
-## write.csv(cleaned_traits, "3.outputs/morphological_dataset_clean.csv", row.names = F)
 
+##to montando o script em ordem entao nao vou salvar o dataset agora
+write.csv(cleaned_traits, "3.outputs/morphological_dataset_clean.csv", row.names = F)
+# read.csv("3.outputs/morphological_dataset_clean.csv)
 traits <- cleaned_traits
+
 #221 obs & 30 variables
 
-inga <-validated_data %>%
-  filter(str_detect(clade, "Inga clade"))
-
-inga_traits <- traits %>%
-  filter(taxon %in% inga$taxon)
-
 ## Traits selected for disparity analyses
-traits_selected <- inga_traits %>%
+traits_selected <- traits %>%
   select(
     taxon,
     inflorescence_type,
@@ -337,11 +331,11 @@ traits_selected <- inga_traits %>%
     corolla_length_mean,
     corolla_lobe_length_mean,
     pedicel_length_mean,
-    filament_length_mean
-  )
+    filament_length_mean)
 
 dim(traits_selected)
-#34 13 
+#221 13 
+
 inflo_traits <- c(
   "inflorescence_type",
   "inflorescence_length_mean",
@@ -363,6 +357,7 @@ flower_traits <- c(
 ##Disparity analyses
 #read phylogenetic tree and ecological data
 tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
+
 ## prune phylogeny
 tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits_selected$taxon))
             
@@ -489,7 +484,7 @@ gower_d <- daisy(traits_mixed, metric = "gower") ##cluster package
 sum(is.na(as.matrix(gower_d)))
 
 ## PCoA com a matriz de gower =====================================
-pcoa_res <- pcoa(gower_d).  #ape package
+pcoa_res <- pcoa(gower_d)  #ape package
 
 ## % de variancia explicada por eixo
 pcoa_res$values$Relative_eig[1:5]
