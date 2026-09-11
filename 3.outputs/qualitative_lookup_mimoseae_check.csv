@@ -220,19 +220,19 @@ male_flowers_presence,some or many of each spike functionally staminate,1,some o
 male_flowers_presence,some staminate only,1,some staminate only
 male_flowers_presence,sometimes male,1,sometimes male
 male_flowers_presence,staminate,1,staminate
-heteromorphic_flower_presence,homomorphic,18,homomorphic
-heteromorphic_flower_presence,yes,16,yes
-heteromorphic_flower_presence,dimorphic,7,dimorphic
+heteromorphic_flower_presence,homomorphic,18,absent
+heteromorphic_flower_presence,yes,16,present
+heteromorphic_flower_presence,dimorphic,7,present
 heteromorphic_flower_presence,present,5,present
-heteromorphic_flower_presence,essentially homomorphic,1,essentially homomorphic
-heteromorphic_flower_presence,homo or heteromorphic,1,homo or heteromorphic
-heteromorphic_flower_presence,inner most broader than outer ones,1,inner most broader than outer ones
-heteromorphic_flower_presence,no,1,no
-heteromorphic_flower_presence,probably dimorphic but terminal one not observed,1,probably dimorphic but terminal one not observed
-sterile_flower_presence,lower ones sterile,2,lower ones sterile
-sterile_flower_presence,yes,2,yes
+heteromorphic_flower_presence,essentially homomorphic,1,absent
+heteromorphic_flower_presence,homo or heteromorphic,1,NA
+heteromorphic_flower_presence,inner most broader than outer ones,1,present
+heteromorphic_flower_presence,no,1,absent
+heteromorphic_flower_presence,probably dimorphic but terminal one not observed,1,NA
+sterile_flower_presence,lower ones sterile,2,present
+sterile_flower_presence,yes,2,present
 sterile_flower_presence,absent,1,absent
-sterile_flower_presence,basal flowers sterile,1,basal flowers sterile
+sterile_flower_presence,basal flowers sterile,1,present
 calyx_shape,campanulate,36,campanulate
 calyx_shape,funnel-shaped,5,funnel-shaped
 calyx_shape,cup-shaped,4,cup-shaped
@@ -376,17 +376,17 @@ filament_color,"in proximal flowers violet, in distal ones pale yellow",1,pink&y
 filament_color,lavender-pink,1,red&pink
 filament_color,lilac,1,red&pink
 filament_color,"lilac-, roseor magenta-pink",1,red&pink
-filament_color,"off-white, golden red",1,whitw
-filament_color,pale cream-coloured,1,pale cream-coloured
-filament_color,pale cream-white,1,pale cream-white
-filament_color,pale creamy white,1,pale creamy white
-filament_color,pale lilac fading whitish,1,pale lilac fading whitish
-filament_color,pale yellow,1,pale yellow
-filament_color,"pallid proximally, carmine",1,"pallid proximally, carmine"
-filament_color,pink fading whitish,1,pink fading whitish
+filament_color,"off-white, golden red",1,white
+filament_color,pale cream-coloured,1,white
+filament_color,pale cream-white,1,white
+filament_color,pale creamy white,1,white
+filament_color,pale lilac fading whitish,1,white
+filament_color,pale yellow,1,yellow
+filament_color,"pallid proximally, carmine",1,red
+filament_color,pink fading whitish,1,pink&white
 filament_color,pink or pinkish orange,1,red&pink
-filament_color,"pink or purplish-pink, sometimes fading whitish",1,"pink or purplish-pink, sometimes fading whitish"
-filament_color,pink or white,1,pink or white
+filament_color,"pink or purplish-pink, sometimes fading whitish",1,pink
+filament_color,pink or white,1,pink&white
 filament_color,pink-lilac,1,red&pink
 filament_color,pink-purple,1,red&pink
 filament_color,probably white,1,white
@@ -395,23 +395,23 @@ filament_color,red or pink,1,red&pink
 filament_color,red to vinaceous,1,red&pink
 filament_color,red-crimson,1,red&pink
 filament_color,vivid pink or lilac-pink,1,red&pink
-filament_color,"white or cream-white, exceptionally pallid-roseate in fading",1,"white or cream-white, exceptionally pallid-roseate in fading"
-filament_color,white or occasionally pink,1,white or occasionally pink
-filament_color,white or pink,1,white or pink
-filament_color,"white proximally, pink or red distally",1,"white proximally, pink or red distally"
-filament_color,white rubescent,1,white rubescent
-filament_color,white to cream,1,white to cream
-filament_color,white to pink or reddish at the apex,1,white to pink or reddish at the apex
-filament_color,"white, cream",1,"white, cream"
-filament_color,"white, crimson",1,"white, crimson"
-filament_color,"white, pink",1,"white, pink"
-filament_color,"white, red, vinaceous",1,"white, red, vinaceous"
-filament_color,"white, yellowish-cream, rarely light pink",1,"white, yellowish-cream, rarely light pink"
-filament_color,white(?),1,white(?)
-filament_color,whitish,1,whitish
-filament_color,whitish or pale pink,1,whitish or pale pink
-filament_color,whitish with tassel red,1,whitish with tassel red
-filament_color,"whitish, yellow-tipped or orange",1,"whitish, yellow-tipped or orange"
+filament_color,"white or cream-white, exceptionally pallid-roseate in fading",1,white
+filament_color,white or occasionally pink,1,white
+filament_color,white or pink,1,pink&white
+filament_color,"white proximally, pink or red distally",1,white
+filament_color,white rubescent,1,white
+filament_color,white to cream,1,white
+filament_color,white to pink or reddish at the apex,1,white&pink
+filament_color,"white, cream",1,white
+filament_color,"white, crimson",1,white
+filament_color,"white, pink",1,white
+filament_color,"white, red, vinaceous",1,white
+filament_color,"white, yellowish-cream, rarely light pink",1,white&yellow
+filament_color,white(?),1,white
+filament_color,whitish,1,white
+filament_color,whitish or pale pink,1,white
+filament_color,whitish with tassel red,1,white
+filament_color,"whitish, yellow-tipped or orange",1,white
 filament_color,yellow,1,yellow
 anther_gland_presence,absent,30,absent
 anther_gland_presence,yes,25,present
@@ -430,13 +430,13 @@ anther_gland_presence,"mostly glandless, rarely with minute apical glands",1,abs
 anther_gland_presence,with a stalked spherical apical gland,1,present
 stemonozone_presence,present,51,present
 stemonozone_presence,absent,4,absent
-stemonozone_presence,no,2,no
-stemonozone_presence,almost 0,1,almost 0
-stemonozone_presence,obscure,1,obscure
-stemonozone_presence,the stemonozone 1 mm or less,1,the stemonozone 1 mm or less
-stemonozone_presence,yes,1,yes
+stemonozone_presence,no,2,absent
+stemonozone_presence,almost 0,1,absent
+stemonozone_presence,obscure,1,absent
+stemonozone_presence,the stemonozone 1 mm or less,1,present
+stemonozone_presence,yes,1,present
 stamen_tube_presence,present,42,present
-stamen_tube_presence,yes,3,yes
+stamen_tube_presence,yes,3,Present
 stamen_tube_presence,absent,1,absent
 stamen_tube_presence,stamens united into a tube at the base,1,stamens united into a tube at the base
 stamen_tube_presence,the filament-tube far-exserted,1,the filament-tube far-exserted
