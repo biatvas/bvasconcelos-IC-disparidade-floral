@@ -135,8 +135,8 @@ for (root in range_traits) {
   }
 }
 
-sum(is.na(traits_2)) #8396
-sum(is.na(traits)) #8396
+sum(is.na(traits_2)) #8403
+sum(is.na(traits)) #8403
 
 #===========================================#
 ## Mean values for continuous traits ####
@@ -359,23 +359,28 @@ traits_selected$stamen_max <- sapply(
   }
 )
 
+## calcular média do número de estames
+traits_selected$stamen_count <- rowMeans(
+  traits_selected[, c("stamen_min", "stamen_max")],
+  na.rm = TRUE
+)
 
-traits_selected[, c(
-  "species",
-  "stamen_count",
-  "stamen_min",
-  "stamen_max")]
-
-#manter apenas o log do maximo e minimo
+#excluir maximo e minimo
 traits_selected <- traits_selected %>%
-  select(
-    species,flower_merosity,
-    filament_color,
-    calyx_length_mean,
-    inflorescence_peduncle_length,
-    stamen_min,
-    stamen_max)
+  select(-stamen_min, -stamen_max)
 
+#apareceram alguns NaN
+traits_selected[] <- lapply(traits_selected, function(x) {
+  if (is.numeric(x)) {
+    x[is.nan(x)] <- NA
+  }
+  x
+})
+
+#221 obs e 13 variaveis!!
+#11/09
+
+##definir os caracteres pra analise
 inflo_traits <- c(
   "inflorescence_type",
   "inflorescence_length_mean",
@@ -394,50 +399,51 @@ flower_traits <- c(
   "filament_length_mean"
 )
 
-
 #turn species names as a rownames
-#preciso substituir taxon por species
-                            
+traits_selected <- traits_selected %>%
+  rename(species = taxon)
+
 traits_matrix <- traits_selected %>%
   tibble::column_to_rownames("species")
 
+# Transformando células vazias em NA
+traits_matrix[] <- lapply(traits_matrix, function(x) {
+  if (is.character(x)) {
+    x <- trimws(x)
+    x[x == ""] <- NA
+  }
+  x
+})
+
 #definindo quais sao as colunas continuas
-cont_cols <- c(
-  "inflorescence_peduncle_length",
-  "calyx_length_mean",
-  "stamen_min",
-  "stamen_max")
+continuous_cols <- c( grep("_mean$", colnames(traits_matrix), value = TRUE), "stamen_count" ) 
+# Definindo quais são as colunas categóricas 
+categorical_cols <- setdiff(colnames(traits_matrix), continuous_cols)
 
-categorical_cols <- c("inflorescence_type","flower_merosity","filament_color")
-
-                          
 #read phylogenetic tree and ecological data
 tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
-
 ## prune phylogeny
-tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits_selected$taxon))
+tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits_selected$species))
             
 ## set seed for replicability
 set.seed(7) 
 
 ##Input de dados com Rphylopars e Moda/Media
+#tem alguns traços que tao com valor ausente mas nao é NA, ai nao ta imputando 
+
 ### A. IMPUTAÇÃO COM MODA / MÉDIA
 traits_sub <- traits_matrix %>%
   mutate(across(all_of(categorical_cols), as.factor)) %>%
-  mutate(across(all_of(cont_cols), as.numeric))
-
-# log nos traços contínuos que fugirem de normalidade (ajuste conforme shapiro_tab)
-traits_sub_log <- traits_sub %>%
-  mutate(across(all_of(cont_cols), log))
+  mutate(across(all_of(continuous_cols), as.numeric))
 
 get_moda <- function(x) {
   ux <- unique(x[!is.na(x)])
   ux[which.max(tabulate(match(x, ux)))]
 }
+#criando um dataset pra aplicar moda e media
+traits_modemean <- traits_sub
 
-traits_modemean <- traits_sub_log 
-
-traits_modemean[cont_cols] <- lapply(traits_modemean[cont_cols], function(x) {
+traits_modemean[continuous_cols] <- lapply(traits_modemean[continuous_cols], function(x) {
   x[is.na(x)] <- mean(x, na.rm = TRUE)
   x
 })
@@ -449,11 +455,16 @@ traits_modemean[categorical_cols] <- lapply(traits_modemean[categorical_cols], f
 
 stopifnot(sum(sapply(traits_modemean, function(x) sum(is.na(x)))) == 0)
 
+
+# log nos traços contínuos que fugirem de normalidade (ajuste conforme shapiro_tab)
+traits_sub_log <- traits_modemean %>%
+  mutate(across(all_of(continuous_cols), log))
+
 #substituindo as colunas
 ## Continuas: preenchidas com a MEDIA da coluna.
 ## Categoricas (factor): preenchidas com a MODA da coluna.
 ## checagem
-sum(sapply(traits_matrix, function(x) sum(is.na(x)))) #5 NAs no começo
+sum(sapply(traits_matrix, function(x) sum(is.na(x)))) #947 NAs no começo
 sum(sapply(traits_modemean,function(x) sum(is.na(x)))) #aqui é 0
 
 # B. IMPUTAÇÃO COM Rphylopars (só traços contínuos)
@@ -463,8 +474,14 @@ sum(sapply(traits_modemean,function(x) sum(is.na(x)))) #aqui é 0
 library(Rphylopars)
 library(tibble)
 
+(setdiff(traits_selected$species, tree$tip.label))
+#Senegalia catechu/Senegalia chundra 
+#Senegalia caesia era p ser Senegalia intsia
+traits_selected <- traits_selected %>%
+  filter(species %in% tree$tip.label)
+
 phylopars_input <- traits_selected %>%
-  select(species, all_of(cont_cols))
+  select(species, all_of(continuous_cols))
 
 phylopars_fit <- phylopars(
   trait_data       = phylopars_input,
@@ -475,8 +492,9 @@ phylopars_fit <- phylopars(
   pheno_correlated = TRUE
 )
 
+#excluir senegalia catechu e caesiaa?? 
 n_tip <- length(tree_pruned$tip.label)
-imputed_cont <- phylopars_fit$anc_recon[1:n_tip, cont_cols, drop = FALSE]
+imputed_cont <- phylopars_fit$anc_recon[1:n_tip, continuous_cols, drop = FALSE]
 
 # checagem defensiva de ordem antes de rotular
 name_order_ok <- identical(rownames(imputed_cont), tree_pruned$tip.label)
@@ -497,31 +515,56 @@ traits_phylo <- as.data.frame(imputed_cont) %>%
   column_to_rownames("species")
 
 stopifnot(sum(sapply(traits_phylo, function(x) sum(is.na(x)))) == 0)
-
 #traits_phylo are dataset with phylogenetic input
 
 
 ##Gower distance x PCoA =====------ 
 library(cluster)
-gower_d <- daisy(traits_mixed, metric = "gower") ##cluster package
+gower_phylo <- daisy(traits_phylo, metric = "gower") ##cluster package
+gower_modemean <- daisy(traits_modemean, metric = "gower")
 
 ## checagem: quantos pares tem NA na distancia (caso alguma linha nao compartilhe
 ## nenhuma variavel observada com outra - daria distancia NA)
-sum(is.na(as.matrix(gower_d)))
+#como fiz a imputação vai dar 0 
+sum(is.na(as.matrix(gower_phylo)))
 
 ## PCoA com a matriz de gower =====================================
-pcoa_res <- pcoa(gower_d)  #ape package
-
-## % de variancia explicada por eixo
-pcoa_res$values$Relative_eig[1:5]
-
-scores_pcoa <- pcoa_res$vectors[, 1:2]
-colnames(scores_pcoa) <- c("PCo1", "PCo2")
+pcoa_res <- pcoa(gower_phylo)  #ape package
 
 ## garantir ordem identica a arvore 
 scores_pcoa <- scores_pcoa[match(tree_pruned$tip.label, rownames(scores_pcoa)), ]
 stopifnot(identical(rownames(scores_pcoa), tree_pruned$tip.label))
 
+#contribuicao de cada eixo
+pcoa_values <- pcoa_res$values
+#coordenadas por especie
+pcoa_res$vectors
+
+#visualizar em porcentagem a contribuicao dos eixos
+percent_explained <- 100 * pcoa_values$Eigenvalues / 
+  sum(pcoa_values$Eigenvalues[pcoa_values$Eigenvalues > 0])
+percent_explained
+
+#plot pcoa
+pcoa_scores <- as.data.frame(pcoa_res$vectors)
+pcoa_scores$species <- rownames(pcoa_scores)
+
+library(ggplot2)
+ggplot(pcoa_scores, aes(x = Axis.1, y = Axis.2)) +
+  geom_point(size = 3) +
+  geom_text(aes(label = species), vjust = -0.5) +
+  theme_classic()
+
+##coord fixed to adjust scale 
+# objeto dispRity a partir dos eixos da PCoA
+library(dispRity)
+pcoa_axes <- pcoa_res$vectors
+
+disp_obj <- custom.subsets(pcoa_axes, group = list(all = rownames(pcoa_axes)))
+
+sov <- dispRity(disp_obj, metric = c(sum, variances))
+sor <- dispRity(disp_obj, metric = c(sum, ranges))
+mpd <- dispRity(disp_obj, metric = c(mean, pairwise.dist))
 
 #PCA Hill-Smith =======
 library(ade4)
@@ -530,17 +573,23 @@ library(adegraphics)
 hs <- dudi.hillsmith(traits_modemean,
                scannf = TRUE, nf = 2)
 
+hs_phylo <- dudi.hillsmith(traits_phylo,
+                          scannf = TRUE, nf = 2)
+
+hs_phylo$eig
+axes_contribution <- 100*hs_phylo$eig/sum(hs_phylo$eig)
+
 hs$eig
 axes_contribution <- 100*hs$eig/sum(hs$eig)
 
 #plot flowers in morpho space
-plot(hs$li[,1],
-     hs$li[,2],
+plot(hs_phylo$li[,1],
+     hs_phylo$li[,2],
      xlab = "pc1",
      ylab = "pc2",
      pch = 19)
 
-text(hs$li[,1],hs$li[,2],labels = traits_selected$species, pos = 1)
+text(hs_phylo$li[,1],hs_phylo$li[,2],labels = traits_phylo$species, pos = 1)
 
 
 
@@ -575,13 +624,14 @@ mpd <- dispRity(disp_obj_dist, metric = c(mean, pairwise.dist))
 
 ##phylomorphospace ======
 # phylomorphospace exige matrix numerica pura, na mesma ordem da arvore
+library(phytools)
 scores_mat <- as.matrix(scores_pcoa)
 
 phylomorphospace(
   tree_pruned,
   scores_mat,
-  xlab = paste0("PCo1 (", var_pco1, "%)"),
-  ylab = paste0("PCo2 (", var_pco2, "%)"),
+  xlab = paste0("PC1 (", var_pc1, "%)"),
+  ylab = paste0("PC2 (", var_pc2, "%)"),
   label = "off"
 )
 
