@@ -430,7 +430,8 @@ set.seed(7)
 
 ##Input de dados com Rphylopars e Moda/Media
 #tem alguns traços que tao com valor ausente mas nao é NA, ai nao ta imputando 
-
+## esse problema já foi corrigido ali em cima com a transformação de celulas vazias em NA
+                            
 ### A. IMPUTAÇÃO COM MODA / MÉDIA
 traits_sub <- traits_matrix %>%
   mutate(across(all_of(categorical_cols), as.factor)) %>%
