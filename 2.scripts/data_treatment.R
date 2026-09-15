@@ -617,7 +617,9 @@ mpd <- dispRity(disp_obj_dist, metric = c(mean, pairwise.dist))
 
 #plot ecomorphospace ======
 
-
+### sinal filogenetico?
+# δ (delta) statistic Borges
+                     
 ##phylomorphospace ======
 # phylomorphospace exige matrix numerica pura, na mesma ordem da arvore
 library(phytools)
