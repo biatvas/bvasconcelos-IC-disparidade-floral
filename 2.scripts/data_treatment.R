@@ -430,8 +430,7 @@ set.seed(7)
 
 ##Input de dados com Rphylopars e Moda/Media
 #tem alguns traços que tao com valor ausente mas nao é NA, ai nao ta imputando 
-## esse problema já foi corrigido ali em cima com a transformação de celulas vazias em NA
-                            
+
 ### A. IMPUTAÇÃO COM MODA / MÉDIA
 traits_sub <- traits_matrix %>%
   mutate(across(all_of(categorical_cols), as.factor)) %>%
@@ -478,8 +477,7 @@ library(tibble)
 (setdiff(traits_selected$species, tree$tip.label))
 #Senegalia catechu/Senegalia chundra 
 #Senegalia caesia era p ser Senegalia intsia
-#excluir senegalia catechu e caesiaa?? 
-           
+
 traits_selected <- traits_selected %>%
   filter(species %in% tree$tip.label)
 
@@ -495,6 +493,7 @@ phylopars_fit <- phylopars(
   pheno_correlated = TRUE
 )
 
+#excluir senegalia catechu e caesiaa?? 
 n_tip <- length(tree_pruned$tip.label)
 imputed_cont <- phylopars_fit$anc_recon[1:n_tip, continuous_cols, drop = FALSE]
 
@@ -518,7 +517,7 @@ traits_phylo <- as.data.frame(imputed_cont) %>%
 
 stopifnot(sum(sapply(traits_phylo, function(x) sum(is.na(x)))) == 0)
 #traits_phylo are dataset with phylogenetic input
-
+### ====================== ######
 
 ##Gower distance x PCoA =====------ 
 library(cluster)
@@ -572,21 +571,16 @@ mpd <- dispRity(disp_obj, metric = c(mean, pairwise.dist))
 library(ade4)
 library(adegraphics)
 
-hs <- dudi.hillsmith(traits_modemean,
+hs <- dudi.hillsmith(traits_phylo,
                scannf = TRUE, nf = 2)
-
-hs_phylo <- dudi.hillsmith(traits_phylo,
-                          scannf = TRUE, nf = 2)
-
-hs_phylo$eig
-axes_contribution <- 100*hs_phylo$eig/sum(hs_phylo$eig)
+#select 2 
 
 hs$eig
 axes_contribution <- 100*hs$eig/sum(hs$eig)
 
 #plot flowers in morpho space
-plot(hs_phylo$li[,1],
-     hs_phylo$li[,2],
+plot(hs$li[,1],
+     hs$li[,2],
      xlab = "pc1",
      ylab = "pc2",
      pch = 19)
