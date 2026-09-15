@@ -478,6 +478,8 @@ library(tibble)
 (setdiff(traits_selected$species, tree$tip.label))
 #Senegalia catechu/Senegalia chundra 
 #Senegalia caesia era p ser Senegalia intsia
+#excluir senegalia catechu e caesiaa?? 
+           
 traits_selected <- traits_selected %>%
   filter(species %in% tree$tip.label)
 
@@ -493,7 +495,6 @@ phylopars_fit <- phylopars(
   pheno_correlated = TRUE
 )
 
-#excluir senegalia catechu e caesiaa?? 
 n_tip <- length(tree_pruned$tip.label)
 imputed_cont <- phylopars_fit$anc_recon[1:n_tip, continuous_cols, drop = FALSE]
 
