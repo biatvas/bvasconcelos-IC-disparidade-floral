@@ -496,6 +496,7 @@ traits_sub_log <- traits_modemean %>%
 ## checagem
 sum(sapply(traits_matrix, function(x) sum(is.na(x)))) #947 NAs no começo
 sum(sapply(traits_modemean,function(x) sum(is.na(x)))) #aqui é 0
+sum(sapply(traits_sub_log,function(x) sum(is.na(x)))) #aqui é 0 tbm
 
 # B. IMPUTAÇÃO COM Rphylopars (só traços contínuos)
 # ============================================================
@@ -513,6 +514,11 @@ traits_selected <- traits_selected %>%
 
 phylopars_input <- traits_selected %>%
   select(species, all_of(continuous_cols))
+
+#ordenando as especies para ter a mesma ordem da filogenia
+#all(phylopars_input$species %in% tree_pruned$tip.label)
+phylopars_input_ordered <- phylopars_input[match(tree_pruned$tip.label, phylopars_input$species),]
+identical(phylopars_input_ordered$species, tree_pruned$tip.label)
 
 phylopars_fit <- phylopars(
   trait_data       = phylopars_input,
