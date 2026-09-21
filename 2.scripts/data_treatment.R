@@ -498,6 +498,12 @@ sum(sapply(traits_matrix, function(x) sum(is.na(x)))) #947 NAs no começo
 sum(sapply(traits_modemean,function(x) sum(is.na(x)))) #aqui é 0
 sum(sapply(traits_sub_log,function(x) sum(is.na(x)))) #aqui é 0 tbm
 
+#ordenando traits_modemean pra filogenia
+traits_modemean <- traits_modemean[match(tree_pruned$tip.label, 
+                      row.names(traits_modemean)),]
+
+#identical(row.names(traits_modemean), tree_pruned$tip.label)
+
 # B. IMPUTAÇÃO COM Rphylopars (só traços contínuos)
 # ============================================================
 # phylopars precisa de data.frame com coluna "species" + as contínuas,
@@ -521,13 +527,28 @@ phylopars_input_ordered <- phylopars_input[match(tree_pruned$tip.label, phylopar
 identical(phylopars_input_ordered$species, tree_pruned$tip.label)
 
 phylopars_fit <- phylopars(
-  trait_data       = phylopars_input,
+  trait_data       = phylopars_input_ordered,
   tree             = tree_pruned,
   model            = "BM",
   pheno_error      = TRUE,
   phylo_correlated = TRUE,
   pheno_correlated = TRUE
 )
+
+#sem assumir correlacao entre tracos e variacao intraespecifica
+phylopars_fit_no_cor <- phylopars(
+  trait_data       = phylopars_input_ordered,
+  tree             = tree_pruned,
+  model            = "BM",
+  pheno_error      = F,
+  phylo_correlated = F,
+  pheno_correlated = F
+)
+
+#checando
+# View(data.frame(phylopars_fit$anc_recon[1:219,1], 
+#            phylopars_fit_no_cor$anc_recon[1:219,1], 
+#      phylopars_input_ordered$inflorescence_length_mean[1:219]))
 
 #excluir senegalia catechu e caesiaa?? 
 n_tip <- length(tree_pruned$tip.label)
@@ -557,8 +578,8 @@ stopifnot(sum(sapply(traits_phylo, function(x) sum(is.na(x)))) == 0)
 
 ##Gower distance x PCoA =====------ 
 library(cluster)
-gower_phylo <- daisy(traits_phylo, metric = "gower") ##cluster package
-gower_modemean <- daisy(traits_modemean, metric = "gower")
+gower_phylo <- as.matrix(daisy(traits_phylo, metric = "gower")) ##cluster package
+gower_modemean <- as.matrix(daisy(traits_modemean, metric = "gower"))
 
 ## checagem: quantos pares tem NA na distancia (caso alguma linha nao compartilhe
 ## nenhuma variavel observada com outra - daria distancia NA)
