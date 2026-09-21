@@ -455,6 +455,36 @@ traits_modemean[categorical_cols] <- lapply(traits_modemean[categorical_cols], f
 
 stopifnot(sum(sapply(traits_modemean, function(x) sum(is.na(x)))) == 0)
 
+# podemos considerar a moda de linhagens filogeneticamente proximas
+# como genero. 
+
+#traits_modemean_2 <- traits_modemean %>%
+#  tibble::rownames_to_column("species") %>% #cria a col species
+#  dplyr::mutate(genus = sub("_.*", "", species)) %>% #cria a col genus, selecionando apenas o primeiro nome antes de _ de species
+#  dplyr::group_by(genus) %>% #agrupa por genero
+#  dplyr::mutate(
+#    dplyr::across(
+#      dplyr::all_of(categorical_cols), #considera apenas as variaveis em categorical_cols
+#      ~ {
+#        x <- .x
+#        x[is.na(x)] <- get_moda(x) #usando a funcao criada acima
+#        x
+#      }
+#    )
+#  ) %>%
+#  dplyr::ungroup() %>%
+#  tibble::column_to_rownames("species")
+#
+## funciona, mas retorna NA pros generos com apenas uma especie no 
+## dataset e que eh NA pra variavel. Ou seja, nesses casos teriamos que fazer o 
+## mesmo procedimento mas considerando generos proximos
+#
+#all(genus$genus %in% sub("_.*","", tree_pruned$tip.label)) #retorna T
+
+#talvez fazer algo como: 
+# se a ocorrencia de um nome em genus$genus é 1, entao selecionar o 
+# genero que ocorre logo antes do nome em sub("_.*","", 
+# tree_pruned$tip.label)
 
 # log nos traços contínuos que fugirem de normalidade (ajuste conforme shapiro_tab)
 traits_sub_log <- traits_modemean %>%
