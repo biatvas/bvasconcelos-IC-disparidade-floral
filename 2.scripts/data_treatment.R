@@ -581,6 +581,8 @@ library(cluster)
 gower_phylo <- as.matrix(daisy(traits_phylo, metric = "gower")) ##cluster package
 gower_modemean <- as.matrix(daisy(traits_modemean, metric = "gower"))
 
+mantel(gower_modemean,gower_phylo) #as duas matrizes estao bem correlacionadas
+
 ## checagem: quantos pares tem NA na distancia (caso alguma linha nao compartilhe
 ## nenhuma variavel observada com outra - daria distancia NA)
 #como fiz a imputação vai dar 0 
@@ -590,6 +592,7 @@ sum(is.na(as.matrix(gower_phylo)))
 pcoa_res <- pcoa(gower_phylo)  #ape package
 
 ## garantir ordem identica a arvore 
+scores_pcoa <- pcoa_res$vectors
 scores_pcoa <- scores_pcoa[match(tree_pruned$tip.label, rownames(scores_pcoa)), ]
 stopifnot(identical(rownames(scores_pcoa), tree_pruned$tip.label))
 
@@ -613,6 +616,35 @@ ggplot(pcoa_scores, aes(x = Axis.1, y = Axis.2)) +
   geom_text(aes(label = species), vjust = -0.5) +
   theme_classic()
 
+#como a matriz nao é euclidiana, 
+# talvez a gente possa considerar uma correção para autovalores negativos
+pcoa_res_2 <- pcoa(gower_phylo, correction = "cailliez")
+
+genus <- data.frame("genus" = sub("_.*" ,"", 
+                        row.names(pcoa_res_2$vectors)),
+                    "species" = row.names(pcoa_res_2$vectors)
+                    )
+
+pcoa_data <- as.data.frame(pcoa_res_2$vectors.cor[, c(1, 2)])
+pcoa_data$species <- row.names(pcoa_data)
+pcoa_data <- merge(pcoa_data, genus, by = "species")
+
+library(ggrepel)
+ggplot(pcoa_data, aes(x = Axis.1, y = Axis.2, color = genus)) +
+  geom_point(size = 3) +
+  # geom_text_repel(
+  #   aes(label = species),
+  #   size = 2.5,
+  #   show.legend = FALSE
+  # ) +
+  theme_classic()
+
+ggplot(pcoa_res_2$vectors.cor[,c(1,2)], aes(x = Axis.1, y = Axis.2)) +
+  geom_point(size = 3) +
+  #geom_text(aes(label = row.names(pcoa_res_2$vectors.cor)), 
+   #         vjust = -0.5, size = 2) +
+  theme_classic()
+
 ##coord fixed to adjust scale 
 # objeto dispRity a partir dos eixos da PCoA
 library(dispRity)
@@ -629,10 +661,13 @@ library(ade4)
 library(adegraphics)
 
 hs <- dudi.hillsmith(traits_phylo,
-               scannf = TRUE, nf = 2)
+               scannf = TRUE, nf = NA)
 #select 2 
+#screeplot(hs)
+summary(hs) #23 eicxos (cada categoria de var quant é um eixo)
+# até o eixo 5, acumula 43.29% da explicacao
+hs$eig #variancia generalizada explicada por eixo expalhada
 
-hs$eig
 axes_contribution <- 100*hs$eig/sum(hs$eig)
 
 #plot flowers in morpho space
@@ -644,7 +679,21 @@ plot(hs$li[,1],
 
 text(hs_phylo$li[,1],hs_phylo$li[,2],labels = traits_phylo$species, pos = 1)
 
+hs$cr # quanto cada variavel esta associada a cada eixo
+hs$index # tipos de cada var
 
+scatter(hs)
+s.label(hs$li, labels = NULL) #essa estrutura mais achatada pode tar
+# refletindo a baixa explicacao por eixo
+
+hs$cr[1] #importancia de cada variavel para cada eixo. 
+# tamanho floral com maior peso. podemos padronizar as var. continuas
+# pela media geometrica 
+
+hs$c1 #laodings (autovetores) 
+hs$co[1] #c1 reescalavo pelos autovalores.
+# direcao (quantitativas) ou qais categorias puxam pra qual lado
+# do eixo
 
 ##calcular metricas de disparidade =======
 ## SV, SR, MPD
