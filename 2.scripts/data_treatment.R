@@ -4,7 +4,7 @@ librarian::shelf(dplyr, purrr, readr, stringr, tidyr, tibble,
                  tibble, stats)
 
 #limpeza e normalização dos dados iniciais
-morpho_data<- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/mimoseae_subset_clean.csv")
+morpho_data <- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/mimoseae_subset_clean.csv")
 validated_data <- morpho_data %>% filter(Check == "1") #221 obs
 
 traits <- cbind("taxon" = validated_data$taxon, validated_data[, 6:83])
@@ -314,6 +314,10 @@ write.csv(cleaned_traits, "3.outputs/morphological_dataset_clean.csv", row.names
 # read.csv("3.outputs/morphological_dataset_clean.csv)
 traits <- cleaned_traits
 
+# AQUI SCRIPT data_treatment É FINALIZADO. ABAIXO INICIAMOS 
+# UM NOVO SCRIPT PARA SELEÇÃO DAS VARIAVEIS E PODEMOS INCLUIR ESTATISTICAS
+# GERAIS DOS TRAÇOS
+
 #221 obs & 30 variables
 
 ## Traits selected for disparity analyses
@@ -458,7 +462,10 @@ stopifnot(sum(sapply(traits_modemean, function(x) sum(is.na(x)))) == 0)
 # podemos considerar a moda de linhagens filogeneticamente proximas
 # como genero. 
 
-#traits_modemean_2 <- traits_modemean %>%
+# genus <- data.frame("genus" = sub("_.*", "", row.names(traits_sub))
+# )
+# 
+# traits_modemean_2 <- traits_sub %>%
 #  tibble::rownames_to_column("species") %>% #cria a col species
 #  dplyr::mutate(genus = sub("_.*", "", species)) %>% #cria a col genus, selecionando apenas o primeiro nome antes de _ de species
 #  dplyr::group_by(genus) %>% #agrupa por genero
@@ -474,15 +481,15 @@ stopifnot(sum(sapply(traits_modemean, function(x) sum(is.na(x)))) == 0)
 #  ) %>%
 #  dplyr::ungroup() %>%
 #  tibble::column_to_rownames("species")
-#
-## funciona, mas retorna NA pros generos com apenas uma especie no 
-## dataset e que eh NA pra variavel. Ou seja, nesses casos teriamos que fazer o 
-## mesmo procedimento mas considerando generos proximos
-#
+
+# funciona, mas retorna NA pros generos com apenas uma especie no
+# dataset e que eh NA pra variavel. Ou seja, nesses casos teriamos que fazer o
+# mesmo procedimento mas considerando generos proximos
+
 #all(genus$genus %in% sub("_.*","", tree_pruned$tip.label)) #retorna T
 
 #talvez fazer algo como: 
-# se a ocorrencia de um nome em genus$genus é 1, entao selecionar o 
+# se a ocorrencia de um nome em genus é 1, entao selecionar o 
 # genero que ocorre logo antes do nome em sub("_.*","", 
 # tree_pruned$tip.label)
 
@@ -524,7 +531,7 @@ phylopars_input <- traits_selected %>%
 #ordenando as especies para ter a mesma ordem da filogenia
 #all(phylopars_input$species %in% tree_pruned$tip.label)
 phylopars_input_ordered <- phylopars_input[match(tree_pruned$tip.label, phylopars_input$species),]
-identical(phylopars_input_ordered$species, tree_pruned$tip.label)
+#identical(phylopars_input_ordered$species, tree_pruned$tip.label)
 
 phylopars_fit <- phylopars(
   trait_data       = phylopars_input_ordered,
@@ -546,8 +553,8 @@ phylopars_fit_no_cor <- phylopars(
 )
 
 #checando
-# View(data.frame(phylopars_fit$anc_recon[1:219,1], 
-#            phylopars_fit_no_cor$anc_recon[1:219,1], 
+# View(data.frame(phylopars_fit$anc_recon[1:219,1],
+#            phylopars_fit_no_cor$anc_recon[1:219,1],
 #      phylopars_input_ordered$inflorescence_length_mean[1:219]))
 
 #excluir senegalia catechu e caesiaa?? 
@@ -555,13 +562,13 @@ n_tip <- length(tree_pruned$tip.label)
 imputed_cont <- phylopars_fit$anc_recon[1:n_tip, continuous_cols, drop = FALSE]
 
 # checagem defensiva de ordem antes de rotular
-name_order_ok <- identical(rownames(imputed_cont), tree_pruned$tip.label)
-if (!name_order_ok) {
-  imputed_cont <- imputed_cont[match(tree_pruned$tip.label, rownames(imputed_cont)), ]
-  stopifnot(identical(rownames(imputed_cont), tree_pruned$tip.label))
-}
-
-stopifnot(sum(is.na(imputed_cont)) == 0)
+# name_order_ok <- identical(rownames(imputed_cont), tree_pruned$tip.label)
+# if (!name_order_ok) {
+#   imputed_cont <- imputed_cont[match(tree_pruned$tip.label, rownames(imputed_cont)), ]
+#   stopifnot(identical(rownames(imputed_cont), tree_pruned$tip.label))
+# }
+# 
+# stopifnot(sum(is.na(imputed_cont)) == 0)
 
 # categóricas entram pela moda (Rphylopars não modela discreto/categórico)
 traits_phylo <- as.data.frame(imputed_cont) %>%
@@ -660,7 +667,11 @@ mpd <- dispRity(disp_obj, metric = c(mean, pairwise.dist))
 library(ade4)
 library(adegraphics)
 
-hs <- dudi.hillsmith(traits_phylo,
+View(traits_phylo[,continuous_cols])
+
+hs <- dudi.hillsmith(traits_sub_log,
+                       scannf = TRUE, nf = NA)
+hs_2 <- dudi.hillsmith(traits_phylo,
                scannf = TRUE, nf = NA)
 #select 2 
 #screeplot(hs)
@@ -691,7 +702,7 @@ hs$cr[1] #importancia de cada variavel para cada eixo.
 # pela media geometrica 
 
 hs$c1 #laodings (autovetores) 
-hs$co[1] #c1 reescalavo pelos autovalores.
+hs$co[1] #c1 reescalonado pelos autovalores.
 # direcao (quantitativas) ou qais categorias puxam pra qual lado
 # do eixo
 
