@@ -6,7 +6,7 @@ librarian::shelf(dplyr, purrr, readr, stringr, tidyr, tibble,
 species_names <- morpho_data$taxon
 
 #limpeza e normalização dos dados iniciais
-morpho_data<- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/mimoseae_subset_clean.csv")
+morpho_data <- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/mimoseae_subset_clean.csv")
 validated_data <- morpho_data %>% filter(Check == "1") #221 obs
 
 traits <- cbind("taxon" = validated_data$taxon, validated_data[, 6:83])
@@ -316,6 +316,10 @@ write.csv(cleaned_traits, "3.outputs/morphological_dataset_clean.csv", row.names
 # read.csv("3.outputs/morphological_dataset_clean.csv)
 traits <- cleaned_traits
 
+# AQUI SCRIPT data_treatment É FINALIZADO. ABAIXO INICIAMOS 
+# UM NOVO SCRIPT PARA SELEÇÃO DAS VARIAVEIS E PODEMOS INCLUIR ESTATISTICAS
+# GERAIS DOS TRAÇOS
+
 #221 obs & 30 variables
 
 ## Traits selected for disparity analyses
@@ -457,6 +461,39 @@ traits_modemean[categorical_cols] <- lapply(traits_modemean[categorical_cols], f
 
 stopifnot(sum(sapply(traits_modemean, function(x) sum(is.na(x)))) == 0)
 
+# podemos considerar a moda de linhagens filogeneticamente proximas
+# como genero. 
+
+# genus <- data.frame("genus" = sub("_.*", "", row.names(traits_sub))
+# )
+# 
+# traits_modemean_2 <- traits_sub %>%
+#  tibble::rownames_to_column("species") %>% #cria a col species
+#  dplyr::mutate(genus = sub("_.*", "", species)) %>% #cria a col genus, selecionando apenas o primeiro nome antes de _ de species
+#  dplyr::group_by(genus) %>% #agrupa por genero
+#  dplyr::mutate(
+#    dplyr::across(
+#      dplyr::all_of(categorical_cols), #considera apenas as variaveis em categorical_cols
+#      ~ {
+#        x <- .x
+#        x[is.na(x)] <- get_moda(x) #usando a funcao criada acima
+#        x
+#      }
+#    )
+#  ) %>%
+#  dplyr::ungroup() %>%
+#  tibble::column_to_rownames("species")
+
+# funciona, mas retorna NA pros generos com apenas uma especie no
+# dataset e que eh NA pra variavel. Ou seja, nesses casos teriamos que fazer o
+# mesmo procedimento mas considerando generos proximos
+
+#all(genus$genus %in% sub("_.*","", tree_pruned$tip.label)) #retorna T
+
+#talvez fazer algo como: 
+# se a ocorrencia de um nome em genus é 1, entao selecionar o 
+# genero que ocorre logo antes do nome em sub("_.*","", 
+# tree_pruned$tip.label)
 
 # log nos traços contínuos que fugirem de normalidade (ajuste conforme shapiro_tab)
 traits_sub_log <- traits_modemean %>%
@@ -468,6 +505,13 @@ traits_sub_log <- traits_modemean %>%
 ## checagem
 sum(sapply(traits_matrix, function(x) sum(is.na(x)))) #947 NAs no começo
 sum(sapply(traits_modemean,function(x) sum(is.na(x)))) #aqui é 0
+sum(sapply(traits_sub_log,function(x) sum(is.na(x)))) #aqui é 0 tbm
+
+#ordenando traits_modemean pra filogenia
+traits_modemean <- traits_modemean[match(tree_pruned$tip.label, 
+                      row.names(traits_modemean)),]
+
+#identical(row.names(traits_modemean), tree_pruned$tip.label)
 
 # B. IMPUTAÇÃO COM Rphylopars (só traços contínuos)
 # ============================================================
@@ -486,8 +530,13 @@ traits_selected <- traits_selected %>%
 phylopars_input <- traits_selected %>%
   select(species, all_of(continuous_cols))
 
+#ordenando as especies para ter a mesma ordem da filogenia
+#all(phylopars_input$species %in% tree_pruned$tip.label)
+phylopars_input_ordered <- phylopars_input[match(tree_pruned$tip.label, phylopars_input$species),]
+#identical(phylopars_input_ordered$species, tree_pruned$tip.label)
+
 phylopars_fit <- phylopars(
-  trait_data       = phylopars_input,
+  trait_data       = phylopars_input_ordered,
   tree             = tree_pruned,
   model            = "BM",
   pheno_error      = TRUE,
@@ -495,18 +544,33 @@ phylopars_fit <- phylopars(
   pheno_correlated = TRUE
 )
 
+#sem assumir correlacao entre tracos e variacao intraespecifica
+phylopars_fit_no_cor <- phylopars(
+  trait_data       = phylopars_input_ordered,
+  tree             = tree_pruned,
+  model            = "BM",
+  pheno_error      = F,
+  phylo_correlated = F,
+  pheno_correlated = F
+)
+
+#checando
+# View(data.frame(phylopars_fit$anc_recon[1:219,1],
+#            phylopars_fit_no_cor$anc_recon[1:219,1],
+#      phylopars_input_ordered$inflorescence_length_mean[1:219]))
+
 #excluir senegalia catechu e caesiaa?? 
 n_tip <- length(tree_pruned$tip.label)
 imputed_cont <- phylopars_fit$anc_recon[1:n_tip, continuous_cols, drop = FALSE]
 
 # checagem defensiva de ordem antes de rotular
-name_order_ok <- identical(rownames(imputed_cont), tree_pruned$tip.label)
-if (!name_order_ok) {
-  imputed_cont <- imputed_cont[match(tree_pruned$tip.label, rownames(imputed_cont)), ]
-  stopifnot(identical(rownames(imputed_cont), tree_pruned$tip.label))
-}
-
-stopifnot(sum(is.na(imputed_cont)) == 0)
+# name_order_ok <- identical(rownames(imputed_cont), tree_pruned$tip.label)
+# if (!name_order_ok) {
+#   imputed_cont <- imputed_cont[match(tree_pruned$tip.label, rownames(imputed_cont)), ]
+#   stopifnot(identical(rownames(imputed_cont), tree_pruned$tip.label))
+# }
+# 
+# stopifnot(sum(is.na(imputed_cont)) == 0)
 
 # categóricas entram pela moda (Rphylopars não modela discreto/categórico)
 traits_phylo <- as.data.frame(imputed_cont) %>%
@@ -523,8 +587,10 @@ stopifnot(sum(sapply(traits_phylo, function(x) sum(is.na(x)))) == 0)
 
 ##Gower distance x PCoA =====------ 
 library(cluster)
-gower_phylo <- daisy(traits_phylo, metric = "gower") ##cluster package
-gower_modemean <- daisy(traits_modemean, metric = "gower")
+gower_phylo <- as.matrix(daisy(traits_phylo, metric = "gower")) ##cluster package
+gower_modemean <- as.matrix(daisy(traits_modemean, metric = "gower"))
+
+mantel(gower_modemean,gower_phylo) #as duas matrizes estao bem correlacionadas
 
 ## checagem: quantos pares tem NA na distancia (caso alguma linha nao compartilhe
 ## nenhuma variavel observada com outra - daria distancia NA)
@@ -535,6 +601,7 @@ sum(is.na(as.matrix(gower_phylo)))
 pcoa_res <- pcoa(gower_phylo)  #ape package
 
 ## garantir ordem identica a arvore 
+scores_pcoa <- pcoa_res$vectors
 scores_pcoa <- scores_pcoa[match(tree_pruned$tip.label, rownames(scores_pcoa)), ]
 stopifnot(identical(rownames(scores_pcoa), tree_pruned$tip.label))
 
@@ -558,6 +625,35 @@ ggplot(pcoa_scores, aes(x = Axis.1, y = Axis.2)) +
   geom_text(aes(label = species), vjust = -0.5) +
   theme_classic()
 
+#como a matriz nao é euclidiana, 
+# talvez a gente possa considerar uma correção para autovalores negativos
+pcoa_res_2 <- pcoa(gower_phylo, correction = "cailliez")
+
+genus <- data.frame("genus" = sub("_.*" ,"", 
+                        row.names(pcoa_res_2$vectors)),
+                    "species" = row.names(pcoa_res_2$vectors)
+                    )
+
+pcoa_data <- as.data.frame(pcoa_res_2$vectors.cor[, c(1, 2)])
+pcoa_data$species <- row.names(pcoa_data)
+pcoa_data <- merge(pcoa_data, genus, by = "species")
+
+library(ggrepel)
+ggplot(pcoa_data, aes(x = Axis.1, y = Axis.2, color = genus)) +
+  geom_point(size = 3) +
+  # geom_text_repel(
+  #   aes(label = species),
+  #   size = 2.5,
+  #   show.legend = FALSE
+  # ) +
+  theme_classic()
+
+ggplot(pcoa_res_2$vectors.cor[,c(1,2)], aes(x = Axis.1, y = Axis.2)) +
+  geom_point(size = 3) +
+  #geom_text(aes(label = row.names(pcoa_res_2$vectors.cor)), 
+   #         vjust = -0.5, size = 2) +
+  theme_classic()
+
 ##coord fixed to adjust scale 
 # objeto dispRity a partir dos eixos da PCoA
 library(dispRity)
@@ -573,11 +669,18 @@ mpd <- dispRity(disp_obj, metric = c(mean, pairwise.dist))
 library(ade4)
 library(adegraphics)
 
-hs <- dudi.hillsmith(traits_phylo,
-               scannf = TRUE, nf = 2)
-#select 2 
+View(traits_phylo[,continuous_cols])
 
-hs$eig
+hs <- dudi.hillsmith(traits_sub_log,
+                       scannf = TRUE, nf = NA)
+hs_2 <- dudi.hillsmith(traits_phylo,
+               scannf = TRUE, nf = NA)
+#select 2 
+#screeplot(hs)
+summary(hs) #23 eicxos (cada categoria de var quant é um eixo)
+# até o eixo 5, acumula 43.29% da explicacao
+hs$eig #variancia generalizada explicada por eixo expalhada
+
 axes_contribution <- 100*hs$eig/sum(hs$eig)
 
 #plot flowers in morpho space
@@ -589,7 +692,21 @@ plot(hs$li[,1],
 
 text(hs_phylo$li[,1],hs_phylo$li[,2],labels = traits_phylo$species, pos = 1)
 
+hs$cr # quanto cada variavel esta associada a cada eixo
+hs$index # tipos de cada var
 
+scatter(hs)
+s.label(hs$li, labels = NULL) #essa estrutura mais achatada pode tar
+# refletindo a baixa explicacao por eixo
+
+hs$cr[1] #importancia de cada variavel para cada eixo. 
+# tamanho floral com maior peso. podemos padronizar as var. continuas
+# pela media geometrica 
+
+hs$c1 #laodings (autovetores) 
+hs$co[1] #c1 reescalonado pelos autovalores.
+# direcao (quantitativas) ou qais categorias puxam pra qual lado
+# do eixo
 
 ##calcular metricas de disparidade =======
 ## SV, SR, MPD
