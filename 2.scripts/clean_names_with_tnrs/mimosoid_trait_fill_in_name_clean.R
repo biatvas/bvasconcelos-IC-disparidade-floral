@@ -1,11 +1,12 @@
 # 1. Head ----------------------------------------------------------------------
 #==============================================================================#
-setwd("C:/Users/Eulália/Desktop/bia/Labis/IC/Dados") #defining work directory
+setwd("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral") #defining work directory
 if (!require(librarian)) install.packages("librarian"); library("librarian")
-librarian::shelf(phytools, dplyr, purrr, factoextra,vegan,tidyverse,ape,stringr,readr) #installing and/or loading packages
-mimosoid_trait_fill_in <- read_excel("1.datasets/tabelas/mimosoid_trait_fill_in.xlsx", 
-                                     +     sheet = "Traits")
-mimosoid_trait <- mimosoid_trait_fill_in
+librarian::shelf(phytools, dplyr, purrr, factoextra,vegan,tidyverse,ape,stringr,readr,readxl) #installing and/or loading packages
+
+mimosoid_trait<- read_excel("1.datasets/raw_data/mimosoid_trait_fill_in.xlsx", 
+                                                               sheet = "Traits")
+
 #========================================================================#
 #==2.1.1 clean species names w/ tnrs=====================================#
 #========================================================================#
@@ -113,9 +114,9 @@ tnrs <- TNRS(tips, sources = "wcvp", classification = "wfo", mode = "resolve", m
 setdiff(tnrs$Name_submitted, tips)
 which(table(tips)>1, T)
 
-write.csv(tnrs,"4.outputs/ryan/ryan_queries.csv", row.names = F)
+write.csv(tnrs,"3.outputs/data/ryan/ryan_queries.csv", row.names = F)
 # Read TNRS queries
-tnrs <- read.csv("4.outputs/ryan/ryan_queries.csv",na.strings = c("", NA), stringsAsFactors = F, encoding = "UTF-8")
+tnrs <- read.csv("3.outputs/data/ryan/ryan_queries.csv",na.strings = c("", NA), stringsAsFactors = F, encoding = "UTF-8")
 # Filter names with an overall score (matching index) equal to 1 (exact match),
 # and with all possible taxonomic statuses except "No opinion"
 resolved <- tnrs %>% filter(Overall_score == 1 &
@@ -133,9 +134,9 @@ fuzzy <- tnrs %>% filter(Overall_score < 1 |
 #8 especies pra checar
 # Write *.csv for manual checking of fuzzy matches
 ## Check `clean_occurrence.R` for details on this procedure
-write.csv(cbind(fuzzy, data.frame(Keep = NA, Altered = NA)), "4.outputs/ryan/ryan_fuzzy_checked.csv",row.names = FALSE)
+write.csv(cbind(fuzzy, data.frame(Keep = NA, Altered = NA)), "3.outputs/data/ryan/ryan_fuzzy_checked.csv",row.names = FALSE)
 # Read *.csv after manual checking
-fuzzy_checked <- read.csv("4.outputs/ryan/ryan_fuzzy_checked.csv", na.strings = c("", NA), stringsAsFactors = F,encoding = "UTF-8")
+fuzzy_checked <- read.csv("3.outputs/data/ryan/ryan_fuzzy_checked.csv", na.strings = c("", NA), stringsAsFactors = F,encoding = "UTF-8")
 fuzzy_checked$X <- NULL
 # Merge automatically and manually checked taxonomic names
 tips_clean <- rbind(cbind(resolved, Keep = 1, Altered = NA), fuzzy_checked)
@@ -171,4 +172,4 @@ mimoseae_species <- mimoseae_species |>
 # <- rm_duplicate_tips(tip_labels = collapsed_species$species,
 # tree = collapsed_species
 # Save new data
-write.csv(mimosoid_trait, "4.outputs/ryan/ryandata_clean.csv", row.names = FALSE)
+write.csv(mimosoid_trait, "3.outputs/data/ryan/ryandata_clean.csv", row.names = FALSE)

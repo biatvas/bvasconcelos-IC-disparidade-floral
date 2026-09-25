@@ -1,9 +1,9 @@
 # 1. Head ----------------------------------------------------------------------
 #==============================================================================#
-setwd("C:/Users/Eulália/Desktop/bia/Labis/IC/Dados") #defining work directory
+setwd("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral") #defining work directory
 if (!require(librarian)) install.packages("librarian"); library("librarian")
 librarian::shelf(phytools, dplyr, purrr, factoextra,vegan,tidyverse,ape,stringr,readr) #installing and/or loading packages
-mimosa_species <- read.csv("1.datasets/tabelas/mimosa_species_features.csv")
+mimosa_species <- read.csv("1.datasets/raw_data/mimosa_species_features.csv")
 
 #========================================================================#
 #==2.1.1 clean species names w/ tnrs=====================================#
@@ -112,9 +112,9 @@ tnrs <- TNRS(tips, sources = "wcvp", classification = "wfo", mode = "resolve", m
 setdiff(tnrs$Name_submitted, tips)
 which(table(tips)>1, T)
 
-write.csv(tnrs,"4.outputs/mimosa/mimosa_queries.csv", row.names = F)
+write.csv(tnrs,"3.outputs/data/mimosa/mimosa_queries.csv", row.names = F)
 # Read TNRS queries
-tnrs <- read.csv("4.outputs/mimosa/mimosa_queries.csv",na.strings = c("", NA), stringsAsFactors = F, encoding = "UTF-8")
+tnrs <- read.csv("3.outputs/data/mimosa/mimosa_queries.csv",na.strings = c("", NA), stringsAsFactors = F, encoding = "UTF-8")
 # Filter names with an overall score (matching index) equal to 1 (exact match),
 # and with all possible taxonomic statuses except "No opinion"
 resolved <- tnrs %>% filter(Overall_score == 1 &
@@ -132,9 +132,9 @@ fuzzy <- tnrs %>% filter(Overall_score < 1 |
 #103 nomes para corrigir
 # Write *.csv for manual checking of fuzzy matches
 ## Check `clean_occurrence.R` for details on this procedure
-write.csv(cbind(fuzzy, data.frame(Keep = NA, Altered = NA)), "4.outputs/mimosa/mimosa_fuzzy_checked.csv",row.names = FALSE)
+write.csv(cbind(fuzzy, data.frame(Keep = NA, Altered = NA)), "3.outputs/data/mimosa/mimosa_fuzzy_checked.csv",row.names = FALSE)
 # Read *.csv after manual checking
-fuzzy_checked <- read.csv("4.outputs/mimosa/mimosa_fuzzy_checked.csv", na.strings = c("", NA), stringsAsFactors = F,encoding = "UTF-8")
+fuzzy_checked <- read.csv("3.outputs/data/mimosa/mimosa_fuzzy_checked.csv", na.strings = c("", NA), stringsAsFactors = F,encoding = "UTF-8")
 # Merge automatically and manually checked taxonomic names
 tips_clean <- rbind(cbind(resolved, Keep = 1, Altered = NA), fuzzy_checked)
 
@@ -182,4 +182,4 @@ mimosa_species <- mimosea_species |>
 # <- rm_duplicate_tips(tip_labels = collapsed_species$species,
 # tree = collapsed_species
 # Save new data
-write.csv(mimosa_species, "4.outputs/mimosa/mimosadata_clean.csv", row.names = FALSE)
+write.csv(mimosa_species, "3.outputs/data/mimosa/mimosadata_clean.csv", row.names = FALSE)
