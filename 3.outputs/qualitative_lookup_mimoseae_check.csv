@@ -197,29 +197,29 @@ flower_merosity,5-merous(some terminal flower 6-merous),1,5
 flower_merosity,5(6)9-merous,1,5&9
 flower_merosity,5(randomly 6)-merous,1,5
 bisexual_flowers_presence,yes,23,yes
-bisexual_flowers_presence,bisexual,3,bisexual
-bisexual_flowers_presence,present,3,present
-bisexual_flowers_presence,all bisexual,1,all bisexual
-bisexual_flowers_presence,all or most bisexual,1,all or most bisexual
-bisexual_flowers_presence,mostly bisexual,1,mostly bisexual
-male_flowers_presence,yes,8,yes
+bisexual_flowers_presence,bisexual,3,yes
+bisexual_flowers_presence,present,3,yes
+bisexual_flowers_presence,all bisexual,1,yes
+bisexual_flowers_presence,all or most bisexual,1,yes
+bisexual_flowers_presence,mostly bisexual,1,yes
+male_flowers_presence,yes,8,present
 male_flowers_presence,present,4,present
-male_flowers_presence,central flower male,3,central flower male
-male_flowers_presence,lower ones staminates,3,lower ones staminates
-male_flowers_presence,some lower ones staminate,2,some lower ones staminate
-male_flowers_presence,central ones male,1,central ones male
-male_flowers_presence,in some spike many staminate,1,in some spike many staminate
-male_flowers_presence,lower ones mostly staminate,1,lower ones mostly staminate
-male_flowers_presence,lower ones staminate,1,lower ones staminate
-male_flowers_presence,lower ones usually staminate,1,lower ones usually staminate
-male_flowers_presence,lowest in each capitulum staminate,1,lowest in each capitulum staminate
-male_flowers_presence,pistil of some lower flowers rudimentary,1,pistil of some lower flowers rudimentary
-male_flowers_presence,some functionally male,1,some functionally male
-male_flowers_presence,some or many lower ones staminate,1,some or many lower ones staminate
-male_flowers_presence,some or many of each spike functionally staminate,1,some or many of each spike functionally staminate
-male_flowers_presence,some staminate only,1,some staminate only
-male_flowers_presence,sometimes male,1,sometimes male
-male_flowers_presence,staminate,1,staminate
+male_flowers_presence,central flower male,3,present
+male_flowers_presence,lower ones staminates,3,present
+male_flowers_presence,some lower ones staminate,2,present
+male_flowers_presence,central ones male,1,present
+male_flowers_presence,in some spike many staminate,1,present
+male_flowers_presence,lower ones mostly staminate,1,present
+male_flowers_presence,lower ones staminate,1,present
+male_flowers_presence,lower ones usually staminate,1,present
+male_flowers_presence,lowest in each capitulum staminate,1,present
+male_flowers_presence,pistil of some lower flowers rudimentary,1,NA
+male_flowers_presence,some functionally male,1,NA
+male_flowers_presence,some or many lower ones staminate,1,present
+male_flowers_presence,some or many of each spike functionally staminate,1,present
+male_flowers_presence,some staminate only,1,present
+male_flowers_presence,sometimes male,1,present
+male_flowers_presence,staminate,1,present
 heteromorphic_flower_presence,homomorphic,18,absent
 heteromorphic_flower_presence,yes,16,present
 heteromorphic_flower_presence,dimorphic,7,present
@@ -360,9 +360,9 @@ stamen_count,9-15,1,9-15
 stamen_count,96-154,1,96-154
 stamen_count,diplostemonous,1,NA
 filament_color,white,49,white
-filament_color,pink,14,red&pink
-filament_color,blood-red,1,red&pink
-filament_color,bright pink,1,red&pink
+filament_color,pink,14,pink
+filament_color,blood-red,1,pink
+filament_color,bright pink,1,pink
 filament_color,bright yellow,1,yellow
 filament_color,cream-colored,1,yellow
 filament_color,"cream-colored, greenish-yellow, pinkish-red",1,yellow
@@ -373,9 +373,9 @@ filament_color,greenish-white,1,white
 filament_color,greenish-yellow,1,yellow
 filament_color,greenishor lemon-yellow,1,yellow
 filament_color,"in proximal flowers violet, in distal ones pale yellow",1,pink&yellow
-filament_color,lavender-pink,1,red&pink
-filament_color,lilac,1,red&pink
-filament_color,"lilac-, roseor magenta-pink",1,red&pink
+filament_color,lavender-pink,1,pink
+filament_color,lilac,1,pink
+filament_color,"lilac-, roseor magenta-pink",1,pink
 filament_color,"off-white, golden red",1,white
 filament_color,pale cream-coloured,1,white
 filament_color,pale cream-white,1,white
@@ -383,18 +383,18 @@ filament_color,pale creamy white,1,white
 filament_color,pale lilac fading whitish,1,white
 filament_color,pale yellow,1,yellow
 filament_color,"pallid proximally, carmine",1,red
-filament_color,pink fading whitish,1,pink&white
-filament_color,pink or pinkish orange,1,red&pink
+filament_color,pink fading whitish,1,pink
+filament_color,pink or pinkish orange,1,pink
 filament_color,"pink or purplish-pink, sometimes fading whitish",1,pink
 filament_color,pink or white,1,pink&white
-filament_color,pink-lilac,1,red&pink
-filament_color,pink-purple,1,red&pink
+filament_color,pink-lilac,1,pink
+filament_color,pink-purple,1,pink
 filament_color,probably white,1,white
-filament_color,pure white,1,pure white
-filament_color,red or pink,1,red&pink
-filament_color,red to vinaceous,1,red&pink
-filament_color,red-crimson,1,red&pink
-filament_color,vivid pink or lilac-pink,1,red&pink
+filament_color,pure white,1,white
+filament_color,red or pink,1,pink
+filament_color,red to vinaceous,1,pink
+filament_color,red-crimson,1,pink
+filament_color,vivid pink or lilac-pink,1,pink
 filament_color,"white or cream-white, exceptionally pallid-roseate in fading",1,white
 filament_color,white or occasionally pink,1,white
 filament_color,white or pink,1,pink&white
@@ -446,10 +446,10 @@ staminal_tube_presence,present,34,present
 staminal_tube_presence,no,1,no
 intrastaminal_nectary_presence,absent,8,absent
 intrastaminal_nectary_presence,present,5,present
-intrastaminal_nectary_presence,an intrastaminal disc around base of ovary,1,an intrastaminal disc around base of ovary
-intrastaminal_nectary_presence,disk adnate to the stamina tube,1,disk adnate to the stamina tube
-intrastaminal_nectary_presence,only in bissexual flowers,1,only in bissexual flowers
-intrastaminal_nectary_presence,only in central flowers,1,only in central flowers
+intrastaminal_nectary_presence,an intrastaminal disc around base of ovary,1,present
+intrastaminal_nectary_presence,disk adnate to the stamina tube,1,present
+intrastaminal_nectary_presence,only in bissexual flowers,1,present
+intrastaminal_nectary_presence,only in central flowers,1,present
 nectary_presence,absent,7,absent
 nectary_presence,present,7,present
 nectary_presence,yes,2,present
