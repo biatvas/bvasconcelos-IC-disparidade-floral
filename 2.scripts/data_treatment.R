@@ -2,8 +2,6 @@ if (!require(librarian)) install.packages("librarian")
 librarian::shelf(dplyr, purrr, readr, stringr, tidyr, tibble,
                  cluster, ape, vegan, ggplot2, readr, ade4, FactoMineR, 
                  tibble, stats)
-##
-species_names <- morpho_data$taxon
 
 #limpeza e normalização dos dados iniciais
 morpho_data <- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/mimoseae_subset_clean.csv")
@@ -395,7 +393,7 @@ inflo_traits <- c(
 
 flower_traits <- c(
   "flower_merosity",
-  "stamen_count",
+  "stamen_count", 
   "anther_gland_presence",
   "nectary_presence",
   "calyx_length_mean",

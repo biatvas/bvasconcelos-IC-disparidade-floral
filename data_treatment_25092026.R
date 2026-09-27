@@ -193,7 +193,7 @@ for (i in seq_along(low_cols)) {
 
 #Verificando
 sum(is.na(traits_2[colnames(traits)])) #8396, o mesmo que antes, então não foram gerados NAs ao estimar a média
-
+#8405
 all.equal(traits_2$height_mean, rowMeans(cbind(as.numeric(traits_2$height_low),
                                                as.numeric(traits_2$height_high)),na.rm = TRUE))
 
@@ -292,15 +292,7 @@ remove(traits_3)
 
 cleaned_traits <- traits_2
 
-#tem alguns NaN, vou limpar pra virar NA
-# limpar NaN -> NA
-cleaned_traits[] <- lapply(cleaned_traits, function(x) {
-  if (is.numeric(x)) {
-    x[is.nan(x)] <- NA
-  }
-  x
-})
-
+#limpar celular vazias pra virar NA
 cleaned_traits[] <- lapply(cleaned_traits, function(x) {
   if (is.character(x)) {
     x <- trimws(x)
@@ -419,4 +411,4 @@ cleaned_traits_2 <- cleaned_traits_2 %>%
   relocate(clade, .after = taxon)
  
 ##salvar o dataset novo gerado 
-write.csv(cleaned_traits, "3.outputs/morphological_dataset_treatment.csv", row.names = F)
+write.csv(cleaned_traits_2, "3.outputs/morphological_dataset_treatment.csv", row.names = F)
