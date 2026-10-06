@@ -13,7 +13,7 @@ validated_data <- morpho_data %>% filter(Check == "1") #221 obs
 
 traits <- cbind("taxon" = validated_data$taxon, validated_data[, 6:83])
 
-#agora vou trabalhar com o arquivo traits pra limpeza e gerar unique csv dos dados 
+#agora vou trabalhar com o arquivo traits pra limpeza  e gerar unique csv dos dados 
 #a etapa consiste em 
 #aplicar um unique csv e gerar arquivo de substituição dos dados qualitativos +
 #transformar dados continuos pra mesma escala de medida e calcular média

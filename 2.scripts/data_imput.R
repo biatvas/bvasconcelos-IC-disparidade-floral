@@ -1,8 +1,11 @@
 ###IMPUTAÇÃO DOS DADOS
 # UM NOVO SCRIPT PARA SELEÇÃO DAS VARIAVEIS E PODEMOS INCLUIR ESTATISTICAS
 # GERAIS DOS TRAÇOS
+library(phytools)
+library(ape)
 #aqui quero ter uma tabela com dados imputados com os nomes das espécies ordenados de acordo com a filogenia 
 #read morpho data
+setwd("Documents/GitHub/bvasconcelos-IC-disparidade-floral/")
 traits <- read.csv("3.outputs/morphological_dataset_treatment.csv")
 #read phylogenetic tree and ecological data
 tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
@@ -179,14 +182,14 @@ phylopars_input <- traits %>%
 #ordenando as especies para ter a mesma ordem da filogenia
 #all(phylopars_input$species %in% tree_pruned$tip.label)
 #retorna T
-phylopars_fit <- phylopars(
-  trait_data       = phylopars_input,
-  tree             = tree_pruned,
-  model            = "BM",
-  pheno_error      = TRUE,
-  phylo_correlated = TRUE,
-  pheno_correlated = TRUE
-)
+# phylopars_fit <- phylopars(
+#   trait_data       = phylopars_input,
+#   tree             = tree_pruned,
+#   model            = "BM",
+#   pheno_error      = TRUE,
+#   phylo_correlated = TRUE,
+#   pheno_correlated = TRUE
+# )
 
 #sem assumir correlacao entre tracos e variacao intraespecifica
 phylopars_fit_no_cor <- phylopars(
@@ -237,4 +240,4 @@ traits_final <- log_phylo %>%
   left_join(clade_info, by = "species")
 
 #por fim, salvar o dataset final gerado
-write.csv()
+write.csv(traits_final, "traits_treatmentimput30092026.csv", row.names = F)

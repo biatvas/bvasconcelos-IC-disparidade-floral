@@ -4,7 +4,7 @@ library(dplyr)
 library(tibble)
 
 #read phylogenetic tree and ecological data
-traits_phylo <- read.csv()
+traits_phylo <- read.csv("traits_treatmentimput30092026.csv")
 biomes <- 
 tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
 ## prune phylogeny
