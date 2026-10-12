@@ -196,12 +196,15 @@ flower_merosity,5-merous or randomly 6-7-merous,1,5-merous or randomly 6-7-merou
 flower_merosity,5-merous(some terminal flower 6-merous),1,5-merous(some terminal flower 6-merous)
 flower_merosity,5(6)9-merous,1,5(6)9-merous
 flower_merosity,5(randomly 6)-merous,1,5(randomly 6)-merous
+Perianth_variable,0,9,0
+Perianth_variable,1,2,1
 bisexual_flowers_presence,yes,23,yes
 bisexual_flowers_presence,bisexual,3,bisexual
 bisexual_flowers_presence,present,3,present
 bisexual_flowers_presence,all bisexual,1,all bisexual
 bisexual_flowers_presence,all or most bisexual,1,all or most bisexual
 bisexual_flowers_presence,mostly bisexual,1,mostly bisexual
+bisexual_flowers_presence,seemingly bisexual,1,seemingly bisexual
 male_flowers_presence,yes,8,yes
 male_flowers_presence,present,4,present
 male_flowers_presence,central flower male,3,central flower male
@@ -220,7 +223,7 @@ male_flowers_presence,some or many of each spike functionally staminate,1,some o
 male_flowers_presence,some staminate only,1,some staminate only
 male_flowers_presence,sometimes male,1,sometimes male
 male_flowers_presence,staminate,1,staminate
-heteromorphic_flower_presence,homomorphic,18,homomorphic
+heteromorphic_flower_presence,homomorphic,21,homomorphic
 heteromorphic_flower_presence,yes,16,yes
 heteromorphic_flower_presence,dimorphic,7,dimorphic
 heteromorphic_flower_presence,present,5,present
@@ -359,7 +362,7 @@ stamen_count,9-12,1,9-12
 stamen_count,9-15,1,9-15
 stamen_count,96-154,1,96-154
 stamen_count,diplostemonous,1,diplostemonous
-filament_color,white,49,white
+filament_color,white,50,white
 filament_color,pink,14,pink
 filament_color,blood-red,1,blood-red
 filament_color,bright pink,1,bright pink
@@ -407,7 +410,6 @@ filament_color,"white, crimson",1,"white, crimson"
 filament_color,"white, pink",1,"white, pink"
 filament_color,"white, red, vinaceous",1,"white, red, vinaceous"
 filament_color,"white, yellowish-cream, rarely light pink",1,"white, yellowish-cream, rarely light pink"
-filament_color,white(?),1,white(?)
 filament_color,whitish,1,whitish
 filament_color,whitish or pale pink,1,whitish or pale pink
 filament_color,whitish with tassel red,1,whitish with tassel red
@@ -444,6 +446,10 @@ stamen_tube_presence,tube equalling or longer than the corolla tube,1,tube equal
 stamen_tube_presence,tube equalling the corolla-tube,1,tube equalling the corolla-tube
 staminal_tube_presence,present,34,present
 staminal_tube_presence,no,1,no
+Filament_union,free,5,free
+Filament_union,stamens partly joined at the base,1,stamens partly joined at the base
+Filament_union,united at the base,1,united at the base
+Filament_union,united forming a tube,1,united forming a tube
 intrastaminal_nectary_presence,absent,8,absent
 intrastaminal_nectary_presence,present,5,present
 intrastaminal_nectary_presence,an intrastaminal disc around base of ovary,1,an intrastaminal disc around base of ovary
