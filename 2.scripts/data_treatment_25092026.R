@@ -11,7 +11,7 @@ librarian::shelf(dplyr, purrr, readr, stringr, tidyr, tibble,
 morpho_data <- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/1.datasets/mimoseae_subset_clean.csv")
 validated_data <- morpho_data %>% filter(Check == "1") #221 obs
 
-traits <- cbind("taxon" = validated_data$taxon, validated_data[, 6:83])
+traits <- cbind("taxon" = validated_data$taxon, validated_data[, 6:85])
 
 #agora vou trabalhar com o arquivo traits pra limpeza  e gerar unique csv dos dados 
 #a etapa consiste em 
@@ -322,7 +322,7 @@ head(cleaned_traits)
 
 #change bisexual and male flower presence in sex type 
 cleaned_traits_2 <- cleaned_traits %>%
-  mutate(sex_type = case_when(male_flowers_presence == "present" ~ 1,
+  mutate(flower_sexuality = case_when(male_flowers_presence == "present" ~ 1,
        bisexual_flowers_presence == "yes" ~ 0,
       TRUE ~ NA_real_))
 
@@ -342,22 +342,22 @@ cleaned_traits_2 <- cleaned_traits_3
 
 #summarize heteromophic flower information in dimorphic flower
 cleaned_traits_3 <- cleaned_traits_2 %>% 
-  mutate(dimorphic_flower = case_when(heteromorphic_flower_presence == "present" ~ 1,
+  mutate(inflorescence_heteromorphy = case_when(heteromorphic_flower_presence == "present" ~ 1,
                              (is.na(heteromorphic_flower_presence) |
                                 heteromorphic_flower_presence %in% c("", "absent")) ~ 0, TRUE ~ NA_real_))
 
 cleaned_traits_2 <- cleaned_traits_3
 
 ##summarize stamen union 
-# cleaned_traits_3 <- cleaned_traits_2 %>% mutate(stamen_union = case_when(stemonozone_presence == "present" |
-#     stamen_tube_presence == "present" |
-#     staminal_tube_presence == "present" ~ 1, is.na(stemonozone_presence) &
-#     is.na(stamen_tube_presence) &
-#     is.na(staminal_tube_presence) ~ 0, TRUE ~ NA_real_))
+cleaned_traits_3 <- cleaned_traits_2 %>% mutate(filament_union = case_when(stemonozone_presence == "present" |
+   stamen_tube_presence == "present" |
+     staminal_tube_presence == "present" ~ 1, is.na(stemonozone_presence) &
+     is.na(stamen_tube_presence) &
+     is.na(staminal_tube_presence) ~ 0, TRUE ~ NA_real_))
 
 
 #após conferir que ta tudo certo nas transformaçoes, fazer isso 
-#cleaned_traits <- cleaned_traits_2
+#cleaned_traits_2 <- cleaned_traits_3
 
 #agora ajustar numero de estames
 #optei por usar max e min do numero de estames
@@ -409,6 +409,6 @@ cleaned_traits_2 <- cleaned_traits_2 %>%
     by = "taxon"
   ) %>%
   relocate(clade, .after = taxon)
- 
+
 ##salvar o dataset novo gerado 
 write.csv(cleaned_traits_2, "3.outputs/morphological_dataset_treatment.csv", row.names = F)

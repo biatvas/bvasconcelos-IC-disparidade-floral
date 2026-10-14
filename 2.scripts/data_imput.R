@@ -24,19 +24,21 @@ traits <- traits %>%
   select(
     species,
     inflorescence_type,
-    flower_merosity,
-    stamen_count,
-    filament_color,
-    anther_gland_presence,
-    nectary,
-    sex_type,
-    dimorphic_flower,
     inflorescence_length_mean,
     inflorescence_peduncle_length_mean,
+    inflorescence_heteromorphy,
+    flower_sexuality,
+    flower_merosity,
+    Perianth_variable,
     calyx_length_mean,
     corolla_length_mean,
     corolla_lobe_length_mean,
-    filament_length_mean)
+    stamen_count,
+    filament_color,
+    filament_length_mean,
+    filament_union,
+    anther_gland_presence,
+    nectary)
 
 dim(traits)
 #219 15

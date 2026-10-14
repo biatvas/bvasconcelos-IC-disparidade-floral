@@ -8,15 +8,54 @@ traits_phylo <- read.csv("traits_treatmentimput30092026.csv")
 biomes <- 
 tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
 ## prune phylogeny
-traits_phylo <- traits_phylo %>% rownames_to_column("species") 
+traits_phylo <- cleaned_traits_2
+traits_phylo <- traits_phylo %>% rename(species = taxon)
 
 tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits_phylo$species))
 
+clade_info <- traits_phylo %>%
+  select(species, clade)
+
 traits_phylo <- traits_phylo %>% column_to_rownames("species")
 
+traits <- traits_phylo %>%
+  select(
+    inflorescence_length_mean,
+    inflorescence_peduncle_length_mean,
+    inflorescence_heteromorphy,
+    flower_sexuality,
+    Perianth_variable,
+    calyx_length_mean,
+    corolla_length_mean,
+    corolla_lobe_length_mean,
+    stamen_count,
+    filament_length_mean,
+    filament_union,
+    nectary)
+
+
+##filament_color,anther_gland_presence, flower_merosity, inflorescence_type,
+dim(traits)
+#221 16
+
+binary_vars <- c(3, 4, 5, 11, 12)
+
+# Converter para fator
+traits[binary_vars] <- lapply(
+  traits[binary_vars],
+  factor
+)
+
+quant_vars <- c(1, 2, 6, 7, 8, 9, 10)
+
+#log scale
+traits[quant_vars] <- lapply(
+  traits[quant_vars],
+  log
+)
+
 ##Gower distance x PCoA =====------ 
-library(cluster)
-gower <- as.matrix(daisy(traits_phylo, metric = "gower")) ##cluster package
+gower <- as.matrix(daisy(traits, metric = "gower")) ##cluster package
 gower_modemean <- as.matrix(daisy(traits_modemean, metric = "gower"))
 
 mantel(gower_modemean,gower) #as duas matrizes estao bem correlacionadas
@@ -58,11 +97,13 @@ ggplot(pcoa_scores, aes(x = Axis.1, y = Axis.2)) +
 
 
 ##incluindo a informaçao de clados
+traits_phylo <- traits_phylo %>% rownames_to_column("species")
+
 pcoa_df <- pcoa_res$vectors %>%
-  as.data.frame() %>%
+  as.data.frame() %>% 
   rownames_to_column("species") %>%
   left_join(
-    traits_final %>%
+    traits_phylo %>%
       select(species, clade),
     by = "species"
   )
