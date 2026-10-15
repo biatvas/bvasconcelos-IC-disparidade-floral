@@ -239,6 +239,7 @@ library(cluster)
 
 modemean <- daisy(traits_modemean, metric = "gower") ##cluster package
 matrix_modemean <- as.matrix(modemean)
+
 #rphylo
 phylo <- daisy(traits_phylo, metric = "gower")
 matrix_phylo <- as.matrix(phylo)
@@ -270,6 +271,7 @@ flower_traits <- traits_final %>% select(species, clade,
   corolla_lobe_length_mean,
   filament_length_mean,
   filament_union,
+  filament_color
   )
 
 #por fim, salvar o dataset final gerado

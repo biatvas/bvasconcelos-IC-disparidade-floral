@@ -5,12 +5,12 @@ library(tibble)
 library(purrr)
 library(ggrepel)
 library(ggplot2)
+library(cluster)
 
 #read phylogenetic tree and ecological data
 traits <- read.csv("3.outputs/mimoseae_flower_data.csv")
 biomes <- read.csv("3.outputs/ecological_data_mimoseae.csv")
 tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
-
 
 ## prune phylogeny
 tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits$species))
@@ -27,22 +27,26 @@ traits <- traits %>%
 
 continuous_cols <- c( grep("_mean$", colnames(traits), value = TRUE)) 
 # Definindo quais são as colunas categóricas 
-categorical_cols <- setdiff(colnames(traits), continuous_cols)
+# categorical_cols <- setdiff(colnames(traits), continuous_cols)
 
 # log nos traços contínuos
 traits_log <- traits %>%
 mutate(across(all_of(continuous_cols), log))
 
 #transformar character em factor
-traits_log[] <- lapply(traits_log, function(x) {
-  if (is.character(x)) as.factor(x) else x
-})
+categorical_cols <- c(
+  "perianth_variable",
+  "anther_gland_presence",
+  "nectary",
+  "filament_color",
+  "filament_union"
+)
 
-#binarias nominais vao virar factor tambem
-traits_log[, c(3, 5, 6)] <- lapply(
-  traits_log[, c(3, 5, 6), drop = FALSE],
+traits_log[categorical_cols] <- lapply(
+  traits_log[categorical_cols],
   factor
 )
+
 #3 é perianth variable e 5 é anther gland presence, 6 é nectary
 traits <- traits_log %>%
   select(-clade)
@@ -105,17 +109,18 @@ resolve_polymorphisms <- function(data, columns) {
 }
 
 traits <- resolve_polymorphisms(data = traits, columns = "flower_merosity")
+traits <- resolve_polymorphisms(data = traits, columns = "filament_color")
 
 #resolve stamen count with NA (imputed as mean or according to phylogeny, thus, continuous values)
 traits$stamen_count <- round(traits$stamen_count, digits = 0)
 traits$stamen_count <- as.integer(traits$stamen_count)
+traits$flower_merosity <- as.integer(traits$flower_merosity)
 
 str(traits)
 unique(traits$flower_merosity)
 
 ##Gower distance x PCoA =====------ 
-gower <- daisy(traits, metric = "gower")
-matrix_phylo <- as.matrix(gower)
+gower <- as.matrix(daisy(traits, metric = "gower"))
 
 ## checagem: quantos pares tem NA na distancia (caso alguma linha nao compartilhe
 ## nenhuma variavel observada com outra - daria distancia NA)
@@ -125,7 +130,7 @@ sum(is.na(as.matrix(gower)))
 ## PCoA com a matriz de gower =====================================
 #como a matriz nao é euclidiana, 
 # talvez a gente possa considerar uma correção para autovalores negativos
-pcoa <- pcoa(matrix_phylo, correction = "cailliez")  #ape package
+pcoa <- pcoa(gower, correction = "cailliez")  #ape package
 
 ## calculating variance explained explained by each principal component
 eigen <- pcoa$values$Corr_eig
@@ -190,11 +195,6 @@ pcoa_data <- merge(pcoa_data, genus, by = "species")
 #plotar morfoespaço colorido por genero
 ggplot(pcoa_data, aes(x = Axis.1, y = Axis.2, color = genus)) +
   geom_point(size = 3) +
-  geom_text(
-    aes(label = species),
-    size = 2.5,
-    show.legend = FALSE
-  ) +
   theme_classic() + 
   ggplot2::coord_equal()
 
