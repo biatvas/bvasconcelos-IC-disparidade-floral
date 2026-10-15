@@ -1,0 +1,611 @@
+"species","BIOME_NAME","BIOME_NUM","n"
+"Abarema levelii","Tropical & Subtropical Moist Broadleaf Forests",1,4
+"Acaciella angustissima","Tropical & Subtropical Coniferous Forests",3,806
+"Acaciella angustissima","Tropical & Subtropical Dry Broadleaf Forests",2,771
+"Acaciella angustissima","Tropical & Subtropical Moist Broadleaf Forests",1,664
+"Acaciella angustissima","Deserts & Xeric Shrublands",13,225
+"Acaciella angustissima","Temperate Conifer Forests",5,36
+"Acaciella angustissima","Mangroves",14,23
+"Acaciella angustissima","Temperate Grasslands, Savannas & Shrublands",8,23
+"Acaciella angustissima","Temperate Broadleaf & Mixed Forests",4,12
+"Acaciella angustissima","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,10
+"Acaciella angustissima","Montane Grasslands & Shrublands",10,3
+"Acaciella tequilana","Tropical & Subtropical Coniferous Forests",3,109
+"Acaciella tequilana","Tropical & Subtropical Dry Broadleaf Forests",2,79
+"Acaciella tequilana","Deserts & Xeric Shrublands",13,20
+"Acaciella tequilana","Mangroves",14,1
+"Adenanthera microsperma","Tropical & Subtropical Moist Broadleaf Forests",1,118
+"Adenanthera microsperma","Tropical & Subtropical Dry Broadleaf Forests",2,6
+"Adenopodia spicata","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,56
+"Adenopodia spicata","Tropical & Subtropical Moist Broadleaf Forests",1,33
+"Adenopodia spicata","Montane Grasslands & Shrublands",10,13
+"Adenopodia spicata","Mangroves",14,2
+"Adenopodia spicata","Mediterranean Forests, Woodlands & Scrub",12,1
+"Alantsilodendron mahafalense","Deserts & Xeric Shrublands",13,4
+"Albizia aurisparsa","Deserts & Xeric Shrublands",13,68
+"Albizia aurisparsa","Tropical & Subtropical Dry Broadleaf Forests",2,4
+"Albizia aurisparsa","Tropical & Subtropical Moist Broadleaf Forests",1,2
+"Albizia aurisparsa","Mangroves",14,1
+"Albizia bernieri","Tropical & Subtropical Dry Broadleaf Forests",2,123
+"Albizia bernieri","Deserts & Xeric Shrublands",13,28
+"Albizia bernieri","Tropical & Subtropical Moist Broadleaf Forests",1,14
+"Albizia carrii","Tropical & Subtropical Moist Broadleaf Forests",1,37
+"Albizia carrii","Mangroves",14,2
+"Albizia chevalieri","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,52
+"Albizia chevalieri","Flooded Grasslands & Savannas",9,3
+"Albizia commiphoroides","Deserts & Xeric Shrublands",13,33
+"Albizia commiphoroides","Tropical & Subtropical Moist Broadleaf Forests",1,1
+"Albizia gummifera","Tropical & Subtropical Moist Broadleaf Forests",1,206
+"Albizia gummifera","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,95
+"Albizia gummifera","Montane Grasslands & Shrublands",10,17
+"Albizia gummifera","Tropical & Subtropical Dry Broadleaf Forests",2,12
+"Albizia gummifera","Deserts & Xeric Shrublands",13,7
+"Albizia gummifera","Flooded Grasslands & Savannas",9,2
+"Albizia julibrissin","Temperate Broadleaf & Mixed Forests",4,645
+"Albizia julibrissin","Tropical & Subtropical Moist Broadleaf Forests",1,108
+"Albizia julibrissin","Temperate Conifer Forests",5,31
+"Albizia julibrissin","Montane Grasslands & Shrublands",10,2
+"Albizia julibrissin","Deserts & Xeric Shrublands",13,1
+"Albizia kostermansii","Tropical & Subtropical Moist Broadleaf Forests",1,6
+"Albizia kostermansii","Mangroves",14,2
+"Albizia procera","Tropical & Subtropical Moist Broadleaf Forests",1,321
+"Albizia procera","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,74
+"Albizia procera","Tropical & Subtropical Dry Broadleaf Forests",2,7
+"Albizia procera","Tropical & Subtropical Coniferous Forests",3,1
+"Albizia tulearensis","Deserts & Xeric Shrublands",13,91
+"Albizia tulearensis","Tropical & Subtropical Moist Broadleaf Forests",1,6
+"Anadenanthera peregrina","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,360
+"Anadenanthera peregrina","Tropical & Subtropical Moist Broadleaf Forests",1,244
+"Anadenanthera peregrina","Tropical & Subtropical Dry Broadleaf Forests",2,60
+"Anadenanthera peregrina","Mangroves",14,4
+"Anadenanthera peregrina","Deserts & Xeric Shrublands",13,2
+"Anadenanthera peregrina","Flooded Grasslands & Savannas",9,2
+"Anadenanthera peregrina","Tropical & Subtropical Coniferous Forests",3,1
+"Archidendron chevalieri","Tropical & Subtropical Moist Broadleaf Forests",1,12
+"Archidendron ellipticum","Tropical & Subtropical Moist Broadleaf Forests",1,196
+"Archidendron ellipticum","Mangroves",14,18
+"Archidendron ellipticum","Tropical & Subtropical Dry Broadleaf Forests",2,2
+"Archidendron glabrum","Tropical & Subtropical Moist Broadleaf Forests",1,55
+"Archidendron glomeriflorum","Tropical & Subtropical Moist Broadleaf Forests",1,12
+"Archidendron glomeriflorum","Tropical & Subtropical Dry Broadleaf Forests",2,5
+"Archidendron jiringa","Tropical & Subtropical Moist Broadleaf Forests",1,98
+"Archidendron jiringa","Mangroves",14,4
+"Archidendron jiringa","Tropical & Subtropical Dry Broadleaf Forests",2,2
+"Archidendron ptenopum","Tropical & Subtropical Moist Broadleaf Forests",1,32
+"Archidendron robinsonii","Tropical & Subtropical Moist Broadleaf Forests",1,5
+"Archidendron robinsonii","Tropical & Subtropical Dry Broadleaf Forests",2,3
+"Archidendron scutiferum","Tropical & Subtropical Moist Broadleaf Forests",1,41
+"Archidendron utile","Tropical & Subtropical Moist Broadleaf Forests",1,18
+"Archidendropsis fournieri","Tropical & Subtropical Moist Broadleaf Forests",1,9
+"Archidendropsis fournieri","Tropical & Subtropical Dry Broadleaf Forests",2,8
+"Archidendropsis granulosa","Tropical & Subtropical Moist Broadleaf Forests",1,18
+"Archidendropsis granulosa","Tropical & Subtropical Dry Broadleaf Forests",2,2
+"Aubrevillea kerstingii","Tropical & Subtropical Moist Broadleaf Forests",1,13
+"Aubrevillea kerstingii","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,9
+"Blanchetiodendron blanchetii","Tropical & Subtropical Dry Broadleaf Forests",2,61
+"Blanchetiodendron blanchetii","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,8
+"Blanchetiodendron blanchetii","Tropical & Subtropical Moist Broadleaf Forests",1,7
+"Calliandra bahiana","Tropical & Subtropical Dry Broadleaf Forests",2,165
+"Calliandra bahiana","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,34
+"Calliandra bella","Tropical & Subtropical Moist Broadleaf Forests",1,119
+"Calliandra bella","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,5
+"Calliandra bella","Tropical & Subtropical Dry Broadleaf Forests",2,3
+"Calliandra bella","Mangroves",14,1
+"Calliandra brenesii","Tropical & Subtropical Moist Broadleaf Forests",1,76
+"Calliandra brevicaulis","Tropical & Subtropical Moist Broadleaf Forests",1,34
+"Calliandra brevicaulis","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,17
+"Calliandra brevicaulis","Flooded Grasslands & Savannas",9,6
+"Calliandra caeciliae","Tropical & Subtropical Dry Broadleaf Forests",2,57
+"Calliandra caeciliae","Tropical & Subtropical Coniferous Forests",3,35
+"Calliandra caeciliae","Tropical & Subtropical Moist Broadleaf Forests",1,1
+"Calliandra californica","Deserts & Xeric Shrublands",13,157
+"Calliandra californica","Tropical & Subtropical Dry Broadleaf Forests",2,5
+"Calliandra californica","Tropical & Subtropical Coniferous Forests",3,2
+"Calliandra californica","Mangroves",14,1
+"Calliandra californica","Mediterranean Forests, Woodlands & Scrub",12,1
+"Calliandra comosa","Tropical & Subtropical Moist Broadleaf Forests",1,3
+"Calliandra dysantha","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,488
+"Calliandra dysantha","Tropical & Subtropical Dry Broadleaf Forests",2,92
+"Calliandra dysantha","Tropical & Subtropical Moist Broadleaf Forests",1,22
+"Calliandra erubescens","Tropical & Subtropical Dry Broadleaf Forests",2,98
+"Calliandra erubescens","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,6
+"Calliandra longipes","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,35
+"Calliandra longipes","Tropical & Subtropical Moist Broadleaf Forests",1,14
+"Calliandra longipes","Tropical & Subtropical Dry Broadleaf Forests",2,1
+"Calliandra mollissima","Tropical & Subtropical Moist Broadleaf Forests",1,11
+"Calpocalyx aubrevillei","Tropical & Subtropical Moist Broadleaf Forests",1,37
+"Calpocalyx aubrevillei","Mangroves",14,1
+"Calpocalyx cauliflorus","Tropical & Subtropical Moist Broadleaf Forests",1,5
+"Calpocalyx dinklagei","Tropical & Subtropical Moist Broadleaf Forests",1,244
+"Calpocalyx dinklagei","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,10
+"Calpocalyx dinklagei","Mangroves",14,3
+"Chidlowia sanguinea","Tropical & Subtropical Moist Broadleaf Forests",1,125
+"Chidlowia sanguinea","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,12
+"Chloroleucon foliolosum","Tropical & Subtropical Dry Broadleaf Forests",2,270
+"Chloroleucon foliolosum","Tropical & Subtropical Moist Broadleaf Forests",1,24
+"Chloroleucon foliolosum","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,20
+"Chloroleucon foliolosum","Mangroves",14,4
+"Chloroleucon foliolosum","Flooded Grasslands & Savannas",9,2
+"Cojoba graciliflora","Tropical & Subtropical Moist Broadleaf Forests",1,180
+"Cojoba graciliflora","Mangroves",14,19
+"Cojoba graciliflora","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,17
+"Cojoba graciliflora","Tropical & Subtropical Coniferous Forests",3,3
+"Cojoba graciliflora","Tropical & Subtropical Dry Broadleaf Forests",2,3
+"Cylicodiscus gabunensis","Tropical & Subtropical Moist Broadleaf Forests",1,88
+"Cylicodiscus gabunensis","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,2
+"Desmanthus fruticosus","Deserts & Xeric Shrublands",13,224
+"Desmanthus fruticosus","Tropical & Subtropical Dry Broadleaf Forests",2,25
+"Desmanthus fruticosus","Mangroves",14,2
+"Desmanthus fruticosus","Tropical & Subtropical Coniferous Forests",3,2
+"Desmanthus fruticosus","Mediterranean Forests, Woodlands & Scrub",12,1
+"Dichrostachys cinerea","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,500
+"Dichrostachys cinerea","Tropical & Subtropical Moist Broadleaf Forests",1,181
+"Dichrostachys cinerea","Deserts & Xeric Shrublands",13,35
+"Dichrostachys cinerea","Montane Grasslands & Shrublands",10,21
+"Dichrostachys cinerea","Tropical & Subtropical Dry Broadleaf Forests",2,11
+"Dichrostachys cinerea","Mangroves",14,8
+"Dichrostachys cinerea","Flooded Grasslands & Savannas",9,7
+"Dichrostachys cinerea","Temperate Broadleaf & Mixed Forests",4,6
+"Dichrostachys cinerea","Mediterranean Forests, Woodlands & Scrub",12,1
+"Enterolobium barnebianum","Tropical & Subtropical Moist Broadleaf Forests",1,59
+"Enterolobium barnebianum","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,3
+"Enterolobium timbouva","Tropical & Subtropical Dry Broadleaf Forests",2,89
+"Enterolobium timbouva","Tropical & Subtropical Moist Broadleaf Forests",1,30
+"Enterolobium timbouva","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,24
+"Enterolobium timbouva","Flooded Grasslands & Savannas",9,10
+"Enterolobium timbouva","Mangroves",14,4
+"Faidherbia albida","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,508
+"Faidherbia albida","Deserts & Xeric Shrublands",13,50
+"Faidherbia albida","Tropical & Subtropical Moist Broadleaf Forests",1,26
+"Faidherbia albida","Montane Grasslands & Shrublands",10,22
+"Faidherbia albida","Flooded Grasslands & Savannas",9,10
+"Faidherbia albida","Mangroves",14,4
+"Faidherbia albida","Mediterranean Forests, Woodlands & Scrub",12,3
+"Faidherbia albida","Temperate Grasslands, Savannas & Shrublands",8,1
+"Havardia albicans","Tropical & Subtropical Dry Broadleaf Forests",2,204
+"Havardia albicans","Tropical & Subtropical Moist Broadleaf Forests",1,134
+"Havardia albicans","Mangroves",14,16
+"Havardia albicans","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,2
+"Havardia pallens","Deserts & Xeric Shrublands",13,126
+"Havardia pallens","Tropical & Subtropical Moist Broadleaf Forests",1,118
+"Havardia pallens","Tropical & Subtropical Coniferous Forests",3,81
+"Havardia pallens","Tropical & Subtropical Dry Broadleaf Forests",2,34
+"Havardia pallens","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,12
+"Havardia pallens","Mangroves",14,6
+"Hesperalbizia occidentalis","Tropical & Subtropical Dry Broadleaf Forests",2,308
+"Hesperalbizia occidentalis","Deserts & Xeric Shrublands",13,34
+"Hesperalbizia occidentalis","Tropical & Subtropical Coniferous Forests",3,23
+"Hesperalbizia occidentalis","Tropical & Subtropical Moist Broadleaf Forests",1,2
+"Hesperalbizia occidentalis","Mangroves",14,1
+"Inga adenophylla","Tropical & Subtropical Moist Broadleaf Forests",1,122
+"Inga adenophylla","Tropical & Subtropical Dry Broadleaf Forests",2,31
+"Inga adenophylla","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,13
+"Inga adenophylla","Montane Grasslands & Shrublands",10,5
+"Inga alba","Tropical & Subtropical Moist Broadleaf Forests",1,694
+"Inga alba","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,89
+"Inga alba","Tropical & Subtropical Dry Broadleaf Forests",2,41
+"Inga alba","Mangroves",14,12
+"Inga alba","Tropical & Subtropical Coniferous Forests",3,1
+"Inga arenicola","Tropical & Subtropical Moist Broadleaf Forests",1,2
+"Inga barbata","Tropical & Subtropical Moist Broadleaf Forests",1,66
+"Inga barbata","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,6
+"Inga blanchetiana","Tropical & Subtropical Moist Broadleaf Forests",1,19
+"Inga blanchetiana","Tropical & Subtropical Dry Broadleaf Forests",2,4
+"Inga cordatoalata","Tropical & Subtropical Moist Broadleaf Forests",1,102
+"Inga cordatoalata","Mangroves",14,2
+"Inga cordatoalata","Flooded Grasslands & Savannas",9,1
+"Inga filiformis","Tropical & Subtropical Moist Broadleaf Forests",1,27
+"Inga filiformis","Mangroves",14,4
+"Inga golfodulcensis","Tropical & Subtropical Moist Broadleaf Forests",1,28
+"Inga herrerae","Tropical & Subtropical Moist Broadleaf Forests",1,21
+"Inga lallensis","Tropical & Subtropical Moist Broadleaf Forests",1,49
+"Inga lallensis","Montane Grasslands & Shrublands",10,6
+"Inga maritima","Tropical & Subtropical Moist Broadleaf Forests",1,39
+"Inga microcalyx","Tropical & Subtropical Moist Broadleaf Forests",1,6
+"Inga mortoniana","Tropical & Subtropical Moist Broadleaf Forests",1,144
+"Inga mortoniana","Mangroves",14,2
+"Inga nobilis","Tropical & Subtropical Moist Broadleaf Forests",1,940
+"Inga nobilis","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,77
+"Inga nobilis","Tropical & Subtropical Dry Broadleaf Forests",2,30
+"Inga nobilis","Mangroves",14,16
+"Inga nobilis","Flooded Grasslands & Savannas",9,5
+"Inga nobilis","Montane Grasslands & Shrublands",10,3
+"Inga oerstediana","Tropical & Subtropical Moist Broadleaf Forests",1,752
+"Inga oerstediana","Tropical & Subtropical Coniferous Forests",3,81
+"Inga oerstediana","Tropical & Subtropical Dry Broadleaf Forests",2,50
+"Inga oerstediana","Mangroves",14,13
+"Inga oerstediana","Deserts & Xeric Shrublands",13,2
+"Inga oerstediana","Flooded Grasslands & Savannas",9,1
+"Inga oerstediana","Montane Grasslands & Shrublands",10,1
+"Inga ruiziana","Tropical & Subtropical Moist Broadleaf Forests",1,663
+"Inga ruiziana","Tropical & Subtropical Dry Broadleaf Forests",2,11
+"Inga ruiziana","Mangroves",14,9
+"Inga ruiziana","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,4
+"Inga ruiziana","Tropical & Subtropical Coniferous Forests",3,3
+"Inga ruiziana","Montane Grasslands & Shrublands",10,1
+"Inga samanensis","Tropical & Subtropical Moist Broadleaf Forests",1,148
+"Inga sertulifera","Tropical & Subtropical Moist Broadleaf Forests",1,366
+"Inga sertulifera","Mangroves",14,9
+"Inga sertulifera","Tropical & Subtropical Dry Broadleaf Forests",2,7
+"Inga sertulifera","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,3
+"Inga sertulifera","Montane Grasslands & Shrublands",10,1
+"Inga sierrae","Tropical & Subtropical Moist Broadleaf Forests",1,138
+"Inga sierrae","Montane Grasslands & Shrublands",10,2
+"Inga sierrae","Tropical & Subtropical Dry Broadleaf Forests",2,1
+"Inga stenoptera","Tropical & Subtropical Moist Broadleaf Forests",1,198
+"Inga stenoptera","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,14
+"Inga stenoptera","Tropical & Subtropical Dry Broadleaf Forests",2,3
+"Inga stenoptera","Flooded Grasslands & Savannas",9,1
+"Inga tenuicalyx","Tropical & Subtropical Moist Broadleaf Forests",1,4
+"Inga tonduzii","Tropical & Subtropical Moist Broadleaf Forests",1,125
+"Inga umbellifera","Tropical & Subtropical Moist Broadleaf Forests",1,765
+"Inga umbellifera","Mangroves",14,12
+"Inga umbellifera","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,10
+"Inga umbellifera","Tropical & Subtropical Dry Broadleaf Forests",2,5
+"Inga umbellifera","Montane Grasslands & Shrublands",10,1
+"Inga umbratica","Tropical & Subtropical Moist Broadleaf Forests",1,7
+"Lemurodendron capuronii","Tropical & Subtropical Moist Broadleaf Forests",1,3
+"Lysiloma watsonii","Tropical & Subtropical Dry Broadleaf Forests",2,31
+"Lysiloma watsonii","Tropical & Subtropical Coniferous Forests",3,30
+"Lysiloma watsonii","Deserts & Xeric Shrublands",13,25
+"Macrosamanea simabifolia","Tropical & Subtropical Moist Broadleaf Forests",1,35
+"Macrosamanea simabifolia","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,1
+"Mariosousa centralis","Tropical & Subtropical Dry Broadleaf Forests",2,97
+"Mariosousa centralis","Tropical & Subtropical Moist Broadleaf Forests",1,64
+"Mariosousa centralis","Tropical & Subtropical Coniferous Forests",3,15
+"Mariosousa centralis","Deserts & Xeric Shrublands",13,3
+"Mariosousa centralis","Mangroves",14,2
+"Microlobius foetidus","Tropical & Subtropical Dry Broadleaf Forests",2,125
+"Microlobius foetidus","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,75
+"Microlobius foetidus","Flooded Grasslands & Savannas",9,19
+"Microlobius foetidus","Mangroves",14,4
+"Microlobius foetidus","Tropical & Subtropical Coniferous Forests",3,2
+"Microlobius foetidus","Deserts & Xeric Shrublands",13,1
+"Mimosa adenantheroides","Tropical & Subtropical Coniferous Forests",3,128
+"Mimosa adenantheroides","Tropical & Subtropical Dry Broadleaf Forests",2,30
+"Mimosa adenantheroides","Deserts & Xeric Shrublands",13,12
+"Mimosa adenantheroides","Tropical & Subtropical Moist Broadleaf Forests",1,9
+"Mimosa affinis","Tropical & Subtropical Dry Broadleaf Forests",2,77
+"Mimosa affinis","Tropical & Subtropical Moist Broadleaf Forests",1,23
+"Mimosa affinis","Tropical & Subtropical Coniferous Forests",3,21
+"Mimosa affinis","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,1
+"Mimosa albida","Tropical & Subtropical Moist Broadleaf Forests",1,955
+"Mimosa albida","Tropical & Subtropical Dry Broadleaf Forests",2,428
+"Mimosa albida","Tropical & Subtropical Coniferous Forests",3,373
+"Mimosa albida","Deserts & Xeric Shrublands",13,41
+"Mimosa albida","Mangroves",14,15
+"Mimosa albida","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,14
+"Mimosa albida","Montane Grasslands & Shrublands",10,9
+"Mimosa albida","Flooded Grasslands & Savannas",9,2
+"Mimosa arenosa","Tropical & Subtropical Dry Broadleaf Forests",2,342
+"Mimosa arenosa","Tropical & Subtropical Moist Broadleaf Forests",1,46
+"Mimosa arenosa","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,19
+"Mimosa arenosa","Deserts & Xeric Shrublands",13,8
+"Mimosa arenosa","Mangroves",14,2
+"Mimosa bahamensis","Tropical & Subtropical Moist Broadleaf Forests",1,590
+"Mimosa bahamensis","Tropical & Subtropical Dry Broadleaf Forests",2,382
+"Mimosa bahamensis","Mangroves",14,58
+"Mimosa bahamensis","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,7
+"Mimosa bahamensis","Tropical & Subtropical Coniferous Forests",3,3
+"Mimosa bahamensis","Deserts & Xeric Shrublands",13,1
+"Mimosa bonplandii","Temperate Grasslands, Savannas & Shrublands",8,15
+"Mimosa bonplandii","Flooded Grasslands & Savannas",9,8
+"Mimosa borealis","Deserts & Xeric Shrublands",13,89
+"Mimosa borealis","Temperate Grasslands, Savannas & Shrublands",8,73
+"Mimosa borealis","Tropical & Subtropical Coniferous Forests",3,48
+"Mimosa borealis","Temperate Conifer Forests",5,2
+"Mimosa borealis","Tropical & Subtropical Dry Broadleaf Forests",2,2
+"Mimosa borealis","Tropical & Subtropical Moist Broadleaf Forests",1,2
+"Mimosa borealis","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,1
+"Mimosa brevispicata","Tropical & Subtropical Dry Broadleaf Forests",2,25
+"Mimosa brevispicata","Deserts & Xeric Shrublands",13,2
+"Mimosa brevispicata","Tropical & Subtropical Moist Broadleaf Forests",1,2
+"Mimosa brevispicata","Tropical & Subtropical Coniferous Forests",3,1
+"Mimosa caesalpiniifolia","Tropical & Subtropical Dry Broadleaf Forests",2,148
+"Mimosa caesalpiniifolia","Tropical & Subtropical Moist Broadleaf Forests",1,37
+"Mimosa caesalpiniifolia","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,16
+"Mimosa caesalpiniifolia","Mangroves",14,13
+"Mimosa colombiana","Tropical & Subtropical Moist Broadleaf Forests",1,48
+"Mimosa colombiana","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,18
+"Mimosa colombiana","Tropical & Subtropical Dry Broadleaf Forests",2,11
+"Mimosa cruenta","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,16
+"Mimosa cruenta","Flooded Grasslands & Savannas",9,3
+"Mimosa cruenta","Tropical & Subtropical Moist Broadleaf Forests",1,3
+"Mimosa cyclophylla","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,24
+"Mimosa dormiens","Tropical & Subtropical Moist Broadleaf Forests",1,23
+"Mimosa dormiens","Tropical & Subtropical Dry Broadleaf Forests",2,12
+"Mimosa dormiens","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,11
+"Mimosa dormiens","Deserts & Xeric Shrublands",13,2
+"Mimosa dormiens","Mangroves",14,2
+"Mimosa dormiens","Flooded Grasslands & Savannas",9,1
+"Mimosa ephedroides","Montane Grasslands & Shrublands",10,14
+"Mimosa ephedroides","Temperate Grasslands, Savannas & Shrublands",8,2
+"Mimosa ephedroides","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,2
+"Mimosa gemmulata","Tropical & Subtropical Dry Broadleaf Forests",2,266
+"Mimosa gemmulata","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,84
+"Mimosa gemmulata","Tropical & Subtropical Moist Broadleaf Forests",1,38
+"Mimosa gemmulata","Deserts & Xeric Shrublands",13,4
+"Mimosa gentryi","Tropical & Subtropical Coniferous Forests",3,4
+"Mimosa gentryi","Tropical & Subtropical Dry Broadleaf Forests",2,1
+"Mimosa gracilis","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,166
+"Mimosa gracilis","Tropical & Subtropical Moist Broadleaf Forests",1,15
+"Mimosa gracilis","Flooded Grasslands & Savannas",9,1
+"Mimosa guaranitica","Tropical & Subtropical Dry Broadleaf Forests",2,45
+"Mimosa guaranitica","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,15
+"Mimosa guaranitica","Tropical & Subtropical Moist Broadleaf Forests",1,3
+"Mimosa guaranitica","Tropical & Subtropical Coniferous Forests",3,1
+"Mimosa hilariana","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,11
+"Mimosa hilariana","Tropical & Subtropical Moist Broadleaf Forests",1,2
+"Mimosa hondurana","Tropical & Subtropical Moist Broadleaf Forests",1,42
+"Mimosa hondurana","Tropical & Subtropical Coniferous Forests",3,18
+"Mimosa hondurana","Tropical & Subtropical Dry Broadleaf Forests",2,15
+"Mimosa hondurana","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,1
+"Mimosa lactiflua","Tropical & Subtropical Dry Broadleaf Forests",2,51
+"Mimosa lactiflua","Tropical & Subtropical Coniferous Forests",3,38
+"Mimosa lactiflua","Deserts & Xeric Shrublands",13,11
+"Mimosa lactiflua","Tropical & Subtropical Moist Broadleaf Forests",1,6
+"Mimosa leucaenoides","Tropical & Subtropical Coniferous Forests",3,91
+"Mimosa leucaenoides","Deserts & Xeric Shrublands",13,63
+"Mimosa leucaenoides","Tropical & Subtropical Moist Broadleaf Forests",1,28
+"Mimosa manidea","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,25
+"Mimosa margaritae","Deserts & Xeric Shrublands",13,17
+"Mimosa margaritae","Tropical & Subtropical Dry Broadleaf Forests",2,8
+"Mimosa monancistra","Deserts & Xeric Shrublands",13,97
+"Mimosa monancistra","Tropical & Subtropical Dry Broadleaf Forests",2,54
+"Mimosa monancistra","Tropical & Subtropical Coniferous Forests",3,22
+"Mimosa monancistra","Tropical & Subtropical Moist Broadleaf Forests",1,19
+"Mimosa monancistra","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,2
+"Mimosa moniliformis","Tropical & Subtropical Dry Broadleaf Forests",2,19
+"Mimosa moniliformis","Tropical & Subtropical Coniferous Forests",3,1
+"Mimosa orthacantha","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,18
+"Mimosa orthacantha","Tropical & Subtropical Moist Broadleaf Forests",1,8
+"Mimosa paludosa","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,41
+"Mimosa paludosa","Tropical & Subtropical Dry Broadleaf Forests",2,38
+"Mimosa paludosa","Tropical & Subtropical Moist Broadleaf Forests",1,25
+"Mimosa paludosa","Tropical & Subtropical Coniferous Forests",3,2
+"Mimosa pectinatipinna","Tropical & Subtropical Moist Broadleaf Forests",1,13
+"Mimosa pigra","Tropical & Subtropical Moist Broadleaf Forests",1,36
+"Mimosa pigra","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,21
+"Mimosa pigra","Tropical & Subtropical Dry Broadleaf Forests",2,14
+"Mimosa pigra","Flooded Grasslands & Savannas",9,3
+"Mimosa pigra","Mangroves",14,1
+"Mimosa pithecolobioides","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,56
+"Mimosa pithecolobioides","Tropical & Subtropical Dry Broadleaf Forests",2,26
+"Mimosa pithecolobioides","Tropical & Subtropical Moist Broadleaf Forests",1,25
+"Mimosa quadrivalvis","Temperate Grasslands, Savannas & Shrublands",8,417
+"Mimosa quadrivalvis","Tropical & Subtropical Dry Broadleaf Forests",2,286
+"Mimosa quadrivalvis","Tropical & Subtropical Moist Broadleaf Forests",1,143
+"Mimosa quadrivalvis","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,89
+"Mimosa quadrivalvis","Tropical & Subtropical Coniferous Forests",3,46
+"Mimosa quadrivalvis","Temperate Broadleaf & Mixed Forests",4,35
+"Mimosa quadrivalvis","Mangroves",14,33
+"Mimosa quadrivalvis","Deserts & Xeric Shrublands",13,20
+"Mimosa quadrivalvis","Flooded Grasslands & Savannas",9,16
+"Mimosa quadrivalvis","Temperate Conifer Forests",5,16
+"Mimosa rhododactyla","Tropical & Subtropical Dry Broadleaf Forests",2,13
+"Mimosa rhododactyla","Tropical & Subtropical Coniferous Forests",3,1
+"Mimosa sicyocarpa","Tropical & Subtropical Dry Broadleaf Forests",2,32
+"Mimosa sicyocarpa","Tropical & Subtropical Coniferous Forests",3,20
+"Mimosa sicyocarpa","Mangroves",14,3
+"Mimosa sicyocarpa","Deserts & Xeric Shrublands",13,2
+"Mimosa sicyocarpa","Tropical & Subtropical Moist Broadleaf Forests",1,2
+"Mimosa skinneri","Tropical & Subtropical Moist Broadleaf Forests",1,130
+"Mimosa skinneri","Tropical & Subtropical Dry Broadleaf Forests",2,65
+"Mimosa skinneri","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,63
+"Mimosa skinneri","Tropical & Subtropical Coniferous Forests",3,19
+"Mimosa somnians","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,599
+"Mimosa somnians","Tropical & Subtropical Moist Broadleaf Forests",1,404
+"Mimosa somnians","Tropical & Subtropical Dry Broadleaf Forests",2,133
+"Mimosa somnians","Tropical & Subtropical Coniferous Forests",3,36
+"Mimosa somnians","Flooded Grasslands & Savannas",9,11
+"Mimosa somnians","Mangroves",14,11
+"Mimosa spirocarpa","Tropical & Subtropical Dry Broadleaf Forests",2,45
+"Mimosa spirocarpa","Tropical & Subtropical Coniferous Forests",3,2
+"Mimosa spirocarpa","Mangroves",14,1
+"Mimosa townsendii","Tropical & Subtropical Moist Broadleaf Forests",1,19
+"Mimosa xanthocentra","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,469
+"Mimosa xanthocentra","Tropical & Subtropical Moist Broadleaf Forests",1,181
+"Mimosa xanthocentra","Tropical & Subtropical Dry Broadleaf Forests",2,102
+"Mimosa xanthocentra","Flooded Grasslands & Savannas",9,27
+"Mimosa xanthocentra","Montane Grasslands & Shrublands",10,8
+"Mimosa xanthocentra","Mangroves",14,1
+"Neptunia lutea","Temperate Grasslands, Savannas & Shrublands",8,74
+"Neptunia lutea","Temperate Conifer Forests",5,15
+"Neptunia lutea","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,12
+"Neptunia lutea","Temperate Broadleaf & Mixed Forests",4,11
+"Newtonia buchananii","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,59
+"Newtonia buchananii","Tropical & Subtropical Moist Broadleaf Forests",1,36
+"Newtonia buchananii","Montane Grasslands & Shrublands",10,3
+"Newtonia buchananii","Flooded Grasslands & Savannas",9,1
+"Newtonia hildebrandtii","Tropical & Subtropical Moist Broadleaf Forests",1,67
+"Newtonia hildebrandtii","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,24
+"Newtonia hildebrandtii","Montane Grasslands & Shrublands",10,2
+"Newtonia leucocarpa","Tropical & Subtropical Moist Broadleaf Forests",1,33
+"Newtonia leucocarpa","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,5
+"Newtonia leucocarpa","Mangroves",14,2
+"Painteria elachistophylla","Tropical & Subtropical Coniferous Forests",3,20
+"Painteria elachistophylla","Deserts & Xeric Shrublands",13,18
+"Painteria elachistophylla","Tropical & Subtropical Dry Broadleaf Forests",2,2
+"Painteria elachistophylla","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,1
+"Parapiptadenia excelsa","Tropical & Subtropical Dry Broadleaf Forests",2,42
+"Parapiptadenia excelsa","Tropical & Subtropical Moist Broadleaf Forests",1,39
+"Parapiptadenia excelsa","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,21
+"Parapiptadenia excelsa","Montane Grasslands & Shrublands",10,3
+"Pararchidendron pruinosum","Temperate Broadleaf & Mixed Forests",4,315
+"Pararchidendron pruinosum","Tropical & Subtropical Moist Broadleaf Forests",1,148
+"Pararchidendron pruinosum","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,38
+"Pararchidendron pruinosum","Tropical & Subtropical Dry Broadleaf Forests",2,5
+"Parasenegalia skleroxyla","Tropical & Subtropical Dry Broadleaf Forests",2,19
+"Parasenegalia skleroxyla","Tropical & Subtropical Moist Broadleaf Forests",1,15
+"Parasenegalia skleroxyla","Flooded Grasslands & Savannas",9,2
+"Parasenegalia skleroxyla","Tropical & Subtropical Coniferous Forests",3,2
+"Parasenegalia skleroxyla","Mangroves",14,1
+"Paraserianthes lophantha","Mediterranean Forests, Woodlands & Scrub",12,216
+"Paraserianthes lophantha","Tropical & Subtropical Moist Broadleaf Forests",1,11
+"Paraserianthes lophantha","Tropical & Subtropical Dry Broadleaf Forests",2,1
+"Parkia discolor","Tropical & Subtropical Moist Broadleaf Forests",1,153
+"Parkia discolor","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,8
+"Parkia filicoidea","Tropical & Subtropical Moist Broadleaf Forests",1,62
+"Parkia filicoidea","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,30
+"Parkia filicoidea","Mangroves",14,2
+"Parkia filicoidea","Montane Grasslands & Shrublands",10,1
+"Parkia nitida","Tropical & Subtropical Moist Broadleaf Forests",1,373
+"Parkia nitida","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,2
+"Parkia nitida","Mangroves",14,1
+"Parkia platycephala","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,110
+"Parkia platycephala","Tropical & Subtropical Dry Broadleaf Forests",2,101
+"Parkia platycephala","Tropical & Subtropical Moist Broadleaf Forests",1,40
+"Parkia ulei","Tropical & Subtropical Moist Broadleaf Forests",1,121
+"Parkia ulei","Mangroves",14,1
+"Pentaclethra macrophylla","Tropical & Subtropical Moist Broadleaf Forests",1,389
+"Pentaclethra macrophylla","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,65
+"Pentaclethra macrophylla","Mangroves",14,18
+"Piptadenia adiantoides","Tropical & Subtropical Moist Broadleaf Forests",1,176
+"Piptadenia adiantoides","Tropical & Subtropical Dry Broadleaf Forests",2,59
+"Piptadenia adiantoides","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,12
+"Piptadenia adiantoides","Mangroves",14,7
+"Piptadenia buchtienii","Tropical & Subtropical Moist Broadleaf Forests",1,24
+"Piptadenia buchtienii","Tropical & Subtropical Dry Broadleaf Forests",2,21
+"Piptadenia buchtienii","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,12
+"Piptadenia paniculata","Tropical & Subtropical Moist Broadleaf Forests",1,145
+"Piptadenia paniculata","Tropical & Subtropical Dry Broadleaf Forests",2,10
+"Piptadenia paniculata","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,8
+"Piptadenia paniculata","Mangroves",14,6
+"Piptadenia robusta","Tropical & Subtropical Dry Broadleaf Forests",2,21
+"Piptadenia robusta","Tropical & Subtropical Moist Broadleaf Forests",1,1
+"Piptadeniastrum africanum","Tropical & Subtropical Moist Broadleaf Forests",1,298
+"Piptadeniastrum africanum","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,28
+"Piptadeniastrum africanum","Mangroves",14,6
+"Piptadeniopsis lomentifera","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,12
+"Pithecellobium dulce","Tropical & Subtropical Dry Broadleaf Forests",2,781
+"Pithecellobium dulce","Tropical & Subtropical Moist Broadleaf Forests",1,243
+"Pithecellobium dulce","Mangroves",14,90
+"Pithecellobium dulce","Deserts & Xeric Shrublands",13,89
+"Pithecellobium dulce","Tropical & Subtropical Coniferous Forests",3,83
+"Pithecellobium dulce","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,4
+"Pithecellobium furcatum","Tropical & Subtropical Moist Broadleaf Forests",1,55
+"Pithecellobium furcatum","Mangroves",14,1
+"Pithecellobium furcatum","Tropical & Subtropical Dry Broadleaf Forests",2,1
+"Pityrocarpa obliqua","Tropical & Subtropical Dry Broadleaf Forests",2,28
+"Pityrocarpa obliqua","Mangroves",14,4
+"Pityrocarpa obliqua","Tropical & Subtropical Moist Broadleaf Forests",1,1
+"Plathymenia reticulata","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,580
+"Plathymenia reticulata","Tropical & Subtropical Dry Broadleaf Forests",2,238
+"Plathymenia reticulata","Tropical & Subtropical Moist Broadleaf Forests",1,181
+"Plathymenia reticulata","Flooded Grasslands & Savannas",9,17
+"Plathymenia reticulata","Mangroves",14,2
+"Prosopidastrum mexicanum","Deserts & Xeric Shrublands",13,56
+"Prosopidastrum mexicanum","Tropical & Subtropical Dry Broadleaf Forests",2,2
+"Prosopis farcta","Mediterranean Forests, Woodlands & Scrub",12,17
+"Prosopis farcta","Deserts & Xeric Shrublands",13,13
+"Prosopis farcta","Temperate Grasslands, Savannas & Shrublands",8,5
+"Prosopis farcta","Temperate Broadleaf & Mixed Forests",4,2
+"Prosopis farcta","Montane Grasslands & Shrublands",10,1
+"Pseudoprosopis fischeri","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,31
+"Pseudosenegalia feddeana","Tropical & Subtropical Dry Broadleaf Forests",2,6
+"Pseudosenegalia feddeana","Tropical & Subtropical Moist Broadleaf Forests",1,1
+"Senegalia caesia","Tropical & Subtropical Moist Broadleaf Forests",1,29
+"Senegalia caesia","Tropical & Subtropical Dry Broadleaf Forests",2,11
+"Senegalia catechu","Tropical & Subtropical Moist Broadleaf Forests",1,7
+"Senegalia catechu","Tropical & Subtropical Dry Broadleaf Forests",2,3
+"Senegalia gaumeri","Tropical & Subtropical Dry Broadleaf Forests",2,453
+"Senegalia gaumeri","Tropical & Subtropical Moist Broadleaf Forests",1,216
+"Senegalia gaumeri","Mangroves",14,42
+"Senegalia gilliesii","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,116
+"Senegalia gilliesii","Montane Grasslands & Shrublands",10,22
+"Senegalia gilliesii","Tropical & Subtropical Dry Broadleaf Forests",2,13
+"Senegalia gilliesii","Temperate Grasslands, Savannas & Shrublands",8,5
+"Senegalia gilliesii","Tropical & Subtropical Moist Broadleaf Forests",1,4
+"Senegalia interior","Deserts & Xeric Shrublands",13,22
+"Senegalia interior","Tropical & Subtropical Dry Broadleaf Forests",2,9
+"Senegalia interior","Tropical & Subtropical Coniferous Forests",3,1
+"Senegalia kraussiana","Tropical & Subtropical Dry Broadleaf Forests",2,19
+"Senegalia kraussiana","Tropical & Subtropical Moist Broadleaf Forests",1,1
+"Senegalia laeta","Deserts & Xeric Shrublands",13,5
+"Senegalia laeta","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,1
+"Senegalia pennata","Tropical & Subtropical Moist Broadleaf Forests",1,148
+"Senegalia pennata","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,37
+"Senegalia pennata","Tropical & Subtropical Dry Broadleaf Forests",2,9
+"Senegalia pennata","Temperate Conifer Forests",5,5
+"Senegalia praecox","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,186
+"Senegalia praecox","Tropical & Subtropical Dry Broadleaf Forests",2,22
+"Senegalia praecox","Temperate Grasslands, Savannas & Shrublands",8,21
+"Senegalia praecox","Tropical & Subtropical Moist Broadleaf Forests",1,14
+"Senegalia praecox","Flooded Grasslands & Savannas",9,8
+"Senegalia praecox","Montane Grasslands & Shrublands",10,2
+"Senegalia reniformis","Deserts & Xeric Shrublands",13,30
+"Senegalia reniformis","Tropical & Subtropical Coniferous Forests",3,10
+"Stryphnodendron guianense","Tropical & Subtropical Moist Broadleaf Forests",1,66
+"Stryphnodendron guianense","Mangroves",14,6
+"Stryphnodendron guianense","Tropical & Subtropical Dry Broadleaf Forests",2,3
+"Stryphnodendron guianense","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,3
+"Tetrapleura tetraptera","Tropical & Subtropical Moist Broadleaf Forests",1,234
+"Tetrapleura tetraptera","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,56
+"Tetrapleura tetraptera","Mangroves",14,1
+"Vachellia bellula","Deserts & Xeric Shrublands",13,68
+"Vachellia bellula","Tropical & Subtropical Dry Broadleaf Forests",2,1
+"Vachellia bilimekii","Tropical & Subtropical Dry Broadleaf Forests",2,50
+"Vachellia bilimekii","Deserts & Xeric Shrublands",13,49
+"Vachellia bilimekii","Tropical & Subtropical Coniferous Forests",3,23
+"Vachellia campeachiana","Tropical & Subtropical Dry Broadleaf Forests",2,534
+"Vachellia campeachiana","Tropical & Subtropical Coniferous Forests",3,48
+"Vachellia campeachiana","Deserts & Xeric Shrublands",13,19
+"Vachellia campeachiana","Tropical & Subtropical Moist Broadleaf Forests",1,12
+"Vachellia campeachiana","Mangroves",14,6
+"Vachellia collinsii","Tropical & Subtropical Dry Broadleaf Forests",2,448
+"Vachellia collinsii","Tropical & Subtropical Moist Broadleaf Forests",1,286
+"Vachellia collinsii","Mangroves",14,45
+"Vachellia collinsii","Tropical & Subtropical Coniferous Forests",3,29
+"Vachellia collinsii","Deserts & Xeric Shrublands",13,10
+"Vachellia collinsii","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,8
+"Vachellia farnesiana","Tropical & Subtropical Dry Broadleaf Forests",2,1010
+"Vachellia farnesiana","Tropical & Subtropical Moist Broadleaf Forests",1,483
+"Vachellia farnesiana","Deserts & Xeric Shrublands",13,470
+"Vachellia farnesiana","Tropical & Subtropical Coniferous Forests",3,352
+"Vachellia farnesiana","Mangroves",14,87
+"Vachellia farnesiana","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,83
+"Vachellia farnesiana","Temperate Grasslands, Savannas & Shrublands",8,26
+"Vachellia farnesiana","Flooded Grasslands & Savannas",9,13
+"Vachellia farnesiana","Mediterranean Forests, Woodlands & Scrub",12,3
+"Vachellia farnesiana","Temperate Broadleaf & Mixed Forests",4,3
+"Vachellia farnesiana","Montane Grasslands & Shrublands",10,2
+"Vachellia farnesiana","Temperate Conifer Forests",5,1
+"Vachellia myrmecophila","Deserts & Xeric Shrublands",13,27
+"Vachellia nebrownii","Deserts & Xeric Shrublands",13,6
+"Vachellia nebrownii","Tropical & Subtropical Coniferous Forests",3,1
+"Vachellia pachyphloia","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,243
+"Vachellia pallidifolia","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,92
+"Vachellia pennatula","Tropical & Subtropical Dry Broadleaf Forests",2,676
+"Vachellia pennatula","Tropical & Subtropical Coniferous Forests",3,490
+"Vachellia pennatula","Tropical & Subtropical Moist Broadleaf Forests",1,357
+"Vachellia pennatula","Mangroves",14,31
+"Vachellia pennatula","Deserts & Xeric Shrublands",13,22
+"Viguieranthus glaber","Tropical & Subtropical Moist Broadleaf Forests",1,14
+"Viguieranthus glaber","Tropical & Subtropical Dry Broadleaf Forests",2,7
+"Viguieranthus glandulosus","Tropical & Subtropical Moist Broadleaf Forests",1,10
+"Wallaceodendron celebicum","Tropical & Subtropical Moist Broadleaf Forests",1,32
+"Wallaceodendron celebicum","Tropical & Subtropical Coniferous Forests",3,1
+"Xerocladia viridiramis","Deserts & Xeric Shrublands",13,34
+"Xylia hoffmannii","Tropical & Subtropical Dry Broadleaf Forests",2,107
+"Xylia hoffmannii","Tropical & Subtropical Moist Broadleaf Forests",1,5
+"Xylia xylocarpa","Tropical & Subtropical Dry Broadleaf Forests",2,102
+"Xylia xylocarpa","Tropical & Subtropical Moist Broadleaf Forests",1,22
+"Xylia xylocarpa","Mangroves",14,1
+"Zapoteca ravenii","Tropical & Subtropical Moist Broadleaf Forests",1,12
+"Zapoteca ravenii","Tropical & Subtropical Coniferous Forests",3,3
+"Zygia lathetica","Tropical & Subtropical Moist Broadleaf Forests",1,52
+"Zygia longifolia","Tropical & Subtropical Moist Broadleaf Forests",1,545
+"Zygia longifolia","Tropical & Subtropical Dry Broadleaf Forests",2,54
+"Zygia longifolia","Mangroves",14,18
+"Zygia longifolia","Tropical & Subtropical Coniferous Forests",3,12
+"Zygia longifolia","Deserts & Xeric Shrublands",13,10
+"Zygia longifolia","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,4
+"Zygia paucijugata","Tropical & Subtropical Moist Broadleaf Forests",1,16
+"Zygia paucijugata","Tropical & Subtropical Dry Broadleaf Forests",2,1
+"Zygia peckii","Tropical & Subtropical Moist Broadleaf Forests",1,52
+"Zygia peckii","Mangroves",14,9
+"Zygia peckii","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,2
+"Zygia racemosa","Tropical & Subtropical Moist Broadleaf Forests",1,242
+"Zygia racemosa","Mangroves",14,3
+"Zygia racemosa","Tropical & Subtropical Dry Broadleaf Forests",2,2
+"Zygia racemosa","Tropical & Subtropical Grasslands, Savannas & Shrublands",7,2

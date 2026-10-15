@@ -15,13 +15,12 @@ tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits$taxon))
 #ordenar de acordo com a filogenia
 traits_ordered <- traits[match(tree_pruned$tip.label, traits$taxon),]
 
-#guardar a informaçao dos clados porque será necessario na analise de disparidade
-clade_info <- traits %>%
-  select(species, clade)
-
 #renomear coluna taxon pra species
 traits <- traits_ordered %>%
   rename(species = taxon)
+#guardar a informaçao dos clados porque será necessario na analise de disparidade
+clade_info <- traits %>%
+  select(species, clade)
 
 colnames(traits)
 
@@ -250,15 +249,15 @@ mantel(matrix_modemean,matrix_phylo) #as duas matrizes estao bem correlacionadas
 #estao bem correlacionadas, mantel r 0.9937
 # subsetting flowers and inflorescence data
 
-inflorescence <- traits_final %>% 
-  select(inflorescence_type,
-         inflorescence_length_mean,
-         inflorescence_width_mean,
-         inflorescence_peduncle_length_mean,
-         bisexual_flowers_presence,
-         male_flowers_presence,
-         heteromorphic_flower_presence,
-         sterile_flower_presence)
+# inflorescence <- traits_final %>% 
+#   select(species, clade, inflorescence_type,
+#          inflorescence_length_mean,
+#          inflorescence_width_mean,
+#          inflorescence_peduncle_length_mean,
+#          bisexual_flowers_presence,
+#          male_flowers_presence,
+#          heteromorphic_flower_presence,
+#          sterile_flower_presence)
 
 flower_traits <- traits_final %>% select(species, clade,
   flower_merosity,

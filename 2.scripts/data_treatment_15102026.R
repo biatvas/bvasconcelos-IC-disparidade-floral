@@ -1,5 +1,4 @@
 ##DATA TREATMENT 22.09.2026
-
 if (!require(librarian)) install.packages("librarian")
 librarian::shelf(dplyr, purrr, readr, stringr, tidyr, tibble,
                  cluster, ape, vegan, ggplot2, readr, ade4, FactoMineR, 
@@ -69,7 +68,7 @@ qual_lookup <- export_qualitative_lookup(traits, qual_cols, "3.outputs/qualitati
 #checar manualmente e gerar um novo arquivo editado pra substituir os nomes 
 #quali data to check are inflorescence type, sex type of flower/inflo, habit,
 #flower_merosity, filament_color, stamen_count, nectary presence, anther gland presence (i dont now if i will keep stemonozone & stamen tube)
-qual_lookup_check <- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/3.outputs/qualitative_lookup_mimoseae.csv")
+qual_lookup_check <- read.csv("~/Documents/GitHub/bvasconcelos-IC-disparidade-floral/3.outputs/qualitative_lookup_mimoseae_check.csv")
 
 apply_qualitative_lookup <- function(traits, lookup) {
   for (v in unique(lookup$variable)) {

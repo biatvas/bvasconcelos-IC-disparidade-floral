@@ -101,7 +101,7 @@ eco_data <- eco_per_species %>% group_by(species) %>%
   summarise(biome = paste(BIOME_NUM, collapse = "&"),
             .groups = "drop")
 
-
+write.csv(eco_per_species, "3.outputs/ecodata_species_mimoseae.csv", row.names = F)
 write.csv(occurrence, "3.outputs/occurrence_data_mimoseae.csv")
 write.csv(eco_data, "3.outputs/ecological_data_mimoseae.csv", row.names = F)
 
