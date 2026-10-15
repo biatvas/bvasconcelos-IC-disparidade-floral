@@ -2,93 +2,86 @@
 # ANALISES DE DISPARIDADE 
 library(dplyr)
 library(tibble)
+library(purrr)
+library(ggrepel)
 
 #read phylogenetic tree and ecological data
-traits_phylo <- read.csv("traits_treatmentimput30092026.csv")
-biomes <- 
+traits <- read.csv("3.outputs/mimoseae_flower_data.csv")
+biomes <- read.csv("3.outputs/ecological_data_mimoseae.csv")
 tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
+
+#prune morphodata to match biomes dataset
+traits$species <- gsub(pattern = "_"," ", traits$species)
+
+traits <- traits[traits$species %in% biomes$species, ]
+#all(traits$species %in% biomes$species)
+
+traits$species <- gsub(pattern = " ","_", traits$species)
 ## prune phylogeny
-traits_phylo <- cleaned_traits_2
-traits_phylo <- traits_phylo %>% rename(species = taxon)
+tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits$species))
 
-tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits_phylo$species))
-
-clade_info <- traits_phylo %>%
-  select(species, clade)
-
-traits_phylo <- traits_phylo %>% column_to_rownames("species")
-
-traits <- traits_phylo %>%
-  select(
-    inflorescence_length_mean,
-    inflorescence_peduncle_length_mean,
-    inflorescence_heteromorphy,
-    flower_sexuality,
-    Perianth_variable,
-    calyx_length_mean,
-    corolla_length_mean,
-    corolla_lobe_length_mean,
-    stamen_count,
-    filament_length_mean,
-    filament_union,
-    nectary)
+#clade_info <- traits %>%
+#  select(species, clade)
+traits <- traits %>%
+  as.data.frame() %>%
+  remove_rownames() %>%
+  column_to_rownames("species")
 
 
-##filament_color,anther_gland_presence, flower_merosity, inflorescence_type,
-dim(traits)
-#221 16
+continuous_cols <- c( grep("_mean$", colnames(traits), value = TRUE), "stamen_count") 
+# Definindo quais são as colunas categóricas 
+categorical_cols <- setdiff(colnames(traits), continuous_cols)
 
-binary_vars <- c(3, 4, 5, 11, 12)
+# log nos traços contínuos
+traits_log <- traits %>%
+mutate(across(all_of(continuous_cols), log))
 
-# Converter para fator
-traits[binary_vars] <- lapply(
-  traits[binary_vars],
+#transformar character em factor
+traits_log[] <- lapply(traits_log, function(x) {
+  if (is.character(x)) as.factor(x) else x
+})
+
+#binarias nominais vao virar factor tambem
+traits_log[, c(2, 5)] <- lapply(
+  traits_log[, c(2, 5), drop = FALSE],
   factor
 )
 
-quant_vars <- c(1, 2, 6, 7, 8, 9, 10)
-
-#log scale
-traits[quant_vars] <- lapply(
-  traits[quant_vars],
-  log
-)
-
 ##Gower distance x PCoA =====------ 
-gower <- as.matrix(daisy(traits, metric = "gower")) ##cluster package
-gower_modemean <- as.matrix(daisy(traits_modemean, metric = "gower"))
-
-mantel(gower_modemean,gower) #as duas matrizes estao bem correlacionadas
+gower <- daisy(traits_log, metric = "gower")
+matrix_phylo <- as.matrix(gower)
 
 ## checagem: quantos pares tem NA na distancia (caso alguma linha nao compartilhe
 ## nenhuma variavel observada com outra - daria distancia NA)
 #como fiz a imputação vai dar 0 
-sum(is.na(as.matrix(gower_phylo)))
+sum(is.na(as.matrix(gower)))
 
 ## PCoA com a matriz de gower =====================================
 #como a matriz nao é euclidiana, 
 # talvez a gente possa considerar uma correção para autovalores negativos
-pcoa_res <- pcoa(gower, correction = "cailliez")  #ape package
+pcoa <- pcoa(gower, correction = "cailliez")  #ape package
+
+## calculating variance explained explained by each principal component
+eigen <- pcoa$values$Corr_eig
+
+# PC1
+round(eigen[1] / sum(eigen[eigen > 0]) * 100, 2)
+# PC2
+round(eigen[2] / sum(eigen[eigen > 0]) * 100, 2)
+# PC3
+round(eigen[3] / sum(eigen[eigen > 0]) * 100, 2)
+
 
 ## garantir ordem identica a arvore 
-scores_pcoa <- pcoa_res$vectors
+scores_pcoa <- pcoa$vectors
 scores_pcoa <- scores_pcoa[match(tree_pruned$tip.label, rownames(scores_pcoa)), ]
 stopifnot(identical(rownames(scores_pcoa), tree_pruned$tip.label))
 
-#contribuicao de cada eixo
-pcoa_values <- pcoa_res$values
-#coordenadas por especie
-pcoa_res$vectors
-
-#visualizar em porcentagem a contribuicao dos eixos
-percent_explained <- 100 * pcoa_values$Eigenvalues / 
-  sum(pcoa_values$Eigenvalues[pcoa_values$Eigenvalues > 0])
-percent_explained
-
 #plot pcoa
-pcoa_scores <- as.data.frame(pcoa_res$vectors)
+pcoa_scores <- as.data.frame(pcoa$vectors)
 pcoa_scores$species <- rownames(pcoa_scores)
 
+#plotar o morfoespaço
 library(ggplot2)
 ggplot(pcoa_scores, aes(x = Axis.1, y = Axis.2)) +
   geom_point(size = 3) +
@@ -97,85 +90,80 @@ ggplot(pcoa_scores, aes(x = Axis.1, y = Axis.2)) +
 
 
 ##incluindo a informaçao de clados
-traits_phylo <- traits_phylo %>% rownames_to_column("species")
-
-pcoa_df <- pcoa_res$vectors %>%
-  as.data.frame() %>% 
-  rownames_to_column("species") %>%
-  left_join(
-    traits_phylo %>%
-      select(species, clade),
-    by = "species"
-  )
+# traits_log <- traits %>% rownames_to_column("species")
+# 
+# pcoa_df <- pcoa_res$vectors %>%
+#   as.data.frame() %>% 
+#   rownames_to_column("species") %>%
+#   left_join(
+#     traits %>%
+#       select(species, clade),
+#     by = "species"
+#   )
 
 ##colorindo por clado
-ggplot(pcoa_df, aes(x = Axis.1, y = Axis.2, color = clade)) +
-  geom_point(size = 3) +
-  theme_classic() +
-  labs(
-    x = "PCoA axis 1",
-    y = "PCoA axis 2",
-    color = "Clade"
-  )
+# ggplot(pcoa_df, aes(x = Axis.1, y = Axis.2, color = clade)) +
+#   geom_point(size = 3) +
+#   theme_classic() +
+#   labs(
+#     x = "PCoA axis 1",
+#     y = "PCoA axis 2",
+#     color = "Clade"
+#   )
 
 #definindo por generos
 genus <- data.frame("genus" = sub("_.*" ,"", 
-                                  row.names(pcoa_res$vectors)),
-                    "species" = row.names(pcoa_res$vectors))
+                                  row.names(pcoa$vectors)),
+                    "species" = row.names(pcoa$vectors))
 
-pcoa_data <- as.data.frame(pcoa_res$vectors.cor[, c(1, 2)])
+pcoa_data <- as.data.frame(pcoa$vectors.cor[, c(1, 2)])
 pcoa_data$species <- row.names(pcoa_data)
 pcoa_data <- merge(pcoa_data, genus, by = "species")
 
-library(ggrepel)
+
+#plotar morfoespaço colorido por genero
 ggplot(pcoa_data, aes(x = Axis.1, y = Axis.2, color = genus)) +
   geom_point(size = 3) +
-  geom_text_repel(
+  geom_text(
     aes(label = species),
     size = 2.5,
     show.legend = FALSE
   ) +
-  theme_classic()
+  theme_classic() + 
+  ggplot2::coord_equal()
 
-ggplot(pcoa_res$vectors.cor[,c(1,2)], aes(x = Axis.1, y = Axis.2)) +
+ggplot(pcoa$vectors.cor[,c(1,2)], aes(x = Axis.1, y = Axis.2)) +
   geom_point(size = 3) +
   geom_text(aes(label = row.names(pcoa_res$vectors.cor)), 
            vjust = -0.5, size = 2) +
   theme_classic()
 
-##coord fixed to adjust scale 
-sov_clade <- pcoa_df %>%
-  group_by(clade) %>%
-  summarise(
-    SOV_Axis1 = max(Axis.1, na.rm = TRUE) -
-      min(Axis.1, na.rm = TRUE),
-    
-    SOV_Axis2 = max(Axis.2, na.rm = TRUE) -
-      min(Axis.2, na.rm = TRUE),
-    
-    SOV_Axis3 = max(Axis.3, na.rm = TRUE) -
-      min(Axis.3, na.rm = TRUE),
-    
-    SOV = SOV_Axis1 +
-      SOV_Axis2 +
-      SOV_Axis3
-  )
+##plot a phylomorphospace 
+space_axis <- pcoa$vectors.cor[, c(1,2)]
+
+space_axis <- space_axis[rownames(space_axis) %in% tree$tip.label, ]
+
+phylomorphospace <- phylomorphospace(
+  tree_pruned,
+  space_axis,
+  xlab = "PC1",
+  ylab = "PC2",
+  label = "off"
+) + ggplot2::coord_equal()
+
+#eco-morphospace
+data_vectors_eco <- pcoa$vectors.cor[, c (1, 2)]
+
+data_vectors_eco <- as.data.frame(data_vectors_eco) %>%
+  add_column(as.factor(biomes$biome), .before = T) %>%
+colnames(data_vectors_eco) <- c("biome", "PC1", "PC2")
+
+# checking species of each vegetation type #
+
+groups_veg_type <- split(dat_eco$species, dat_eco$biome)
 
 
-##mean pairwise distance
-mpd_clade <- pcoa_df %>%
-  group_by(clade) %>%
-  group_modify(~ {
-    
-    coords <- .x %>%
-      select(Axis.1, Axis.2, Axis.3)
-    
-    d <- as.matrix(dist(coords))
-    
-    data.frame(
-      MPD = mean(d[upper.tri(d)])
-    )
-  })
+
 
 #####Disparity metrics
 # objeto dispRity a partir dos eixos da PCoA
@@ -193,67 +181,6 @@ mpd <- dispRity(disp_obj_dist, metric = c(mean, pairwise.dist))
 sov <- dispRity(disp_obj_dist, metric = c(sum, variances))
 sor <- dispRity(disp_obj_dist, metric = c(sum, ranges))
 
-#PCA Hill-Smith =======
-library(ade4)
-library(adegraphics)
-
-hs <- dudi.hillsmith(
-  traits_log,
-  scannf = FALSE,
-  nf = 5
-)
-
-#select 2 
-#screeplot(hs)
-summary(hs) #23 eicxos (cada categoria de var quant é um eixo)
-# até o eixo 5, acumula 43.29% da explicacao
-hs$eig #variancia generalizada explicada por eixo expalhada
-
-axes_contribution <- 100*hs$eig/sum(hs$eig)
-
-#plot flowers in morpho space
-plot(hs$li[,1],
-     hs$li[,2],
-     xlab = "pc1",
-     ylab = "pc2",
-     pch = 19) +
-
-  text(hs$li[,1],hs$li[,2],labels = traits_log$specie, pos = 1)
-
-hs$cr # quanto cada variavel esta associada a cada eixo
-hs$index # tipos de cada var
-
-scatter(hs)
-s.label(hs$li, labels = NULL) 
-#essa estrutura mais achatada pode tar
-# refletindo a baixa explicacao por eixo
-
-hs$cr[1] #importancia de cada variavel para cada eixo. 
-# tamanho floral com maior peso. podemos padronizar as var. continuas
-# pela media geometrica 
-
-hs$c1 #laodings (autovetores) 
-hs$co[1] #c1 reescalonado pelos autovalores.
-# direcao (quantitativas) ou qais categorias puxam pra qual lado
-# do eixo
-
-hs_df <- hs$li %>%
-  as.data.frame() %>%
-  rownames_to_column("species") %>%
-  left_join(
-    traits_final %>%
-      select(species, clade),
-    by = "species"
-  )
-
-ggplot(hs_df, aes(x = Axis1, y = Axis2, color = clade)) +
-  geom_point(size = 3) +
-  theme_classic() +
-  labs(
-    x = "PC1",
-    y = "PC2",
-    color = "Clade"
-  )
 
 ##calcular metricas de disparidade =======
 ## SV, SR, MPD
@@ -263,32 +190,6 @@ ggplot(hs_df, aes(x = Axis1, y = Axis2, color = clade)) +
 # objeto dispRity a partir dos eixos da PCoA
 
 
-##using claddis
-## create Claddis cladistic matrix
-library(Claddis)
-as.matrix(traits_phylo) -> traits
-
-#precisaria substituir valores que sao nomes pra categorias
-cladistic_matrix <- build_cladistic_matrix(traits, ordering = ord)
-
-## calculating distance matrix
-dist <- calculate_morphological_distances(cladistic_matrix)
-
-## pcoa
-pcoa <- ape::pcoa(dist$distance_matrix, correction = "cailliez")
-
-## calculating variance explained explained by each principal component
-eigen <- pcoa_res$values$Corr_eig
-
-# PC1
-round(eigen[1] / sum(eigen[eigen > 0]) * 100, 2)
-#10,98
-# PC2
-round(eigen[2] / sum(eigen[eigen > 0]) * 100, 2)
-#7,35
-# PC3
-round(eigen[3] / sum(eigen[eigen > 0]) * 100, 2)
-#5,37
 
 ##plot clades ======
 
@@ -322,3 +223,64 @@ phylomorphospace(
 bootstraps <- 1000
 rarefaction <- "min" # "min" or FALSE
 
+
+#PCA Hill-Smith =======
+library(ade4)
+library(adegraphics)
+
+hs <- dudi.hillsmith(
+  traits_log,
+  scannf = FALSE,
+  nf = 5
+)
+
+#select 2 
+#screeplot(hs)
+summary(hs) #23 eicxos (cada categoria de var quant é um eixo)
+# até o eixo 5, acumula 43.29% da explicacao
+hs$eig #variancia generalizada explicada por eixo expalhada
+
+axes_contribution <- 100*hs$eig/sum(hs$eig)
+
+#plot flowers in morpho space
+plot(hs$li[,1],
+     hs$li[,2],
+     xlab = "pc1",
+     ylab = "pc2",
+     pch = 19) +
+  
+  text(hs$li[,1],hs$li[,2],labels = traits_log$specie, pos = 1)
+
+hs$cr # quanto cada variavel esta associada a cada eixo
+hs$index # tipos de cada var
+
+scatter(hs)
+s.label(hs$li, labels = NULL) 
+#essa estrutura mais achatada pode tar
+# refletindo a baixa explicacao por eixo
+
+hs$cr[1] #importancia de cada variavel para cada eixo. 
+# tamanho floral com maior peso. podemos padronizar as var. continuas
+# pela media geometrica 
+
+hs$c1 #laodings (autovetores) 
+hs$co[1] #c1 reescalonado pelos autovalores.
+# direcao (quantitativas) ou qais categorias puxam pra qual lado
+# do eixo
+hs_df <- hs$li %>%
+  as.data.frame() %>%
+  rownames_to_column("species") %>%
+  left_join(
+    traits_log %>%
+      select(species, clade),
+    by = "species"
+  )
+
+ggplot(hs_df, aes(x = Axis1, y = Axis2, color = clade)) +
+  geom_point(size = 3) +
+  theme_classic() +
+  labs(
+    x = "PC1",
+    y = "PC2",
+    color = "Clade"
+  )

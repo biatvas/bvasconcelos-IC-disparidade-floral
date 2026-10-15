@@ -26,12 +26,14 @@ setdiff(species, unique(mimosoid_occ$species)) #57 species in our dataset not pr
 # which(is.na(mimosoid_occ$decimalLatitude))
 # which(is.na(mimosoid_occ$decimalLongitude))
 
-occurrence <- mimosoid_occ 
-# all(occurence$species %in% species)
+# selecting only mimosoid species that occur in morpho_data dataset
+occurrence <- mimosoid_occ[which(mimosoid_occ$species %in% species),]
+
+# all(occurrence$species %in% species)
 
 # transforming occurence data in sf object and projecting
 occurrence_points <- st_as_sf(
-  occurence,
+  occurrence,
   coords = c("decimalLongitude", "decimalLatitude"),
   crs = 4326) %>% 
   st_transform(st_crs(eco_reg))
@@ -52,46 +54,54 @@ table(st_is_valid(eco_reg_valid)) #no more invalid geometries
 #   occurrence_points,
 #   eco_reg_valid)
 
-# occurrence_ecoregions_nearest <- st_nearest_feature(
-#   occurrence_points,
-#   eco_reg_valid)
-
-intersects <- st_intersects(
+occurrence_ecoregions_nearest <- st_nearest_feature(
   occurrence_points,
   eco_reg_valid)
 
-test <- sapply(intersects, function(x) length(x) > 1) 
-which(test == TRUE)
+# intersects <- st_intersects(
+#   occurrence_points,
+#   eco_reg_valid)
 
-for (i in seq_along(intersects)) {
-  if (length(intersects[[i]]) > 0) {
-    occurrence$BIOME_NUM[i] <- eco_reg_valid$BIOME_NUM[intersects[[i]]]
-    occurrence$BIOME_NAME[i] <- eco_reg_valid$BIOME_NAME[intersects[[i]]]
-  } else {
-    occurrence$BIOME_NUM[i] <- NA
-    occurrence$BIOME_NAME[i] <- NA
+# test <- sapply(intersects, function(x) length(x) > 1) 
+# which(test == TRUE)
+
+# for (i in seq_along(intersects)) {
+#   if (length(intersects[[i]]) > 0) {
+#     occurrence$BIOME_NUM[i] <- eco_reg_valid$BIOME_NUM[intersects[[i]]]
+#     occurrence$BIOME_NAME[i] <- eco_reg_valid$BIOME_NAME[intersects[[i]]]
+#   } else {
+#     occurrence$BIOME_NUM[i] <- NA
+#     occurrence$BIOME_NAME[i] <- NA
+#   }
+# }
+
+# eco_reg_na <- st_as_sf(eco_reg_na,
+#   coords = c("decimalLongitude", "decimalLatitude"),
+#   crs = 4326) %>% 
+#   st_transform(st_crs(eco_reg))
+# 
+# st_write(eco_reg_na, "3.outputs/occurrence-data/eco_reg_na.shp")
+
+
+for (i in seq_along(occurrence_ecoregions_nearest)) {
+    occurrence$BIOME_NUM[i] <- eco_reg_valid$BIOME_NUM[occurrence_ecoregions_nearest[i]]
+    occurrence$BIOME_NAME[i] <- eco_reg_valid$BIOME_NAME[occurrence_ecoregions_nearest[i]]
   }
-}
 
-# selecting only mimosoid species that occur in morpho_data dataset
-occurrence_ecoregions_subset <- occurrence_ecoregions[which(occurrence_ecoregions$species 
-                                                            %in% species),]
+any(is.na(occurrence$BIOME_NAME))
 
-# all(occurrence_ecoregions_subset$species %in% species)
-# unique(occurrence_ecoregions_subset$species)
-
-eco_per_species <- occurrence_ecoregions_subset %>% 
+eco_per_species <- occurrence %>% 
   st_drop_geometry() %>%
-  count(species, BIOME_NAME, REALM, BIOME_NUM) %>%
+  count(species, BIOME_NAME, BIOME_NUM) %>%
   arrange(species, desc(n))
 
 unique(eco_per_species$species)
 
-eco_per_species %>% group_by(species) %>% 
+eco_data <- eco_per_species %>% group_by(species) %>% 
   summarise(biome = paste(BIOME_NUM, collapse = "&"),
             .groups = "drop")
 
-write_sf(occurrence_point, "3.outputs/occurence-data/occurrence_point")
-write_sf(eco_reg_valid, "3.outputs/occurence-data/")
 
-#dados florais, 
+write.csv(occurrence, "3.outputs/occurrence_data_mimoseae.csv")
+write.csv(eco_data, "3.outputs/ecological_data_mimoseae.csv", row.names = F)
+

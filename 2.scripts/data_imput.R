@@ -12,24 +12,28 @@ tree <- read.tree("4.trees/mimosoid_calibrated_clean_updated.tre")
 ## prune phylogeny
 tree_pruned <- drop.tip(tree, setdiff(tree$tip.label, traits$taxon))
 
+#ordenar de acordo com a filogenia
 traits_ordered <- traits[match(tree_pruned$tip.label, traits$taxon),]
 
+#guardar a informaçao dos clados porque será necessario na analise de disparidade
+clade_info <- traits %>%
+  select(species, clade)
+
+#renomear coluna taxon pra species
 traits <- traits_ordered %>%
   rename(species = taxon)
 
-clade_info <- traits %>%
-  select(species, clade)
+colnames(traits)
 
 traits <- traits %>%
   select(
     species,
     inflorescence_type,
     inflorescence_length_mean,
+    inflorescence_width_mean,
     inflorescence_peduncle_length_mean,
-    inflorescence_heteromorphy,
-    flower_sexuality,
     flower_merosity,
-    Perianth_variable,
+    perianth_variable,
     calyx_length_mean,
     corolla_length_mean,
     corolla_lobe_length_mean,
@@ -41,7 +45,8 @@ traits <- traits %>%
     nectary)
 
 dim(traits)
-#219 15
+#219 16
+
 
 #turn species names as a rownames
 traits_matrix <- traits %>%
@@ -143,23 +148,15 @@ traits_modemean_3[continuous_cols] <- lapply(traits_modemean_3[continuous_cols],
 
 #checar se imputou em tudo 
 sum(sapply(traits_modemean_3, function(x) sum(is.na(x))))
-
-# log nos traços contínuos que fugirem de normalidade 
-traits_log <- traits_modemean %>%
-  mutate(across(all_of(continuous_cols), log))
+#alguns clados ainda contêm NA... pensar como resolver isso aqui 
+#imputar dado da especie em sequencia na tabela? ja que ta ordenada? 
 
 #substituindo as colunas
 ## Continuas: preenchidas com a MEDIA da coluna.
 ## Categoricas (factor): preenchidas com a MODA da coluna.
 ## checagem
-sum(sapply(traits_matrix, function(x) sum(is.na(x)))) #947 NAs no começo
+sum(sapply(traits_matrix, function(x) sum(is.na(x)))) #1227 NAs no começo
 sum(sapply(traits_modemean,function(x) sum(is.na(x)))) #aqui é 0
-sum(sapply(traits_log,function(x) sum(is.na(x)))) #aqui é 0 tbm
-
-#isso ja foi feito antes 
-# #ordenando traits_modemean pra filogenia
-# traits_modemean <- traits_modemean[match(tree_pruned$tip.label, 
-#                                          row.names(traits_modemean)),]
 
 
 #identical(row.names(traits_modemean), tree_pruned$tip.label)
@@ -233,13 +230,49 @@ traits_phylo <- as.data.frame(imputed_cont) %>%
 stopifnot(sum(sapply(traits_phylo, function(x) sum(is.na(x)))) == 0)
 #traits_phylo are dataset with phylogenetic input
 
-# log nos traços contínuos que fugirem de normalidade 
-log_phylo <- traits_phylo %>%
-  mutate(across(all_of(continuous_cols), log))
 ### ====================== ######
-traits_final <- log_phylo %>%
+traits_final <- traits_phylo %>%
   tibble::rownames_to_column("species") %>%
   left_join(clade_info, by = "species")
 
+library(vegan)
+library(cluster)
+
+modemean <- daisy(traits_modemean, metric = "gower") ##cluster package
+matrix_modemean <- as.matrix(modemean)
+#rphylo
+phylo <- daisy(traits_phylo, metric = "gower")
+matrix_phylo <- as.matrix(phylo)
+
+#checar se muda muito com as imputaçoes
+mantel(matrix_modemean,matrix_phylo) #as duas matrizes estao bem correlacionadas
+
+#estao bem correlacionadas, mantel r 0.9937
+# subsetting flowers and inflorescence data
+
+inflorescence <- traits_final %>% 
+  select(inflorescence_type,
+         inflorescence_length_mean,
+         inflorescence_width_mean,
+         inflorescence_peduncle_length_mean,
+         bisexual_flowers_presence,
+         male_flowers_presence,
+         heteromorphic_flower_presence,
+         sterile_flower_presence)
+
+flower_traits <- traits_final %>% select(species, clade,
+  flower_merosity,
+  perianth_variable,
+  stamen_count, 
+  anther_gland_presence,
+  nectary,
+  calyx_length_mean,
+  corolla_length_mean,
+  corolla_lobe_length_mean,
+  filament_length_mean,
+  filament_union,
+  )
+
 #por fim, salvar o dataset final gerado
-write.csv(traits_final, "traits_treatmentimput30092026.csv", row.names = F)
+write.csv(traits_final, "traits_treatmentimput.csv", row.names = F)
+write.csv(flower_traits, "3.outputs/mimoseae_flower_data.csv", row.names = F)
