@@ -141,6 +141,13 @@ traits$flower_merosity <- as.numeric((as.character(traits$flower_merosity)))
 str(traits) #check classes: numeric and factor
 unique(traits$flower_merosity) #check the merosity values
 
+# transforming names of colors into numbers
+traits$filament_color <- as.factor(as.integer(factor(traits$filament_color)) - 1)
+#yellow: 3; white: 2; pink:1; bicolored: 0
+traits <- rename(traits,  color = filament_color)
+
+str(traits)
+
 #################################################
 ##Gower distance + NMDS =====------ 
 ###################################################
@@ -302,12 +309,22 @@ library(adegraphics)
 # nf = 5         -> keep the first 5 axes (eigenvalues are still computed for all)
 hs <- dudi.hillsmith(
   traits,
-  scannf = FALSE,
-  nf = 5
+  scannf = T
 )
 
+# considerando flower_merosity as factor
+# traits_2 <- traits
+# traits_2$flower_merosity <- as.factor(traits_2$flower_merosity)
+# hs_test <- dudi.hillsmith(
+#   traits_2,
+#   scannf = F,
+#   nf = 13
+# )
+# 
+# cor(hs$li$Axis1, hs_test$li$Axis1)
+
 #screeplot(hs, main = "variancia por eixo")
-summary(hs) 
+summary(hs)
 
 # The number of axes = (n quantitative vars) + sum over factors of (levels - 1).
 # (It is NOT "one axis per category of a quantitative variable": it is the
@@ -316,7 +333,7 @@ summary(hs)
 #autovalores
 hs$eig #variancia generalizada explicada por eixo expalhada
 
-axes_contribution <- 100*hs$eig/sum(hs$eig)
+axes_contribution <-  100*hs$eig/sum(hs$eig)
 axes_cumulative <- cumsum(axes_contribution)
 
 data.frame(
@@ -336,8 +353,9 @@ hs$cr # quanto cada variavel esta associada a cada eixo
 # like flower_merosity / stamen_count were read as intended.
 hs$index # tipos de cada var
 
-
 scatter(hs)  # quick overview plot ade4
+screeplot(hs)
+s.arrow(hs$co[1:2])
 s.label(hs$li, labels = NULL) 
 # A flat/elongated cloud usually reflects that variance is spread over many
 # axes (each one explains little), i.e. no single dominant gradient.
@@ -376,6 +394,37 @@ ggplot(hs_df, aes(x = Axis1, y = Axis2, color = clade)) +
     title = "Floral Morphospace of tribe Mimoseae",
     subtitle = "Hill-Smith ordenation")
 
+## Final morphospace colored by variables state
+ggplot(hs_df, aes(x = Axis1, y = Axis2, 
+                  color = factor(traits$flower_merosity))) +
+  geom_point(size = 2.5, alpha = 0.85) +
+  coord_equal() +
+  theme_classic()
+
+ggplot(hs_df, aes(x = Axis1, y = Axis2, 
+                  color = traits$anther_gland_presence)) +
+  geom_point(size = 2.5, alpha = 0.85) +
+  coord_equal() +
+  theme_classic()
+
+ggplot(hs_df, aes(x = Axis1, y = Axis2, 
+                  color = traits$nectary)) +
+  geom_point(size = 2.5, alpha = 0.85) +
+  coord_equal() +
+  theme_classic()
+
+ggplot(hs_df, aes(x = Axis1, y = Axis2, 
+                  color = traits$filament_union)) +
+  geom_point(size = 2.5, alpha = 0.85) +
+  coord_equal() +
+  theme_classic()
+
+ggplot(hs_df, aes(x = Axis1, y = Axis2, 
+                  color = traits$filament_color)) +
+  geom_point(size = 2.5, alpha = 0.85) +
+  coord_equal() +
+  theme_classic()
+
 ### plot morphospace with only one clade colored
 
 
@@ -393,7 +442,7 @@ set.seed(1234)
 
 ## ---- settings -------
 bootstrap <- 1000 #defining bootstrap replicates
-rarefaction <- "min" #all groups rarefied to this size 
+rarefaction <- 3 #all groups rarefied to this size 
 var_threshold <- 0.90   # keep as many PCA axes as needed to reach 90% variance
 drop_clades   <- c("outgroup")   # clades to exclude from the clade analysis
 
@@ -412,7 +461,6 @@ message(n_axes, " axes retained (", round(100 * cum_var[n_axes], 1),
 # Species x axes matrix. THIS (coordinates), not the Gower distance matrix, is
 # what variances/ranges must be computed on.
 scores_hs <- as.matrix(hs_full$li[, 1:n_axes])
-
 
 # ---- 2. Standardise species names everywhere (underscore format) ------------
 rownames(scores_hs) <- gsub(" ", "_", rownames(scores_hs))
@@ -778,7 +826,8 @@ clade_sv_bhatt <- test.dispRity(sv_clade, bhatt.coeff)
 #salvar sv
 #sum of range
 sr_clade <- dispRity(bootstrapped_clades, metric = c(sum, ranges))
-clade_sr_smry <- summary(sr_clade)
+clade_sr_smry <- summary(sr_clade) 
+
 clade_sr_wilcox <- test.dispRity(sr_clade, 
                                  wilcox.test,
                                  correction = "holm")
