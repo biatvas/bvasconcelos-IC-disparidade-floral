@@ -1,9 +1,7 @@
 ### REDUÇÃO DE DIMENSIONALIDADE (GOWER) E
-# ANALISES DE DISPARIDADE
 # Dimensionality reduction on MIXED data (continuous + categorical traits): 
 # (A) Gower distance -> NMDS
-# (B) Hill-Smith PCA (ade4::dudi.hillsmith)
-#Both ordinate species in a "morphospace"; disparity is analysed from there. 
+
 ################################################################################
 ##nao considerar glandula nas anteras, 
 #mas visualizar se existe algum padrao associado a esse carater 
@@ -148,6 +146,9 @@ traits <- rename(traits,  color = filament_color)
 
 str(traits)
 
+saveRDS(meta, "3.outputs/meta.rds")
+saveRDS(traits,"3.outputs/flower_traits_matrix.rds")
+
 #################################################
 ##Gower distance + NMDS =====------ 
 ###################################################
@@ -157,9 +158,7 @@ str(traits)
 
 gower <- as.matrix(daisy(traits, metric = "gower"))
 
-saveRDS(
-  gower,
-  "3.outputs/flower_gower_distance.rds")
+saveRDS(gower,"3.outputs/flower_gower_distance.rds")
 
 ## checagem: quantos pares tem NA na distancia (caso alguma linha nao compartilhe
 ## nenhuma variavel observada com outra - daria distancia NA)
@@ -291,227 +290,227 @@ legend(
 
 ### save NMDS coordinates + clade as text
 # 
-
-# (B) PCA Hill-Smith =======
-library(ade4)
-library(adegraphics)
-
-# Hill-Smith needs NO distance matrix: it works directly on the data table.
-#   - numeric columns   -> treated as quantitative (centred and scaled)
-#   - factor columns    -> treated as categorical (dummy-coded, weighted)
-# Quantitative and categorical variables are balanced so each variable
-# contributes comparably to total inertia (variance). The result is a
-# "PCA" where both kinds of variable are represented.
-#
-# Therefore: every column of `traits` must be correctly typed (numeric vs factor).
-#
-# scannf = FALSE -> don't ask interactively how many axes to keep
-# nf = 5         -> keep the first 5 axes (eigenvalues are still computed for all)
-hs <- dudi.hillsmith(
-  traits,
-  scannf = T
-)
-
-# considerando flower_merosity as factor
-# traits_2 <- traits
-# traits_2$flower_merosity <- as.factor(traits_2$flower_merosity)
-# hs_test <- dudi.hillsmith(
-#   traits_2,
-#   scannf = F,
-#   nf = 13
+# 
+# # (B) PCA Hill-Smith =======
+# library(ade4)
+# library(adegraphics)
+# 
+# # Hill-Smith needs NO distance matrix: it works directly on the data table.
+# #   - numeric columns   -> treated as quantitative (centred and scaled)
+# #   - factor columns    -> treated as categorical (dummy-coded, weighted)
+# # Quantitative and categorical variables are balanced so each variable
+# # contributes comparably to total inertia (variance). The result is a
+# # "PCA" where both kinds of variable are represented.
+# #
+# # Therefore: every column of `traits` must be correctly typed (numeric vs factor).
+# #
+# # scannf = FALSE -> don't ask interactively how many axes to keep
+# # nf = 5         -> keep the first 5 axes (eigenvalues are still computed for all)
+# hs <- dudi.hillsmith(
+#   traits,
+#   scannf = T
 # )
 # 
-# cor(hs$li$Axis1, hs_test$li$Axis1)
-
-#screeplot(hs, main = "variancia por eixo")
-summary(hs)
-
-# The number of axes = (n quantitative vars) + sum over factors of (levels - 1).
-# (It is NOT "one axis per category of a quantitative variable": it is the
-# categories of the FACTORS that add axes.)
-
-#autovalores
-hs$eig #variancia generalizada explicada por eixo expalhada
-
-axes_contribution <-  100*hs$eig/sum(hs$eig)
-axes_cumulative <- cumsum(axes_contribution)
-
-data.frame(
-  eixo = seq_along(hs$eig),
-  variancia = axes_contribution,
-  acumulada = axes_cumulative
-)
-
-# Contribution of each VARIABLE to each axis.
-# For a quantitative variable: squared correlation with the axis.
-# For a factor: correlation ratio (eta^2) = how much the factor's categories
-# separate species along that axis. Both range from 0 to 1, so they are comparable.
-hs$cr # quanto cada variavel esta associada a cada eixo
-
-# Type of each variable as understood by dudi.hillsmith
-# ("q" = quantitative, "f" = factor). Use this to confirm that columns
-# like flower_merosity / stamen_count were read as intended.
-hs$index # tipos de cada var
-
-scatter(hs)  # quick overview plot ade4
-screeplot(hs)
-s.arrow(hs$co[1:2])
-s.label(hs$li, labels = NULL) 
-# A flat/elongated cloud usually reflects that variance is spread over many
-# axes (each one explains little), i.e. no single dominant gradient.
-
-hs$cr[1]  #importancia no eixo 1
-#importancia de cada variavel para cada eixo. 
-# tamanho floral com maior peso. podemos padronizar as var. continuas
-# pela media geometrica 
-
-hs$c1 #laodings (autovetores) 
-hs$co[1] #c1 reescalonado pelos autovalores.
-
-# Quick plot of species scores on axes 1 and 2 (hs$li = row/species coordinates)
-plot(hs$li[, 1], hs$li[, 2], xlab = "PC1", ylab = "PC2", pch = 19)
-# text(hs$li[,1], hs$li[,2], labels = rownames(traits), pos = 1)
-
-
-# ---- Attach clade to Hill-Smith scores --------------------------------------
-# The species -> clade table is `meta`.
-hs_df <- hs$li %>%
-  as.data.frame() %>%
-  rownames_to_column("species") %>%
-  left_join(meta %>% dplyr::select(species, clade), by = "species")
-
-table(hs_df$clade, useNA = "ifany")   # every species should have a clade
-
-## Final morphospace plot (Hill-Smith)
-ggplot(hs_df, aes(x = Axis1, y = Axis2, color = clade)) +
-  geom_point(size = 2.5, alpha = 0.85) +
-  coord_equal() +
-  theme_classic() +
-  labs(
-    x = sprintf("Axis 1 (%.1f%%)", axes_contribution[1]),
-    y = sprintf("Axis  2 (%.1f%%)", axes_contribution[2]),
-    color = "Clado",
-    title = "Floral Morphospace of tribe Mimoseae",
-    subtitle = "Hill-Smith ordenation")
-
-## Final morphospace colored by variables state
-ggplot(hs_df, aes(x = Axis1, y = Axis2, 
-                  color = factor(traits$flower_merosity))) +
-  geom_point(size = 2.5, alpha = 0.85) +
-  coord_equal() +
-  theme_classic()
-
-ggplot(hs_df, aes(x = Axis1, y = Axis2, 
-                  color = traits$anther_gland_presence)) +
-  geom_point(size = 2.5, alpha = 0.85) +
-  coord_equal() +
-  theme_classic()
-
-ggplot(hs_df, aes(x = Axis1, y = Axis2, 
-                  color = traits$nectary)) +
-  geom_point(size = 2.5, alpha = 0.85) +
-  coord_equal() +
-  theme_classic()
-
-ggplot(hs_df, aes(x = Axis1, y = Axis2, 
-                  color = traits$filament_union)) +
-  geom_point(size = 2.5, alpha = 0.85) +
-  coord_equal() +
-  theme_classic()
-
-ggplot(hs_df, aes(x = Axis1, y = Axis2, 
-                  color = traits$filament_color)) +
-  geom_point(size = 2.5, alpha = 0.85) +
-  coord_equal() +
-  theme_classic()
-
-### plot morphospace with only one clade colored
-
-
-##DISPARITY INDICES (SV, SR, MPD) ON HILL-SMITH PCA SCORES ======
-# Groups: clades and biomes
-#
-# Run AFTER the first script. It needs these objects in the environment:
-#   traits : data.frame, species in rownames, numeric/factor columns correctly
-#            typed and polymorphisms already resolved (input of dudi.hillsmith)
-#   meta   : data.frame with columns `species` and `clade`
-#   biomes : data.frame with columns `species` and `biome` (codes such as
-#            "1", "2", "1&7", "10, 12"...)
-
-set.seed(1234)
-
-## ---- settings -------
-bootstrap <- 1000 #defining bootstrap replicates
-rarefaction <- 3 #all groups rarefied to this size 
-var_threshold <- 0.90   # keep as many PCA axes as needed to reach 90% variance
-drop_clades   <- c("outgroup")   # clades to exclude from the clade analysis
-
-# ---- 1. Hill-Smith scores to use as the morphospace -------------------------
-# The first script kept only 5 axes (nf = 5), which is only ~43% of variance.
-# Disparity should be computed on enough axes to represent the morphospace,
-# so we recompute the analysis keeping all axes and then choose a cutoff.
-hs_tmp  <- dudi.hillsmith(traits, scannf = FALSE, nf = 2) 
-hs_full <- dudi.hillsmith(traits, scannf = FALSE, nf = hs_tmp$rank)
-
-cum_var <- cumsum(hs_full$eig) / sum(hs_full$eig)
-n_axes  <- which(cum_var >= var_threshold)[1]
-message(n_axes, " axes retained (", round(100 * cum_var[n_axes], 1),
-        "% of total variance)")
-
-# Species x axes matrix. THIS (coordinates), not the Gower distance matrix, is
-# what variances/ranges must be computed on.
-scores_hs <- as.matrix(hs_full$li[, 1:n_axes])
-
-# ---- 2. Standardise species names everywhere (underscore format) ------------
-rownames(scores_hs) <- gsub(" ", "_", rownames(scores_hs))
-meta$species     <- gsub(" ", "_", meta$species)
-biomes$species   <- gsub(" ", "_", biomes$species)
-
-# Quick check of name matching
-cat("Species in scores:           ", nrow(scores_hs), "\n") #219
-cat("Species in scores w/ clade:  ", sum(rownames(scores_hs) %in% meta$species), "\n") #219
-cat("Species in scores w/ biome:  ", sum(rownames(scores_hs) %in% biomes$species), "\n")
-#168 species in biome
-
-## define groups 
-# Clades
-groups_clade <- split(meta$species, meta$clade) 
-groups_clade <- groups_clade[!names(groups_clade) %in% drop_clades]
-
-## Biomes
-# a species occur in more than one biome, so groups overlap.
-#split each cell into its individual numeric codes and match exactly.
-## colorir por biomas 
-
-biome_names <- c(
-  "1"  = "Tropical & Subtropical Moist Broadleaf Forests",
-  "2"  = "Tropical & Subtropical Dry Broadleaf Forests",
-  "3"  = "Tropical & Subtropical Coniferous Forests",
-  "4"  = "Temperate Broadleaf & Mixed Forests",
-  "5"  = "Temperate Conifer Forests",
-  "7"  = "Tropical & Subtropical Grasslands, Savannas & Shrublands",
-  "8"  = "Temperate Grasslands, Savannas & Shrublands",
-  "9"  = "Flooded Grasslands & Savannas",
-  "10" = "Montane Grasslands & Shrublands",
-  "12" = "Mediterranean Forests, Woodlands & Scrub",
-  "13" = "Deserts & Xeric Shrublands",
-  "14" = "Mangroves"
-)
-
-biome_codes <- lapply(as.character(biomes$biome), function(x) {
-  if (is.na(x) || x == "") return(character(0))
-  setdiff(strsplit(x, "[^0-9]+")[[1]], "")
-})
-
-groups_biome <- lapply(names(biome_names), function(code) {
-  unique(biomes$species[vapply(biome_codes, function(x) code %in% x, logical(1))])
-})
-names(groups_biome) <- unname(biome_names)
-
-# Keep only species present in the score matrix and groups with >= min_n.
-# Why rarefy: SV, and especially SR, grow with sample size. Without rarefaction,
-# large clades/biomes look more "disparate" simply because they have more
-# species. Rarefying every group to the same n makes them comparable.
+# # considerando flower_merosity as factor
+# # traits_2 <- traits
+# # traits_2$flower_merosity <- as.factor(traits_2$flower_merosity)
+# # hs_test <- dudi.hillsmith(
+# #   traits_2,
+# #   scannf = F,
+# #   nf = 13
+# # )
+# # 
+# # cor(hs$li$Axis1, hs_test$li$Axis1)
+# 
+# #screeplot(hs, main = "variancia por eixo")
+# summary(hs)
+# 
+# # The number of axes = (n quantitative vars) + sum over factors of (levels - 1).
+# # (It is NOT "one axis per category of a quantitative variable": it is the
+# # categories of the FACTORS that add axes.)
+# 
+# #autovalores
+# hs$eig #variancia generalizada explicada por eixo expalhada
+# 
+# axes_contribution <-  100*hs$eig/sum(hs$eig)
+# axes_cumulative <- cumsum(axes_contribution)
+# 
+# data.frame(
+#   eixo = seq_along(hs$eig),
+#   variancia = axes_contribution,
+#   acumulada = axes_cumulative
+# )
+# 
+# # Contribution of each VARIABLE to each axis.
+# # For a quantitative variable: squared correlation with the axis.
+# # For a factor: correlation ratio (eta^2) = how much the factor's categories
+# # separate species along that axis. Both range from 0 to 1, so they are comparable.
+# hs$cr # quanto cada variavel esta associada a cada eixo
+# 
+# # Type of each variable as understood by dudi.hillsmith
+# # ("q" = quantitative, "f" = factor). Use this to confirm that columns
+# # like flower_merosity / stamen_count were read as intended.
+# hs$index # tipos de cada var
+# 
+# scatter(hs)  # quick overview plot ade4
+# screeplot(hs)
+# s.arrow(hs$co[1:2])
+# s.label(hs$li, labels = NULL) 
+# # A flat/elongated cloud usually reflects that variance is spread over many
+# # axes (each one explains little), i.e. no single dominant gradient.
+# 
+# hs$cr[1]  #importancia no eixo 1
+# #importancia de cada variavel para cada eixo. 
+# # tamanho floral com maior peso. podemos padronizar as var. continuas
+# # pela media geometrica 
+# 
+# hs$c1 #laodings (autovetores) 
+# hs$co[1] #c1 reescalonado pelos autovalores.
+# 
+# # Quick plot of species scores on axes 1 and 2 (hs$li = row/species coordinates)
+# plot(hs$li[, 1], hs$li[, 2], xlab = "PC1", ylab = "PC2", pch = 19)
+# # text(hs$li[,1], hs$li[,2], labels = rownames(traits), pos = 1)
+# 
+# 
+# # ---- Attach clade to Hill-Smith scores --------------------------------------
+# # The species -> clade table is `meta`.
+# hs_df <- hs$li %>%
+#   as.data.frame() %>%
+#   rownames_to_column("species") %>%
+#   left_join(meta %>% dplyr::select(species, clade), by = "species")
+# 
+# table(hs_df$clade, useNA = "ifany")   # every species should have a clade
+# 
+# ## Final morphospace plot (Hill-Smith)
+# ggplot(hs_df, aes(x = Axis1, y = Axis2, color = clade)) +
+#   geom_point(size = 2.5, alpha = 0.85) +
+#   coord_equal() +
+#   theme_classic() +
+#   labs(
+#     x = sprintf("Axis 1 (%.1f%%)", axes_contribution[1]),
+#     y = sprintf("Axis  2 (%.1f%%)", axes_contribution[2]),
+#     color = "Clado",
+#     title = "Floral Morphospace of tribe Mimoseae",
+#     subtitle = "Hill-Smith ordenation")
+# 
+# ## Final morphospace colored by variables state
+# ggplot(hs_df, aes(x = Axis1, y = Axis2, 
+#                   color = factor(traits$flower_merosity))) +
+#   geom_point(size = 2.5, alpha = 0.85) +
+#   coord_equal() +
+#   theme_classic()
+# 
+# ggplot(hs_df, aes(x = Axis1, y = Axis2, 
+#                   color = traits$anther_gland_presence)) +
+#   geom_point(size = 2.5, alpha = 0.85) +
+#   coord_equal() +
+#   theme_classic()
+# 
+# ggplot(hs_df, aes(x = Axis1, y = Axis2, 
+#                   color = traits$nectary)) +
+#   geom_point(size = 2.5, alpha = 0.85) +
+#   coord_equal() +
+#   theme_classic()
+# 
+# ggplot(hs_df, aes(x = Axis1, y = Axis2, 
+#                   color = traits$filament_union)) +
+#   geom_point(size = 2.5, alpha = 0.85) +
+#   coord_equal() +
+#   theme_classic()
+# 
+# ggplot(hs_df, aes(x = Axis1, y = Axis2, 
+#                   color = traits$filament_color)) +
+#   geom_point(size = 2.5, alpha = 0.85) +
+#   coord_equal() +
+#   theme_classic()
+# 
+# ### plot morphospace with only one clade colored
+# 
+# 
+# ##DISPARITY INDICES (SV, SR, MPD) ON HILL-SMITH PCA SCORES ======
+# # Groups: clades and biomes
+# #
+# # Run AFTER the first script. It needs these objects in the environment:
+# #   traits : data.frame, species in rownames, numeric/factor columns correctly
+# #            typed and polymorphisms already resolved (input of dudi.hillsmith)
+# #   meta   : data.frame with columns `species` and `clade`
+# #   biomes : data.frame with columns `species` and `biome` (codes such as
+# #            "1", "2", "1&7", "10, 12"...)
+# 
+# set.seed(1234)
+# 
+# ## ---- settings -------
+# bootstrap <- 1000 #defining bootstrap replicates
+# rarefaction <- 3 #all groups rarefied to this size 
+# var_threshold <- 0.90   # keep as many PCA axes as needed to reach 90% variance
+# drop_clades   <- c("outgroup")   # clades to exclude from the clade analysis
+# 
+# # ---- 1. Hill-Smith scores to use as the morphospace -------------------------
+# # The first script kept only 5 axes (nf = 5), which is only ~43% of variance.
+# # Disparity should be computed on enough axes to represent the morphospace,
+# # so we recompute the analysis keeping all axes and then choose a cutoff.
+# hs_tmp  <- dudi.hillsmith(traits, scannf = FALSE, nf = 2) 
+# hs_full <- dudi.hillsmith(traits, scannf = FALSE, nf = hs_tmp$rank)
+# 
+# cum_var <- cumsum(hs_full$eig) / sum(hs_full$eig)
+# n_axes  <- which(cum_var >= var_threshold)[1]
+# message(n_axes, " axes retained (", round(100 * cum_var[n_axes], 1),
+#         "% of total variance)")
+# 
+# # Species x axes matrix. THIS (coordinates), not the Gower distance matrix, is
+# # what variances/ranges must be computed on.
+# scores_hs <- as.matrix(hs_full$li[, 1:n_axes])
+# 
+# # ---- 2. Standardise species names everywhere (underscore format) ------------
+# rownames(scores_hs) <- gsub(" ", "_", rownames(scores_hs))
+# meta$species     <- gsub(" ", "_", meta$species)
+# biomes$species   <- gsub(" ", "_", biomes$species)
+# 
+# # Quick check of name matching
+# cat("Species in scores:           ", nrow(scores_hs), "\n") #219
+# cat("Species in scores w/ clade:  ", sum(rownames(scores_hs) %in% meta$species), "\n") #219
+# cat("Species in scores w/ biome:  ", sum(rownames(scores_hs) %in% biomes$species), "\n")
+# #168 species in biome
+# 
+# ## define groups 
+# # Clades
+# groups_clade <- split(meta$species, meta$clade) 
+# groups_clade <- groups_clade[!names(groups_clade) %in% drop_clades]
+# 
+# ## Biomes
+# # a species occur in more than one biome, so groups overlap.
+# #split each cell into its individual numeric codes and match exactly.
+# ## colorir por biomas 
+# 
+# biome_names <- c(
+#   "1"  = "Tropical & Subtropical Moist Broadleaf Forests",
+#   "2"  = "Tropical & Subtropical Dry Broadleaf Forests",
+#   "3"  = "Tropical & Subtropical Coniferous Forests",
+#   "4"  = "Temperate Broadleaf & Mixed Forests",
+#   "5"  = "Temperate Conifer Forests",
+#   "7"  = "Tropical & Subtropical Grasslands, Savannas & Shrublands",
+#   "8"  = "Temperate Grasslands, Savannas & Shrublands",
+#   "9"  = "Flooded Grasslands & Savannas",
+#   "10" = "Montane Grasslands & Shrublands",
+#   "12" = "Mediterranean Forests, Woodlands & Scrub",
+#   "13" = "Deserts & Xeric Shrublands",
+#   "14" = "Mangroves"
+# )
+# 
+# biome_codes <- lapply(as.character(biomes$biome), function(x) {
+#   if (is.na(x) || x == "") return(character(0))
+#   setdiff(strsplit(x, "[^0-9]+")[[1]], "")
+# })
+# 
+# groups_biome <- lapply(names(biome_names), function(code) {
+#   unique(biomes$species[vapply(biome_codes, function(x) code %in% x, logical(1))])
+# })
+# names(groups_biome) <- unname(biome_names)
+# 
+# # Keep only species present in the score matrix and groups with >= min_n.
+# # Why rarefy: SV, and especially SR, grow with sample size. Without rarefaction,
+# # large clades/biomes look more "disparate" simply because they have more
+# # species. Rarefying every group to the same n makes them comparable.
 
 ##calculate also PCoA index
 #we can compare after how pcoa and PCA hill smith differ from coordinates values and morphospace distribution 
@@ -527,13 +526,6 @@ eigen <- pcoa$values$Corr_eig
 flower_eigenvalues<-pcoa$values
 flower_eigenvectors<-pcoa$vectors.cor
 
-# wb<-createWorkbook()
-# addWorksheet(wb, "Flower Eigenvalues")
-# addWorksheet(wb, "Flower Eigenvectors")
-# writeData(wb, 1, flower_eigenvalues)
-# writeData(wb, 2, flower_eigenvectors)
-
-#saveWorkbook(wb, "3.outputs/PCoA_values_and_vectors.xlsx", overwrite=TRUE)
 
 # PC1
 round(eigen[1] / sum(eigen[eigen > 0]) * 100, 2)
@@ -908,230 +900,6 @@ biomes_mpd_wilcox <- test.dispRity(mpd_biomes,
 ### available at https://doi.org/10.5281/zenodo.7240006
 ##check code of Clark et al. (2023)
 #sum of variances for disparity of a group 
-library(patchwork)
-
-##STATS - summarize disprity descriptive and test statistics and export
-labels<-c(rep("Cranial",7),rep("Postcranial",7),rep(c(rep("Cranial",3),rep("Postcranial",3)),2))
-fam_disp<-do.call(rbind,fam_DISP)
-clade_disp<-do.call(rbind,clade_DISP)
-colnames(fam_disp)[8]<-"97.5%"
-colnames(clade_disp)[8]<-"97.5%"
-colnames(diet_DISP)[8]<-"97.5%"
-colnames(loc_DISP)[8]<-"97.5%"
-info_disp<-rbind(fam_disp,clade_disp,diet_DISP,loc_DISP)
-options(digits = 2)
-summary_DISP<-data.frame(labels,info_disp)
-summary_DISP<-summary_DISP[-c(7:8)]
-colnames(summary_DISP)<-c("Partition","Group","N","SV_Obs","Median_BS","0.025_BS","0.975_BS")
-summary_DISP$Group[summary_DISP$Group=="Mixed_Grazer"]<-"Mixed/Grazer"
-
-statistic_W<-c(unlist(fam_DISP_wilcoxon)[c(1:6,13:18)],unlist(clade_DISP_wilcoxon)[c(1,3)],unlist(diet_DISP_wilcoxon)[1],unlist(loc_DISP_wilcoxon)[1])
-p_value<-c(unlist(fam_DISP_wilcoxon)[c(7:12,19:24)],unlist(clade_DISP_wilcoxon)[c(2,4)],unlist(diet_DISP_wilcoxon)[2],unlist(loc_DISP_wilcoxon)[2])
-b_coeff<-c(unlist(fam_DISP_bhatt),unlist(clade_DISP_bhatt),unlist(diet_DISP_bhatt),unlist(loc_DISP_bhatt))
-gr_lab<-c(rep(c(rownames(fam_DISP_bhatt[[1]])),2),rep("Megatherioidea : Mylodontoidea",2),"Browser : Mixed/Grazer","Scansorial : Terrestrial")
-pt_lab<-c(rep("Cranial",6),rep("Postcranial",6),rep(c("Cranial","Postcranial"),2))
-summary_stats<-data.frame(pt_lab,gr_lab,round(statistic_W,2),round(p_value,2),round(b_coeff,2))
-colnames(summary_stats)<-c("Partition","Groups","Statistic W","P-value","Bhattacharyya Coefficient")
-wb<-createWorkbook()
-addWorksheet(wb, "Sum of variances")
-addWorksheet(wb, "Stats")
-writeData(wb, 1, summary_DISP)
-writeData(wb, 2, summary_stats)
-saveWorkbook(wb, "SV_stats.xlsx", overwrite=TRUE)
-
-##PLOTS - disparity (SV) violin plots
-
-#FAMILY
-F1<-c(rep("Megatheriidae",bootstraps))
-F2<-c(rep("Megalonychidae",bootstraps))
-F3<-c(rep("Mylodontidae",bootstraps))
-F4<-c(rep("Scelidotheriidae",bootstraps))
-fams_plot_disp<-vector(mode="list",length=length(fam_disparity))
-for (i in 1:length(fam_disparity))
-{
-  sum_Megatheriidae<-as.vector(fam_disparity[[i]]$disparity$Megatheriidae[[3]])
-  sum_Megalonychidae<-as.vector(fam_disparity[[i]]$disparity$Megalonychidae[[3]])
-  sum_Mylodontidae<-as.vector(fam_disparity[[i]]$disparity$Mylodontidae[[3]])
-  sum_Scelidotheriidae<-as.vector(fam_disparity[[i]]$disparity$Scelidotheriidae[[2]])
-  
-  SV_Megatheriidae<-data.frame(F1,sum_Megatheriidae)
-  colnames(SV_Megatheriidae)<-c("Group","Sum_of_variances")
-  SV_Megalonychidae<-data.frame(F2,sum_Megalonychidae)
-  colnames(SV_Megalonychidae)<-c("Group","Sum_of_variances")
-  SV_Mylodontidae<-data.frame(F3,sum_Mylodontidae)
-  colnames(SV_Mylodontidae)<-c("Group","Sum_of_variances")
-  SV_Scelidotheriidae<-data.frame(F4,sum_Scelidotheriidae)
-  colnames(SV_Scelidotheriidae)<-c("Group","Sum_of_variances")
-  fams_to_plot<-rbind(SV_Megatheriidae,SV_Megalonychidae,SV_Mylodontidae,SV_Scelidotheriidae)
-  ylab_list<-c(rep("Sum of variances",2))
-  
-  ci <- function(x)
-  {
-    exit <- quantile(x, probs = c(0.025,0.975))
-    names(exit) <- c("ymin","ymax")
-    return(exit) 
-  }
-  
-  median <- function(x)
-  {
-    exit <- quantile(x, probs = c(0.5))
-    names(exit) <- c("y")
-    return(exit) 
-  }	
-  
-  fams_to_plot$Group<-factor(fams_to_plot$Group,levels=c("Megatheriidae","Megalonychidae","Mylodontidae","Scelidotheriidae"))
-  fams_plot_disp[[i]]<-ggplot(fams_to_plot, aes(x=Group, y=Sum_of_variances, colour=Group, fill=Group),alpha=0.9) +
-    geom_violin(alpha=0.5, show.legend=T) + labs(x="", y="") +
-    xlab("") +
-    ylab(ylab_list[i]) +
-    scale_fill_manual(values=c("dodgerblue3","limegreen","red","gold2"))+
-    scale_colour_manual(values=c("dodgerblue3","limegreen","red","gold2")) +
-    stat_summary(fun=ci, geom="line", size=0.6) +
-    stat_summary(fun=median, geom="point", size=2.5) +
-    theme_bw() + labs("") +
-    theme(legend.title=element_blank(), legend.position="bottom", legend.text=element_text(size=12), plot.title=element_text(size=14,face= "bold",hjust=0.5),
-          axis.text.x=element_blank(), axis.text.y=element_text(size=10), axis.ticks.x=element_blank(), axis.title.x=element_text(size=12),axis.title.y=element_text(size=12),
-          panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
-    scale_y_continuous(labels=label_number(accuracy=0.1 ,decimal.mark="."))
-}
-
-#CLADE
-M1<-c(rep("Megatherioidea",bootstraps))
-M2<-c(rep("Mylodontoidea",bootstraps))
-clade_plot_disp<-vector(mode="list",length=length(clade_disparity))
-for (i in 1:length(clade_disparity))
-{
-  sum_Megatherioidea<-as.vector(clade_disparity[[i]]$disparity$Megatherioidea[[3]])
-  sum_Mylodontoidea<-as.vector(clade_disparity[[i]]$disparity$Mylodontoidea[[2]])
-  
-  SV_Megatherioidea<-data.frame(M1,sum_Megatherioidea)
-  colnames(SV_Megatherioidea)<-c("Group","Sum_of_variances")
-  SV_Mylodontoidea<-data.frame(M2,sum_Mylodontoidea)
-  colnames(SV_Mylodontoidea)<-c("Group","Sum_of_variances")
-  clades_to_plot<-rbind(SV_Megatherioidea, SV_Mylodontoidea)
-  ylab_list<-c(rep("Sum of variances",2))
-  
-  ci <- function(x)
-  {
-    exit <- quantile(x, probs = c(0.025,0.975))
-    names(exit) <- c("ymin","ymax")
-    return(exit) 
-  }
-  
-  median <- function(x)
-  {
-    exit <- quantile(x, probs = c(0.5))
-    names(exit) <- c("y")
-    return(exit) 
-  }	
-  
-  clades_to_plot$Group<-factor(clades_to_plot$Group,levels=c("Megatherioidea","Mylodontoidea"))
-  clade_plot_disp[[i]]<-ggplot(clades_to_plot, aes(x=Group, y=Sum_of_variances, colour=Group, fill=Group),alpha=0.9) +
-    geom_violin(alpha=0.5, show.legend=T) + labs(x="", y="") +
-    xlab("") +
-    ylab(ylab_list[i]) +
-    scale_fill_manual(values=c("purple", "orange")) +
-    scale_colour_manual(values=c("purple", "orange")) +
-    stat_summary(fun=ci, geom="line", size=0.6) +
-    stat_summary(fun=median, geom="point", size=2.5) +
-    theme_bw() + labs("") +
-    theme(legend.title=element_blank(), legend.position="bottom", legend.text=element_text(size=12), plot.title=element_text(size=14,face= "bold",hjust=0.5),
-          axis.text.x=element_blank(), axis.text.y=element_text(size=10), axis.ticks.x=element_blank(), axis.title.x=element_text(size=12),axis.title.y=element_text(size=12),
-          panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
-    scale_y_continuous(labels=label_number(accuracy=0.1 ,decimal.mark="."))
-}
-
-#DIET
-D1<-c(rep("Browser",bootstraps))
-D2<-c(rep("Mixed/Grazer",bootstraps))	
-sum_Browser<-as.vector(diet_disparity$disparity$Browser[[3]])
-sum_Mixed_Grazer<-as.vector(diet_disparity$disparity$Mixed_Grazer[[2]])
-
-SV_Browser<-data.frame(D1,sum_Browser)
-colnames(SV_Browser)<-c("Group","Sum_of_variances")
-SV_Mixed_Grazer<-data.frame(D2,sum_Mixed_Grazer)
-colnames(SV_Mixed_Grazer)<-c("Group","Sum_of_variances")
-diets_to_plot<-rbind(SV_Browser, SV_Mixed_Grazer)
-ylab_list<-"Sum of variances"
-
-ci <- function(x)
-{
-  exit <- quantile(x, probs = c(0.025,0.975))
-  names(exit) <- c("ymin","ymax")
-  return(exit) 
-}
-
-median <- function(x)
-{
-  exit <- quantile(x, probs = c(0.5))
-  names(exit) <- c("y")
-  return(exit) 
-}	
-
-diets_to_plot$Group<-factor(diets_to_plot$Group,levels=c("Browser","Mixed/Grazer"))
-diet_plot_disp<-ggplot(diets_to_plot, aes(x=Group, y=Sum_of_variances, colour=Group, fill=Group),alpha=0.9) +
-  geom_violin(alpha=0.5, show.legend=T) + labs(x="", y="") +
-  xlab("") +
-  ylab(ylab_list) +
-  scale_fill_manual(values=c("darkgreen", "aquamarine3")) +
-  scale_colour_manual(values=c("darkgreen", "aquamarine3")) +
-  stat_summary(fun=ci, geom="line", size=0.6) +
-  stat_summary(fun=median, geom="point", size=2.5) +
-  theme_bw() + labs(title=) +
-  theme(legend.title=element_blank(), legend.position="bottom", legend.text=element_text(size=12), plot.title=element_text(size=14,face= "bold",hjust=0.5),
-        axis.text.x=element_blank(), axis.text.y=element_text(size=10), axis.ticks.x=element_blank(), axis.title.x=element_text(size=12),axis.title.y=element_text(size=12),
-        panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
-  scale_y_continuous(labels=label_number(accuracy=0.1 ,decimal.mark="."))
-
-
-#Final_disparity_plots - merge morphospaces and violin plots
-
-DISP_fam1<-ggarrange(pcoa_fam[[1]],fams_plot_disp[[1]], ncol = 1, nrow = 2, legend="none", align="hv")		
-DISP_clade1<-ggarrange(pcoa_clade[[1]],clade_plot_disp[[1]], ncol = 1, nrow = 2, legend="none", align="hv")	
-DISP_fam2<-ggarrange(pcoa_fam[[2]],fams_plot_disp[[2]], ncol = 1, nrow = 2, legend="none", align="hv")	
-DISP_clade2<-ggarrange(pcoa_clade[[2]],clade_plot_disp[[2]],ncol = 1, nrow = 2, legend="none", align="hv")		
-DISP_diet<-ggarrange(pcoa_diet,diet_plot_disp, ncol = 1, nrow = 2, legend="none", align="hv")	
-DISP_locs<-ggarrange(pcoa_loc,loc_plot_disp, ncol = 1, nrow = 2, legend="none", align="hv")
-
-DISP_cranial<-ggarrange(DISP_fam1,DISP_clade1,DISP_diet,ncol = 3, nrow = 1, legend="none", align="hv",
-                        labels=c("A","B","C"),font.label=list(size = 16,face="bold"))
-DISP_cranial
-DISP_cranial<-annotate_figure(DISP_cranial,left=text_grob("Cranial",hjust=0, face = "bold", size = 16, rot = 90))	
-
-DISP_postcranial<-ggarrange(DISP_fam2,DISP_clade2,DISP_locs, ncol = 3, nrow = 1, legend="none", align="hv",
-                            labels=c("D","E","F"),font.label=list(size = 16,face="bold"))
-DISP_postcranial
-DISP_postcranial<-annotate_figure(DISP_postcranial,left=text_grob("Postcranial",hjust=0, face = "bold", size = 16, rot = 90))
-
-DISP_final<-ggarrange(DISP_cranial,DISP_postcranial, ncol = 1, nrow = 2, legend.grob=get_legend(pcoa_fam[[1]]), legend="bottom" ,align="hv")
-DISP_final	
-ggsave("DISP_final.pdf",DISP_final,width=8, height=10)
-
-###################################################################CONVERGENCE#############################################################
-##test convergence hypotheses
-conv_hypotheses<-ReorderData(time_tree,node_edge[1:41,7:10])
-cranial_states<-conv_hypotheses[,1:2]
-postcranial_states<-conv_hypotheses[,3:4]
-states<-list(cranial_states,postcranial_states)
-
-conv2<-vector(mode="list",length=length(pcoa_asr_list))
-for (i in 1:length(pcoa_asr_list))
-{	
-  tips<-ReorderData(time_tree,pcoa_asr_list[[i]]$vectors.cor[1:41,1:2])
-  nodes<-pcoa_asr_list[[i]]$vectors.cor[42:81,1:2]
-  
-  conv<-vector(mode="list",length=length(colnames(states[[i]])))
-  for (j in 1:length(colnames(states[[i]])))
-  {
-    st<-states[[i]][,j]
-    names(st)<-rownames(states[[i]])		
-    conv[[j]]<-search.conv(RR=NULL,tree=time_tree,y=tips,state=st,aceV=nodes,declust=TRUE,nsim=1000,rsim=1000,clus=.5)
-  }
-  names(conv)<-colnames(states[[i]])
-  conv2[[i]]<-conv
-}
-names(conv2)<-c("cranial","postcranial")
-
 
 #biomes names
 #1 Tropical & Subtropical Moist Broadleaf Forests
