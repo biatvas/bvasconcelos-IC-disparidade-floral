@@ -12,9 +12,9 @@ sp_nitfix <- tree_nitfix$tip.label
 
 #===============================================================#
 # reading morpho data =====
-morpho <- read.csv("3.outputs/continuous_data_cleaned-20260410.csv")
+morpho <- read.csv("1.datasets/mimoseae_species_nameclean.csv")
 #checking NA in each species 
-morpho$na_percent <- rowMeans(is.na(morpho[,3:31])) * 100
+morpho$na_percent <- rowMeans(is.na(morpho[,6:83])) * 100
 
 #excluir acacia pois o sampling esta sendo validado separadamente
 morpho <- morpho %>%
@@ -132,6 +132,7 @@ sampled_species <- data_slice %>%
   group_by(clade) %>%
   reframe(slice_sample(cur_data(),
                        n = max(1, round(0.2*n())))) #20% selecionado
+
 ##clados com menos de 5 sp nao entram na porcentagem 
 
 #10% selecionou 191 de espécies
@@ -148,15 +149,19 @@ librarian::shelf(patchwork)  # pra juntar os dois plots
 # --- Plot 1: seleção por corte temporal (sampled_species, 20% por clado) ---
 selected_taxa_temporal <- sampled_species$taxon
 
+#ggplot2 v
 tip_data_temporal <- data.frame(label = tree_pruned$tip.label)
 tip_data_temporal$sampled <- ifelse(tip_data_temporal$label %in% selected_taxa_temporal,
-                                    "selected", "not_selected")
+                                    "selecionado", " ")
 
 p_temporal <- ggtree(tree_pruned, size = 0.1, layout = "circular") %<+% tip_data_temporal +
   geom_tippoint(aes(color = sampled), size = 0.3) +
-  scale_color_manual(values = c(selected = "red", not_selected = "grey80")) +
+  scale_color_manual(values = c(selecionado = "red", " " = "grey80")) +
   labs(title = "Corte temporal (20% por clado)") +
   theme(legend.position = "right")
+
+ggsave("5.figuras/amostragem_filogenia_15mya.png",
+       width = 14, height = 7, dpi = 300)
 
 # --- Plot 2: seleção por gênero (morpho_10perc, 10% por gênero) ---
 selected_taxa_genus <- morpho_10perc$taxon
